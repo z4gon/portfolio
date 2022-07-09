@@ -11,7 +11,6 @@ export default function Document() {
                     rel="stylesheet"
                 />
 
-                <title>z4gon | Portfolio</title>
                 <meta name="description" content="z4gon portfolio" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

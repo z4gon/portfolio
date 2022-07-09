@@ -1,6 +1,6 @@
 import NavBarIcon from './NavBarIcon'
 
-import '../../styles/NavBar.module.sass'
+// import '../../styles/NavBar.module.sass'
 
 const NavBar: React.FC<{}> = () => {
     return (
