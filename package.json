@@ -1,0 +1,14 @@
+{
+    "name": "z4gon",
+    "version": "1.0.0",
+    "main": "",
+    "repository": "git@github.com:z4gon/z4gon.git",
+    "author": "z4gon",
+    "license": "MIT",
+    "scripts": {
+        "dev": "http-server -c-10"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
