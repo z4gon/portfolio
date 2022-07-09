@@ -1,18 +1,26 @@
 nav {
+    position: fixed;
+
+    background-color: var(--bg);
+
+    z-index: 1;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     width: 100%;
     height: 60px;
+    padding: 0 15px;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    padding: 0 15px;
 }
 
 nav h1 {
-    font-size: 1.4em;
-    font-weight: 300;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 nav ul {
@@ -25,5 +33,5 @@ nav ul li + li {
 }
 
 nav ul li img {
-    height: 38px;
+    height: 30px;
 }
