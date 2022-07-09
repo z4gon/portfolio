@@ -1,0 +1,26 @@
+[
+    {
+        "id": "starcat",
+        "thumbnailUrl": "/images/portfolio/starcat.gif",
+        "imagesUrls": [
+            "/images/portfolio/starcat/screen-1.jpg",
+            "/images/portfolio/starcat/screen-2.png",
+            "/images/portfolio/starcat/screen-3.png",
+            "/images/portfolio/starcat/screen-4.png",
+            "/images/portfolio/starcat/screen-5.png",
+            "/images/portfolio/starcat/screen-6.png"
+        ],
+        "youtubeVideoId": "3EQ1cwSD_BY",
+        "title": "The Star Cat",
+        "subtitle": "Published Mobile Game",
+        "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
+        "links": [
+            {
+                "href": "https://nochegames.com",
+                "text": "https://nochegames.com"
+            }
+        ],
+        "appleAppStoreUrl": "https://apps.apple.com/us/app/the-star-cat/id1544668944",
+        "googlePlayStoreUrl": "https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat"
+    }
+]
