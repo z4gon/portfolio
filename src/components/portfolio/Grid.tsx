@@ -13,15 +13,9 @@ interface GridProps {
 const Grid: React.FC<GridProps> = ({ projects }) => {
     const [page, setPage] = useState(0)
 
-    const loadNextPage = () => {
-        console.log(`loadNextPage page: ${page + 1}`)
-        setPage((currentPage) => currentPage + 1)
-    }
+    const loadNextPage = () => setPage((currentPage) => currentPage + 1)
 
     const hasNext = projects.length > (page + 1) * PAGE_SIZE
-
-    console.log(`projects.length: ${projects.length}`)
-    console.log(`page: ${page}`)
 
     return (
         <main className={styles.container}>

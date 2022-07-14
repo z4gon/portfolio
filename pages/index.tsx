@@ -13,7 +13,6 @@ export default function Home({ projects }: HomeProps) {
         <>
             <NavBar />
             <PortfolioGrid projects={projects} />
-            {`projects length: ${projects.length}`}
         </>
     )
 }
