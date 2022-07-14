@@ -1,17 +1,19 @@
 // import Image from 'next/image'
+import projects from '../data/projects.json'
 import NavBar from '../src/components/navbar/NavBar'
-import { items, PortfolioItemData } from '../src/components/portfolio/data'
+import { ProjectData } from '../src/components/portfolio/data-models'
 import PortfolioGrid from '../src/components/portfolio/Grid'
 
 interface HomeProps {
-    items: PortfolioItemData[]
+    projects: ProjectData[]
 }
 
-export default function Home({ items }: HomeProps) {
+export default function Home({ projects }: HomeProps) {
     return (
         <>
             <NavBar />
-            <PortfolioGrid items={items} />
+            <PortfolioGrid projects={projects} />
+            {`projects length: ${projects.length}`}
         </>
     )
 }
@@ -23,7 +25,7 @@ export default function Home({ items }: HomeProps) {
 export async function getStaticProps() {
     return {
         props: {
-            items,
+            projects,
         },
     }
 }

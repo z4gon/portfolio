@@ -4,7 +4,7 @@
         '/': [
             a,
             'static/css/45e2276d45a1677e.css',
-            'static/chunks/pages/index-e79d30f11647be31.js',
+            'static/chunks/pages/index-c2d0a032703fa508.js',
         ],
         '/_error': ['static/chunks/pages/_error-7397496ca01950b1.js'],
         '/project/[id]': [

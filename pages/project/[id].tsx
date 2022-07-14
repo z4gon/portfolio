@@ -1,9 +1,11 @@
+import projects from '../../data/projects.json'
 import NavBar from '../../src/components/navbar/NavBar'
-import { items, PortfolioItemData } from '../../src/components/portfolio/data'
+import { ProjectData } from '../../src/components/portfolio/data-models'
+
 import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
 
 interface ProjectPageProps {
-    project: PortfolioItemData
+    project: ProjectData
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
@@ -21,7 +23,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps(context) {
     const id = context.params.id
-    const project = items.find((item) => item.id === id)
+    const project = projects.find((item) => item.id === id)
 
     return {
         props: {
@@ -35,7 +37,7 @@ export async function getStaticProps(context) {
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
     return {
-        paths: [...items.map((item) => ({ params: { id: item.id } }))],
+        paths: [...projects.map((item) => ({ params: { id: item.id } }))],
         fallback: true, // false or 'blocking'
     }
 }

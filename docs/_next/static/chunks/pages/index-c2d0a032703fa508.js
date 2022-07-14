@@ -47,43 +47,53 @@
                     })
                 },
                 o = function (d) {
-                    var a = d.items,
-                        b = (0, j.useState)(0),
-                        c = b[0],
-                        f = b[1],
-                        e = a.length > (c + 1) * 5
-                    return (0, g.jsxs)('main', {
-                        className: k().container,
-                        children: [
-                            (0, g.jsx)('div', {
-                                className: k().grid,
-                                children: a
-                                    .slice(0, (c + 1) * 5)
-                                    .map(function (a) {
-                                        return (0,
-                                        g.jsx)(n, (0, i.Z)({}, a), a.id)
-                                    }),
-                            }),
-                            e &&
-                                (0, g.jsx)('button', {
-                                    className: k().loadMore,
-                                    onClick: function () {
-                                        f(function (a) {
-                                            return a + 1
-                                        })
-                                    },
-                                    children: 'Load More',
+                    var a = d.projects,
+                        c = (0, j.useState)(0),
+                        b = c[0],
+                        f = c[1],
+                        e = a.length > (b + 1) * 5
+                    return (
+                        console.log('projects.length: '.concat(a.length)),
+                        console.log('page: '.concat(b)),
+                        (0, g.jsxs)('main', {
+                            className: k().container,
+                            children: [
+                                (0, g.jsx)('div', {
+                                    className: k().grid,
+                                    children: a
+                                        .slice(0, (b + 1) * 5)
+                                        .map(function (a) {
+                                            return (0,
+                                            g.jsx)(n, (0, i.Z)({}, a), a.id)
+                                        }),
                                 }),
-                        ],
-                    })
+                                e &&
+                                    (0, g.jsx)('button', {
+                                        className: k().loadMore,
+                                        onClick: function () {
+                                            console.log(
+                                                'loadNextPage page: '.concat(
+                                                    b + 1
+                                                )
+                                            ),
+                                                f(function (a) {
+                                                    return a + 1
+                                                })
+                                        },
+                                        children: 'Load More',
+                                    }),
+                            ],
+                        })
+                    )
                 },
                 p = !0
-            function q(a) {
-                var b = a.items
+            function q(b) {
+                var a = b.projects
                 return (0, g.jsxs)(g.Fragment, {
                     children: [
                         (0, g.jsx)(h.Z, {}),
-                        (0, g.jsx)(o, { items: b }),
+                        (0, g.jsx)(o, { projects: a }),
+                        'projects length: '.concat(a.length),
                     ],
                 })
             }

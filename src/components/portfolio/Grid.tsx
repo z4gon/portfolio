@@ -1,28 +1,32 @@
 import { useState } from 'react'
 import styles from '../../../styles/components/portfolio/Grid.module.sass'
-import { PortfolioItemData } from './data'
+import { ProjectData } from './data-models'
 
 import Thumbnail from './Thumbnail'
 
 const PAGE_SIZE = 5
 
 interface GridProps {
-    items: PortfolioItemData[]
+    projects: ProjectData[]
 }
 
-const Grid: React.FC<GridProps> = ({ items }) => {
+const Grid: React.FC<GridProps> = ({ projects }) => {
     const [page, setPage] = useState(0)
 
     const loadNextPage = () => {
+        console.log(`loadNextPage page: ${page + 1}`)
         setPage((currentPage) => currentPage + 1)
     }
 
-    const hasNext = items.length > (page + 1) * PAGE_SIZE
+    const hasNext = projects.length > (page + 1) * PAGE_SIZE
+
+    console.log(`projects.length: ${projects.length}`)
+    console.log(`page: ${page}`)
 
     return (
         <main className={styles.container}>
             <div className={styles.grid}>
-                {items.slice(0, (page + 1) * PAGE_SIZE).map((item) => (
+                {projects.slice(0, (page + 1) * PAGE_SIZE).map((item) => (
                     <Thumbnail key={item.id} {...item} />
                 ))}
             </div>

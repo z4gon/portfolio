@@ -1,6 +1,6 @@
 {
     "pageProps": {
-        "items": [
+        "projects": [
             {
                 "id": "starcat",
                 "imageUrl": "images/portfolio/starcat.gif",

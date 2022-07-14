@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import styles from '../../../styles/components/portfolio/Thumbnail.module.sass'
-import { PortfolioItemData } from './data'
+import { ProjectData } from './data-models'
 
-interface ThumbnailProps extends PortfolioItemData {}
+interface ThumbnailProps extends ProjectData {}
 
 const Thumbnail: React.FC<ThumbnailProps> = (props) => {
     const { id, imageUrl } = props

@@ -1,7 +1,7 @@
 import styles from '../../../styles/components/portfolio/ProjectDetails.module.sass'
-import { PortfolioItemData, PortfolioItemLinkData } from './data'
+import { ProjectData, ProjectLink } from './data-models'
 
-interface ExternalLinkProps extends PortfolioItemLinkData {}
+interface ExternalLinkProps extends ProjectLink {}
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({ href, text }) => {
     return (
@@ -11,9 +11,9 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ href, text }) => {
     )
 }
 
-interface PortfolioItemProps extends PortfolioItemData {}
+interface ProjectDetailsProps extends ProjectData {}
 
-const ProjectDetails: React.FC<PortfolioItemProps> = ({
+const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     imageUrl,
     title,
     subtitle,
