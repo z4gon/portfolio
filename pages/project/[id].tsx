@@ -1,10 +1,9 @@
-// import Image from 'next/image'
 import { useRouter } from 'next/router'
 import NavBar from '../../src/components/navbar/NavBar'
-import Details from '../../src/components/portfolio/ProjectDetails'
 import { items } from '../../src/components/portfolio/data'
+import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
 
-export default function ProjectDetails() {
+export default function ProjectPage() {
     const router = useRouter()
 
     const { id } = router.query
@@ -13,7 +12,7 @@ export default function ProjectDetails() {
     return (
         <>
             <NavBar />
-            {project && <Details {...project} />}
+            {project && <ProjectDetails {...project} />}
         </>
     )
 }

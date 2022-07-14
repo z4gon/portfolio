@@ -22,6 +22,7 @@ const ProjectDetails: React.FC<PortfolioItemProps> = ({
 }) => {
     return (
         <article className={styles.card}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={imageUrl} alt={title} className={styles.image} />
             <div
                 className={styles.image}
