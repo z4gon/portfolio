@@ -10,10 +10,18 @@ npm run dev
 yarn dev
 ```
 
-## Build for Github Pages
+## Build Static HTML for Github Pages
 
 ```bash
 npm run build
 # or
 yarn build
+```
+
+## Serve Static HTML for dev purposes
+
+```bash
+npm run start:static
+# or
+yarn start:static
 ```
