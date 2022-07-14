@@ -1,6 +1,9 @@
 .projectDetails
     padding: 120px 60px
 
+    @media screen and ( max-width: 640px)
+        padding: 80px 20px
+
     display: flex
     flex-direction: column
     justify-content: flex-start
@@ -10,28 +13,63 @@
 
     height: auto
 
-    &:hover
-        transform: scale(1.05)
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-
-    .image
-        height: 250px
-        width: 100%
-
     .title
-        font-size: 1.2em
+        font-size: 1.8em
         font-weight: 700
 
     .subtitle
+        font-size: 1.2em
         font-weight: 500
         font-style: italic
 
     .text
-        font-size: 0.9em
+        font-size: 1em
         font-weight: 500
 
         margin-top: 20px
         margin-bottom: 20px
 
+        max-width: 900px
+
     & > *
         margin-bottom: 10px
+
+    .storeLinks
+        margin-top: 20px
+
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        @media screen and ( max-width: 640px)
+            flex-direction: column
+            width: 100%
+
+        .appleAppStoreBadge
+            width: 200px
+        .googlePlayStoreBadge
+            width: 260px
+
+    .video
+        margin-top: 20px
+
+        iframe
+            width: 92vw
+            height: 30vh
+            min-height: 20em
+
+            @media screen and ( min-width: 640px)
+                width: 640px
+                height: 400px
+
+    .images
+        margin-top: 20px
+
+        .image
+            max-height: 300px
+            max-width: 500px
+
+            margin: 5px
+
+            @media screen and ( max-width: 640px)
+                width: 100%
