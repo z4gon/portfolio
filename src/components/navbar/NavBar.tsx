@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import NavBarIcon from './NavBarIcon'
 
 // import '../../styles/NavBar.module.sass'
@@ -5,7 +6,11 @@ import NavBarIcon from './NavBarIcon'
 const NavBar: React.FC<{}> = () => {
     return (
         <nav>
-            <h1>z4gon</h1>
+            <Link href="/">
+                <a>
+                    <h1>z4gon - Portfolio</h1>
+                </a>
+            </Link>
             <ul>
                 <NavBarIcon
                     href="https://linkedin.com/in/gonzacn"
