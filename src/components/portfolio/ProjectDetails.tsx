@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import { PortfolioItemData, PortfolioItemLinkData } from './data'
-
 import styles from '../../../styles/components/portfolio/ProjectDetails.module.sass'
+import { PortfolioItemData, PortfolioItemLinkData } from './data'
 
 interface ExternalLinkProps extends PortfolioItemLinkData {}
 

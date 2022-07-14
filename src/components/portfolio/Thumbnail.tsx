@@ -1,15 +1,11 @@
-import { PortfolioItemData } from './data'
-
-import styles from '../../../styles/components/portfolio/Thumbnail.module.sass'
-import { useState } from 'react'
 import Link from 'next/link'
+import styles from '../../../styles/components/portfolio/Thumbnail.module.sass'
+import { PortfolioItemData } from './data'
 
 interface ThumbnailProps extends PortfolioItemData {}
 
 const Thumbnail: React.FC<ThumbnailProps> = (props) => {
     const { id, imageUrl } = props
-
-    const [showingPopup, setShowingPopup] = useState(false)
 
     return (
         <Link href={`/project/${id}`}>

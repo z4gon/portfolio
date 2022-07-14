@@ -1,17 +1,12 @@
+import { useState } from 'react'
+import styles from '../../../styles/components/portfolio/Grid.module.sass'
 import { items } from './data'
 
 import Thumbnail from './Thumbnail'
 
-import styles from '../../../styles/components/portfolio/Grid.module.sass'
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-
 const PAGE_SIZE = 5
 
 const Grid: React.FC<{}> = () => {
-    const router = useRouter()
-
     const [page, setPage] = useState(0)
 
     const loadNextPage = () => {
