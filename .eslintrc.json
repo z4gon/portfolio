@@ -1,5 +1,5 @@
 {
-    "extends": ["next/core-web-vitals", "plugin:import/errors"],
+    "extends": ["next/core-web-vitals"],
     "plugins": ["unused-imports"],
     "rules": {
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
@@ -30,12 +30,5 @@
                 }
             }
         ]
-    },
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
-        }
     }
 }
