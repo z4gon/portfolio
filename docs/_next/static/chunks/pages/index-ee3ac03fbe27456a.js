@@ -48,110 +48,100 @@
                 },
                 o = function (d) {
                     var a = d.projects,
-                        c = (0, j.useState)(0),
-                        b = c[0],
-                        f = c[1],
-                        e = a.length > (b + 1) * 5
-                    return (
-                        console.log('projects.length: '.concat(a.length)),
-                        console.log('page: '.concat(b)),
-                        (0, g.jsxs)('main', {
-                            className: k().container,
-                            children: [
-                                (0, g.jsx)('div', {
-                                    className: k().grid,
-                                    children: a
-                                        .slice(0, (b + 1) * 5)
-                                        .map(function (a) {
-                                            return (0,
-                                            g.jsx)(n, (0, i.Z)({}, a), a.id)
-                                        }),
-                                }),
-                                e &&
-                                    (0, g.jsx)('button', {
-                                        className: k().loadMore,
-                                        onClick: function () {
-                                            console.log(
-                                                'loadNextPage page: '.concat(
-                                                    b + 1
-                                                )
-                                            ),
-                                                f(function (a) {
-                                                    return a + 1
-                                                })
-                                        },
-                                        children: 'Load More',
+                        b = (0, j.useState)(0),
+                        c = b[0],
+                        f = b[1],
+                        e = a.length > (c + 1) * 5
+                    return (0, g.jsxs)('main', {
+                        className: k().container,
+                        children: [
+                            (0, g.jsx)('div', {
+                                className: k().grid,
+                                children: a
+                                    .slice(0, (c + 1) * 5)
+                                    .map(function (a) {
+                                        return (0,
+                                        g.jsx)(n, (0, i.Z)({}, a), a.id)
                                     }),
-                            ],
-                        })
-                    )
+                            }),
+                            e &&
+                                (0, g.jsx)('button', {
+                                    className: k().loadMore,
+                                    onClick: function () {
+                                        return f(function (a) {
+                                            return a + 1
+                                        })
+                                    },
+                                    children: 'Load More',
+                                }),
+                        ],
+                    })
                 },
                 p = !0
-            function q(b) {
-                var a = b.projects
+            function q(a) {
+                var b = a.projects
                 return (0, g.jsxs)(g.Fragment, {
                     children: [
                         (0, g.jsx)(h.Z, {}),
-                        (0, g.jsx)(o, { projects: a }),
-                        'projects length: '.concat(a.length),
+                        (0, g.jsx)(o, { projects: b }),
                     ],
                 })
             }
         },
         7056: function (e, b, a) {
             'use strict'
-            var f = a(5893),
+            var f = a(1799),
+                g = a(5893),
                 c = a(1664),
-                g = a.n(c),
+                h = a.n(c),
                 d = a(4666),
-                h = a.n(d),
-                i = function (a) {
+                i = a.n(d),
+                j = function (a) {
                     var b = a.href,
                         c = a.iconUrl
-                    return (0, f.jsx)('a', {
+                    return (0, g.jsx)('a', {
                         href: b,
                         rel: 'noopener noreferrer',
                         target: '_blank',
-                        children: (0, f.jsx)('img', {
-                            className: h().iconImage,
+                        children: (0, g.jsx)('img', {
+                            className: i().iconImage,
                             src: c,
                             alt: b,
                             height: 30,
                             width: 30,
                         }),
                     })
-                }
+                },
+                k = [
+                    {
+                        href: 'https://linkedin.com/in/gonzacn',
+                        iconUrl: '/images/In-Blue-72.png',
+                    },
+                    {
+                        href: 'https://github.com/z4gon',
+                        iconUrl: '/images/GitHub-Mark-64px.png',
+                    },
+                ]
             b.Z = function () {
-                return (0, f.jsxs)('nav', {
-                    className: h().navbar,
+                return (0, g.jsxs)('nav', {
+                    className: i().navbar,
                     children: [
-                        (0, f.jsx)(g(), {
+                        (0, g.jsx)(h(), {
                             href: '/',
-                            children: (0, f.jsx)('a', {
-                                className: h().titleLink,
-                                children: (0, f.jsx)('h1', {
-                                    className: h().title,
+                            children: (0, g.jsx)('a', {
+                                className: i().titleLink,
+                                children: (0, g.jsx)('h1', {
+                                    className: i().title,
                                     children: 'z4gon - Portfolio',
                                 }),
                             }),
                         }),
-                        (0, f.jsxs)('ul', {
-                            className: h().icons,
-                            children: [
-                                (0, f.jsx)('li', {
-                                    className: h().icon,
-                                    children: (0, f.jsx)(i, {
-                                        href: 'https://linkedin.com/in/gonzacn',
-                                        iconUrl: 'images/In-Blue-72.png',
-                                    }),
-                                }),
-                                (0, f.jsx)('li', {
-                                    children: (0, f.jsx)(i, {
-                                        href: 'https://github.com/z4gon',
-                                        iconUrl: 'images/GitHub-Mark-64px.png',
-                                    }),
-                                }),
-                            ],
+                        (0, g.jsx)('ul', {
+                            className: i().icons,
+                            children: k.map(function (a) {
+                                return (0,
+                                g.jsx)('li', { className: i().icon, children: (0, g.jsx)(j, (0, f.Z)({}, a)) }, a.href)
+                            }),
                         }),
                     ],
                 })

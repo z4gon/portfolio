@@ -87,58 +87,58 @@
         },
         7056: function (e, b, a) {
             'use strict'
-            var f = a(5893),
+            var f = a(1799),
+                g = a(5893),
                 c = a(1664),
-                g = a.n(c),
+                h = a.n(c),
                 d = a(4666),
-                h = a.n(d),
-                i = function (a) {
+                i = a.n(d),
+                j = function (a) {
                     var b = a.href,
                         c = a.iconUrl
-                    return (0, f.jsx)('a', {
+                    return (0, g.jsx)('a', {
                         href: b,
                         rel: 'noopener noreferrer',
                         target: '_blank',
-                        children: (0, f.jsx)('img', {
-                            className: h().iconImage,
+                        children: (0, g.jsx)('img', {
+                            className: i().iconImage,
                             src: c,
                             alt: b,
                             height: 30,
                             width: 30,
                         }),
                     })
-                }
+                },
+                k = [
+                    {
+                        href: 'https://linkedin.com/in/gonzacn',
+                        iconUrl: '/images/In-Blue-72.png',
+                    },
+                    {
+                        href: 'https://github.com/z4gon',
+                        iconUrl: '/images/GitHub-Mark-64px.png',
+                    },
+                ]
             b.Z = function () {
-                return (0, f.jsxs)('nav', {
-                    className: h().navbar,
+                return (0, g.jsxs)('nav', {
+                    className: i().navbar,
                     children: [
-                        (0, f.jsx)(g(), {
+                        (0, g.jsx)(h(), {
                             href: '/',
-                            children: (0, f.jsx)('a', {
-                                className: h().titleLink,
-                                children: (0, f.jsx)('h1', {
-                                    className: h().title,
+                            children: (0, g.jsx)('a', {
+                                className: i().titleLink,
+                                children: (0, g.jsx)('h1', {
+                                    className: i().title,
                                     children: 'z4gon - Portfolio',
                                 }),
                             }),
                         }),
-                        (0, f.jsxs)('ul', {
-                            className: h().icons,
-                            children: [
-                                (0, f.jsx)('li', {
-                                    className: h().icon,
-                                    children: (0, f.jsx)(i, {
-                                        href: 'https://linkedin.com/in/gonzacn',
-                                        iconUrl: 'images/In-Blue-72.png',
-                                    }),
-                                }),
-                                (0, f.jsx)('li', {
-                                    children: (0, f.jsx)(i, {
-                                        href: 'https://github.com/z4gon',
-                                        iconUrl: 'images/GitHub-Mark-64px.png',
-                                    }),
-                                }),
-                            ],
+                        (0, g.jsx)('ul', {
+                            className: i().icons,
+                            children: k.map(function (a) {
+                                return (0,
+                                g.jsx)('li', { className: i().icon, children: (0, g.jsx)(j, (0, f.Z)({}, a)) }, a.href)
+                            }),
                         }),
                     ],
                 })

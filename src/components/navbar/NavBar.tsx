@@ -21,6 +21,17 @@ const NavBarIcon: React.FC<NavBarIconProps> = ({ href, iconUrl }) => {
     )
 }
 
+const icons = [
+    {
+        href: 'https://linkedin.com/in/gonzacn',
+        iconUrl: '/images/In-Blue-72.png',
+    },
+    {
+        href: 'https://github.com/z4gon',
+        iconUrl: '/images/GitHub-Mark-64px.png',
+    },
+]
+
 const NavBar: React.FC<{}> = () => {
     return (
         <nav className={styles.navbar}>
@@ -30,18 +41,11 @@ const NavBar: React.FC<{}> = () => {
                 </a>
             </Link>
             <ul className={styles.icons}>
-                <li className={styles.icon}>
-                    <NavBarIcon
-                        href="https://linkedin.com/in/gonzacn"
-                        iconUrl="images/In-Blue-72.png"
-                    />
-                </li>
-                <li>
-                    <NavBarIcon
-                        href="https://github.com/z4gon"
-                        iconUrl="images/GitHub-Mark-64px.png"
-                    />
-                </li>
+                {icons.map((icon) => (
+                    <li className={styles.icon} key={icon.href}>
+                        <NavBarIcon {...icon} />
+                    </li>
+                ))}
             </ul>
         </nav>
     )
