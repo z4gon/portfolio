@@ -1,6 +1,6 @@
 export interface ProjectData {
     id: string
-    imageUrl: string
+    thumbnailUrl: string
     title: string
     subtitle: string
     text: string

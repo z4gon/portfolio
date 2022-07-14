@@ -5,14 +5,14 @@ import { ProjectData } from './data-models'
 interface ThumbnailProps extends ProjectData {}
 
 const Thumbnail: React.FC<ThumbnailProps> = (props) => {
-    const { id, imageUrl } = props
+    const { id, thumbnailUrl } = props
 
     return (
         <Link href={`/project/${id}`}>
             <a className={styles.link}>
                 <div
                     className={styles.thumbnail}
-                    style={{ backgroundImage: `url(${imageUrl})` }}
+                    style={{ backgroundImage: `url(${thumbnailUrl})` }}
                 />
             </a>
         </Link>

@@ -14,20 +14,17 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ href, text }) => {
 interface ProjectDetailsProps extends ProjectData {}
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
-    imageUrl,
+    thumbnailUrl,
     title,
     subtitle,
     text,
     links,
 }) => {
     return (
-        <article className={styles.card}>
+        <main className={styles.projectDetails}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={imageUrl} alt={title} className={styles.image} />
-            <div
-                className={styles.image}
-                style={{ backgroundImage: `url(${imageUrl})` }}
-            />
+            <img src={thumbnailUrl} alt={title} className={styles.image} />
+
             <h2 className={styles.title}>{title}</h2>
             <span className={styles.subtitle}>{subtitle}</span>
 
@@ -36,7 +33,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             {links.map((link, index) => (
                 <ExternalLink key={index} href={link.href} text={link.text} />
             ))}
-        </article>
+        </main>
     )
 }
 

@@ -1,7 +1,7 @@
 [
     {
         "id": "starcat",
-        "imageUrl": "/images/portfolio/starcat.gif",
+        "thumbnailUrl": "/images/portfolio/starcat.gif",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -22,7 +22,7 @@
     },
     {
         "id": "pepe1",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -43,7 +43,7 @@
     },
     {
         "id": "pepe2",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -64,7 +64,7 @@
     },
     {
         "id": "pepe3",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic0.thegamerimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2021%2F03%2FFire-Pokemon-1.jpg&f=1&nofb=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic0.thegamerimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2021%2F03%2FFire-Pokemon-1.jpg&f=1&nofb=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -85,7 +85,7 @@
     },
     {
         "id": "pepe4",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -106,7 +106,7 @@
     },
     {
         "id": "pepe5",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -127,7 +127,7 @@
     },
     {
         "id": "pepe6",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic0.thegamerimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2021%2F03%2FFire-Pokemon-1.jpg&f=1&nofb=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic0.thegamerimages.com%2Fwordpress%2Fwp-content%2Fuploads%2F2021%2F03%2FFire-Pokemon-1.jpg&f=1&nofb=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -148,7 +148,7 @@
     },
     {
         "id": "pepe7",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.desicomments.com%2Fwp-content%2Fuploads%2FLaughing-Pikachu-Image.png&f=1&nofb=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
@@ -169,7 +169,7 @@
     },
     {
         "id": "pepe8",
-        "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
+        "thumbnailUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NGlTrdvwjAZfFOG0v6IpiwHaG1%26pid%3DApi&f=1",
         "title": "The Star Cat",
         "subtitle": "Published Mobile Game",
         "text": "Solo indie developer on the project. Managed everything from conception, art & programming until deployment in AppStore and PlayStore. A stylish 2D Side-Scroller / Shoot 'Em Up developed with the Unity game engine.",
