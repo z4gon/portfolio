@@ -5,16 +5,18 @@ repos:
       rev: 'v2.7.1' # Use the sha or tag you want to point at
       hooks:
           - id: prettier
-            exclude: ^docs/
-    # - repo: https://github.com/pre-commit/mirrors-eslint
-    #   rev: 'v8.19.0' # Use the sha / tag you want to point at
-    #   hooks:
-    #       - id: eslint
-    #         files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
-    #         types: [file]
-    #         exclude: ^docs/
-    #         args:
-    #             - --fix
-    #         additional_dependencies:
-    #             - eslint-config-next@12.2.2
-    #             - eslint-plugin-unused-imports@2.0.0
+    - repo: local
+      hooks:
+          - id: eslint
+            name: ESLint
+            language: node
+            files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+            types: [file]
+            args:
+                - --fix
+            entry: bash -c "npm run lint -- --fix"
+            additional_dependencies:
+                - next@12.2.2
+                - eslint@8.19.0
+                - eslint-config-next@12.2.2
+                - eslint-plugin-unused-imports@2.0.0
