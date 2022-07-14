@@ -8,15 +8,8 @@ const nextConfig = {
     exportPathMap: async function () {
         return {
             '/': { page: '/' },
+            '/404': { page: '/404' },
         }
-    },
-
-    experimental: {
-        // Image Optimization using Next.js' default loader is not compatible with `next export`
-        // https://nextjs.org/docs/messages/export-image-api
-        images: {
-            unoptimized: true,
-        },
     },
 }
 

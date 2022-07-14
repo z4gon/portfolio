@@ -1369,7 +1369,6 @@
                                         ],
                                         path: '/_next/image',
                                         loader: 'default',
-                                        experimentalUnoptimized: !0,
                                     },
                                 },
                                 b

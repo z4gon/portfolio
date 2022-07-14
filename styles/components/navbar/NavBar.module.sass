@@ -1,4 +1,4 @@
-nav
+.navbar
     position: fixed
 
     background-color: var(--bg)
@@ -17,16 +17,20 @@ nav
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
     box-sizing: border-box
 
-    h1
-        font-size: 1.2em
-        font-weight: 500
+    .titleLink
+        text-decoration: none
+        color: var(--text-color)
 
-    ul
+        .title
+            font-size: 1.2em
+            font-weight: 700
+
+    .icons
         display: flex
         flex-direction: row
 
-    li
-        & + li
-            margin-left: 10px
-        img
-            height: 30px
+        .icon
+            & + .icon
+                margin-left: 10px
+            .iconImage
+                height: 30px
