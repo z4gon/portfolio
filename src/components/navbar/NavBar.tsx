@@ -10,6 +10,7 @@ interface NavBarIconProps {
 const NavBarIcon: React.FC<NavBarIconProps> = ({ href, iconUrl }) => {
     return (
         <a href={href} rel="noopener noreferrer" target="_blank">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
                 className={styles.iconImage}
                 src={iconUrl}

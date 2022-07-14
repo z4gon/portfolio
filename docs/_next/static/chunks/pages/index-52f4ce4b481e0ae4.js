@@ -32,7 +32,7 @@
                 m = a.n(e),
                 n = function (a) {
                     var b = a.id,
-                        c = a.imageUrl
+                        c = a.thumbnailUrl
                     return (0, g.jsx)(l(), {
                         href: '/project/'.concat(b),
                         children: (0, g.jsx)('a', {

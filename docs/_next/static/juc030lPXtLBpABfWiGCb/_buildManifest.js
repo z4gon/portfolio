@@ -4,13 +4,13 @@
         '/': [
             a,
             'static/css/45e2276d45a1677e.css',
-            'static/chunks/pages/index-ee3ac03fbe27456a.js',
+            'static/chunks/pages/index-52f4ce4b481e0ae4.js',
         ],
         '/_error': ['static/chunks/pages/_error-7397496ca01950b1.js'],
         '/project/[id]': [
             a,
-            'static/css/47142ea1374a3b45.css',
-            'static/chunks/pages/project/[id]-301aa5739371a8f6.js',
+            'static/css/75f7db39915f6cce.css',
+            'static/chunks/pages/project/[id]-d10756a1bf750d56.js',
         ],
         sortedPages: ['/', '/_app', '/_error', '/project/[id]'],
     }

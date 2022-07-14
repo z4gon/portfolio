@@ -42,6 +42,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/images/badge-app-store.svg"
                             alt="App Store Link"
@@ -55,6 +56,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/images/badge-google-play.png"
                             alt="Play Store Link"
