@@ -7,6 +7,7 @@ export interface ProjectData {
     subtitle: string
     text: string
     links: ProjectLink[]
+    gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
 }

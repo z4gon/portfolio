@@ -1,7 +1,6 @@
 import projects from '../../data/projects.json'
 import NavBar from '../../src/components/navbar/NavBar'
 import { ProjectData } from '../../src/components/portfolio/data-models'
-
 import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
 
 interface ProjectPageProps {
