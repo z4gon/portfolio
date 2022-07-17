@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../../../styles/components/portfolio/Grid.module.sass'
-import { ProjectData } from './data-models'
+import { ProjectData } from '../../models/ProjectData'
 
 import Thumbnail from './Thumbnail'
 

@@ -1,3 +1,5 @@
+import { ProjectLink } from './ProjectLink'
+
 export interface ProjectData {
     id: string
     thumbnailUrl: string
@@ -11,9 +13,4 @@ export interface ProjectData {
     gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
-}
-
-export interface ProjectLink {
-    href: string
-    text: string
 }

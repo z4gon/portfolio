@@ -1,0 +1,36 @@
+.externalLink
+    margin: 5px
+    text-decoration: none
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    width: auto
+
+    color: var(--text-color)
+
+    border: solid 1px var(--text-color)
+    border-radius: 5px
+    padding: 4px 8px
+
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+
+    .icon
+        height: 20px
+        width: 20px
+        min-width: 20px
+        min-height: 20px
+
+        margin-left: 10px
+
+        fill: var(--text-color)
+
+        transition: fill 0.2s ease-in-out
+
+    &:hover
+        color: var(--bg)
+        background-color: var(--text-color)
+
+        .icon
+            fill: var(--bg)

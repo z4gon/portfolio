@@ -1,8 +1,8 @@
 import projects from '../../data/projects.json'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
-import { ProjectData } from '../../src/components/portfolio/data-models'
-import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
+import ProjectDetails from '../../src/components/project/ProjectDetails'
+import { ProjectData } from '../../src/models/ProjectData'
 
 interface ProjectPageProps {
     project: ProjectData
