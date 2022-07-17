@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import styles from '../../../styles/components/portfolio/Thumbnail.module.sass'
-import { ProjectData } from './data-models'
+import { ProjectData } from '../../models/ProjectData'
 
-interface ThumbnailProps extends ProjectData {}
+interface ProjectThumbnailProps extends ProjectData {}
 
-const Thumbnail: React.FC<ThumbnailProps> = (props) => {
+const ProjectThumbnail: React.FC<ProjectThumbnailProps> = (props) => {
     const { id, thumbnailUrl } = props
 
     return (
@@ -19,4 +19,4 @@ const Thumbnail: React.FC<ThumbnailProps> = (props) => {
     )
 }
 
-export default Thumbnail
+export default ProjectThumbnail
