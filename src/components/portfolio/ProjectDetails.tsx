@@ -1,3 +1,4 @@
+import Slider, { Settings as SliderSettings } from 'react-slick'
 import styles from '../../../styles/components/portfolio/ProjectDetails.module.sass'
 import { ProjectData, ProjectLink } from './data-models'
 
@@ -13,6 +14,26 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ href, text }) => {
 
 interface ProjectDetailsProps extends ProjectData {}
 
+const sliderSettings: SliderSettings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+    lazyLoad: 'ondemand',
+    autoplay: true,
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+}
+
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     imagesUrls,
     title,
@@ -25,51 +46,58 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 }) => {
     return (
         <main className={styles.projectDetails}>
-            <h2 className={styles.title}>{title}</h2>
-            <span className={styles.subtitle}>{subtitle}</span>
+            <article className={styles.information}>
+                <h2 className={styles.title}>{title}</h2>
+                <span className={styles.subtitle}>{subtitle}</span>
 
-            <p className={styles.text}>{text}</p>
+                <p className={styles.text}>{text}</p>
 
-            {links.map((link, index) => (
-                <ExternalLink key={index} href={link.href} text={link.text} />
-            ))}
+                {links.map((link, index) => (
+                    <ExternalLink
+                        key={index}
+                        href={link.href}
+                        text={link.text}
+                    />
+                ))}
 
-            {/* Store links */}
-            <div className={styles.storeLinks}>
-                {appleAppStoreUrl && (
-                    <a
-                        href={appleAppStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="/images/badge-app-store.svg"
-                            alt="App Store Link"
-                            className={styles.appleAppStoreBadge}
-                        />
-                    </a>
-                )}
-                {googlePlayStoreUrl && (
-                    <a
-                        href={googlePlayStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="/images/badge-google-play.png"
-                            alt="Play Store Link"
-                            className={styles.googlePlayStoreBadge}
-                        />
-                    </a>
-                )}
-            </div>
+                {/* {`breakpoint: ${breakpoint}}`} */}
 
+                {/* Store links */}
+                <div className={styles.storeLinks}>
+                    {appleAppStoreUrl && (
+                        <a
+                            href={appleAppStoreUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="/images/badge-app-store.svg"
+                                alt="App Store Link"
+                                className={styles.appleAppStoreBadge}
+                            />
+                        </a>
+                    )}
+                    {googlePlayStoreUrl && (
+                        <a
+                            href={googlePlayStoreUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="/images/badge-google-play.png"
+                                alt="Play Store Link"
+                                className={styles.googlePlayStoreBadge}
+                            />
+                        </a>
+                    )}
+                </div>
+            </article>
+
+            <h2 className={styles.sectionTitle}>Video</h2>
             {youtubeVideoId && (
                 <div className={styles.video}>
-                    <h3>Video</h3>
-                    <br />
                     <iframe
                         src={`https://www.youtube.com/embed/${youtubeVideoId}`}
                         title={title}
@@ -79,19 +107,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 </div>
             )}
 
-            <div className={styles.images}>
-                <h3>Images</h3>
-                <br />
+            <h2 className={styles.sectionTitle}>Screenshots</h2>
+            <Slider className={styles.slider} {...sliderSettings}>
                 {imagesUrls.map((url) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                        key={url}
-                        src={url}
-                        alt={title}
-                        className={styles.image}
-                    />
+                    <div key={url}>
+                        <div
+                            style={{
+                                backgroundImage: `url(${url})`,
+                            }}
+                            className={styles.image}
+                        ></div>
+                    </div>
                 ))}
-            </div>
+            </Slider>
         </main>
     )
 }

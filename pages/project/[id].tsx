@@ -1,7 +1,7 @@
 import projects from '../../data/projects.json'
-import NavBar from '../../src/components/navbar/NavBar'
+import Metatags from '../../src/components/Metatags'
+import Page from '../../src/components/page/Page'
 import { ProjectData } from '../../src/components/portfolio/data-models'
-
 import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
 
 interface ProjectPageProps {
@@ -10,10 +10,14 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ project }: ProjectPageProps) {
     return (
-        <>
-            <NavBar />
+        <Page>
+            <Metatags
+                title={`${project.title} | Project`}
+                description={project.text}
+                imageUrl={project.metaImageUrl}
+            />
             {project && <ProjectDetails {...project} />}
-        </>
+        </Page>
     )
 }
 

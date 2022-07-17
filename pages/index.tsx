@@ -1,6 +1,7 @@
 // import Image from 'next/image'
 import projects from '../data/projects.json'
-import NavBar from '../src/components/navbar/NavBar'
+import Metatags from '../src/components/Metatags'
+import Page from '../src/components/page/Page'
 import { ProjectData } from '../src/components/portfolio/data-models'
 import PortfolioGrid from '../src/components/portfolio/Grid'
 
@@ -10,10 +11,10 @@ interface HomeProps {
 
 export default function Home({ projects }: HomeProps) {
     return (
-        <>
-            <NavBar />
+        <Page>
+            <Metatags />
             <PortfolioGrid projects={projects} />
-        </>
+        </Page>
     )
 }
 

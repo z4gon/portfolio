@@ -1,4 +1,5 @@
 import '../styles/global/index.sass'
+import '../styles/global/slick-arrows.sass'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
