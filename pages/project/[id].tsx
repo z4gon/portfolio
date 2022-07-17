@@ -1,5 +1,5 @@
 import projects from '../../data/projects.json'
-import NavBar from '../../src/components/navbar/NavBar'
+import Page from '../../src/components/page/Page'
 import { ProjectData } from '../../src/components/portfolio/data-models'
 import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
 
@@ -8,12 +8,7 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
-    return (
-        <>
-            <NavBar />
-            {project && <ProjectDetails {...project} />}
-        </>
-    )
+    return <Page>{project && <ProjectDetails {...project} />}</Page>
 }
 
 // This function gets called at build time on server-side.
