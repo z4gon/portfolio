@@ -1,7 +1,8 @@
 [
     {
         "id": "starcat",
-        "thumbnailUrl": "/images/portfolio/starcat.gif",
+        "thumbnailUrl": "/images/portfolio/starcat/thumbnail.gif",
+        "metaImageUrl": "/images/portfolio/starcat/screen-5.png",
         "imagesUrls": [
             "/images/portfolio/starcat/screen-1.jpg",
             "/images/portfolio/starcat/screen-2.png",

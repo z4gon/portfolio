@@ -21,9 +21,6 @@ export default function Document() {
                     type="text/css"
                     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
                 />
-
-                <meta name="description" content="z4gon portfolio" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             <body>
                 <Main />

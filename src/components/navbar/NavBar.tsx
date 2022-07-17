@@ -38,7 +38,7 @@ const NavBar: React.FC<{}> = () => {
         <nav className={styles.navbar}>
             <Link href="/">
                 <a className={styles.titleLink}>
-                    <h1 className={styles.title}>z4gon - Portfolio</h1>
+                    <h1 className={styles.title}>Gonzalo Cumini</h1>
                 </a>
             </Link>
             <ul className={styles.icons}>

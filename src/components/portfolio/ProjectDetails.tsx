@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Slider, { Settings as SliderSettings } from 'react-slick'
 import styles from '../../../styles/components/portfolio/ProjectDetails.module.sass'
 import { ProjectData, ProjectLink } from './data-models'
@@ -47,10 +46,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 }) => {
     return (
         <main className={styles.projectDetails}>
-            <Head>
-                <title>{`${title} | Project`}</title>
-            </Head>
-
             <article className={styles.information}>
                 <h2 className={styles.title}>{title}</h2>
                 <span className={styles.subtitle}>{subtitle}</span>

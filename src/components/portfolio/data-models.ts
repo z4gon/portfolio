@@ -1,6 +1,7 @@
 export interface ProjectData {
     id: string
     thumbnailUrl: string
+    metaImageUrl: string
     imagesUrls: string[]
     youtubeVideoId?: string
     title: string

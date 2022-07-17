@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 interface Props {
     title?: string
     url?: string
@@ -8,15 +10,15 @@ interface Props {
 
 export default function Metatags(props: Props) {
     const {
-        title = 'Noche Games',
-        url = 'https://www.nochegames.com/',
-        imageUrl = '/images/meta.jpg',
+        title = 'Gonzalo Cumini | Portfolio',
+        url = 'z4gon.github.io/',
+        imageUrl = '/images/portfolio/starcat/meta.jpg',
         faviconUrl = '/favicon.ico',
-        description = "Starcat! A stylish Shoot 'Em Up where you play as a cosmic cat making your way through enemy drones and aliens, to escape from your crashed ship!",
+        description = 'Gonzalo Cumini | Portfolio',
     } = props
 
     return (
-        <>
+        <Head>
             {/* <!-- Primary Meta Tags --> */}
             <title>{title}</title>
             <meta name="title" content={title} />
@@ -37,6 +39,6 @@ export default function Metatags(props: Props) {
             <meta property="twitter:image" content={imageUrl} />
 
             <link rel="icon" href={faviconUrl} />
-        </>
+        </Head>
     )
 }
