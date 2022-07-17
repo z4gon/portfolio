@@ -10,14 +10,16 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ project }: ProjectPageProps) {
     return (
-        <Page>
-            <Metatags
-                title={`${project.title} | Project`}
-                description={project.text}
-                imageUrl={project.metaImageUrl}
-            />
-            {project && <ProjectDetails {...project} />}
-        </Page>
+        <>
+            <Page>
+                <Metatags
+                    title={`${project.title} | Project`}
+                    description={project.text}
+                    imageUrl={project.metaImageUrl}
+                />
+                {project && <ProjectDetails {...project} />}
+            </Page>
+        </>
     )
 }
 

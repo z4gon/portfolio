@@ -1,5 +1,6 @@
 import Slider, { Settings as SliderSettings } from 'react-slick'
 import styles from '../../../styles/components/project/ImagesSlider.module.sass'
+import FullScreenImage from './FullScreenImage'
 
 interface ImagesSliderProps {
     imagesUrls: string[]
@@ -14,7 +15,7 @@ const sliderSettings: SliderSettings = {
     slidesToScroll: 1,
     centerMode: true,
     lazyLoad: 'ondemand',
-    autoplay: true,
+    // autoplay: true,
     responsive: [
         {
             breakpoint: 1000,
@@ -35,7 +36,9 @@ const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls }) => {
                             backgroundImage: `url(${url})`,
                         }}
                         className={styles.image}
-                    ></div>
+                    >
+                        <FullScreenImage imageUrl={url} />
+                    </div>
                 </div>
             ))}
         </Slider>

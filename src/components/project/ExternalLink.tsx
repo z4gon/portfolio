@@ -12,12 +12,6 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ href, text }) => {
             target="_blank"
         >
             {text}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            {/* <img
-                className={styles.icon}
-                src="/images/external-link.svg"
-                alt="External Link"
-            /> */}
             <svg
                 className={styles.icon}
                 fill="#000000"
