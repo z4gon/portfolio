@@ -3,6 +3,7 @@ import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from './ExternalLink'
 import ImagesSlider from './ImagesSlider'
 import StoreLinks from './StoreLinks'
+import Tags from './Tags'
 
 interface ProjectDetailsProps extends ProjectData {}
 
@@ -22,16 +23,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         <main className={styles.projectDetails}>
             <ImagesSlider imagesUrls={imagesUrls} />
 
-            <article className={styles.information}>
+            <section className={styles.information}>
                 <h2 className={styles.title}>{title}</h2>
                 <span className={styles.subtitle}>{subtitle}</span>
+                <Tags tags={tags} />
 
-                {description.map((paragraph, index) => (
-                    <p className={styles.descriptionItem} key={index}>
-                        {paragraph}
-                    </p>
-                ))}
-            </article>
+                <div className={styles.descriptionItems}>
+                    {description.map((paragraph, index) => (
+                        <p className={styles.descriptionItem} key={index}>
+                            {paragraph}
+                        </p>
+                    ))}
+                </div>
+            </section>
 
             <h2 className={styles.sectionTitle}>Details</h2>
             <ul className={styles.bullets}>
