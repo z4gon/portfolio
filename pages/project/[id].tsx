@@ -28,7 +28,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                     description={project.description.join('')}
                     imageUrl={project.metaImageUrl}
                 />
-                {project && <ProjectDetails {...project} />}
+                <ProjectDetails {...project} />
             </Page>
             <FullScreenImageRenderer />
         </FullScreenImageContext.Provider>
