@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import projects from '../../data/projects.json'
+import projects from '../../data/projects'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
 import FullScreenImageRenderer from '../../src/components/project/FullScreenImageRenderer'
@@ -14,6 +14,10 @@ interface ProjectPageProps {
 export default function ProjectPage({ project }: ProjectPageProps) {
     const [fullScreenImageUrl, setFullScreenImageUrl] = useState(null)
 
+    if (!project) {
+        return null
+    }
+
     return (
         <FullScreenImageContext.Provider
             value={{ url: fullScreenImageUrl, setUrl: setFullScreenImageUrl }}
@@ -21,7 +25,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             <Page>
                 <Metatags
                     title={`${project.title} | Project`}
-                    description={project.text}
+                    description={project.description.join('')}
                     imageUrl={project.metaImageUrl}
                 />
                 {project && <ProjectDetails {...project} />}
@@ -50,8 +54,9 @@ export async function getStaticProps(context) {
 // For example, suppose that you have a page that uses Dynamic Routes named pages/posts/[id].js.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
+    const paths = projects.map((item) => ({ params: { id: item.id } }))
     return {
-        paths: [...projects.map((item) => ({ params: { id: item.id } }))],
+        paths,
         fallback: true, // false or 'blocking'
     }
 }

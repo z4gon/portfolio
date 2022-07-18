@@ -1,4 +1,4 @@
-import projects from '../data/projects.json'
+import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
 import ProjectsGrid from '../src/components/portfolio/ProjectsGrid'
