@@ -18,34 +18,27 @@
         padding: 20px 0
 
         @media screen and ( max-width: 1000px)
-            padding: 20px 30px
+            padding: 20px
 
         .title
             font-size: 1.8em
             font-weight: 700
+            margin-bottom: 10px
 
         .subtitle
             font-size: 1.2em
             font-weight: 500
             font-style: italic
+            margin-bottom: 20px
 
-        .text
+        .descriptionItem
             font-size: 1em
             line-height: 1.4em
             font-weight: 500
 
-            margin-top: 20px
-            margin-bottom: 20px
+            margin-top: 8px
 
             max-width: 900px
-
-        & > *
-            margin-bottom: 10px
-
-        .externalLinks
-            display: flex
-            flex-wrap: wrap
-            width: 100%
 
     .sectionTitle
         font-size: 1.3em
@@ -53,6 +46,24 @@
 
         @media screen and ( max-width: 1000px)
             padding-left: 20px
+
+    .bullets
+        padding: 0 35px 10px 25px
+
+        @media screen and ( max-width: 1000px)
+            padding: 0 35px
+
+        .bullet
+            line-height: 1.5em
+
+    .externalLinks
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        width: 100%
+
+        @media screen and ( max-width: 1000px)
+            padding: 0 20px
 
     .video
         height: 600px

@@ -1,15 +1,21 @@
 .storeLinks
-    margin-top: 40px
-
     display: flex
     flex-direction: row
     align-items: center
 
+    @media screen and ( max-width: 1000px)
+        padding: 0 20px
+
     @media screen and ( max-width: 640px)
-        flex-direction: column
         width: 100%
 
     .appleAppStoreBadge
         width: 200px
     .googlePlayStoreBadge
         width: 260px
+
+    @media screen and ( max-width: 640px)
+        .appleAppStoreBadge
+            width: 150px
+        .googlePlayStoreBadge
+            width: 195px

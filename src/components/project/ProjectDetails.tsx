@@ -10,7 +10,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     imagesUrls,
     title,
     subtitle,
-    text,
+    description,
+    bullets,
+    tags,
     links,
     appleAppStoreUrl,
     googlePlayStoreUrl,
@@ -18,27 +20,44 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 }) => {
     return (
         <main className={styles.projectDetails}>
+            <ImagesSlider imagesUrls={imagesUrls} />
+
             <article className={styles.information}>
                 <h2 className={styles.title}>{title}</h2>
                 <span className={styles.subtitle}>{subtitle}</span>
 
-                <p className={styles.text}>{text}</p>
-
-                <div className={styles.externalLinks}>
-                    {links.map((link, index) => (
-                        <ExternalLink
-                            key={index}
-                            href={link.href}
-                            text={link.text}
-                        />
-                    ))}
-                </div>
-
-                <StoreLinks
-                    appleAppStoreUrl={appleAppStoreUrl}
-                    googlePlayStoreUrl={googlePlayStoreUrl}
-                />
+                {description.map((paragraph, index) => (
+                    <p className={styles.descriptionItem} key={index}>
+                        {paragraph}
+                    </p>
+                ))}
             </article>
+
+            <h2 className={styles.sectionTitle}>Details</h2>
+            <ul className={styles.bullets}>
+                {bullets.map((bullet, index) => (
+                    <li className={styles.bullet} key={index}>
+                        {bullet}
+                    </li>
+                ))}
+            </ul>
+
+            <h2 className={styles.sectionTitle}>Links</h2>
+            <div className={styles.externalLinks}>
+                {links.map((link, index) => (
+                    <ExternalLink
+                        key={index}
+                        href={link.href}
+                        text={link.text}
+                    />
+                ))}
+            </div>
+
+            <h2 className={styles.sectionTitle}>Store Presence</h2>
+            <StoreLinks
+                appleAppStoreUrl={appleAppStoreUrl}
+                googlePlayStoreUrl={googlePlayStoreUrl}
+            />
 
             <h2 className={styles.sectionTitle}>Video</h2>
             {youtubeVideoId && (
@@ -51,9 +70,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     ></iframe>
                 </div>
             )}
-
-            <h2 className={styles.sectionTitle}>Screenshots</h2>
-            <ImagesSlider imagesUrls={imagesUrls} />
         </main>
     )
 }

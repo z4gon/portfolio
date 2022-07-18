@@ -8,7 +8,9 @@ export interface ProjectData {
     youtubeVideoId?: string
     title: string
     subtitle: string
-    text: string
+    description: string[]
+    bullets: string[]
+    tags: string[]
     links: ProjectLink[]
     gitHubUrl?: string
     appleAppStoreUrl?: string
