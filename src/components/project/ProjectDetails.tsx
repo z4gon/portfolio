@@ -8,6 +8,7 @@ import Tags from './Tags'
 interface ProjectDetailsProps extends ProjectData {}
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
+    date,
     imagesUrls,
     title,
     subtitle,
@@ -20,11 +21,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     youtubeVideoId,
 }) => {
     return (
-        <main className={styles.projectDetails}>
+        <main className={styles.container}>
             <ImagesSlider imagesUrls={imagesUrls} />
 
             <section className={styles.information}>
-                <h2 className={styles.title}>{title}</h2>
+                <h2 className={styles.title}>
+                    {title}
+                    <span className={styles.date}>{date}</span>
+                </h2>
                 <span className={styles.subtitle}>{subtitle}</span>
                 <Tags tags={tags} />
 

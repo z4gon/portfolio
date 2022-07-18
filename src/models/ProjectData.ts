@@ -2,6 +2,7 @@ import { ProjectLink } from './ProjectLink'
 
 export interface ProjectData {
     id: string
+    date: string
     thumbnailUrl: string
     metaImageUrl: string
     imagesUrls: string[]
