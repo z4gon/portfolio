@@ -2,6 +2,7 @@ import { useState } from 'react'
 import projects from '../../data/projects.json'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
+import FullScreenImageRenderer from '../../src/components/project/FullScreenImageRenderer'
 import ProjectDetails from '../../src/components/project/ProjectDetails'
 import { FullScreenImageContext } from '../../src/contexts/fullScreenImage'
 import { ProjectData } from '../../src/models/ProjectData'
@@ -25,6 +26,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 />
                 {project && <ProjectDetails {...project} />}
             </Page>
+            <FullScreenImageRenderer />
         </FullScreenImageContext.Provider>
     )
 }
