@@ -3,7 +3,7 @@ import styles from '../../../styles/components/portfolio/ProjectsGrid.module.sas
 import { ProjectData } from '../../models/ProjectData'
 import ProjectCard from './ProjectCard'
 
-const PAGE_SIZE = 5
+const PAGE_SIZE = 12
 
 interface ProjectsGridProps {
     projects: ProjectData[]
@@ -24,9 +24,11 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
                 ))}
             </div>
             {hasNext && (
-                <button className={styles.loadMore} onClick={loadNextPage}>
-                    Load More
-                </button>
+                <div className={styles.actions}>
+                    <button className={styles.loadMore} onClick={loadNextPage}>
+                        Load More
+                    </button>
+                </div>
             )}
         </main>
     )
