@@ -1,0 +1,23 @@
+.slider
+    margin-bottom: 40px
+    width: 100%
+
+    .image
+        height: 250px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+        position: relative
+
+        @media screen and ( min-width: 700px)
+            border: solid 2px var(--bg)
+            border-radius: 15px
+
+        @media screen and ( max-width: 640px)
+            height: 30vh
+
+    .slick-arrow.slick-next
+        right: 25px
+        transform: scale(1.5)
+        top: calc(50% - 15px)

@@ -1,9 +1,8 @@
-// import Image from 'next/image'
 import projects from '../data/projects.json'
 import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
-import { ProjectData } from '../src/components/portfolio/data-models'
-import PortfolioGrid from '../src/components/portfolio/Grid'
+import ProjectsGrid from '../src/components/portfolio/ProjectsGrid'
+import { ProjectData } from '../src/models/ProjectData'
 
 interface HomeProps {
     projects: ProjectData[]
@@ -13,7 +12,7 @@ export default function Home({ projects }: HomeProps) {
     return (
         <Page>
             <Metatags />
-            <PortfolioGrid projects={projects} />
+            <ProjectsGrid projects={projects} />
         </Page>
     )
 }

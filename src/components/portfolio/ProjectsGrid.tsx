@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import styles from '../../../styles/components/portfolio/Grid.module.sass'
-import { ProjectData } from './data-models'
+import { ProjectData } from '../../models/ProjectData'
 
-import Thumbnail from './Thumbnail'
+import ProjectThumbnail from './ProjectThumbnail'
 
 const PAGE_SIZE = 5
 
-interface GridProps {
+interface ProjectsGridProps {
     projects: ProjectData[]
 }
 
-const Grid: React.FC<GridProps> = ({ projects }) => {
+const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
     const [page, setPage] = useState(0)
 
     const loadNextPage = () => setPage((currentPage) => currentPage + 1)
@@ -21,7 +21,7 @@ const Grid: React.FC<GridProps> = ({ projects }) => {
         <main className={styles.container}>
             <div className={styles.grid}>
                 {projects.slice(0, (page + 1) * PAGE_SIZE).map((item) => (
-                    <Thumbnail key={item.id} {...item} />
+                    <ProjectThumbnail key={item.id} {...item} />
                 ))}
             </div>
             {hasNext && (
@@ -33,4 +33,4 @@ const Grid: React.FC<GridProps> = ({ projects }) => {
     )
 }
 
-export default Grid
+export default ProjectsGrid

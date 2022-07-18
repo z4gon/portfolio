@@ -1,23 +1,33 @@
+import { useState } from 'react'
 import projects from '../../data/projects.json'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
-import { ProjectData } from '../../src/components/portfolio/data-models'
-import ProjectDetails from '../../src/components/portfolio/ProjectDetails'
+import FullScreenImageRenderer from '../../src/components/project/FullScreenImageRenderer'
+import ProjectDetails from '../../src/components/project/ProjectDetails'
+import { FullScreenImageContext } from '../../src/contexts/fullScreenImage'
+import { ProjectData } from '../../src/models/ProjectData'
 
 interface ProjectPageProps {
     project: ProjectData
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
+    const [fullScreenImageUrl, setFullScreenImageUrl] = useState(null)
+
     return (
-        <Page>
-            <Metatags
-                title={`${project.title} | Project`}
-                description={project.text}
-                imageUrl={project.metaImageUrl}
-            />
-            {project && <ProjectDetails {...project} />}
-        </Page>
+        <FullScreenImageContext.Provider
+            value={{ url: fullScreenImageUrl, setUrl: setFullScreenImageUrl }}
+        >
+            <Page>
+                <Metatags
+                    title={`${project.title} | Project`}
+                    description={project.text}
+                    imageUrl={project.metaImageUrl}
+                />
+                {project && <ProjectDetails {...project} />}
+            </Page>
+            <FullScreenImageRenderer />
+        </FullScreenImageContext.Provider>
     )
 }
 
