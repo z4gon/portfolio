@@ -3,6 +3,7 @@ import { ProjectData } from '../src/models/ProjectData'
 const projects: ProjectData[] = [
     {
         id: 'starcat',
+        date: '2022-7',
         thumbnailUrl: '/images/portfolio/starcat/thumbnail.gif',
         metaImageUrl: '/images/portfolio/starcat/meta.png',
         imagesUrls: [

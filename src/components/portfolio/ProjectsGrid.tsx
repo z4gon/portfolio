@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import styles from '../../../styles/components/portfolio/Grid.module.sass'
+import styles from '../../../styles/components/portfolio/ProjectsGrid.module.sass'
 import { ProjectData } from '../../models/ProjectData'
-
-import ProjectThumbnail from './ProjectThumbnail'
+import ProjectCard from './ProjectCard'
 
 const PAGE_SIZE = 5
 
@@ -20,8 +19,8 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
     return (
         <main className={styles.container}>
             <div className={styles.grid}>
-                {projects.slice(0, (page + 1) * PAGE_SIZE).map((item) => (
-                    <ProjectThumbnail key={item.id} {...item} />
+                {projects.slice(0, (page + 1) * PAGE_SIZE).map((project) => (
+                    <ProjectCard key={project.id} {...project} />
                 ))}
             </div>
             {hasNext && (

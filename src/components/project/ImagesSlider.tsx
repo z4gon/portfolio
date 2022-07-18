@@ -14,7 +14,7 @@ const sliderSettings: SliderSettings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     lazyLoad: 'ondemand',
-    // autoplay: true,
+    autoplay: true,
     responsive: [
         {
             breakpoint: 1000,
