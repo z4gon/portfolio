@@ -61,7 +61,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 ))}
             </div>
 
-            <h2 className={styles.sectionTitle}>Store Presence</h2>
+            {(appleAppStoreUrl || googlePlayStoreUrl) && (
+                <h2 className={styles.sectionTitle}>Store Presence</h2>
+            )}
             <StoreLinks
                 appleAppStoreUrl={appleAppStoreUrl}
                 googlePlayStoreUrl={googlePlayStoreUrl}
