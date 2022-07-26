@@ -21,7 +21,7 @@ const projects: ProjectData[] = [
         title: 'Water Shader',
         subtitle: 'With Shader Graph in Unity',
         description: [
-            'Water shader with dynamic configurations, which can simulate several environmenal effects.',
+            'Water shader with dynamic configurations, which can simulate several environmental effects.',
         ],
         bullets: [
             'Water depth effect using Scene Depth node (Camera Depth Buffer) and Screen Position node (Fragment Position)',
