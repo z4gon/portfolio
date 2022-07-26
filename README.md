@@ -14,14 +14,8 @@ yarn dev
 
 ```bash
 npm run build
+npm run export
 # or
 yarn build
-```
-
-## Serve Static HTML for dev purposes
-
-```bash
-npm run start:static
-# or
-yarn start:static
+yarn export
 ```
