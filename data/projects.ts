@@ -24,10 +24,10 @@ const projects: ProjectData[] = [
             'Water shader with dynamic configurations, which can simulate several environmenal effects.',
         ],
         bullets: [
-            'Water depth effect using Scene Depth (Camera Depth Buffer) node and Screen Position node (Fragment Position)',
-            'Refractions using Screen Color node to render distorted objects behind the water, using Normals generated from height from a gradient noise',
-            'Foam generated using the Scene Depth node and a gradient noise',
-            'Waves achieved with geometry displacement, using adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry',
+            'Water depth effect using Scene Depth node (Camera Depth Buffer) and Screen Position node (Fragment Position)',
+            'Refractions using Screen Color node to render distorted objects behind the water, using Normals generated from height from a gradient noise.',
+            'Foam generated using the Scene Depth node and a gradient noise.',
+            'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
         ],
         tags: ['Unity3D', 'VFX', 'Shader Graph'],
         links: [
