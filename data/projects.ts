@@ -32,7 +32,7 @@ const projects: ProjectData[] = [
         tags: ['Unity3D', 'VFX', 'Shader Graph'],
         links: [
             {
-                href: 'https://github.com/z4gon/shader-water-unity',
+                href: 'https://github.com/z4gon/water-shader-unity',
                 text: 'View on GitHub',
             },
         ],
