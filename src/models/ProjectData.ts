@@ -10,9 +10,9 @@ export interface ProjectData {
     title: string
     subtitle: string
     description: string[]
-    bullets: string[]
+    implementationDetails: string[]
     tags: string[]
-    links: ProjectLink[]
+    links?: ProjectLink[]
     gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string

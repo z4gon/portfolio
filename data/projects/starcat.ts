@@ -21,7 +21,7 @@ const data: ProjectData = {
         'A stylish 2D Side-Scroller with a cat character that shoots a weapon. The player has to destroy enemies and avoid obstacles.',
         'The game is developed in Unity3D engine.',
     ],
-    bullets: [
+    implementationDetails: [
         'Gameplay programming and behaviors for Unity with C#.',
         'Designing architecture for testability and reusability of systems.',
         'Dependency injection using Zenject.',

@@ -1,3 +1,5 @@
+import { PropsWithChildren } from 'react'
+import classNames from 'classnames'
 import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
@@ -5,80 +7,113 @@ import ImagesSlider from '../images-slider/ImagesSlider'
 import Tags from '../Tags'
 import StoreLinks from './StoreLinks'
 
+interface SectionProps extends PropsWithChildren {
+    title?: string
+    className?: string
+    mobileFullWidth?: boolean
+}
+
+const Section: React.FC<SectionProps> = ({
+    title,
+    children,
+    className,
+    mobileFullWidth,
+}) => (
+    <div
+        className={classNames(styles.sectionBody, className, {
+            [styles.mobileFullWidth]: mobileFullWidth,
+        })}
+    >
+        {title && <h2 className={styles.sectionTitle}>{title}</h2>}
+        {children}
+    </div>
+)
+
 interface ProjectDetailsProps extends ProjectData {}
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     date,
-    imagesUrls,
+    imagesUrls = [],
     title,
     subtitle,
-    description,
-    bullets,
-    tags,
-    links,
-    appleAppStoreUrl,
-    googlePlayStoreUrl,
-    youtubeVideoId,
+    description = [],
+    implementationDetails = [],
+    tags = [],
+    links = [],
+    gitHubUrl = '',
+    appleAppStoreUrl = '',
+    googlePlayStoreUrl = '',
+    youtubeVideoId = '',
 }) => {
     return (
         <main className={styles.container}>
             <ImagesSlider imagesUrls={imagesUrls} />
 
-            <section className={styles.information}>
+            <Section className={styles.information}>
                 <h2 className={styles.title}>
                     {title}
                     <span className={styles.date}>{date}</span>
                 </h2>
                 <span className={styles.subtitle}>{subtitle}</span>
                 <Tags tags={tags} />
+            </Section>
 
-                <div className={styles.descriptionItems}>
+            {description.length > 0 && (
+                <Section className={styles.descriptionItems}>
                     {description.map((paragraph, index) => (
                         <p className={styles.descriptionItem} key={index}>
                             {paragraph}
                         </p>
                     ))}
-                </div>
-            </section>
+                </Section>
+            )}
 
-            <h2 className={styles.sectionTitle}>Details</h2>
-            <ul className={styles.bullets}>
-                {bullets.map((bullet, index) => (
-                    <li className={styles.bullet} key={index}>
-                        {bullet}
-                    </li>
-                ))}
-            </ul>
+            {implementationDetails.length > 0 && (
+                <Section title="Implementation">
+                    <ul className={styles.implementationDetails}>
+                        {implementationDetails.map((bullet, index) => (
+                            <li className={styles.bullet} key={index}>
+                                {bullet}
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            )}
 
-            <h2 className={styles.sectionTitle}>Links</h2>
-            <div className={styles.externalLinks}>
-                {links.map((link, index) => (
-                    <ExternalLink
-                        key={index}
-                        href={link.href}
-                        text={link.text}
-                    />
-                ))}
-            </div>
+            {links.length > 0 && (
+                <Section title="Links" className={styles.externalLinks}>
+                    <div className={styles.externalLinks}>
+                        {links.map((link, index) => (
+                            <ExternalLink
+                                key={index}
+                                href={link.href}
+                                text={link.text}
+                            />
+                        ))}
+                    </div>
+                </Section>
+            )}
 
             {(appleAppStoreUrl || googlePlayStoreUrl) && (
-                <h2 className={styles.sectionTitle}>Store Presence</h2>
+                <Section title="Store Presence">
+                    <StoreLinks
+                        appleAppStoreUrl={appleAppStoreUrl}
+                        googlePlayStoreUrl={googlePlayStoreUrl}
+                    />
+                </Section>
             )}
-            <StoreLinks
-                appleAppStoreUrl={appleAppStoreUrl}
-                googlePlayStoreUrl={googlePlayStoreUrl}
-            />
 
-            <h2 className={styles.sectionTitle}>Video</h2>
             {youtubeVideoId && (
-                <div className={styles.video}>
-                    <iframe
-                        src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-                        title={title}
-                        frameBorder="0"
-                        allowFullScreen
-                    ></iframe>
-                </div>
+                <Section title="Video" mobileFullWidth>
+                    <div className={styles.video}>
+                        <iframe
+                            src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                            title={title}
+                            frameBorder="0"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </Section>
             )}
         </main>
     )
