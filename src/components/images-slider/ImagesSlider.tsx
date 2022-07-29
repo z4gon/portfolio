@@ -1,6 +1,6 @@
 import Slider, { Settings as SliderSettings } from 'react-slick'
 import styles from '../../../styles/components/images-slider/ImagesSlider.module.sass'
-import FullScreenImageButton from './FullScreenImageButton'
+import GoFullScreenButton from './GoFullScreenButton'
 
 interface ImagesSliderProps {
     imagesUrls: string[]
@@ -34,7 +34,7 @@ const sliderSettings: SliderSettings = {
 const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls }) => {
     return (
         <Slider className={styles.slider} {...sliderSettings}>
-            {imagesUrls.map((url) => (
+            {imagesUrls.map((url, idx) => (
                 <div key={url}>
                     <div
                         style={{
@@ -42,7 +42,10 @@ const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls }) => {
                         }}
                         className={styles.image}
                     >
-                        <FullScreenImageButton imageUrl={url} />
+                        <GoFullScreenButton
+                            allImagesUrls={imagesUrls}
+                            imageIdx={idx}
+                        />
                     </div>
                 </div>
             ))}
