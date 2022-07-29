@@ -9,40 +9,57 @@
     @media screen and ( max-width: 640px)
         padding: 100px 0px
 
-    .information
+    .header
         display: flex
-        flex-direction: column
-        justify-content: flex-start
+        flex-direction: row
+        justify-content: space-between
         align-items: flex-start
 
         padding: 20px 0
 
+        @media screen and ( max-width: 600px)
+            flex-direction: column
+            justify-content: flex-start
+
+            .gitHubLink
+                margin-top: 20px
+
         @media screen and ( max-width: 1000px)
             padding: 20px
 
-        .title
-            font-size: 1.8em
-            font-weight: 700
-            margin-bottom: 10px
+        .gitHubLink
+            .iconImage
+                margin-left: 6px
 
-            .date
-                font-weight: normal
-                font-size: 0.6em
+        .information
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
 
-                display: inline-block
-                background: var(--secondary)
+            .title
+                font-size: 1.8em
+                font-weight: 700
+                margin-bottom: 10px
 
-                border-radius: 15px
+                .date
+                    font-weight: normal
+                    font-size: 0.6em
 
-                padding: 4px 8px
-                margin-left: 10px
-                margin-top: -4px
+                    display: inline-block
+                    background: var(--secondary)
 
-        .subtitle
-            font-size: 1.2em
-            font-weight: 500
-            font-style: italic
-            margin-bottom: 10px
+                    border-radius: 15px
+
+                    padding: 4px 8px
+                    margin-left: 10px
+                    margin-top: -4px
+
+            .subtitle
+                font-size: 1.2em
+                font-weight: 500
+                font-style: italic
+                margin-bottom: 10px
 
     .sectionBody
         padding: 30px 0px 0px

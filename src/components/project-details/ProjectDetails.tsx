@@ -49,13 +49,33 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         <main className={styles.container}>
             <ImagesSlider imagesUrls={imagesUrls} />
 
-            <Section className={styles.information}>
-                <h2 className={styles.title}>
-                    {title}
-                    <span className={styles.date}>{date}</span>
-                </h2>
-                <span className={styles.subtitle}>{subtitle}</span>
-                <Tags tags={tags} />
+            <Section className={styles.header}>
+                <div className={styles.information}>
+                    <h2 className={styles.title}>
+                        {title}
+                        <span className={styles.date}>{date}</span>
+                    </h2>
+                    <span className={styles.subtitle}>{subtitle}</span>
+                    <Tags tags={tags} />
+                </div>
+                {gitHubUrl && (
+                    <ExternalLink
+                        href={gitHubUrl}
+                        className={styles.gitHubLink}
+                        icon={
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                className={styles.iconImage}
+                                src="/images/GitHub-Mark-64px.png"
+                                alt="GitHub Logo"
+                                height={20}
+                                width={20}
+                            />
+                        }
+                    >
+                        View on GitHub
+                    </ExternalLink>
+                )}
             </Section>
 
             {description.length > 0 && (
@@ -84,11 +104,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 <Section title="Links" className={styles.externalLinks}>
                     <div className={styles.externalLinks}>
                         {links.map((link, index) => (
-                            <ExternalLink
-                                key={index}
-                                href={link.href}
-                                text={link.text}
-                            />
+                            <ExternalLink key={index} href={link.href}>
+                                {link.text}
+                            </ExternalLink>
                         ))}
                     </div>
                 </Section>
