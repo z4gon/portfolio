@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import styles from '../../../styles/components/project/FullScreenImageRenderer.module.sass'
+import styles from '../../../styles/components/images-slider/FullScreenImageRenderer.module.sass'
 import { FullScreenImageContext } from '../../contexts/fullScreenImage'
 
 const FullScreenImageRenderer: React.FC<{}> = () => {

@@ -1,5 +1,5 @@
-import styles from '../../../styles/components/project/ExternalLink.module.sass'
-import { ProjectLink } from '../../models/ProjectLink'
+import styles from '../../styles/components/ExternalLink.module.sass'
+import { ProjectLink } from '../models/ProjectLink'
 
 interface ExternalLinkProps extends ProjectLink {}
 

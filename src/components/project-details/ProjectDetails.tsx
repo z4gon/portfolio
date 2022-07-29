@@ -1,9 +1,9 @@
-import styles from '../../../styles/components/project/ProjectDetails.module.sass'
+import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
-import ExternalLink from './ExternalLink'
-import ImagesSlider from './ImagesSlider'
+import ExternalLink from '../ExternalLink'
+import ImagesSlider from '../images-slider/ImagesSlider'
+import Tags from '../Tags'
 import StoreLinks from './StoreLinks'
-import Tags from './Tags'
 
 interface ProjectDetailsProps extends ProjectData {}
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '../../../styles/components/portfolio/ProjectsGrid.module.sass'
+import styles from '../../../styles/components/projects-grid/ProjectsGrid.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ProjectCard from './ProjectCard'
 

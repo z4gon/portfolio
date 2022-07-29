@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import styles from '../../../styles/components/portfolio/ProjectCard.module.sass'
+import styles from '../../../styles/components/projects-grid/ProjectCard.module.sass'
 import { ProjectData } from '../../models/ProjectData'
-import Tags from '../project/Tags'
+import Tags from '../Tags'
 
 interface ProjectCardProps extends ProjectData {}
 

@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/project/Tags.module.sass'
+import styles from '../../styles/components/Tags.module.sass'
 
 interface TagsProps {
     tags: string[]
