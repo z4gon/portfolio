@@ -22,6 +22,22 @@ const FullScreenCarousel: React.FC<{}> = () => {
                     backgroundImage: `url(${urls[currentIdx]})`,
                 }}
                 className={styles.image}
+                // @ts-ignore
+                tabIndex="0" // hack to make div listen to on key down
+                onKeyDown={(event) => {
+                    // on next
+                    if (event.key === 'ArrowRight') {
+                        nextUrl()
+                    }
+                    // on previous
+                    if (event.key === 'ArrowLeft') {
+                        previousUrl()
+                    }
+                    // on esc
+                    if (event.key === 'Escape') {
+                        reset()
+                    }
+                }}
             >
                 <button className={styles.closeButton} onClick={() => reset()}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
