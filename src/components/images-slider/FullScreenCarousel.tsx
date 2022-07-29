@@ -7,6 +7,8 @@ const FullScreenCarousel: React.FC<{}> = () => {
         urls = [],
         currentIdx,
         reset,
+        nextUrl,
+        previousUrl,
     } = useContext(FullScreenCarouselContext)
 
     if (urls.length === 0) {
@@ -24,6 +26,22 @@ const FullScreenCarousel: React.FC<{}> = () => {
                 <button className={styles.closeButton} onClick={() => reset()}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/images/ui/close-icon.png" alt="Close" />
+                </button>
+
+                <button className={styles.nextButton} onClick={() => nextUrl()}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/ui/chevron-right-icon.png" alt="Next" />
+                </button>
+
+                <button
+                    className={styles.prevButton}
+                    onClick={() => previousUrl()}
+                >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src="/images/ui/chevron-right-icon.png"
+                        alt="Previous"
+                    />
                 </button>
             </div>
         </div>
