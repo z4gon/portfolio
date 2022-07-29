@@ -1,10 +1,8 @@
-import { useState } from 'react'
 import projects from '../../data/projects'
-import FullScreenImageRenderer from '../../src/components/images-slider/FullScreenImageRenderer'
+import WithFullScreenCarousel from '../../src/components/images-slider/WithFullScreenCarousel'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
 import ProjectDetails from '../../src/components/project-details/ProjectDetails'
-import { FullScreenImageContext } from '../../src/contexts/fullScreenImage'
 import { ProjectData } from '../../src/models/ProjectData'
 
 interface ProjectPageProps {
@@ -12,16 +10,12 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
-    const [fullScreenImageUrl, setFullScreenImageUrl] = useState(null)
-
     if (!project) {
         return null
     }
 
     return (
-        <FullScreenImageContext.Provider
-            value={{ url: fullScreenImageUrl, setUrl: setFullScreenImageUrl }}
-        >
+        <WithFullScreenCarousel>
             <Page>
                 <Metatags
                     title={`${project.title} | Project`}
@@ -30,8 +24,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 />
                 <ProjectDetails {...project} />
             </Page>
-            <FullScreenImageRenderer />
-        </FullScreenImageContext.Provider>
+        </WithFullScreenCarousel>
     )
 }
 
