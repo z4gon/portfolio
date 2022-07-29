@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import styles from '../../../styles/components/project/FullScreenImageButton.module.sass'
+import styles from '../../../styles/components/images-slider/FullScreenImageButton.module.sass'
 import { FullScreenImageContext } from '../../contexts/fullScreenImage'
 
 interface FullScreenImageButtonProps {

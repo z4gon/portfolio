@@ -1,0 +1,115 @@
+.container
+    padding: 100px 60px 0 60px
+
+    width: 100%
+    max-width: 1000px
+
+    overflow: hidden
+
+    @media screen and ( max-width: 640px)
+        padding: 100px 0px
+
+    .header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+
+        padding: 20px 0
+
+        @media screen and ( max-width: 600px)
+            flex-direction: column
+            justify-content: flex-start
+
+            .gitHubLink
+                margin-top: 20px
+
+        @media screen and ( max-width: 1000px)
+            padding: 20px
+
+        .gitHubLink
+            .iconImage
+                margin-left: 6px
+
+        .information
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            .title
+                font-size: 1.8em
+                font-weight: 700
+                margin-bottom: 10px
+
+                .date
+                    font-weight: normal
+                    font-size: 0.6em
+
+                    display: inline-block
+                    background: var(--secondary)
+
+                    border-radius: 15px
+
+                    padding: 4px 8px
+                    margin-left: 10px
+                    margin-top: -4px
+
+            .subtitle
+                font-size: 1.2em
+                font-weight: 500
+                font-style: italic
+                margin-bottom: 10px
+
+    .sectionBody
+        padding: 30px 0px 0px
+
+        @media screen and ( max-width: 1000px)
+            padding: 30px 20px 0px
+
+            &.mobileFullWidth
+                padding: 10px 0px
+
+                .sectionTitle
+                    padding: 0 20px
+
+        .sectionTitle
+            font-size: 1.3em
+            margin-bottom: 20px
+
+    .descriptionItems
+        .descriptionItem
+            font-size: 1em
+            line-height: 1.4em
+            font-weight: 500
+
+            margin-top: 8px
+
+            max-width: 900px
+
+    .implementationDetails
+        padding: 0 30px
+
+        .bullet
+            line-height: 1.5em
+
+    .externalLinks
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        width: 100%
+
+    .video
+        height: 600px
+        width: 100%
+        margin-bottom: 20px
+
+        @media screen and ( max-width: 640px)
+            height: 30vh
+
+        iframe
+            width: 100%
+            height: 100%
+
+            @media screen and ( min-width: 1000px)
+                border-radius: 15px

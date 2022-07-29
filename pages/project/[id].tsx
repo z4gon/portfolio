@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import projects from '../../data/projects'
+import FullScreenImageRenderer from '../../src/components/images-slider/FullScreenImageRenderer'
 import Metatags from '../../src/components/Metatags'
 import Page from '../../src/components/page/Page'
-import FullScreenImageRenderer from '../../src/components/project/FullScreenImageRenderer'
-import ProjectDetails from '../../src/components/project/ProjectDetails'
+import ProjectDetails from '../../src/components/project-details/ProjectDetails'
 import { FullScreenImageContext } from '../../src/contexts/fullScreenImage'
 import { ProjectData } from '../../src/models/ProjectData'
 
