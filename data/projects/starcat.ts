@@ -13,7 +13,7 @@ const data: ProjectData = {
         '/images/portfolio/starcat/screen-5.png',
         '/images/portfolio/starcat/screen-6.png',
     ],
-    youtubeVideoId: '3EQ1cwSD_BY',
+    youtubeVideoIds: ['3EQ1cwSD_BY'],
     title: 'The Star Cat',
     subtitle: 'Published Mobile Game for iOS & Android',
     description: [

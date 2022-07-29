@@ -1,4 +1,4 @@
-import { ProjectLink } from './ProjectLink'
+import { LinkData } from './LinkData'
 
 export interface ProjectData {
     id: string
@@ -6,13 +6,13 @@ export interface ProjectData {
     thumbnailUrl: string
     metaImageUrl: string
     imagesUrls: string[]
-    youtubeVideoId?: string
+    youtubeVideoIds?: string[]
     title: string
     subtitle: string
     description: string[]
     implementationDetails: string[]
     tags: string[]
-    links?: ProjectLink[]
+    links?: LinkData[]
     gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string

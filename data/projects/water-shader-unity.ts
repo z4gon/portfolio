@@ -16,7 +16,7 @@ const data: ProjectData = {
         '/images/portfolio/water-shader-unity/water_depth.gif',
         '/images/portfolio/water-shader-unity/water_colors.gif',
     ],
-    youtubeVideoId: '6VaHBkttvSE',
+    youtubeVideoIds: ['ag5X-ObzOY8', '0AfmcD5DlXs', 'S920GVHesBM'],
     title: 'Water Shader',
     subtitle: 'With Shader Graph in Unity',
     description: [
