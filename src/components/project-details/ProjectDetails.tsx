@@ -43,7 +43,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     gitHubUrl = '',
     appleAppStoreUrl = '',
     googlePlayStoreUrl = '',
-    youtubeVideoId = '',
+    youtubeVideoIds = [],
 }) => {
     return (
         <main className={styles.container}>
@@ -121,16 +121,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 </Section>
             )}
 
-            {youtubeVideoId && (
-                <Section title="Video" mobileFullWidth>
-                    <div className={styles.video}>
-                        <iframe
-                            src={`https://www.youtube.com/embed/${youtubeVideoId}`}
-                            title={title}
-                            frameBorder="0"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
+            {youtubeVideoIds.length > 0 && (
+                <Section title="Videos" mobileFullWidth>
+                    {youtubeVideoIds.map((videoId) => (
+                        <div key={videoId} className={styles.video}>
+                            <iframe
+                                src={`https://www.youtube.com/embed/${videoId}`}
+                                title={title}
+                                frameBorder="0"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    ))}
                 </Section>
             )}
         </main>
