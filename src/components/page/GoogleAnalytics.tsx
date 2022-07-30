@@ -1,4 +1,4 @@
-import Script from 'next/Script'
+import Script from 'next/script'
 
 const GoogleAnalytics: React.FC<{}> = () => {
     return (
