@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
     return (
@@ -21,6 +22,21 @@ export default function Document() {
                     type="text/css"
                     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
                 />
+
+                {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-NPBT98N1FD"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-NPBT98N1FD');
+                    `}
+                </Script>
             </Head>
             <body>
                 <Main />
