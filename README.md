@@ -1,6 +1,6 @@
 ### Portfolio
 
-[Portfolio](https://z4gon.github.io)
+Live: [Portfolio](https://z4gon.github.io)
 
 ## Development
 
