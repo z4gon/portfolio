@@ -20,10 +20,10 @@ const data: ProjectData = {
     title: 'Fire VFX',
     subtitle: 'With VFX Graph in Unity',
     description: [
-        'Fire VFX with randomness at spawn, flipbook animation, wind and drag forces, configurable color and sparks.',
+        'Fire VFX with randomness at spawn, flip book animation, wind and drag forces, configurable color and sparks.',
     ],
     implementationDetails: [
-        'Flipbook animation using a sprite sheet, a flipbook player and normal maps',
+        'Flip book animation using a sprite sheet, a flip book player and normal maps',
         'Particles with random velocity, angle, lifetime and evolving size over life.',
         'Quads always facing the active camera.',
         'Wind and Drag forces applied over the particles.',

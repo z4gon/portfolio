@@ -33,7 +33,7 @@ const data: ProjectData = {
         'Spawning particles over distance, so the VFX leaves a trail of debris.',
         'Decals to leave a burning effect on the ground/geometry.',
         'Programming to snap the VFX to the geometry it goes over, to make it adjust dynamically to it.',
-        'Debris with random velocities, gravity and collission with plane.',
+        'Debris with random velocities, gravity and collision with plane.',
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
     tags: ['Unity3D', 'VFX', 'VFX Graph'],
