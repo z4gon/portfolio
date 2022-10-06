@@ -2,34 +2,7 @@
     text-decoration: none
     color: var(--text-color)
 
-    flex-basis: 24%
-
-    margin-bottom: 10px
-
-    @media screen and (max-width: 1200px)
-        flex-basis: 32%
-
-    @media screen and (max-width: 768px)
-        flex-basis: 49%
-
-    @media screen and (max-width: 600px)
-        flex-basis: 100%
-
     .card
-        @media screen and (min-width: 600px)
-            min-height: 34rem
-
-        // @media screen and (min-width: 768px)
-        //     min-height: 34rem
-
-        @media screen and (min-width: 1000px)
-            min-height: 30rem
-
-        @media screen and (min-width: 1200px)
-            min-height: 28rem
-
-        margin-right: 0.8rem
-
         cursor: pointer
 
         border-radius: 10px
@@ -40,6 +13,9 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 
         transition: transform 0.2s ease, box-shadow 0.2s ease
+
+        margin: 0.5rem
+        height: 97%
 
         &:hover
             transform: translateY(-10px)
