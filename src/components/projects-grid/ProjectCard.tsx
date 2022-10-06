@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from '../../../styles/components/projects-grid/ProjectCard.module.sass'
 import { ProjectData } from '../../models/ProjectData'
-import Tags from '../Tags'
 
 interface ProjectCardProps extends ProjectData {}
 
@@ -26,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         </span>
                         <br />
                         <br />
-                        <Tags tags={props.tags} />
+                        {/* <Tags tags={props.tags} /> */}
                     </div>
                 </article>
             </a>
