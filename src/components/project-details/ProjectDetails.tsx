@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
+import GitHubIcon from '../icons/GitHubIcon'
 import ImagesSlider from '../images-slider/ImagesSlider'
 import Tags from '../Tags'
 import StoreLinks from './StoreLinks'
@@ -62,16 +63,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <ExternalLink
                         href={gitHubUrl}
                         className={styles.gitHubLink}
-                        icon={
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                                className={styles.iconImage}
-                                src="/images/github.svg"
-                                alt="GitHub Logo"
-                                height={15}
-                                width={15}
-                            />
-                        }
+                        icon={<GitHubIcon className={''} />}
                     >
                         View on GitHub
                     </ExternalLink>

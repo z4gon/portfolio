@@ -24,7 +24,7 @@ const ExternalLink: React.FC<PropsWithChildren<ExternalLinkProps>> = ({
             {children}
             {icon || (
                 <svg
-                    className={styles.icon}
+                    className={styles.iconSvg}
                     fill="#000000"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 30 30"
