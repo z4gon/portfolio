@@ -25,11 +25,11 @@ const NavBarIcon: React.FC<NavBarIconProps> = ({ href, iconUrl }) => {
 const icons = [
     {
         href: 'https://linkedin.com/in/gonzacn',
-        iconUrl: '/images/In-Blue-72.png',
+        iconUrl: '/images/linkedin.svg',
     },
     {
         href: 'https://github.com/z4gon',
-        iconUrl: '/images/GitHub-Mark-64px.png',
+        iconUrl: '/images/github.svg',
     },
 ]
 

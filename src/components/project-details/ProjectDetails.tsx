@@ -66,10 +66,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                                 className={styles.iconImage}
-                                src="/images/GitHub-Mark-64px.png"
+                                src="/images/github.svg"
                                 alt="GitHub Logo"
-                                height={20}
-                                width={20}
+                                height={15}
+                                width={15}
                             />
                         }
                     >
