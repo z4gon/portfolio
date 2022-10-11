@@ -50,68 +50,70 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         <main className={styles.container}>
             <ImagesSlider imagesUrls={imagesUrls} />
 
-            <Section className={styles.header}>
-                <div className={styles.information}>
-                    <h2 className={styles.title}>
-                        {title}
-                        <span className={styles.date}>{date}</span>
-                    </h2>
-                    <span className={styles.subtitle}>{subtitle}</span>
-                    <Tags tags={tags} />
-                </div>
-                {gitHubUrl && (
-                    <ExternalLink
-                        href={gitHubUrl}
-                        className={styles.gitHubLink}
-                        icon={<GitHubIcon className={''} />}
-                    >
-                        View on GitHub
-                    </ExternalLink>
-                )}
-            </Section>
-
-            {description.length > 0 && (
-                <Section className={styles.descriptionItems}>
-                    {description.map((paragraph, index) => (
-                        <p className={styles.descriptionItem} key={index}>
-                            {paragraph}
-                        </p>
-                    ))}
-                </Section>
-            )}
-
-            {implementationDetails.length > 0 && (
-                <Section title="Implementation">
-                    <ul className={styles.implementationDetails}>
-                        {implementationDetails.map((bullet, index) => (
-                            <li className={styles.bullet} key={index}>
-                                {bullet}
-                            </li>
-                        ))}
-                    </ul>
-                </Section>
-            )}
-
-            {links.length > 0 && (
-                <Section title="Links" className={styles.externalLinks}>
-                    <div className={styles.externalLinks}>
-                        {links.map((link, index) => (
-                            <ExternalLink key={index} href={link.href}>
-                                {link.text}
-                            </ExternalLink>
-                        ))}
+            <div className={styles.card}>
+                <Section className={styles.header}>
+                    <div className={styles.information}>
+                        <h2 className={styles.title}>
+                            {title}
+                            <span className={styles.date}>{date}</span>
+                        </h2>
+                        <span className={styles.subtitle}>{subtitle}</span>
+                        <Tags tags={tags} />
                     </div>
+                    {gitHubUrl && (
+                        <ExternalLink
+                            href={gitHubUrl}
+                            className={styles.gitHubLink}
+                            icon={<GitHubIcon className={''} />}
+                        >
+                            View on GitHub
+                        </ExternalLink>
+                    )}
                 </Section>
-            )}
 
-            {(appleAppStoreUrl || googlePlayStoreUrl) && (
-                <Section title="Store Presence">
-                    <StoreLinks
-                        appleAppStoreUrl={appleAppStoreUrl}
-                        googlePlayStoreUrl={googlePlayStoreUrl}
-                    />
-                </Section>
-            )}
+                {description.length > 0 && (
+                    <Section className={styles.descriptionItems}>
+                        {description.map((paragraph, index) => (
+                            <p className={styles.descriptionItem} key={index}>
+                                {paragraph}
+                            </p>
+                        ))}
+                    </Section>
+                )}
+
+                {implementationDetails.length > 0 && (
+                    <Section title="Implementation">
+                        <ul className={styles.implementationDetails}>
+                            {implementationDetails.map((bullet, index) => (
+                                <li className={styles.bullet} key={index}>
+                                    {bullet}
+                                </li>
+                            ))}
+                        </ul>
+                    </Section>
+                )}
+
+                {links.length > 0 && (
+                    <Section title="Links" className={styles.externalLinks}>
+                        <div className={styles.externalLinks}>
+                            {links.map((link, index) => (
+                                <ExternalLink key={index} href={link.href}>
+                                    {link.text}
+                                </ExternalLink>
+                            ))}
+                        </div>
+                    </Section>
+                )}
+
+                {(appleAppStoreUrl || googlePlayStoreUrl) && (
+                    <Section title="Store Presence">
+                        <StoreLinks
+                            appleAppStoreUrl={appleAppStoreUrl}
+                            googlePlayStoreUrl={googlePlayStoreUrl}
+                        />
+                    </Section>
+                )}
+            </div>
 
             {youtubeVideoIds.length > 0 && (
                 <Section title="Videos" mobileFullWidth>
