@@ -7,30 +7,34 @@
 
     width: auto
 
-    color: var(--text-color)
+    color: var(--button-text-color)
 
-    border: solid 1px var(--border)
+    border: solid 1px var(--button-border)
     border-radius: 5px
     padding: 4px 8px
 
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out
 
     margin-bottom: 10px
 
     & + .externalLink
         margin-left: 10px
 
-    .icon
+    svg
+        margin-left: 10px
         height: 20px
         width: 20px
-        min-width: 20px
-        min-height: 20px
 
-        margin-left: 10px
-
-        fill: var(--text-color)
-
-        transition: fill 0.2s ease-in-out
+        path
+            fill: var(--button-text-color)
+            transition: fill 0.2s ease-in-out
 
     &:hover
-        background-color: var(--tag-secondary)
+        border: solid 1px var(--button-bg-highlight)
+
+        color: var(--button-text-color-highlight)
+        background-color: var(--button-bg-highlight)
+
+        svg
+            path
+                fill: var(--button-text-color-highlight)

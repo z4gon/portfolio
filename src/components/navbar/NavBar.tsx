@@ -1,23 +1,18 @@
 import Link from 'next/link'
 
 import styles from '../../../styles/components/navbar/NavBar.module.sass'
+import GitHubIcon from '../icons/GitHubIcon'
+import LinkedInIcon from '../icons/LinkedInIcon'
 
 interface NavBarIconProps {
-    iconUrl: string
+    icon: React.ReactNode
     href: string
 }
 
-const NavBarIcon: React.FC<NavBarIconProps> = ({ href, iconUrl }) => {
+const NavBarIcon: React.FC<NavBarIconProps> = ({ href, icon }) => {
     return (
         <a href={href} rel="noopener noreferrer" target="_blank">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-                className={styles.iconImage}
-                src={iconUrl}
-                alt={href}
-                height={30}
-                width={30}
-            />
+            {icon}
         </a>
     )
 }
@@ -25,11 +20,11 @@ const NavBarIcon: React.FC<NavBarIconProps> = ({ href, iconUrl }) => {
 const icons = [
     {
         href: 'https://linkedin.com/in/gonzacn',
-        iconUrl: '/images/In-Blue-72.png',
+        icon: <LinkedInIcon className={styles.iconSvg} />,
     },
     {
         href: 'https://github.com/z4gon',
-        iconUrl: '/images/GitHub-Mark-64px.png',
+        icon: <GitHubIcon className={styles.iconSvg} />,
     },
 ]
 

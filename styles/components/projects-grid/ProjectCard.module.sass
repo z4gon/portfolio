@@ -6,14 +6,16 @@
         cursor: pointer
         overflow: hidden
 
-        background: var(--bg)
-        border: solid 1px var(--border-light)
+        background: var(--card-bg)
+        border: solid 2px var(--bg)
 
         margin: 0.5rem
         height: 95%
 
+        transition: border 0.2s ease-in-out
+
         &:hover
-            border: solid 1px var(--border)
+            border: solid 2px var(--border-highlight)
 
         .thumbnail
             background-size: cover
@@ -43,7 +45,8 @@
                     font-weight: normal
                     font-size: 0.8em
 
-                    background: var(--tag-secondary)
+                    background: var(--tag-secondary-bg)
+                    color: var(--tag-secondary-text-color)
                     border-radius: 15px
 
                     padding: 4px 8px
