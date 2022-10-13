@@ -1,20 +1,21 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const data: ProjectData = {
+const data: ProjectData = generateProjectData({
     id: 'fire-vfx-unity',
     date: '2022-9',
-    thumbnailUrl: '/images/portfolio/fire-vfx-unity/thumbnail.gif',
-    metaImageUrl: '/images/portfolio/fire-vfx-unity/thumbnail.gif',
-    imagesUrls: [
-        '/images/portfolio/fire-vfx-unity/thumbnail.gif',
-        '/images/portfolio/fire-vfx-unity/sparks.gif',
-        '/images/portfolio/fire-vfx-unity/lighting.gif',
-        '/images/portfolio/fire-vfx-unity/color.gif',
-        '/images/portfolio/fire-vfx-unity/with-normals.gif',
-        '/images/portfolio/fire-vfx-unity/flipbook-animation.gif',
-        '/images/portfolio/fire-vfx-unity/size-over-life-wind-and-drag-forces.gif',
-        '/images/portfolio/fire-vfx-unity/face-camera.gif',
-        '/images/portfolio/fire-vfx-unity/spawn-randomness.gif',
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'thumbnail.gif',
+        'sparks.gif',
+        'lighting.gif',
+        'color.gif',
+        'with-normals.gif',
+        'flipbook-animation.gif',
+        'size-over-life-wind-and-drag-forces.gif',
+        'face-camera.gif',
+        'spawn-randomness.gif',
     ],
     youtubeVideoIds: ['mn22mVaAxvg'],
     title: 'Fire VFX',
@@ -31,8 +32,7 @@ const data: ProjectData = {
         'Lighting using a Point Light.',
         'Sparks effect implemented with a secondary particle system.',
     ],
-    tags: ['Unity3D', 'VFX', 'VFX Graph'],
-    gitHubUrl: 'https://github.com/z4gon/fire-vfx-unity',
-}
+    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D],
+})
 
 export default data
