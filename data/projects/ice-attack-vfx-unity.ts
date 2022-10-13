@@ -1,20 +1,21 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const data: ProjectData = {
+const data: ProjectData = generateProjectData({
     id: 'ice-attack-vfx-unity',
     date: '2022-9',
-    thumbnailUrl: '/images/portfolio/ice-attack-vfx-unity/thumbnail.gif',
-    metaImageUrl: '/images/portfolio/ice-attack-vfx-unity/thumbnail.gif',
-    imagesUrls: [
-        '/images/portfolio/ice-attack-vfx-unity/thumbnail.gif',
-        '/images/portfolio/ice-attack-vfx-unity/8-waves.gif',
-        '/images/portfolio/ice-attack-vfx-unity/7-snow-spike-vfx.gif',
-        '/images/portfolio/ice-attack-vfx-unity/6-snow-mesh.gif',
-        '/images/portfolio/ice-attack-vfx-unity/5-spikes.gif',
-        '/images/portfolio/ice-attack-vfx-unity/4-spike-test.gif',
-        '/images/portfolio/ice-attack-vfx-unity/3-dissolve-fresnel.gif',
-        '/images/portfolio/ice-attack-vfx-unity/2-spike-mesh.gif',
-        '/images/portfolio/ice-attack-vfx-unity/1-ground-textures.gif',
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'thumbnail.gif',
+        '8-waves.gif',
+        '7-snow-spike-vfx.gif',
+        '6-snow-mesh.gif',
+        '5-spikes.gif',
+        '4-spike-test.gif',
+        '3-dissolve-fresnel.gif',
+        '2-spike-mesh.gif',
+        '1-ground-textures.gif',
     ],
     youtubeVideoIds: ['h4akS-e__9E'],
     title: 'Ice Attack VFX',
@@ -32,8 +33,7 @@ const data: ProjectData = {
         'Dissolve and Fresnel shader implemented in Shader Graph, and integrated into the particles of VFX Graph utilizing the option for support for VFX Graph',
         '3D Modeling in Blender.',
     ],
-    tags: ['Unity3D', 'VFX', 'VFX Graph', 'Shader Graph'],
-    gitHubUrl: 'https://github.com/z4gon/ice-attack-vfx-unity',
-}
+    tags: [Tag.VFX, Tag.VFXGraph, Tag.ShaderGraph, Tag.Unity3D],
+})
 
 export default data
