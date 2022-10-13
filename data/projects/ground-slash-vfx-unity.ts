@@ -1,25 +1,26 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const data: ProjectData = {
+const data: ProjectData = generateProjectData({
     id: 'ground-slash-vfx-unity',
     date: '2022-9',
-    thumbnailUrl: '/images/portfolio/ground-slash-vfx-unity/thumbnail.gif',
-    metaImageUrl: '/images/portfolio/ground-slash-vfx-unity/thumbnail.gif',
-    imagesUrls: [
-        '/images/portfolio/ground-slash-vfx-unity/thumbnail.gif',
-        '/images/portfolio/ground-slash-vfx-unity/13-finished.gif',
-        '/images/portfolio/ground-slash-vfx-unity/12-spawn-debris-gravity.gif',
-        '/images/portfolio/ground-slash-vfx-unity/11-debris-cell-fracture.gif',
-        '/images/portfolio/ground-slash-vfx-unity/10-ground-shooter-script.gif',
-        '/images/portfolio/ground-slash-vfx-unity/9-first-person-character-controller.gif',
-        '/images/portfolio/ground-slash-vfx-unity/8-decals.gif',
-        '/images/portfolio/ground-slash-vfx-unity/7-spawn-trail.gif',
-        '/images/portfolio/ground-slash-vfx-unity/6-spawn-over-distance.gif',
-        '/images/portfolio/ground-slash-vfx-unity/5-gradient-fade.gif',
-        '/images/portfolio/ground-slash-vfx-unity/4-mesh-output.gif',
-        '/images/portfolio/ground-slash-vfx-unity/3-slash-model.gif',
-        '/images/portfolio/ground-slash-vfx-unity/2-uv-maps.gif',
-        '/images/portfolio/ground-slash-vfx-unity/1-model-uv-map.gif',
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'thumbnail.gif',
+        '13-finished.gif',
+        '12-spawn-debris-gravity.gif',
+        '11-debris-cell-fracture.gif',
+        '10-ground-shooter-script.gif',
+        '9-first-person-character-controller.gif',
+        '8-decals.gif',
+        '7-spawn-trail.gif',
+        '6-spawn-over-distance.gif',
+        '5-gradient-fade.gif',
+        '4-mesh-output.gif',
+        '3-slash-model.gif',
+        '2-uv-maps.gif',
+        '1-model-uv-map.gif',
     ],
     youtubeVideoIds: ['pybsA5K_S-c'],
     title: 'Ground Slash VFX',
@@ -36,8 +37,7 @@ const data: ProjectData = {
         'Debris with random velocities, gravity and collision with plane.',
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
-    tags: ['Unity3D', 'VFX', 'VFX Graph'],
-    gitHubUrl: 'https://github.com/z4gon/ground-slash-vfx-unity',
-}
+    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D],
+})
 
 export default data

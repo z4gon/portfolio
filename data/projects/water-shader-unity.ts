@@ -1,20 +1,21 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const data: ProjectData = {
+const data: ProjectData = generateProjectData({
     id: 'water-shader-unity',
     date: '2022-7',
-    thumbnailUrl: '/images/portfolio/water-shader-unity/thumbnail.gif',
-    metaImageUrl: '/images/portfolio/water-shader-unity/thumbnail.gif',
-    imagesUrls: [
-        '/images/portfolio/water-shader-unity/cliff.gif',
-        '/images/portfolio/water-shader-unity/lake.gif',
-        '/images/portfolio/water-shader-unity/water_waves.gif',
-        '/images/portfolio/water-shader-unity/water_depth_colored.gif',
-        '/images/portfolio/water-shader-unity/water_depth_refracted.gif',
-        '/images/portfolio/water-shader-unity/water_refraction.gif',
-        '/images/portfolio/water-shader-unity/water_foam.gif',
-        '/images/portfolio/water-shader-unity/water_depth.gif',
-        '/images/portfolio/water-shader-unity/water_colors.gif',
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'cliff.gif',
+        'lake.gif',
+        'water_waves.gif',
+        'water_depth_colored.gif',
+        'water_depth_refracted.gif',
+        'water_refraction.gif',
+        'water_foam.gif',
+        'water_depth.gif',
+        'water_colors.gif',
     ],
     youtubeVideoIds: ['ag5X-ObzOY8', '0AfmcD5DlXs', 'S920GVHesBM'],
     title: 'Water Shader',
@@ -28,8 +29,7 @@ const data: ProjectData = {
         'Foam generated using the Scene Depth node and a gradient noise.',
         'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
     ],
-    tags: ['Unity3D', 'VFX', 'Shader Graph'],
-    gitHubUrl: 'https://github.com/z4gon/water-shader-unity',
-}
+    tags: [Tag.VFX, Tag.ShaderGraph, Tag.Unity3D],
+})
 
 export default data

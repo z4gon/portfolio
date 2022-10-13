@@ -1,17 +1,18 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const data: ProjectData = {
+const data: ProjectData = generateProjectData({
     id: 'starcat',
     date: '2022-7',
-    thumbnailUrl: '/images/portfolio/starcat/thumbnail.gif',
-    metaImageUrl: '/images/portfolio/starcat/meta.png',
-    imagesUrls: [
-        '/images/portfolio/starcat/screen-1.jpg',
-        '/images/portfolio/starcat/screen-2.png',
-        '/images/portfolio/starcat/screen-3.png',
-        '/images/portfolio/starcat/screen-4.png',
-        '/images/portfolio/starcat/screen-5.png',
-        '/images/portfolio/starcat/screen-6.png',
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'screen-1.jpg',
+        'screen-2.png',
+        'screen-3.png',
+        'screen-4.png',
+        'screen-5.png',
+        'screen-6.png',
     ],
     youtubeVideoIds: ['3EQ1cwSD_BY'],
     title: 'The Star Cat',
@@ -38,7 +39,7 @@ const data: ProjectData = {
         'AssetBundles and LoadAsync for memory usage optimization.',
         'ScriptableObjects.',
     ],
-    tags: ['Unity3D', 'C#', 'iOS', 'Android', 'Mobile Game'],
+    tags: [Tag.Unity3D, Tag.CSharp, Tag.iOS, Tag.Android, Tag.MobileGame],
     links: [
         {
             href: 'https://nochegames.com',
@@ -48,6 +49,6 @@ const data: ProjectData = {
     appleAppStoreUrl: 'https://apps.apple.com/us/app/the-star-cat/id1544668944',
     googlePlayStoreUrl:
         'https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat',
-}
+})
 
 export default data

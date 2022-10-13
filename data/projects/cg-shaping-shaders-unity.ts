@@ -1,32 +1,28 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const id = 'cg-shaping-shaders-unity'
-const imagesFolder = `/images/portfolio/${id}`
-
-const pictures: string[] = [
-    'thumbnail',
-    '19',
-    '17',
-    '16b',
-    '15',
-    '14',
-    '13',
-    '12',
-    '11b',
-    '10',
-    '9',
-    '8c',
-    '7',
-    '6b',
-    '4',
-]
-
-const data: ProjectData = {
-    id,
+const data: ProjectData = generateProjectData({
+    id: 'cg-shaping-shaders-unity',
     date: '2022-10',
-    thumbnailUrl: `${imagesFolder}/thumbnail.gif`,
-    metaImageUrl: `${imagesFolder}/thumbnail.gif`,
-    imagesUrls: pictures.map((name) => `${imagesFolder}/${name}.gif`),
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: [
+        'thumbnail.gif',
+        '19.gif',
+        '17.gif',
+        '16b.gif',
+        '15.gif',
+        '14.gif',
+        '13.gif',
+        '12.gif',
+        '11b.gif',
+        '10.gif',
+        '9.gif',
+        '8c.gif',
+        '7.gif',
+        '6b.gif',
+        '4.gif',
+    ],
     youtubeVideoIds: ['PWh5ksoYrLM'],
     title: 'Cg Shaping Shaders',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
@@ -50,8 +46,13 @@ const data: ProjectData = {
         'SONAR gradient using atan2 and angles subtraction to measure the angle in radians from the SONAR line.',
         'Using Cg semantics for compatibility with different GPU hardware.',
     ],
-    tags: ['Cg', 'ShaderLab', 'Vertex Shader', 'Fragment Shader', 'Unity3D'],
-    gitHubUrl: `https://github.com/z4gon/${id}`,
-}
+    tags: [
+        Tag.Cg,
+        Tag.ShaderLab,
+        Tag.VertexShader,
+        Tag.FragmentShader,
+        Tag.Unity3D,
+    ],
+})
 
 export default data
