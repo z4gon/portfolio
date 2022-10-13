@@ -5,6 +5,7 @@ import { Tag } from '../tags'
 const data: ProjectData = generateProjectData({
     id: 'cg-shaping-shaders-unity',
     date: '2022-10',
+    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         'thumbnail.gif',
         '19.gif',

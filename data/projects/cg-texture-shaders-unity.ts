@@ -1,16 +1,12 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const id = 'cg-texture-shaders-unity'
-const imagesFolder = `/images/portfolio/${id}`
-
-const pictures: string[] = ['3', '2', '1d', '1b']
-
-const data: ProjectData = {
-    id,
+const data: ProjectData = generateProjectData({
+    id: 'cg-texture-shaders-unity',
     date: '2022-10',
-    thumbnailUrl: `${imagesFolder}/thumbnail.gif`,
-    metaImageUrl: `${imagesFolder}/thumbnail.gif`,
-    imagesUrls: pictures.map((name) => `${imagesFolder}/${name}.gif`),
+    thumbnailImageName: 'thumbnail.gif',
+    imagesNames: ['3.gif', '2.gif', '1d.gif', '1b.gif'],
     youtubeVideoIds: ['G0M9q3efZ1M'],
     title: 'Cg Texture Shaders',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
@@ -24,8 +20,7 @@ const data: ProjectData = {
         'Ripple effect calculated using a radial vector to the center of the quad.',
         'Transition and blending between textures using smoothstep.',
     ],
-    tags: ['Cg', 'ShaderLab', 'Fragment Shader', 'Unity3D'],
-    gitHubUrl: `https://github.com/z4gon/${id}`,
-}
+    tags: [Tag.Cg, Tag.ShaderLab, Tag.FragmentShader, Tag.Unity3D],
+})
 
 export default data
