@@ -5,6 +5,7 @@ import { Tag } from './tags'
 interface GenerateProjectDataArgs {
     id: string
     thumbnailImageName: string
+    metaImageName?: string
     imagesNames: string[]
     date: string
     youtubeVideoIds: string[]
@@ -23,6 +24,7 @@ const generateProjectData = ({
     id,
     date,
     thumbnailImageName,
+    metaImageName,
     imagesNames,
     youtubeVideoIds,
     title,
@@ -41,7 +43,7 @@ const generateProjectData = ({
         id,
         date,
         thumbnailUrl: `${imagesFolder}/${thumbnailImageName}`,
-        metaImageUrl: `${imagesFolder}/${thumbnailImageName}`,
+        metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
         youtubeVideoIds,
         title,
