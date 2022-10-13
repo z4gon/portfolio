@@ -1,16 +1,11 @@
 import { ProjectData } from '../../src/models/ProjectData'
+import generateProjectData from '../generateProjectData'
+import { Tag } from '../tags'
 
-const id = 'cg-perlin-noise-shader-unity'
-const imagesFolder = `/images/portfolio/${id}`
-
-const pictures: string[] = ['thumbnail', '3', '2', '1']
-
-const data: ProjectData = {
-    id,
+const data: ProjectData = generateProjectData({
+    id: 'cg-perlin-noise-shader-unity',
     date: '2022-10',
-    thumbnailUrl: `${imagesFolder}/thumbnail.gif`,
-    metaImageUrl: `${imagesFolder}/thumbnail.gif`,
-    imagesUrls: pictures.map((name) => `${imagesFolder}/${name}.gif`),
+    imagesNames: ['thumbnail.gif', '3.gif', '2.gif', '1.gif'],
     youtubeVideoIds: ['d1HJ0O3btq0'],
     title: 'Perlin Noise Shader',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
@@ -24,8 +19,13 @@ const data: ProjectData = {
         'Interpolate the 4 dot values for the current pixel.',
         'Optionally use _Time to rotate the gradient vectors over time.',
     ],
-    tags: ['Cg', 'ShaderLab', 'Vertex Shader', 'Fragment Shader', 'Unity3D'],
-    gitHubUrl: `https://github.com/z4gon/${id}`,
-}
+    tags: [
+        Tag.Cg,
+        Tag.ShaderLab,
+        Tag.VertexShader,
+        Tag.FragmentShader,
+        Tag.Unity3D,
+    ],
+})
 
 export default data
