@@ -11,4 +11,6 @@ export enum Tag {
     iOS = 'iOS',
     Android = 'Android',
     MobileGame = 'Mobile Game',
+    SurfaceShader = 'Surface Shader',
+    Lighting = 'Lighting',
 }

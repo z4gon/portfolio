@@ -18,6 +18,7 @@ interface GenerateProjectDataArgs {
     links?: LinkData[]
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
+    isPrivateRepo?: boolean
 }
 
 const generateProjectData = ({
@@ -36,6 +37,7 @@ const generateProjectData = ({
     links = [],
     appleAppStoreUrl = null,
     googlePlayStoreUrl = null,
+    isPrivateRepo = false,
 }: GenerateProjectDataArgs): ProjectData => {
     const imagesFolder = `/images/portfolio/${id}`
 
@@ -51,7 +53,9 @@ const generateProjectData = ({
         description,
         implementationDetails,
         tags,
-        gitHubUrl: gitHubUrl || `https://github.com/z4gon/${id}`,
+        gitHubUrl: isPrivateRepo
+            ? null
+            : gitHubUrl || `https://github.com/z4gon/${id}`,
         links,
         appleAppStoreUrl,
         googlePlayStoreUrl,

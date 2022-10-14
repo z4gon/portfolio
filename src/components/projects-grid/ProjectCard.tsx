@@ -16,16 +16,10 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         style={{ backgroundImage: `url(${thumbnailUrl})` }}
                     />
                     <div className={styles.information}>
-                        <h2 className={styles.title}>
-                            {props.title}
-                            <span className={styles.date}>{props.date}</span>
-                        </h2>
+                        <h2 className={styles.title}>{props.title}</h2>
                         <span className={styles.subtitle}>
                             {props.subtitle}
                         </span>
-                        <br />
-                        <br />
-                        {/* <Tags tags={props.tags} /> */}
                     </div>
                 </article>
             </a>

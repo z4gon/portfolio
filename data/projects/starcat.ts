@@ -49,6 +49,7 @@ const data: ProjectData = generateProjectData({
     appleAppStoreUrl: 'https://apps.apple.com/us/app/the-star-cat/id1544668944',
     googlePlayStoreUrl:
         'https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat',
+    isPrivateRepo: true,
 })
 
 export default data
