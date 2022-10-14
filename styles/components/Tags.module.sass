@@ -5,13 +5,22 @@
     align-items: flex-start
     flex-wrap: wrap
 
-    .tag
-        background: var(--tag-bg)
-        color: var(--tag-text-color)
+.tag
+    background: var(--tag-bg)
+    color: var(--tag-text-color)
 
-        font-size: 14px
+    display: inline-block
+    font-weight: normal
 
-        padding: 6px 10px
-        border-radius: 30px
+    vertical-align: middle
 
-        margin: 0 5px 5px 0
+    font-size: 14px
+
+    padding: 6px 10px
+    border-radius: 30px
+
+    margin: 0 5px 5px 0
+
+    &.secondary
+        background: var(--tag-secondary-bg)
+        color: var(--tag-secondary-text-color)

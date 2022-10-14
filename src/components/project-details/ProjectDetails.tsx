@@ -5,7 +5,7 @@ import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
 import ImagesSlider from '../images-slider/ImagesSlider'
-import Tags from '../Tags'
+import Tags, { Tag } from '../Tags'
 import StoreLinks from './StoreLinks'
 
 interface SectionProps extends PropsWithChildren {
@@ -55,7 +55,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <div className={styles.information}>
                         <h2 className={styles.title}>
                             {title}
-                            <span className={styles.date}>{date}</span>
+                            <Tag secondary className={styles.date}>
+                                {date}
+                            </Tag>
                         </h2>
                         <span className={styles.subtitle}>{subtitle}</span>
                         <Tags tags={tags} />
