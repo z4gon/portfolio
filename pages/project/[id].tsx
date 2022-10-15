@@ -36,6 +36,13 @@ export async function getStaticProps(context) {
     const id = context.params.id
     const project = projects.find((item) => item.id === id)
 
+    // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
+    if (!project) {
+        return {
+            notFound: true,
+        }
+    }
+
     return {
         props: {
             project,

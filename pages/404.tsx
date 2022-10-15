@@ -5,17 +5,23 @@ import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
 import { ProjectData } from '../src/models/ProjectData'
 
-interface HomeProps {
+interface NotFoundProps {
     projects: ProjectData[]
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function NotFound({ projects }: NotFoundProps) {
     return (
         <Page>
             <Metatags />
-            <Spacer amount="5.5em" />
+            <Spacer amount="7em" />
+
+            <h1>404, Lost?</h1>
+            <h3>
+                The project you are looking for doesn&apos;t seem to exist...
+            </h3>
+
+            <Spacer amount="2em" />
             <ProjectsGrid projects={projects} />
-            <Spacer amount="3.5em" />
         </Page>
     )
 }
@@ -27,7 +33,7 @@ export default function Home({ projects }: HomeProps) {
 export async function getStaticProps() {
     return {
         props: {
-            projects,
+            projects: projects.slice(0, 4),
         },
     }
 }
