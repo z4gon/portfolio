@@ -19,7 +19,7 @@ const data: ProjectData = generateProjectData({
     ],
     youtubeVideoIds: ['ag5X-ObzOY8', '0AfmcD5DlXs', 'S920GVHesBM'],
     title: 'Water Shader',
-    subtitle: 'With Shader Graph in Unity',
+    subtitle: 'With Shader Graph in Unity URP',
     description: [
         'Water shader with dynamic configurations, which can simulate several environmental effects.',
     ],
@@ -29,7 +29,7 @@ const data: ProjectData = generateProjectData({
         'Foam generated using the Scene Depth node and a gradient noise.',
         'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
     ],
-    tags: [Tag.VFX, Tag.ShaderGraph, Tag.Unity3D],
+    tags: [Tag.VFX, Tag.ShaderGraph, Tag.Unity3D, Tag.URP],
 })
 
 export default data

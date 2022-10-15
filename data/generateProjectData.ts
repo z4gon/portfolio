@@ -11,7 +11,7 @@ interface GenerateProjectDataArgs {
     youtubeVideoIds: string[]
     title: string
     subtitle: string
-    description: string[]
+    description?: string[]
     implementationDetails: string[]
     tags: Tag[]
     gitHubUrl?: string
@@ -30,7 +30,7 @@ const generateProjectData = ({
     youtubeVideoIds,
     title,
     subtitle,
-    description,
+    description = [],
     implementationDetails,
     tags,
     gitHubUrl = null,

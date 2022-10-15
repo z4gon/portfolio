@@ -10,17 +10,21 @@ const data: ProjectData = generateProjectData({
     youtubeVideoIds: ['G0M9q3efZ1M'],
     title: 'Cg Texture Shaders',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
-    description: [
-        'Texture manipulation Shaders written in the Cg programming language for Unity Built-In RP.',
-    ],
     implementationDetails: [
+        'Texture manipulation shaders',
         'Using the 2D Property type in ShaderLab and the sampler2D data type in Cg.',
         'Mapping the uv coordinates to a texel using the tex2D function.',
         'Flipping and rotating uv coordinates.',
         'Ripple effect calculated using a radial vector to the center of the quad.',
         'Transition and blending between textures using smoothstep.',
     ],
-    tags: [Tag.Cg, Tag.ShaderLab, Tag.FragmentShader, Tag.Unity3D],
+    tags: [
+        Tag.Cg,
+        Tag.ShaderLab,
+        Tag.FragmentShader,
+        Tag.Unity3D,
+        Tag.BuiltInRP,
+    ],
 })
 
 export default data

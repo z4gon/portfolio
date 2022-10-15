@@ -13,4 +13,7 @@ export enum Tag {
     MobileGame = 'Mobile Game',
     SurfaceShader = 'Surface Shader',
     Lighting = 'Lighting',
+    BuiltInRP = 'Built-in RP',
+    URP = 'URP',
+    HDRP = 'HDRP',
 }

@@ -18,9 +18,6 @@ const data: ProjectData = generateProjectData({
     youtubeVideoIds: ['r5qDHvfYG9c'],
     title: 'Ball of Lava VFX',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
-    description: [
-        'Ball of Lava VFX written in the Cg programming language for Unity Built-In RP.',
-    ],
     implementationDetails: [
         'Using the Perlin Noise algorithm to displace vertices in the mesh, during the Vertex Shader Stage.',
         'Using _Time to animate the Perlin Noise, also multiplying by _Displacement and _NoiseVelocity to control how much and how fast the noise is.',
@@ -34,6 +31,7 @@ const data: ProjectData = generateProjectData({
         Tag.VertexShader,
         Tag.FragmentShader,
         Tag.Unity3D,
+        Tag.BuiltInRP,
     ],
 })
 
