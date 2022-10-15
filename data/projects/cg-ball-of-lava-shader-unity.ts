@@ -3,7 +3,7 @@ import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
 
 const data: ProjectData = generateProjectData({
-    id: 'ball-of-lava-shader-unity',
+    id: 'cg-ball-of-lava-shader-unity',
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
@@ -16,7 +16,7 @@ const data: ProjectData = generateProjectData({
         '1.gif',
     ],
     youtubeVideoIds: ['r5qDHvfYG9c'],
-    title: 'Ball of Lava VFX',
+    title: 'Ball of Lava Shader',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
     implementationDetails: [
         'Using the Perlin Noise algorithm to displace vertices in the mesh, during the Vertex Shader Stage.',

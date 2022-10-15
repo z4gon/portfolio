@@ -1,6 +1,6 @@
 import { ProjectData } from '../src/models/ProjectData'
 
-import ballOfLavaShaderUnity from './projects/ball-of-lava-shader-unity'
+import cgBallOfLavaShaderUnity from './projects/cg-ball-of-lava-shader-unity'
 import cgPerlinNoiseShaderUnity from './projects/cg-perlin-noise-shader-unity'
 import cgShapingShadersUnity from './projects/cg-shaping-shaders-unity'
 import cgSurfaceShadersUnity from './projects/cg-surface-shaders-unity'
@@ -12,7 +12,7 @@ import starcat from './projects/starcat'
 import waterShaderUnity from './projects/water-shader-unity'
 
 const pinned: ProjectData[] = [
-    ballOfLavaShaderUnity,
+    cgBallOfLavaShaderUnity,
     cgSurfaceShadersUnity,
     groundSlashVfxUnity,
     iceAttackVfxUnity,
