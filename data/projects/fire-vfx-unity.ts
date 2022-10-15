@@ -19,10 +19,7 @@ const data: ProjectData = generateProjectData({
     ],
     youtubeVideoIds: ['mn22mVaAxvg'],
     title: 'Fire VFX',
-    subtitle: 'With VFX Graph in Unity',
-    description: [
-        'Fire VFX with randomness at spawn, flip book animation, wind and drag forces, configurable color and sparks.',
-    ],
+    subtitle: 'With VFX Graph in Unity for HDRP',
     implementationDetails: [
         'Flip book animation using a sprite sheet, a flip book player and normal maps',
         'Particles with random velocity, angle, lifetime and evolving size over life.',
@@ -32,7 +29,7 @@ const data: ProjectData = generateProjectData({
         'Lighting using a Point Light.',
         'Sparks effect implemented with a secondary particle system.',
     ],
-    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D],
+    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.HDRP],
 })
 
 export default data

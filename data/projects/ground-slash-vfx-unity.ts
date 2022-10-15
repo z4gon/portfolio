@@ -24,20 +24,18 @@ const data: ProjectData = generateProjectData({
     ],
     youtubeVideoIds: ['pybsA5K_S-c'],
     title: 'Ground Slash VFX',
-    subtitle: 'With VFX Graph in Unity',
-    description: [
-        'A ground slash attack vfx implemented with a Mesh, decal textures, VFX Graph and some programming. Made in Unity. ',
-    ],
+    subtitle: 'With VFX Graph in Unity for URP',
     implementationDetails: [
         'Modelling of the 3D Meshes for the Slash and the Debris.',
         'UV Mapping for the gradient texture of the Slash mesh.',
+        'Utilize VFX Graph',
         'Spawning particles over distance, so the VFX leaves a trail of debris.',
         'Decals to leave a burning effect on the ground/geometry.',
         'Programming to snap the VFX to the geometry it goes over, to make it adjust dynamically to it.',
         'Debris with random velocities, gravity and collision with plane.',
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
-    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D],
+    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.URP],
 })
 
 export default data

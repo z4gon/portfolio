@@ -19,11 +19,9 @@ const data: ProjectData = generateProjectData({
     ],
     youtubeVideoIds: ['QF2svyMgkRQ'],
     title: 'Standard Surface Shaders',
-    subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
-    description: [
-        'Lambert Lighting, Blinn-Phong Lighting and Custom Lighting models.',
-    ],
+    subtitle: 'Written in the Cg programming language for Unity Built-In RP',
     implementationDetails: [
+        'Lambert Lighting, Blinn-Phong Lighting and Custom Lighting models.',
         'Standard Surface Shaders in Unity using the #pragma directive to define the surface function and the lighting model.',
         'Setting the Albedo property from a texture.',
         'Normals implemented using a Normal Map or "Bump Map".',
@@ -34,7 +32,14 @@ const data: ProjectData = generateProjectData({
         'Implementing a Custom Lambert Lighting model.',
         'Toon Shading implemented with a ramped Lambert lighting model and an Outline shader implemented in a second Pass.',
     ],
-    tags: [Tag.Cg, Tag.ShaderLab, Tag.SurfaceShader, Tag.Lighting, Tag.Unity3D],
+    tags: [
+        Tag.Cg,
+        Tag.ShaderLab,
+        Tag.SurfaceShader,
+        Tag.Lighting,
+        Tag.Unity3D,
+        Tag.BuiltInRP,
+    ],
 })
 
 export default data

@@ -9,7 +9,7 @@ export interface ProjectData {
     youtubeVideoIds?: string[]
     title: string
     subtitle: string
-    description: string[]
+    description?: string[]
     implementationDetails: string[]
     tags: string[]
     links?: LinkData[]

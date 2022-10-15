@@ -26,9 +26,6 @@ const data: ProjectData = generateProjectData({
     youtubeVideoIds: ['PWh5ksoYrLM'],
     title: 'Cg Shaping Shaders',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
-    description: [
-        'A collection of Shaping Shaders written in Cg for the Built-in RP in Unity, from basic to advanced.',
-    ],
     implementationDetails: [
         'Creating simple Unlit Shaders in the Built-in RP in Unity.',
         'Using the uniform _Time to define sinusoidal functions.',
@@ -52,6 +49,7 @@ const data: ProjectData = generateProjectData({
         Tag.VertexShader,
         Tag.FragmentShader,
         Tag.Unity3D,
+        Tag.BuiltInRP,
     ],
 })
 
