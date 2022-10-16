@@ -4,6 +4,7 @@ import { Tag } from '../tags'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-ball-of-lava-shader-unity',
+    aliases: ['ball-of-lava-shader-unity'],
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
     imagesNames: [

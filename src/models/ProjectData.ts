@@ -2,6 +2,7 @@ import { LinkData } from './LinkData'
 
 export interface ProjectData {
     id: string
+    aliases?: string[]
     date: string
     thumbnailUrl: string
     metaImageUrl: string

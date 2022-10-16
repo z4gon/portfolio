@@ -33,8 +33,17 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps(context) {
-    const id = context.params.id
-    const project = projects.find((item) => item.id === id)
+    const urlId = context.params.id
+    const project = projects.find(
+        ({ id, aliases = [] }) => urlId === id || aliases.includes(urlId)
+    )
+
+    // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
+    if (!project) {
+        return {
+            notFound: true,
+        }
+    }
 
     return {
         props: {
@@ -47,7 +56,12 @@ export async function getStaticProps(context) {
 // For example, suppose that you have a page that uses Dynamic Routes named pages/posts/[id].js.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
-    const paths = projects.map((item) => ({ params: { id: item.id } }))
+    const idsAndAliases = projects
+        .map(({ id, aliases = [] }) => [id, ...aliases])
+        .reduce((subArray, finalArray) => finalArray.concat(subArray), [])
+
+    const paths = idsAndAliases.map((id) => ({ params: { id: id } }))
+
     return {
         paths,
         fallback: true, // false or 'blocking'

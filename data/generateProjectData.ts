@@ -4,6 +4,7 @@ import { Tag } from './tags'
 
 interface GenerateProjectDataArgs {
     id: string
+    aliases?: string[]
     thumbnailImageName: string
     metaImageName?: string
     imagesNames: string[]
@@ -23,6 +24,7 @@ interface GenerateProjectDataArgs {
 
 const generateProjectData = ({
     id,
+    aliases = [],
     date,
     thumbnailImageName,
     metaImageName,
@@ -43,6 +45,7 @@ const generateProjectData = ({
 
     const data: ProjectData = {
         id,
+        aliases,
         date,
         thumbnailUrl: `${imagesFolder}/${thumbnailImageName}`,
         metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,

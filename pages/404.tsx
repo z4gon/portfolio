@@ -5,17 +5,30 @@ import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
 import { ProjectData } from '../src/models/ProjectData'
 
-interface HomeProps {
+import styles from '../styles/pages/404.module.sass'
+
+interface NotFoundProps {
     projects: ProjectData[]
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function NotFound({ projects }: NotFoundProps) {
     return (
         <Page>
             <Metatags />
-            <Spacer amount="5.5em" />
+            <Spacer amount="7em" />
+
+            <h1 className={styles.title}>404</h1>
+            <h2 className={styles.subtitle}>Not Found</h2>
+
+            <p className={styles.description}>
+                The project you are looking for doesn&apos;t seem to exist...
+            </p>
+            <p className={styles.description}>
+                Here are some other projects you might be interested in:
+            </p>
+
+            <Spacer amount="2em" />
             <ProjectsGrid projects={projects} />
-            <Spacer amount="3.5em" />
         </Page>
     )
 }
@@ -27,7 +40,7 @@ export default function Home({ projects }: HomeProps) {
 export async function getStaticProps() {
     return {
         props: {
-            projects,
+            projects: projects.slice(0, 4),
         },
     }
 }
