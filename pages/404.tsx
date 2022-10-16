@@ -5,6 +5,8 @@ import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
 import { ProjectData } from '../src/models/ProjectData'
 
+import styles from '../styles/pages/404.module.sass'
+
 interface NotFoundProps {
     projects: ProjectData[]
 }
@@ -15,10 +17,15 @@ export default function NotFound({ projects }: NotFoundProps) {
             <Metatags />
             <Spacer amount="7em" />
 
-            <h1>404, Lost?</h1>
-            <h3>
+            <h1 className={styles.title}>404</h1>
+            <h2 className={styles.subtitle}>Not Found</h2>
+
+            <p className={styles.description}>
                 The project you are looking for doesn&apos;t seem to exist...
-            </h3>
+            </p>
+            <p className={styles.description}>
+                Here are some other projects you might be interested in:
+            </p>
 
             <Spacer amount="2em" />
             <ProjectsGrid projects={projects} />
