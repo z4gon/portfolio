@@ -12,7 +12,7 @@ export default function Metatags(props: Props) {
     const {
         title = 'Gonzalo Cumini | Portfolio',
         url = 'z4gon.github.io/',
-        imageUrl = '/images/portfolio/starcat/meta.jpg',
+        imageUrl = '/thumbnail.jpg',
         faviconUrl = '/favicon.ico',
         description = 'Gonzalo Cumini | Portfolio',
     } = props
