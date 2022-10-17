@@ -21,15 +21,9 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                 <article
                     className={styles.card}
                     style={{
-                        background: `rgb(0,0,0) linear-gradient(90deg, rgba(0,0,0,1) 0%, ${gradientColor} 50%)`,
+                        background: `rgb(0,0,0) linear-gradient(0deg, rgba(0,0,0,1) 0%, ${gradientColor} 50%)`,
                     }}
                 >
-                    <div className={styles.information}>
-                        <h2 className={styles.title}>{props.title}</h2>
-                        <span className={styles.subtitle}>
-                            {props.subtitle}
-                        </span>
-                    </div>
                     <div
                         className={styles.thumbnail}
                         style={{
@@ -38,6 +32,12 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                             backgroundPosition,
                         }}
                     />
+                    <div className={styles.information}>
+                        <h2 className={styles.title}>{props.title}</h2>
+                        <span className={styles.subtitle}>
+                            {props.subtitle}
+                        </span>
+                    </div>
                 </article>
             </a>
         </Link>
