@@ -22,11 +22,11 @@ const data: ProjectData = generateProjectData({
     ],
     tags: [
         Tag.Cg,
+        Tag.BuiltInRP,
         Tag.ShaderLab,
+        Tag.Unity,
         Tag.VertexShader,
         Tag.FragmentShader,
-        Tag.Unity3D,
-        Tag.BuiltInRP,
     ],
     cardConfig: {
         backgroundSize: '120%',

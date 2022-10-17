@@ -39,7 +39,7 @@ const data: ProjectData = generateProjectData({
         'AssetBundles and LoadAsync for memory usage optimization.',
         'ScriptableObjects.',
     ],
-    tags: [Tag.Unity3D, Tag.CSharp, Tag.iOS, Tag.Android, Tag.MobileGame],
+    tags: [Tag.iOS, Tag.Android, Tag.Unity, Tag.CSharp, Tag.MobileGame],
     links: [
         {
             href: 'https://nochegames.com',

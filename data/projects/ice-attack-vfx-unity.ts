@@ -31,7 +31,7 @@ const data: ProjectData = generateProjectData({
         'Dissolve and Fresnel shader implemented in Shader Graph, and integrated into the particles of VFX Graph utilizing the option for support for VFX Graph',
         '3D Modeling in Blender.',
     ],
-    tags: [Tag.VFX, Tag.VFXGraph, Tag.ShaderGraph, Tag.Unity3D, Tag.URP],
+    tags: [Tag.VFXGraph, Tag.ShaderGraph, Tag.URP, Tag.Unity, Tag.VFX],
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-10px -20px',

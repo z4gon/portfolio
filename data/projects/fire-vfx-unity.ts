@@ -29,7 +29,7 @@ const data: ProjectData = generateProjectData({
         'Lighting using a Point Light.',
         'Sparks effect implemented with a secondary particle system.',
     ],
-    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.HDRP],
+    tags: [Tag.VFXGraph, Tag.HDRP, Tag.Unity, Tag.VFX],
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-10px -40px',

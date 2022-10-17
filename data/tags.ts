@@ -1,8 +1,8 @@
 export enum Tag {
     Cg = 'Cg',
-    Unity3D = 'Unity3D',
+    Unity = 'Unity',
     ShaderGraph = 'Shader Graph',
-    ShaderLab = 'Shader Lab',
+    ShaderLab = 'ShaderLab',
     VFXGraph = 'VFX Graph',
     VFX = 'VFX',
     VertexShader = 'Vertex Shader',
