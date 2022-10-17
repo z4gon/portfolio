@@ -1,20 +1,21 @@
 import Link from 'next/link'
 import styles from '../../../styles/components/projects-grid/ProjectCard.module.sass'
 import { ProjectData } from '../../models/ProjectData'
+import Tags from '../Tags'
 
 interface ProjectCardProps extends ProjectData {}
 
-const ProjectCard: React.FC<ProjectCardProps> = (props) => {
-    const {
-        id,
-        thumbnailUrl,
-        cardConfig: {
-            backgroundSize = '120%',
-            backgroundPosition = '0px 0px',
-            gradientColor = 'rgb(0, 96, 115)',
-        } = {},
-    } = props
-
+const ProjectCard: React.FC<ProjectCardProps> = ({
+    id,
+    thumbnailUrl,
+    title,
+    tags,
+    cardConfig: {
+        backgroundSize = '120%',
+        backgroundPosition = '0px 0px',
+        gradientColor = 'rgb(0, 96, 115)',
+    } = {},
+}) => {
     return (
         <Link href={`/project/${id}`}>
             <a className={styles.link}>
@@ -33,10 +34,8 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         }}
                     />
                     <div className={styles.information}>
-                        <h2 className={styles.title}>{props.title}</h2>
-                        <span className={styles.subtitle}>
-                            {props.subtitle}
-                        </span>
+                        <h2 className={styles.title}>{title}</h2>
+                        <Tags dark tags={tags.slice(0, 3)} />
                     </div>
                 </article>
             </a>

@@ -1,3 +1,4 @@
+import { Tag } from '../../data/tags'
 import { LinkData } from './LinkData'
 import { ProjectCardConfig } from './ProjectCardConfig'
 
@@ -13,7 +14,7 @@ export interface ProjectData {
     subtitle: string
     description?: string[]
     implementationDetails: string[]
-    tags: string[]
+    tags: Tag[]
     links?: LinkData[]
     gitHubUrl?: string
     appleAppStoreUrl?: string

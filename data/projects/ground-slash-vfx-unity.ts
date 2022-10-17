@@ -35,7 +35,7 @@ const data: ProjectData = generateProjectData({
         'Debris with random velocities, gravity and collision with plane.',
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
-    tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.URP],
+    tags: [Tag.VFXGraph, Tag.URP, Tag.Unity, Tag.VFX],
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '4px -14px',

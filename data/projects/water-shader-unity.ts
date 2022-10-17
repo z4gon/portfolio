@@ -29,7 +29,7 @@ const data: ProjectData = generateProjectData({
         'Foam generated using the Scene Depth node and a gradient noise.',
         'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
     ],
-    tags: [Tag.VFX, Tag.ShaderGraph, Tag.Unity3D, Tag.URP],
+    tags: [Tag.ShaderGraph, Tag.URP, Tag.Unity, Tag.VFX],
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '0px 0px',

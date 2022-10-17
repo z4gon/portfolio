@@ -18,13 +18,7 @@ const data: ProjectData = generateProjectData({
         'Ripple effect calculated using a radial vector to the center of the quad.',
         'Transition and blending between textures using smoothstep.',
     ],
-    tags: [
-        Tag.Cg,
-        Tag.ShaderLab,
-        Tag.FragmentShader,
-        Tag.Unity3D,
-        Tag.BuiltInRP,
-    ],
+    tags: [Tag.Cg, Tag.BuiltInRP, Tag.ShaderLab, Tag.Unity, Tag.FragmentShader],
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '20px -16px',
