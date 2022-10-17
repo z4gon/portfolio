@@ -15,7 +15,7 @@ export default function NotFound({ projects }: NotFoundProps) {
     return (
         <Page>
             <Metatags />
-            <Spacer amount="7em" />
+            <Spacer amount="8em" />
 
             <h1 className={styles.title}>404</h1>
             <h2 className={styles.subtitle}>Not Found</h2>
@@ -27,8 +27,9 @@ export default function NotFound({ projects }: NotFoundProps) {
                 These other projects might interest you 🥳
             </p>
 
-            <Spacer amount="2em" />
+            <Spacer amount="4em" />
             <ProjectsGrid projects={projects} />
+            <Spacer amount="10em" />
         </Page>
     )
 }
