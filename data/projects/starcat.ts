@@ -52,7 +52,7 @@ const data: ProjectData = generateProjectData({
     isPrivateRepo: true,
     cardConfig: {
         backgroundSize: '100%',
-        backgroundPosition: '-20px 0px',
+        backgroundPosition: '-10px -70px',
         gradientColor: 'rgb(125, 0, 0)',
     },
 })

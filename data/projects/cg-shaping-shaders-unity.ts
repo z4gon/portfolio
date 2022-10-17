@@ -52,8 +52,8 @@ const data: ProjectData = generateProjectData({
         Tag.BuiltInRP,
     ],
     cardConfig: {
-        backgroundSize: '135%',
-        backgroundPosition: '-40px -18px',
+        backgroundSize: '100%',
+        backgroundPosition: '10px -18px',
         gradientColor: 'rgb(0, 91, 0)',
     },
 })

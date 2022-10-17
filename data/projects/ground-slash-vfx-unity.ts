@@ -37,8 +37,8 @@ const data: ProjectData = generateProjectData({
     ],
     tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.URP],
     cardConfig: {
-        backgroundSize: '120%',
-        backgroundPosition: '-46px -14px',
+        backgroundSize: '100%',
+        backgroundPosition: '4px -14px',
         gradientColor: 'rgb(134, 60, 0)',
     },
 })
