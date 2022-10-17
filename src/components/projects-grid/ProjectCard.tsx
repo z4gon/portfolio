@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                 <article
                     className={styles.card}
                     style={{
-                        background: `rgb(0,0,0) linear-gradient(180deg, black, 80%, ${gradientColor} 100%)`,
+                        background: `rgb(0,0,0) linear-gradient(180deg, black, 65%, ${gradientColor} 100%)`,
                     }}
                 >
                     <div
