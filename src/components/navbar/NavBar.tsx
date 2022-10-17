@@ -31,11 +31,22 @@ const icons = [
 const NavBar: React.FC<{}> = () => {
     return (
         <nav className={styles.navbar}>
-            <Link href="/">
-                <a className={styles.titleLink}>
-                    <h1 className={styles.title}>Gonzalo Cumini</h1>
-                </a>
-            </Link>
+            <ul className={styles.links}>
+                <li className={styles.icon}>
+                    <Link href="/">
+                        <a className={styles.titleLink}>
+                            <h1 className={styles.title}>Gonzalo Cumini</h1>
+                        </a>
+                    </Link>
+                </li>
+                <li className={styles.icon}>
+                    <Link href="/">
+                        <a>
+                            <h1>Projects</h1>
+                        </a>
+                    </Link>
+                </li>
+            </ul>
             <ul className={styles.icons}>
                 {icons.map((icon) => (
                     <li className={styles.icon} key={icon.href}>

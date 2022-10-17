@@ -21,10 +21,10 @@ export default function NotFound({ projects }: NotFoundProps) {
             <h2 className={styles.subtitle}>Not Found</h2>
 
             <p className={styles.description}>
-                The project you are looking for doesn&apos;t seem to exist...
+                The project doesn&apos;t exist 💀
             </p>
             <p className={styles.description}>
-                Here are some other projects you might be interested in:
+                These other projects might interest you 🥳
             </p>
 
             <Spacer amount="2em" />

@@ -16,18 +16,32 @@
 
     box-sizing: border-box
 
-    .titleLink
-        text-decoration: none
-        text-transform: uppercase
-        color: var(--text-color)
 
-        .title
-            font-size: 1.2em
-            font-weight: 700
+    .links
+        display: flex
+        flex-direction: row
+        list-style: none
+
+        .titleLink
+            text-transform: uppercase
+
+        li
+            a
+                text-decoration: none
+                color: var(--text-color)
+                font-size: 1em
+                font-weight: 400
+
+                &:hover
+                    text-decoration: underline
+
+            margin-right: 20px
+
 
     .icons
         display: flex
         flex-direction: row
+        list-style: none
 
         .icon
             & + .icon
