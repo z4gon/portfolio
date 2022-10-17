@@ -1,4 +1,5 @@
 import { LinkData } from './LinkData'
+import { ProjectCardConfig } from './ProjectCardConfig'
 
 export interface ProjectData {
     id: string
@@ -17,4 +18,5 @@ export interface ProjectData {
     gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
+    cardConfig?: ProjectCardConfig
 }

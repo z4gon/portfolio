@@ -1,4 +1,5 @@
 import { LinkData } from '../src/models/LinkData'
+import { ProjectCardConfig } from '../src/models/ProjectCardConfig'
 import { ProjectData } from '../src/models/ProjectData'
 import { Tag } from './tags'
 
@@ -20,6 +21,7 @@ interface GenerateProjectDataArgs {
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
     isPrivateRepo?: boolean
+    cardConfig?: ProjectCardConfig
 }
 
 const generateProjectData = ({
@@ -40,6 +42,11 @@ const generateProjectData = ({
     appleAppStoreUrl = null,
     googlePlayStoreUrl = null,
     isPrivateRepo = false,
+    cardConfig = {
+        backgroundSize: '120%',
+        backgroundPosition: '0px 0px',
+        gradientColor: 'rgb(0, 96, 115)',
+    },
 }: GenerateProjectDataArgs): ProjectData => {
     const imagesFolder = `/images/portfolio/${id}`
 
@@ -62,6 +69,7 @@ const generateProjectData = ({
         links,
         appleAppStoreUrl,
         googlePlayStoreUrl,
+        cardConfig,
     }
 
     return data

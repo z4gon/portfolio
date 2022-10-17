@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from '../../../styles/components/projects-grid/ProjectsGrid.module.sass'
 import { ProjectData } from '../../models/ProjectData'
+import Button from '../Button'
 import ProjectCard from './ProjectCard'
 
 const PAGE_SIZE = 12
@@ -25,9 +26,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
             </div>
             {hasNext && (
                 <div className={styles.actions}>
-                    <button className={styles.loadMore} onClick={loadNextPage}>
-                        Load More
-                    </button>
+                    <Button onClick={loadNextPage}>Load More</Button>
                 </div>
             )}
         </main>

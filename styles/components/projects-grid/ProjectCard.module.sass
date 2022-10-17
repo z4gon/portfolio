@@ -3,33 +3,47 @@
     color: var(--text-color)
 
     .card
+        height: 15em
+
         cursor: pointer
         overflow: hidden
 
-        background: var(--card-bg)
-        border: solid 2px var(--bg)
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
 
         margin: 0.5rem
-        height: 95%
 
         transition: border 0.2s ease-in-out
+        border: solid 2px var(--bg)
+        border-radius: 1em
 
         &:hover
-            border: solid 2px var(--border-highlight)
+            border: solid 2px var(--card-border-highlight)
 
         .thumbnail
+            height: 8em
+
             background-size: cover
             background-position: center
 
-            height: 180px
+            flex-basis: 70%
+
+            transform: rotate(4deg) scale(1.2) translate(0em, -0.8em)
+
+            filter: contrast(110%)
 
         .information
-            padding: 10px 10px 15px
+            flex-basis: 40%
+            padding: 10px
+
+            text-shadow: 0px 2px 2px #000
 
             .title
                 font-size: 1.2em
+                line-height: 1.1em
                 margin-bottom: 10px
 
             .subtitle
-                margin-bottom: 15px
+                line-height: 1.1em
                 font-weight: 400

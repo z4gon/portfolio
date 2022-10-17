@@ -118,7 +118,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </div>
 
             {youtubeVideoIds.length > 0 && (
-                <Section title="Videos" mobileFullWidth>
+                <Section mobileFullWidth>
                     {youtubeVideoIds.map((videoId) => (
                         <div key={videoId} className={styles.video}>
                             <iframe

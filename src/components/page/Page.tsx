@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
 import styles from '../../../styles/components/page/Page.module.sass'
 import NavBar from '../navbar/NavBar'
+import Footer from './Footer'
 import GoogleAnalytics from './GoogleAnalytics'
 
 const Page: React.FC<PropsWithChildren> = ({ children }) => {
@@ -9,6 +10,7 @@ const Page: React.FC<PropsWithChildren> = ({ children }) => {
             <GoogleAnalytics />
             <NavBar />
             {children}
+            <Footer />
         </div>
     )
 }

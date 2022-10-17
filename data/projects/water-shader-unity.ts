@@ -30,6 +30,11 @@ const data: ProjectData = generateProjectData({
         'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
     ],
     tags: [Tag.VFX, Tag.ShaderGraph, Tag.Unity3D, Tag.URP],
+    cardConfig: {
+        backgroundSize: '100%',
+        backgroundPosition: '0px 0px',
+        gradientColor: 'rgb(0, 83, 157)',
+    },
 })
 
 export default data
