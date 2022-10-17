@@ -50,6 +50,11 @@ const data: ProjectData = generateProjectData({
     googlePlayStoreUrl:
         'https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat',
     isPrivateRepo: true,
+    cardConfig: {
+        backgroundSize: '100%',
+        backgroundPosition: '-20px 0px',
+        gradientColor: 'rgb(125, 0, 0)',
+    },
 })
 
 export default data

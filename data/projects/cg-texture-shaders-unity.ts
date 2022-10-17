@@ -25,6 +25,11 @@ const data: ProjectData = generateProjectData({
         Tag.Unity3D,
         Tag.BuiltInRP,
     ],
+    cardConfig: {
+        backgroundSize: '130%',
+        backgroundPosition: '-40px -16px',
+        gradientColor: 'rgb(0, 69, 157)',
+    },
 })
 
 export default data

@@ -36,6 +36,11 @@ const data: ProjectData = generateProjectData({
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
     tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.URP],
+    cardConfig: {
+        backgroundSize: '120%',
+        backgroundPosition: '-46px -14px',
+        gradientColor: 'rgb(134, 60, 0)',
+    },
 })
 
 export default data

@@ -32,6 +32,11 @@ const data: ProjectData = generateProjectData({
         '3D Modeling in Blender.',
     ],
     tags: [Tag.VFX, Tag.VFXGraph, Tag.ShaderGraph, Tag.Unity3D, Tag.URP],
+    cardConfig: {
+        backgroundSize: '140%',
+        backgroundPosition: '-86px -34px',
+        gradientColor: 'rgb(0, 121, 181)',
+    },
 })
 
 export default data

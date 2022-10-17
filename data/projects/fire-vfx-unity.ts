@@ -30,6 +30,11 @@ const data: ProjectData = generateProjectData({
         'Sparks effect implemented with a secondary particle system.',
     ],
     tags: [Tag.VFX, Tag.VFXGraph, Tag.Unity3D, Tag.HDRP],
+    cardConfig: {
+        backgroundSize: '130%',
+        backgroundPosition: '-75px -20px',
+        gradientColor: 'rgb(102, 0, 119)',
+    },
 })
 
 export default data
