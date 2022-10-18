@@ -7,6 +7,7 @@ const data: ProjectData = generateProjectData({
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
+        '9.gif',
         '8a.gif',
         '8b.gif',
         '5.gif',
@@ -16,6 +17,8 @@ const data: ProjectData = generateProjectData({
         '6.gif',
         '2.gif',
         '1.gif',
+        '10.gif',
+        '11.png',
     ],
     youtubeVideoIds: ['QF2svyMgkRQ'],
     title: 'Standard Surface Shaders',
@@ -31,6 +34,8 @@ const data: ProjectData = generateProjectData({
         'Using the Binn-Phong lighting model in a Standard Surface Shader.',
         'Implementing a Custom Lambert Lighting model.',
         'Toon Shading implemented with a ramped Lambert lighting model and an Outline shader implemented in a second Pass.',
+        'Utilizing the Standard, physically correct lighting model.',
+        'Writing a custom unlit shader for manual implementation of Lambert Lighting, Ambient Illumination and Shadow Casting/Receiving.',
     ],
     tags: [
         Tag.Cg,
