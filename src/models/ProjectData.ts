@@ -10,6 +10,7 @@ export interface ProjectData {
     metaImageUrl: string
     imagesUrls: string[]
     youtubeVideoIds?: string[]
+    previewImageUrl?: string
     title: string
     subtitle: string
     description?: string[]

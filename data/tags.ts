@@ -16,4 +16,5 @@ export enum Tag {
     BuiltInRP = 'Built-in RP',
     URP = 'URP',
     HDRP = 'HDRP',
+    Tessellation = 'Tessellation',
 }
