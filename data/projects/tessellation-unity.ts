@@ -10,7 +10,7 @@ const data: ProjectData = generateProjectData({
     imagesNames: ['thumbnail.gif', '4.gif', '3.gif', '2.gif', '1.gif'],
     title: 'Tessellation',
     subtitle:
-        'Tessellation in Unity, both with Cg for Surface Shaders and HDRP Compute Shader Tessellation',
+        'Tessellation in Unity, both with Cg for Surface Shaders and HDRP with Compute Shader',
     implementationDetails: [
         'In Built-in RP using Surface Shader and the Hull/Domain/Geometry shader stages, using the #pragma directive for tessellation.',
         'Exploring limitations of the Metal graphics API for geometry shader stages, and the preferred Compute Shader way of doing tessellation.',

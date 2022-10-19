@@ -60,7 +60,9 @@ const generateProjectData = ({
         metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
         youtubeVideoIds,
-        previewImageUrl: `${imagesFolder}/${previewImageName}`,
+        previewImageUrl: previewImageName
+            ? `${imagesFolder}/${previewImageName}`
+            : null,
         title,
         subtitle,
         description,
