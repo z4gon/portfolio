@@ -11,6 +11,7 @@ interface GenerateProjectDataArgs {
     imagesNames: string[]
     date: string
     youtubeVideoIds?: string[]
+    previewImageName?: string
     title: string
     subtitle: string
     description?: string[]
@@ -32,6 +33,7 @@ const generateProjectData = ({
     metaImageName,
     imagesNames,
     youtubeVideoIds = [],
+    previewImageName = null,
     title,
     subtitle,
     description = [],
@@ -58,6 +60,7 @@ const generateProjectData = ({
         metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
         youtubeVideoIds,
+        previewImageUrl: `${imagesFolder}/${previewImageName}`,
         title,
         subtitle,
         description,

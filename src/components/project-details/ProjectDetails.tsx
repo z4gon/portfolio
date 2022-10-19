@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
+import Image from 'next/image'
 import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
@@ -45,6 +46,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     appleAppStoreUrl = '',
     googlePlayStoreUrl = '',
     youtubeVideoIds = [],
+    previewImageUrl = null,
 }) => {
     return (
         <main className={styles.container}>
@@ -116,6 +118,17 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </Section>
                 )}
             </div>
+
+            {previewImageUrl && (
+                <Section mobileFullWidth>
+                    <Image
+                        src={previewImageUrl}
+                        width={2000}
+                        height={1000}
+                        alt="Preview"
+                    />
+                </Section>
+            )}
 
             {youtubeVideoIds.length > 0 && (
                 <Section mobileFullWidth>

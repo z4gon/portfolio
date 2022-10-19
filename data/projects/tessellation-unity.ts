@@ -6,6 +6,7 @@ const data: ProjectData = generateProjectData({
     id: 'tessellation-unity',
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
+    previewImageName: 'thumbnail.gif',
     imagesNames: ['thumbnail.gif', '4.gif', '3.gif', '2.gif', '1.gif'],
     title: 'Tessellation',
     subtitle:
