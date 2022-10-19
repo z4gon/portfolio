@@ -9,6 +9,7 @@ import fireVfxUnity from './projects/fire-vfx-unity'
 import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import starcat from './projects/starcat'
+import tessellationUnity from './projects/tessellation-unity'
 import waterShaderUnity from './projects/water-shader-unity'
 
 const pinned: ProjectData[] = [
@@ -24,6 +25,7 @@ const other: ProjectData[] = [
     cgPerlinNoiseShaderUnity,
     cgTextureShadersUnity,
     cgShapingShadersUnity,
+    tessellationUnity,
 ]
 
 const projects = [...pinned, ...publishedGames, ...other]

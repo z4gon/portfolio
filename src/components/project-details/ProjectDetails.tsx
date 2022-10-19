@@ -66,7 +66,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         <ExternalLink
                             href={gitHubUrl}
                             className={styles.gitHubLink}
-                            icon={<GitHubIcon className={''} />}
+                            Icon={GitHubIcon}
                         >
                             View on GitHub
                         </ExternalLink>

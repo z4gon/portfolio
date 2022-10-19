@@ -5,13 +5,13 @@ import styles from '../../styles/components/ExternalLink.module.sass'
 interface ExternalLinkProps {
     href: string
     className?: string
-    icon?: React.ReactNode
+    Icon?: React.FC<{ className?: string }>
 }
 
 const ExternalLink: React.FC<PropsWithChildren<ExternalLinkProps>> = ({
     href,
     className,
-    icon,
+    Icon,
     children,
 }) => {
     return (
@@ -22,7 +22,9 @@ const ExternalLink: React.FC<PropsWithChildren<ExternalLinkProps>> = ({
             target="_blank"
         >
             {children}
-            {icon || (
+            {Icon ? (
+                <Icon className={styles.iconSvg} />
+            ) : (
                 <svg
                     className={styles.iconSvg}
                     fill="#000000"
