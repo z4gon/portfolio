@@ -31,7 +31,11 @@ const sliderSettings: SliderSettings = {
     ],
 }
 
-const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls }) => {
+const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls = [] }) => {
+    if (imagesUrls.length === 0) {
+        return null
+    }
+
     return (
         <Slider className={styles.slider} {...sliderSettings}>
             {imagesUrls.map((url, idx) => (
