@@ -124,8 +124,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <Image
                         src={previewImageUrl}
                         width={2000}
-                        height={1000}
+                        height={1200}
                         alt="Preview"
+                        style={{ filter: 'contrast(120%)' }}
                     />
                 </Section>
             )}

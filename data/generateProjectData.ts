@@ -8,7 +8,7 @@ interface GenerateProjectDataArgs {
     aliases?: string[]
     thumbnailImageName: string
     metaImageName?: string
-    imagesNames: string[]
+    imagesNames?: string[]
     date: string
     youtubeVideoIds?: string[]
     previewImageName?: string
@@ -31,7 +31,7 @@ const generateProjectData = ({
     date,
     thumbnailImageName,
     metaImageName,
-    imagesNames,
+    imagesNames = [],
     youtubeVideoIds = [],
     previewImageName = null,
     title,

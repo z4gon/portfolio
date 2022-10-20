@@ -8,7 +8,7 @@ export interface ProjectData {
     date: string
     thumbnailUrl: string
     metaImageUrl: string
-    imagesUrls: string[]
+    imagesUrls?: string[]
     youtubeVideoIds?: string[]
     previewImageUrl?: string
     title: string
