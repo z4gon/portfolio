@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
@@ -9,12 +10,28 @@ interface HomeProps {
     projects: ProjectData[]
 }
 
+const PAGE_SIZE = 12
+
 export default function Home({ projects }: HomeProps) {
+    const [page, setPage] = useState(0)
+
+    const hasNext = projects.length > (page + 1) * PAGE_SIZE
+
+    const loadNextPage = () => {
+        if (!hasNext) {
+            return
+        }
+
+        setPage((currentPage) => currentPage + 1)
+    }
+
     return (
-        <Page>
+        <Page onScrollToBottom={loadNextPage}>
             <Metatags />
             <Spacer amount="5.5em" />
-            <ProjectsGrid projects={projects} />
+            <ProjectsGrid
+                projects={projects.slice(0, (page + 1) * PAGE_SIZE)}
+            />
             <Spacer amount="3.5em" />
         </Page>
     )
