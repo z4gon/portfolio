@@ -7,7 +7,7 @@ const data: ProjectData = generateProjectData({
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
     imagesNames: ['2.gif', '3a.gif', '3b.gif'],
-    title: 'Clipping Pixels in a shader',
+    title: 'Clipping Pixels',
     subtitle:
         'Clipping pixels in a Built-in RP shader in Unity, using the Cg programming language',
     implementationDetails: [
