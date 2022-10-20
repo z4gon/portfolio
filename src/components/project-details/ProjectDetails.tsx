@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import Image from 'next/image'
 import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
@@ -51,6 +50,17 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     return (
         <main className={styles.container}>
             <ImagesSlider imagesUrls={imagesUrls} />
+
+            {previewImageUrl && (
+                <Section mobileFullWidth>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        className={styles.previewImage}
+                        src={previewImageUrl}
+                        alt="Preview"
+                    />
+                </Section>
+            )}
 
             <div className={styles.card}>
                 <Section className={styles.header}>
@@ -118,18 +128,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </Section>
                 )}
             </div>
-
-            {previewImageUrl && (
-                <Section mobileFullWidth>
-                    <Image
-                        src={previewImageUrl}
-                        width={2000}
-                        height={1200}
-                        alt="Preview"
-                        style={{ filter: 'contrast(120%)' }}
-                    />
-                </Section>
-            )}
 
             {youtubeVideoIds.length > 0 && (
                 <Section mobileFullWidth>
