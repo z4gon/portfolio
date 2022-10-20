@@ -1,6 +1,7 @@
 import { ProjectData } from '../src/models/ProjectData'
 
 import cgBallOfLavaShaderUnity from './projects/cg-ball-of-lava-shader-unity'
+import cgClippingShader from './projects/cg-clipping-shader'
 import cgPerlinNoiseShaderUnity from './projects/cg-perlin-noise-shader-unity'
 import cgShapingShadersUnity from './projects/cg-shaping-shaders-unity'
 import cgStencilBufferUnity from './projects/cg-stencil-buffer-unity'
@@ -15,6 +16,7 @@ import waterShaderUnity from './projects/water-shader-unity'
 
 const pinned: ProjectData[] = [
     cgBallOfLavaShaderUnity,
+    cgClippingShader,
     cgSurfaceShadersUnity,
     groundSlashVfxUnity,
     iceAttackVfxUnity,
