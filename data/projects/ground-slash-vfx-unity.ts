@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'ground-slash-vfx-unity',
@@ -35,7 +36,8 @@ const data: ProjectData = generateProjectData({
         'Debris with random velocities, gravity and collision with plane.',
         'First Person Character Controller with Input System to simulate the player using the VFX.',
     ],
-    tags: [Tag.VFXGraph, Tag.URP, Tag.Unity, Tag.VFX],
+    tags: [Tag.VFXGraph, Tag.URP, Tag.VFX, Tag.Unity],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '4px -14px',

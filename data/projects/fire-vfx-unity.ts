@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'fire-vfx-unity',
@@ -29,7 +30,8 @@ const data: ProjectData = generateProjectData({
         'Lighting using a Point Light.',
         'Sparks effect implemented with a secondary particle system.',
     ],
-    tags: [Tag.VFXGraph, Tag.HDRP, Tag.Unity, Tag.VFX],
+    tags: [Tag.VFXGraph, Tag.HDRP, Tag.VFX, Tag.Unity],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-10px -40px',

@@ -46,6 +46,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     googlePlayStoreUrl = '',
     youtubeVideoIds = [],
     previewImageUrl = null,
+    technology = null,
 }) => {
     return (
         <main className={styles.container}>
@@ -66,6 +67,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 <Section className={styles.header}>
                     <div className={styles.information}>
                         <h2 className={styles.title}>
+                            {technology && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                    className={styles.technology}
+                                    src={`/images/${technology}.png`}
+                                    alt={technology}
+                                />
+                            )}
                             {title}
                             <Tag secondary className={styles.date}>
                                 {date}

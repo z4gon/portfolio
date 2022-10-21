@@ -1,4 +1,5 @@
 import { Tag } from '../../data/tags'
+import { Technology } from '../../data/technology'
 import { LinkData } from './LinkData'
 import { ProjectCardConfig } from './ProjectCardConfig'
 
@@ -21,4 +22,5 @@ export interface ProjectData {
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
     cardConfig?: ProjectCardConfig
+    technology?: Technology
 }

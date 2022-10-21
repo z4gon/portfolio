@@ -10,6 +10,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     thumbnailUrl,
     title,
     tags,
+    technology = null,
     cardConfig: {
         backgroundSize = '120%',
         backgroundPosition = '0px 0px',
@@ -36,6 +37,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <div className={styles.information}>
                         <h2 className={styles.title}>{title}</h2>
                         <Tags dark tags={tags.slice(0, 3)} />
+                        {technology && (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                                className={styles.technology}
+                                src={`/images/${technology}.png`}
+                                alt={technology}
+                            />
+                        )}
                     </div>
                 </article>
             </a>

@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-stencil-buffer-unity',
@@ -17,6 +18,7 @@ const data: ProjectData = generateProjectData({
         'Setting Queue=Geometry-1 in the shader to ensure it renders in front of all other objects.',
     ],
     tags: [Tag.Cg, Tag.BuiltInRP, Tag.Unity],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-5px 0px',

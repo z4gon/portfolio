@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-texture-shaders-unity',
@@ -19,6 +20,7 @@ const data: ProjectData = generateProjectData({
         'Transition and blending between textures using smoothstep.',
     ],
     tags: [Tag.Cg, Tag.BuiltInRP, Tag.ShaderLab, Tag.Unity, Tag.FragmentShader],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '20px -16px',

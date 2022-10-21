@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'ice-attack-vfx-unity',
@@ -32,6 +33,7 @@ const data: ProjectData = generateProjectData({
         '3D Modeling in Blender.',
     ],
     tags: [Tag.VFXGraph, Tag.ShaderGraph, Tag.URP, Tag.Unity, Tag.VFX],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-10px -20px',
