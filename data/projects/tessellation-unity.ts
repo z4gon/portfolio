@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'tessellation-unity',
@@ -16,6 +17,7 @@ const data: ProjectData = generateProjectData({
         'Implementing the baked in tessellation in the HDRP.',
     ],
     tags: [Tag.BuiltInRP, Tag.HDRP, Tag.Tessellation],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '140%',
         backgroundPosition: '5px 0px',

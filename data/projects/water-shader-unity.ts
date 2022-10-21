@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'water-shader-unity',
@@ -29,7 +30,8 @@ const data: ProjectData = generateProjectData({
         'Foam generated using the Scene Depth node and a gradient noise.',
         'Waves achieved with geometry displacement, adding Normals multiplied by a gradient noise, effectively deforming the fragment geometry.',
     ],
-    tags: [Tag.ShaderGraph, Tag.URP, Tag.Unity, Tag.VFX],
+    tags: [Tag.ShaderGraph, Tag.URP, Tag.VFX, Tag.Unity],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '0px 0px',

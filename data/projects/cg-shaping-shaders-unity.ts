@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-shaping-shaders-unity',
@@ -51,6 +52,7 @@ const data: ProjectData = generateProjectData({
         Tag.VertexShader,
         Tag.FragmentShader,
     ],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '10px -18px',

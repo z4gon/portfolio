@@ -2,6 +2,7 @@ import { LinkData } from '../src/models/LinkData'
 import { ProjectCardConfig } from '../src/models/ProjectCardConfig'
 import { ProjectData } from '../src/models/ProjectData'
 import { Tag } from './tags'
+import { Technology } from './technology'
 
 interface GenerateProjectDataArgs {
     id: string
@@ -23,6 +24,7 @@ interface GenerateProjectDataArgs {
     googlePlayStoreUrl?: string
     isPrivateRepo?: boolean
     cardConfig?: ProjectCardConfig
+    technology?: Technology
 }
 
 const generateProjectData = ({
@@ -44,6 +46,7 @@ const generateProjectData = ({
     appleAppStoreUrl = null,
     googlePlayStoreUrl = null,
     isPrivateRepo = false,
+    technology = null,
     cardConfig = {
         backgroundSize: '120%',
         backgroundPosition: '0px 0px',
@@ -74,6 +77,7 @@ const generateProjectData = ({
         links,
         appleAppStoreUrl,
         googlePlayStoreUrl,
+        technology,
         cardConfig,
     }
 

@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'starcat',
@@ -39,7 +40,7 @@ const data: ProjectData = generateProjectData({
         'AssetBundles and LoadAsync for memory usage optimization.',
         'ScriptableObjects.',
     ],
-    tags: [Tag.iOS, Tag.Android, Tag.Unity, Tag.CSharp, Tag.MobileGame],
+    tags: [Tag.iOS, Tag.Android, Tag.CSharp, Tag.Unity, Tag.MobileGame],
     links: [
         {
             href: 'https://nochegames.com',
@@ -50,6 +51,7 @@ const data: ProjectData = generateProjectData({
     googlePlayStoreUrl:
         'https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat',
     isPrivateRepo: true,
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '100%',
         backgroundPosition: '-10px -70px',

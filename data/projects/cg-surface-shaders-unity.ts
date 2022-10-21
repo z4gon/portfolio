@@ -1,6 +1,7 @@
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 import { Tag } from '../tags'
+import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-surface-shaders-unity',
@@ -45,6 +46,7 @@ const data: ProjectData = generateProjectData({
         Tag.SurfaceShader,
         Tag.Lighting,
     ],
+    technology: Technology.UnityEngine,
     cardConfig: {
         backgroundSize: '120%',
         backgroundPosition: '10px 0px',
