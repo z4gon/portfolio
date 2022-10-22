@@ -4,8 +4,7 @@ import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
 
 const data: ProjectData = generateProjectData({
-    id: 'cg-ball-of-lava-shader-unity',
-    aliases: ['ball-of-lava-shader-unity'],
+    id: 'mario-kart-item-box-vfx',
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
     imagesNames: [

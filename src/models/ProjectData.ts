@@ -1,26 +1,29 @@
-import { Tag } from '../../data/tags'
-import { Technology } from '../../data/technology'
+import { Tag } from './enums/Tag'
+import { Technology } from './enums/Technology'
 import { LinkData } from './LinkData'
 import { ProjectCardConfig } from './ProjectCardConfig'
 
-export interface ProjectData {
+export interface ProjectDataMinimal {
     id: string
+    title: string
+    thumbnailUrl: string
+    tags: Tag[]
+    technology?: Technology
+    cardConfig?: ProjectCardConfig
+}
+
+export interface ProjectData extends ProjectDataMinimal {
     aliases?: string[]
     date: string
-    thumbnailUrl: string
     metaImageUrl: string
     imagesUrls?: string[]
     youtubeVideoIds?: string[]
     previewImageUrl?: string
-    title: string
     subtitle: string
     description?: string[]
     implementationDetails: string[]
-    tags: Tag[]
     links?: LinkData[]
     gitHubUrl?: string
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
-    cardConfig?: ProjectCardConfig
-    technology?: Technology
 }

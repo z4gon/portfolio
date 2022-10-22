@@ -1,11 +1,9 @@
 import Link from 'next/link'
 import styles from '../../../styles/components/projects-grid/ProjectCard.module.sass'
-import { ProjectData } from '../../models/ProjectData'
-import Tags from '../Tags'
+import { ProjectDataMinimal } from '../../models/ProjectData'
+import TagsList from '../TagsList'
 
-interface ProjectCardProps extends ProjectData {}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<ProjectDataMinimal> = ({
     id,
     thumbnailUrl,
     title,
@@ -36,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     />
                     <div className={styles.information}>
                         <h2 className={styles.title}>{title}</h2>
-                        <Tags dark tags={tags.slice(0, 3)} />
+                        <TagsList dark tags={tags.slice(0, 3)} />
                         {technology && (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img

@@ -1,8 +1,8 @@
+import { Tag } from '../src/models/enums/Tag'
+import { Technology } from '../src/models/enums/Technology'
 import { LinkData } from '../src/models/LinkData'
 import { ProjectCardConfig } from '../src/models/ProjectCardConfig'
 import { ProjectData } from '../src/models/ProjectData'
-import { Tag } from './tags'
-import { Technology } from './technology'
 
 interface GenerateProjectDataArgs {
     id: string
