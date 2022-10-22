@@ -1,5 +1,6 @@
 export enum Tag {
     Cg = 'Cg',
+    HLSL = 'HLSL',
     Unity = 'Unity',
     ShaderGraph = 'Shader Graph',
     ShaderLab = 'ShaderLab',
