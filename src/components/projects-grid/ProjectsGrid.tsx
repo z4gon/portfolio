@@ -1,9 +1,9 @@
 import styles from '../../../styles/components/projects-grid/ProjectsGrid.module.sass'
-import { ProjectData } from '../../models/ProjectData'
+import { ProjectDataMinimal } from '../../models/ProjectData'
 import ProjectCard from './ProjectCard'
 
 interface ProjectsGridProps {
-    projects: ProjectData[]
+    projects: ProjectDataMinimal[]
 }
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {

@@ -11,11 +11,13 @@ import cgTransparencyShadersUnity from './projects/cg-transparency-shaders-unity
 import fireVfxUnity from './projects/fire-vfx-unity'
 import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
+import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import starcat from './projects/starcat'
 import tessellationUnity from './projects/tessellation-unity'
 import waterShaderUnity from './projects/water-shader-unity'
 
 const pinned: ProjectData[] = [
+    marioKartItemBoxVfx,
     cgBallOfLavaShaderUnity,
     cgClippingShader,
     cgTransparencyShadersUnity,

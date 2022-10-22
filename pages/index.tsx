@@ -4,10 +4,10 @@ import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
-import { ProjectData } from '../src/models/ProjectData'
+import { ProjectDataMinimal } from '../src/models/ProjectData'
 
 interface HomeProps {
-    projects: ProjectData[]
+    projects: ProjectDataMinimal[]
 }
 
 const PAGE_SIZE = 12
@@ -44,7 +44,15 @@ export default function Home({ projects }: HomeProps) {
 export async function getStaticProps() {
     return {
         props: {
-            projects,
+            // only serialize the needed properties
+            projects: projects.map((x) => ({
+                id: x.id,
+                title: x.title,
+                thumbnailUrl: x.thumbnailUrl,
+                tags: x.tags,
+                technology: x.technology,
+                cardConfig: x.cardConfig,
+            })),
         },
     }
 }

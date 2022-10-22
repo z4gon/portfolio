@@ -1,15 +1,15 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import { Tag as TagData } from '../../data/tags'
 import styles from '../../styles/components/Tags.module.sass'
+import { Tag } from '../models/enums/Tag'
 
-interface TagsProps {
-    tags: TagData[]
+interface TagsListProps {
+    tags: Tag[]
     secondary?: boolean
     dark?: boolean
 }
 
-const Tags: React.FC<TagsProps> = ({
+const TagsList: React.FC<TagsListProps> = ({
     tags,
     secondary = false,
     dark = false,
@@ -17,9 +17,9 @@ const Tags: React.FC<TagsProps> = ({
     return (
         <div className={styles.tags}>
             {tags.map((tag, index) => (
-                <Tag key={index} secondary={secondary} dark={dark}>
+                <TagRenderer key={index} secondary={secondary} dark={dark}>
                     {tag}
-                </Tag>
+                </TagRenderer>
             ))}
         </div>
     )
@@ -31,7 +31,7 @@ interface TagProps extends PropsWithChildren {
     dark?: boolean
 }
 
-export const Tag: React.FC<TagProps> = ({
+export const TagRenderer: React.FC<TagProps> = ({
     children,
     className,
     secondary = false,
@@ -47,4 +47,4 @@ export const Tag: React.FC<TagProps> = ({
     </span>
 )
 
-export default Tags
+export default TagsList

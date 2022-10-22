@@ -1,7 +1,7 @@
+import { Tag } from '../../src/models/enums/Tag'
+import { Technology } from '../../src/models/enums/Technology'
 import { ProjectData } from '../../src/models/ProjectData'
 import generateProjectData from '../generateProjectData'
-import { Tag } from '../tags'
-import { Technology } from '../technology'
 
 const data: ProjectData = generateProjectData({
     id: 'cg-transparency-shaders-unity',
