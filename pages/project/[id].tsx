@@ -1,6 +1,6 @@
 import projects from '../../data/projects'
-import WithFullScreenCarousel from '../../src/components/images-slider/WithFullScreenCarousel'
 import Metatags from '../../src/components/Metatags'
+import WithFullScreenCarousel from '../../src/components/multimedia-slider/WithFullScreenCarousel'
 import Page from '../../src/components/page/Page'
 import ProjectDetails from '../../src/components/project-details/ProjectDetails'
 import { ProjectData } from '../../src/models/ProjectData'

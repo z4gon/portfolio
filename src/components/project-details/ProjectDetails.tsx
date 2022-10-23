@@ -4,7 +4,7 @@ import styles from '../../../styles/components/project-details/ProjectDetails.mo
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
-import ImagesSlider from '../images-slider/ImagesSlider'
+import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
 
@@ -35,6 +35,7 @@ interface ProjectDetailsProps extends ProjectData {}
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     date,
     imagesUrls = [],
+    videosUrls = [],
     title,
     subtitle,
     description = [],
@@ -51,7 +52,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     return (
         <div className={styles.detailsView}>
             <main className={styles.container}>
-                <ImagesSlider imagesUrls={imagesUrls} />
+                <MultimediaSlider
+                    imagesUrls={imagesUrls}
+                    videosUrls={videosUrls}
+                />
 
                 {previewImageUrl && (
                     <Section mobileFullWidth>
