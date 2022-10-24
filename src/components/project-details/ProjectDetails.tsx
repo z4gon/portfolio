@@ -4,7 +4,7 @@ import styles from '../../../styles/components/project-details/ProjectDetails.mo
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
-import ImagesSlider from '../images-slider/ImagesSlider'
+import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
 
@@ -35,6 +35,7 @@ interface ProjectDetailsProps extends ProjectData {}
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     date,
     imagesUrls = [],
+    videosUrls = [],
     title,
     subtitle,
     description = [],
@@ -45,22 +46,41 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     appleAppStoreUrl = '',
     googlePlayStoreUrl = '',
     youtubeVideoIds = [],
-    previewImageUrl = null,
+    primaryImageUrl = null,
+    primaryVideoUrl = null,
     technology = null,
 }) => {
     return (
         <div className={styles.detailsView}>
             <main className={styles.container}>
-                <ImagesSlider imagesUrls={imagesUrls} />
+                <MultimediaSlider
+                    imagesUrls={imagesUrls}
+                    videosUrls={videosUrls}
+                />
 
-                {previewImageUrl && (
+                {primaryImageUrl && (
                     <Section mobileFullWidth>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            className={styles.previewImage}
-                            src={previewImageUrl}
+                            className={styles.primaryImage}
+                            src={primaryImageUrl}
                             alt="Preview"
                         />
+                    </Section>
+                )}
+
+                {primaryVideoUrl && (
+                    <Section mobileFullWidth>
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls
+                            className={styles.primaryVideo}
+                        >
+                            <source src={primaryVideoUrl} type="video/mp4" />
+                        </video>
                     </Section>
                 )}
 

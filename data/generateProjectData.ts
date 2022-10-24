@@ -10,9 +10,11 @@ interface GenerateProjectDataArgs {
     thumbnailImageName: string
     metaImageName?: string
     imagesNames?: string[]
+    videosNames?: string[]
     date: string
     youtubeVideoIds?: string[]
-    previewImageName?: string
+    primaryImageName?: string
+    primaryVideoName?: string
     title: string
     subtitle: string
     description?: string[]
@@ -34,8 +36,10 @@ const generateProjectData = ({
     thumbnailImageName,
     metaImageName,
     imagesNames = [],
+    videosNames = [],
     youtubeVideoIds = [],
-    previewImageName = null,
+    primaryImageName = null,
+    primaryVideoName = null,
     title,
     subtitle,
     description = [],
@@ -54,6 +58,7 @@ const generateProjectData = ({
     },
 }: GenerateProjectDataArgs): ProjectData => {
     const imagesFolder = `/images/portfolio/${id}`
+    const videosFolder = `/videos/${id}`
 
     const data: ProjectData = {
         id,
@@ -62,9 +67,13 @@ const generateProjectData = ({
         thumbnailUrl: `${imagesFolder}/${thumbnailImageName}`,
         metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
+        videosUrls: videosNames.map((name) => `${videosFolder}/${name}`),
         youtubeVideoIds,
-        previewImageUrl: previewImageName
-            ? `${imagesFolder}/${previewImageName}`
+        primaryImageUrl: primaryImageName
+            ? `${imagesFolder}/${primaryImageName}`
+            : null,
+        primaryVideoUrl: primaryVideoName
+            ? `${videosFolder}/${primaryVideoName}`
             : null,
         title,
         subtitle,

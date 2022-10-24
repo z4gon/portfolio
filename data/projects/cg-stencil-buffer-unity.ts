@@ -7,7 +7,7 @@ const data: ProjectData = generateProjectData({
     id: 'cg-stencil-buffer-unity',
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
-    previewImageName: 'thumbnail.gif',
+    primaryImageName: 'thumbnail.gif',
     title: 'X-Ray Stencil Buffer',
     subtitle:
         'X-Ray shader using the stencil buffer in Unity 2021.3.10f1 Built-in RP written in the Cg programming language',

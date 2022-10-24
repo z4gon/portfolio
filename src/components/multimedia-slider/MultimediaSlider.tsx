@@ -1,9 +1,10 @@
 import Slider, { Settings as SliderSettings } from 'react-slick'
-import styles from '../../../styles/components/images-slider/ImagesSlider.module.sass'
+import styles from '../../../styles/components/multimedia-slider/MultimediaSlider.module.sass'
 import GoFullScreenButton from './GoFullScreenButton'
 
-interface ImagesSliderProps {
+interface MultimediaSliderProps {
     imagesUrls: string[]
+    videosUrls: string[]
 }
 
 const sliderSettings: SliderSettings = {
@@ -31,13 +32,21 @@ const sliderSettings: SliderSettings = {
     ],
 }
 
-const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls = [] }) => {
-    if (imagesUrls.length === 0) {
+const MultimediaSlider: React.FC<MultimediaSliderProps> = ({
+    imagesUrls = [],
+    videosUrls = [],
+}) => {
+    if (imagesUrls.length === 0 && videosUrls.length === 0) {
         return null
     }
 
     return (
         <Slider className={styles.slider} {...sliderSettings}>
+            {videosUrls.map((url) => (
+                <video autoPlay loop muted playsInline controls key={url}>
+                    <source src={url} type="video/mp4" />
+                </video>
+            ))}
             {imagesUrls.map((url, idx) => (
                 <div key={url}>
                     <div
@@ -57,4 +66,4 @@ const ImagesSlider: React.FC<ImagesSliderProps> = ({ imagesUrls = [] }) => {
     )
 }
 
-export default ImagesSlider
+export default MultimediaSlider
