@@ -1,5 +1,5 @@
 import Slider, { Settings as SliderSettings } from 'react-slick'
-import styles from '../../../styles/components/images-slider/ImagesSlider.module.sass'
+import styles from '../../../styles/components/multimedia-slider/MultimediaSlider.module.sass'
 import GoFullScreenButton from './GoFullScreenButton'
 
 interface MultimediaSliderProps {
