@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import styles from '../../../styles/components/images-slider/FullScreenCarousel.module.sass'
+import styles from '../../../styles/components/multimedia-slider/FullScreenCarousel.module.sass'
 import { FullScreenCarouselContext } from '../../contexts/fullScreenCarousel'
 
 const FullScreenCarousel: React.FC<{}> = () => {

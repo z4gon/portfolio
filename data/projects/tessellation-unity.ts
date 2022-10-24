@@ -7,7 +7,7 @@ const data: ProjectData = generateProjectData({
     id: 'tessellation-unity',
     date: '2022-10',
     thumbnailImageName: 'thumbnail.gif',
-    previewImageName: 'thumbnail.gif',
+    primaryImageName: 'thumbnail.gif',
     title: 'Tessellation',
     subtitle:
         'Tessellation in Unity, both with Cg for Surface Shaders and HDRP with Compute Shader',
