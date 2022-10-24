@@ -6,7 +6,7 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-perlin-noise-shader-unity',
     date: '2022-10',
-    imagesNames: ['4.gif', '3.gif', '2.gif', '1.gif'],
+    videosNames: ['4.mp4', '3.mp4', '2.mp4', '1.mp4'],
     youtubeVideoIds: ['d1HJ0O3btq0'],
     title: 'Perlin Noise Shader',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
