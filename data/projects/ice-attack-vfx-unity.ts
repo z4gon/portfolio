@@ -6,16 +6,16 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'ice-attack-vfx-unity',
     date: '2022-9',
-    imagesNames: [
-        'thumbnail.gif',
-        '8-waves.gif',
-        '7-snow-spike-vfx.gif',
-        '6-snow-mesh.gif',
-        '5-spikes.gif',
-        '4-spike-test.gif',
-        '3-dissolve-fresnel.gif',
-        '2-spike-mesh.gif',
-        '1-ground-textures.gif',
+    videosNames: [
+        '9.mp4',
+        '8-waves.mp4',
+        '7-snow-spike-vfx.mp4',
+        '6-snow-mesh.mp4',
+        '5-spikes.mp4',
+        '4-spike-test.mp4',
+        '3-dissolve-fresnel.mp4',
+        '2-spike-mesh.mp4',
+        '1-ground-textures.mp4',
     ],
     youtubeVideoIds: ['h4akS-e__9E'],
     title: 'Ice Attack VFX',
@@ -34,8 +34,8 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.VFXGraph, Tag.ShaderGraph, Tag.URP, Tag.Unity, Tag.VFX],
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '-10px -20px',
+        backgroundSize: '90%',
+        backgroundPosition: '26px 0px',
         gradientColor: 'rgb(0, 121, 181)',
     },
 })
