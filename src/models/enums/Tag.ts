@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 export enum Tag {
     Cg = 'Cg',
     HLSL = 'HLSL',
