@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from '../../../styles/components/projects-grid/ProjectsGrid.module.sass'
 import { ProjectDataMinimal } from '../../models/ProjectData'
+import Button from '../Button'
 import ProjectCard from './ProjectCard'
 
 interface ProjectsGridProps {
@@ -22,8 +23,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
         setPage((currentPage) => currentPage + 1)
     }
 
-    // const projectsToList = projects.slice(0, (page + 1) * PAGE_SIZE)
-    const projectsToList = projects
+    const projectsToList = projects.slice(0, (page + 1) * PAGE_SIZE)
 
     return (
         <main className={styles.container}>
@@ -31,6 +31,11 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
                 {projectsToList.map((project) => (
                     <ProjectCard key={project.id} {...project} />
                 ))}
+            </div>
+            <div className={styles.actions}>
+                {hasNext && (
+                    <Button onClick={() => loadNextPage()}>Show More</Button>
+                )}
             </div>
         </main>
     )
