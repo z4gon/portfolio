@@ -34,7 +34,6 @@ export async function getStaticProps() {
                 thumbnailUrl: x.thumbnailUrl,
                 tags: x.tags,
                 technology: x.technology,
-                cardConfig: x.cardConfig,
             })),
         },
     }

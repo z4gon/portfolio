@@ -17,11 +17,6 @@ const data: ProjectData = generateProjectData({
     ],
     tags: [Tag.BuiltInRP, Tag.HDRP, Tag.Tessellation],
     technology: Technology.UnityEngine,
-    cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '20px 10px',
-        gradientColor: 'rgb(84, 119, 155)',
-    },
 })
 
 export default data

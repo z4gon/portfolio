@@ -1,7 +1,6 @@
 import { Tag } from '../src/models/enums/Tag'
 import { Technology } from '../src/models/enums/Technology'
 import { LinkData } from '../src/models/LinkData'
-import { ProjectCardConfig } from '../src/models/ProjectCardConfig'
 import { ProjectData } from '../src/models/ProjectData'
 
 interface GenerateProjectDataArgs {
@@ -23,7 +22,6 @@ interface GenerateProjectDataArgs {
     appleAppStoreUrl?: string
     googlePlayStoreUrl?: string
     isPrivateRepo?: boolean
-    cardConfig?: ProjectCardConfig
     technology?: Technology
 }
 
@@ -47,15 +45,10 @@ const generateProjectData = ({
     googlePlayStoreUrl = null,
     isPrivateRepo = false,
     technology = null,
-    cardConfig = {
-        backgroundSize: '120%',
-        backgroundPosition: '0px 0px',
-        gradientColor: 'rgb(0, 96, 115)',
-    },
 }: GenerateProjectDataArgs): ProjectData => {
-    const thumbnailImageUrl = `/images/thumbnails/${id}.gif`
+    const thumbnailImageUrl = `/videos/thumbnails/${id}.mp4`
     const imagesFolder = `/images/projects/${id}`
-    const videosFolder = `/videos/${id}`
+    const videosFolder = `/videos/projects/${id}`
 
     const data: ProjectData = {
         id,
@@ -84,7 +77,6 @@ const generateProjectData = ({
         appleAppStoreUrl,
         googlePlayStoreUrl,
         technology,
-        cardConfig,
     }
 
     return data

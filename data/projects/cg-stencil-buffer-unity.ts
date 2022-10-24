@@ -18,11 +18,6 @@ const data: ProjectData = generateProjectData({
     ],
     tags: [Tag.Cg, Tag.BuiltInRP, Tag.Unity],
     technology: Technology.UnityEngine,
-    cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '-5px -20px',
-        gradientColor: 'rgb(84, 119, 155)',
-    },
 })
 
 export default data

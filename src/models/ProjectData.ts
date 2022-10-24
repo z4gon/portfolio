@@ -1,7 +1,6 @@
 import { Tag } from './enums/Tag'
 import { Technology } from './enums/Technology'
 import { LinkData } from './LinkData'
-import { ProjectCardConfig } from './ProjectCardConfig'
 
 export interface ProjectDataMinimal {
     id: string
@@ -9,7 +8,6 @@ export interface ProjectDataMinimal {
     thumbnailUrl: string
     tags: Tag[]
     technology?: Technology
-    cardConfig?: ProjectCardConfig
 }
 
 export interface ProjectData extends ProjectDataMinimal {

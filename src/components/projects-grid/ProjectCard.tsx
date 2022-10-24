@@ -9,29 +9,23 @@ const ProjectCard: React.FC<ProjectDataMinimal> = ({
     title,
     tags,
     technology = null,
-    cardConfig: {
-        backgroundSize = '120%',
-        backgroundPosition = '0px 0px',
-        gradientColor = 'rgb(0, 96, 115)',
-    } = {},
 }) => {
     return (
         <Link href={`/project/${id}`}>
             <a className={styles.link}>
-                <article
-                    className={styles.card}
-                    style={{
-                        background: `rgb(0,0,0) linear-gradient(180deg, black, 65%, ${gradientColor} 100%)`,
-                    }}
-                >
-                    <div
-                        className={styles.thumbnail}
-                        style={{
-                            backgroundImage: `url(${thumbnailUrl})`,
-                            backgroundSize,
-                            backgroundPosition,
-                        }}
-                    />
+                <article className={styles.card}>
+                    <div className={styles.thumbnailContainer}>
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className={styles.thumbnail}
+                        >
+                            <source src={thumbnailUrl} type="video/mp4" />
+                        </video>
+                    </div>
+
                     <div className={styles.information}>
                         <h2 className={styles.title}>{title}</h2>
                         <TagsList dark tags={tags.slice(0, 3)} />
