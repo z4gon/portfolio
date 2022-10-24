@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-stencil-buffer-unity',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     previewImageName: 'thumbnail.gif',
     title: 'X-Ray Stencil Buffer',
     subtitle:

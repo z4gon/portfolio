@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'ice-attack-vfx-unity',
     date: '2022-9',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         'thumbnail.gif',
         '8-waves.gif',

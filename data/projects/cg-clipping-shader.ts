@@ -6,8 +6,7 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-clipping-shader',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
-    imagesNames: ['2.gif', '3a.gif', '3b.gif'],
+    videosNames: ['2.mp4', '3a.mp4', '3b.mp4'],
     title: 'Clipping Pixels',
     subtitle:
         'Clipping pixels in a Built-in RP shader in Unity, using the Cg programming language',

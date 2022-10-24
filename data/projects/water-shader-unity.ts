@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'water-shader-unity',
     date: '2022-7',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         'cliff.gif',
         'lake.gif',

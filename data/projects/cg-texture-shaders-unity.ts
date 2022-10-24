@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-texture-shaders-unity',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: ['3.gif', '2.gif', '1d.gif', '1b.gif'],
     youtubeVideoIds: ['G0M9q3efZ1M'],
     title: 'Cg Texture Shaders',

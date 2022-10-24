@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'starcat',
     date: '2022-7',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         'screen-1.jpg',
         'screen-2.png',

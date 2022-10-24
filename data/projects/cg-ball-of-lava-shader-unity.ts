@@ -7,7 +7,6 @@ const data: ProjectData = generateProjectData({
     id: 'cg-ball-of-lava-shader-unity',
     aliases: ['ball-of-lava-shader-unity'],
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     videosNames: [
         '7.mp4',
         '6.mp4',

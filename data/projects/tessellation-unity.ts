@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'tessellation-unity',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     previewImageName: 'thumbnail.gif',
     title: 'Tessellation',
     subtitle:

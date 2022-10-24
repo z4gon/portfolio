@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'mario-kart-item-box-vfx',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         '13.gif',
         '12.gif',

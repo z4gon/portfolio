@@ -6,7 +6,6 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-transparency-shaders-unity',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
     imagesNames: [
         'thumbnail.gif',
         '10.gif',
