@@ -7,8 +7,6 @@ import { ProjectData } from '../src/models/ProjectData'
 interface GenerateProjectDataArgs {
     id: string
     aliases?: string[]
-    thumbnailImageName: string
-    metaImageName?: string
     imagesNames?: string[]
     videosNames?: string[]
     date: string
@@ -32,8 +30,6 @@ const generateProjectData = ({
     id,
     aliases = [],
     date,
-    thumbnailImageName,
-    metaImageName,
     imagesNames = [],
     videosNames = [],
     youtubeVideoIds = [],
@@ -55,15 +51,16 @@ const generateProjectData = ({
         gradientColor: 'rgb(0, 96, 115)',
     },
 }: GenerateProjectDataArgs): ProjectData => {
-    const imagesFolder = `/images/portfolio/${id}`
+    const thumbnailImageUrl = `/images/thumbnails/${id}.gif`
+    const imagesFolder = `/images/projects/${id}`
     const videosFolder = `/videos/${id}`
 
     const data: ProjectData = {
         id,
         aliases,
         date,
-        thumbnailUrl: `${imagesFolder}/${thumbnailImageName}`,
-        metaImageUrl: `${imagesFolder}/${metaImageName || thumbnailImageName}`,
+        thumbnailUrl: thumbnailImageUrl,
+        metaImageUrl: thumbnailImageUrl,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
         videosUrls: videosNames.map((name) => `${videosFolder}/${name}`),
         youtubeVideoIds,

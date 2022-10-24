@@ -22,7 +22,8 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
         setPage((currentPage) => currentPage + 1)
     }
 
-    const projectsToList = projects.slice(0, (page + 1) * PAGE_SIZE)
+    // const projectsToList = projects.slice(0, (page + 1) * PAGE_SIZE)
+    const projectsToList = projects
 
     return (
         <main className={styles.container}>
