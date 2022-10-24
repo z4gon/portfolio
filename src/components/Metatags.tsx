@@ -14,8 +14,8 @@ export default function Metatags(props: Props) {
     const {
         title = 'Gonzalo Cumini | Portfolio',
         url = urlBase,
-        imageUrl = `/thumbnail.gif`,
-        faviconUrl = `/favicon.ico`,
+        imageUrl = '/thumbnail.gif',
+        faviconUrl = '/favicon.ico',
         description = 'Gonzalo Cumini | Portfolio',
     } = props
 
