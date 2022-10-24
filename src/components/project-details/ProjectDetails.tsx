@@ -47,6 +47,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     googlePlayStoreUrl = '',
     youtubeVideoIds = [],
     previewImageUrl = null,
+    previewVideoUrl = null,
     technology = null,
 }) => {
     return (
@@ -65,6 +66,21 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             src={previewImageUrl}
                             alt="Preview"
                         />
+                    </Section>
+                )}
+
+                {previewVideoUrl && (
+                    <Section mobileFullWidth>
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls
+                            className={styles.previewVideo}
+                        >
+                            <source src={previewVideoUrl} type="video/mp4" />
+                        </video>
                     </Section>
                 )}
 
