@@ -19,8 +19,8 @@ export interface ProjectData extends ProjectDataMinimal {
     imagesUrls?: string[]
     videosUrls?: string[]
     youtubeVideoIds?: string[]
-    previewImageUrl?: string
-    previewVideoUrl?: string
+    primaryImageUrl?: string
+    primaryVideoUrl?: string
     subtitle: string
     description?: string[]
     implementationDetails: string[]

@@ -46,8 +46,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     appleAppStoreUrl = '',
     googlePlayStoreUrl = '',
     youtubeVideoIds = [],
-    previewImageUrl = null,
-    previewVideoUrl = null,
+    primaryImageUrl = null,
+    primaryVideoUrl = null,
     technology = null,
 }) => {
     return (
@@ -58,18 +58,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     videosUrls={videosUrls}
                 />
 
-                {previewImageUrl && (
+                {primaryImageUrl && (
                     <Section mobileFullWidth>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            className={styles.previewImage}
-                            src={previewImageUrl}
+                            className={styles.primaryImage}
+                            src={primaryImageUrl}
                             alt="Preview"
                         />
                     </Section>
                 )}
 
-                {previewVideoUrl && (
+                {primaryVideoUrl && (
                     <Section mobileFullWidth>
                         <video
                             autoPlay
@@ -77,9 +77,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             muted
                             playsInline
                             controls
-                            className={styles.previewVideo}
+                            className={styles.primaryVideo}
                         >
-                            <source src={previewVideoUrl} type="video/mp4" />
+                            <source src={primaryVideoUrl} type="video/mp4" />
                         </video>
                     </Section>
                 )}
