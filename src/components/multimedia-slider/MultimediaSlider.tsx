@@ -5,6 +5,7 @@ import GoFullScreenButton from './GoFullScreenButton'
 interface MultimediaSliderProps {
     imagesUrls: string[]
     videosUrls: string[]
+    autoPlayVideos?: boolean
 }
 
 const sliderSettings: SliderSettings = {
@@ -16,6 +17,7 @@ const sliderSettings: SliderSettings = {
     slidesToScroll: 1,
     lazyLoad: 'ondemand',
     autoplay: true,
+    autoplaySpeed: 10 * 1000,
     responsive: [
         {
             breakpoint: 1000,
@@ -35,6 +37,7 @@ const sliderSettings: SliderSettings = {
 const MultimediaSlider: React.FC<MultimediaSliderProps> = ({
     imagesUrls = [],
     videosUrls = [],
+    autoPlayVideos = false,
 }) => {
     if (imagesUrls.length === 0 && videosUrls.length === 0) {
         return null
@@ -42,8 +45,16 @@ const MultimediaSlider: React.FC<MultimediaSliderProps> = ({
 
     return (
         <Slider className={styles.slider} {...sliderSettings}>
-            {videosUrls.map((url) => (
-                <video autoPlay loop muted playsInline controls key={url}>
+            {videosUrls.map((url, idx) => (
+                <video
+                    autoPlay={idx === 0 || autoPlayVideos}
+                    preload="metadata"
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    key={url}
+                >
                     <source src={url} type="video/mp4" />
                 </video>
             ))}
