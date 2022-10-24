@@ -4,28 +4,11 @@ import NavBar from '../navbar/NavBar'
 import Footer from './Footer'
 import GoogleAnalytics from './GoogleAnalytics'
 
-interface PageProps {
-    onScrollToBottom?: () => void
-}
+interface PageProps {}
 
-const Page: React.FC<PropsWithChildren<PageProps>> = ({
-    children,
-    onScrollToBottom,
-}) => {
-    const handleScroll = (e) => {
-        if (!onScrollToBottom) {
-            return
-        }
-
-        const bottom =
-            e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight
-        if (bottom) {
-            onScrollToBottom()
-        }
-    }
-
+const Page: React.FC<PropsWithChildren<PageProps>> = ({ children }) => {
     return (
-        <div className={styles.page} onScroll={handleScroll}>
+        <div className={styles.page}>
             <GoogleAnalytics />
             <NavBar />
             {children}

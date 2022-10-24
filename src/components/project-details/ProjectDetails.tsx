@@ -49,110 +49,115 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     technology = null,
 }) => {
     return (
-        <main className={styles.container}>
-            <ImagesSlider imagesUrls={imagesUrls} />
+        <div className={styles.detailsView}>
+            <main className={styles.container}>
+                <ImagesSlider imagesUrls={imagesUrls} />
 
-            {previewImageUrl && (
-                <Section mobileFullWidth>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        className={styles.previewImage}
-                        src={previewImageUrl}
-                        alt="Preview"
-                    />
-                </Section>
-            )}
-
-            <div className={styles.card}>
-                <Section className={styles.header}>
-                    <div className={styles.information}>
-                        <h2 className={styles.title}>
-                            {technology && (
-                                // eslint-disable-next-line @next/next/no-img-element
-                                <img
-                                    className={styles.technology}
-                                    src={`/images/${technology}.png`}
-                                    alt={technology}
-                                />
-                            )}
-                            {title}
-                            <TagRenderer secondary className={styles.date}>
-                                {date}
-                            </TagRenderer>
-                        </h2>
-                        <span className={styles.subtitle}>{subtitle}</span>
-                        <TagsList tags={tags} />
-                    </div>
-                    {gitHubUrl && (
-                        <ExternalLink
-                            href={gitHubUrl}
-                            className={styles.gitHubLink}
-                            Icon={GitHubIcon}
-                        >
-                            View on GitHub
-                        </ExternalLink>
-                    )}
-                </Section>
-
-                {description.length > 0 && (
-                    <Section className={styles.descriptionItems}>
-                        {description.map((paragraph, index) => (
-                            <p className={styles.descriptionItem} key={index}>
-                                {paragraph}
-                            </p>
-                        ))}
-                    </Section>
-                )}
-
-                {implementationDetails.length > 0 && (
-                    <Section title="Implementation">
-                        <ul className={styles.implementationDetails}>
-                            {implementationDetails.map((bullet, index) => (
-                                <li className={styles.bullet} key={index}>
-                                    {bullet}
-                                </li>
-                            ))}
-                        </ul>
-                    </Section>
-                )}
-
-                {links.length > 0 && (
-                    <Section title="Links" className={styles.externalLinks}>
-                        <div className={styles.externalLinks}>
-                            {links.map((link, index) => (
-                                <ExternalLink key={index} href={link.href}>
-                                    {link.text}
-                                </ExternalLink>
-                            ))}
-                        </div>
-                    </Section>
-                )}
-
-                {(appleAppStoreUrl || googlePlayStoreUrl) && (
-                    <Section title="Store Presence">
-                        <StoreLinks
-                            appleAppStoreUrl={appleAppStoreUrl}
-                            googlePlayStoreUrl={googlePlayStoreUrl}
+                {previewImageUrl && (
+                    <Section mobileFullWidth>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            className={styles.previewImage}
+                            src={previewImageUrl}
+                            alt="Preview"
                         />
                     </Section>
                 )}
-            </div>
 
-            {youtubeVideoIds.length > 0 && (
-                <Section mobileFullWidth>
-                    {youtubeVideoIds.map((videoId) => (
-                        <div key={videoId} className={styles.video}>
-                            <iframe
-                                src={`https://www.youtube.com/embed/${videoId}`}
-                                title={title}
-                                frameBorder="0"
-                                allowFullScreen
-                            ></iframe>
+                <div className={styles.card}>
+                    <Section className={styles.header}>
+                        <div className={styles.information}>
+                            <h2 className={styles.title}>
+                                {technology && (
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img
+                                        className={styles.technology}
+                                        src={`/images/${technology}.png`}
+                                        alt={technology}
+                                    />
+                                )}
+                                {title}
+                                <TagRenderer secondary className={styles.date}>
+                                    {date}
+                                </TagRenderer>
+                            </h2>
+                            <span className={styles.subtitle}>{subtitle}</span>
+                            <TagsList tags={tags} />
                         </div>
-                    ))}
-                </Section>
-            )}
-        </main>
+                        {gitHubUrl && (
+                            <ExternalLink
+                                href={gitHubUrl}
+                                className={styles.gitHubLink}
+                                Icon={GitHubIcon}
+                            >
+                                View on GitHub
+                            </ExternalLink>
+                        )}
+                    </Section>
+
+                    {description.length > 0 && (
+                        <Section className={styles.descriptionItems}>
+                            {description.map((paragraph, index) => (
+                                <p
+                                    className={styles.descriptionItem}
+                                    key={index}
+                                >
+                                    {paragraph}
+                                </p>
+                            ))}
+                        </Section>
+                    )}
+
+                    {implementationDetails.length > 0 && (
+                        <Section title="Implementation">
+                            <ul className={styles.implementationDetails}>
+                                {implementationDetails.map((bullet, index) => (
+                                    <li className={styles.bullet} key={index}>
+                                        {bullet}
+                                    </li>
+                                ))}
+                            </ul>
+                        </Section>
+                    )}
+
+                    {links.length > 0 && (
+                        <Section title="Links" className={styles.externalLinks}>
+                            <div className={styles.externalLinks}>
+                                {links.map((link, index) => (
+                                    <ExternalLink key={index} href={link.href}>
+                                        {link.text}
+                                    </ExternalLink>
+                                ))}
+                            </div>
+                        </Section>
+                    )}
+
+                    {(appleAppStoreUrl || googlePlayStoreUrl) && (
+                        <Section title="Store Presence">
+                            <StoreLinks
+                                appleAppStoreUrl={appleAppStoreUrl}
+                                googlePlayStoreUrl={googlePlayStoreUrl}
+                            />
+                        </Section>
+                    )}
+                </div>
+
+                {youtubeVideoIds.length > 0 && (
+                    <Section mobileFullWidth>
+                        {youtubeVideoIds.map((videoId) => (
+                            <div key={videoId} className={styles.youtubeVideos}>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${videoId}`}
+                                    title={title}
+                                    frameBorder="0"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        ))}
+                    </Section>
+                )}
+            </main>
+        </div>
     )
 }
 
