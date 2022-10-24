@@ -49,11 +49,6 @@ const data: ProjectData = generateProjectData({
         Tag.FragmentShader,
     ],
     technology: Technology.UnityEngine,
-    cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '15px -5px',
-        gradientColor: 'rgb(255, 85, 236)',
-    },
 })
 
 export default data
