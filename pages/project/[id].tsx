@@ -19,7 +19,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             <Page>
                 <Metatags
                     title={`${project.title} | Project`}
-                    description={project.description.join('')}
+                    description={
+                        project.description.join('') || project.subtitle
+                    }
                     imageUrl={project.metaImageUrl}
                 />
                 <ProjectDetails {...project} />
