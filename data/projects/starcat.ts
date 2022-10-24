@@ -6,6 +6,7 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'starcat',
     date: '2022-7',
+    videosNames: ['1.mp4'],
     imagesNames: [
         'screen-1.jpg',
         'screen-2.png',
@@ -52,8 +53,8 @@ const data: ProjectData = generateProjectData({
     isPrivateRepo: true,
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '-10px -70px',
+        backgroundSize: '90%',
+        backgroundPosition: '10px -90px',
         gradientColor: 'rgb(125, 0, 0)',
     },
 })
