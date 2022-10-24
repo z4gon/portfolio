@@ -46,7 +46,8 @@ const generateProjectData = ({
     isPrivateRepo = false,
     technology = null,
 }: GenerateProjectDataArgs): ProjectData => {
-    const thumbnailImageUrl = `/videos/thumbnails/${id}.mp4`
+    const thumbnailVideoUrl = `/videos/thumbnails/${id}.mp4`
+    const metaImageUrl = `/images/thumbnails/${id}.gif`
     const imagesFolder = `/images/projects/${id}`
     const videosFolder = `/videos/projects/${id}`
 
@@ -54,8 +55,8 @@ const generateProjectData = ({
         id,
         aliases,
         date,
-        thumbnailUrl: thumbnailImageUrl,
-        metaImageUrl: thumbnailImageUrl,
+        thumbnailUrl: thumbnailVideoUrl,
+        metaImageUrl: metaImageUrl,
         imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
         videosUrls: videosNames.map((name) => `${videosFolder}/${name}`),
         youtubeVideoIds,
