@@ -30,8 +30,8 @@ const data: ProjectData = generateProjectData({
     ],
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '120%',
-        backgroundPosition: '-10px -20px',
+        backgroundSize: '90%',
+        backgroundPosition: '30px 0px',
         gradientColor: 'rgb(108, 0, 51)',
     },
 })
