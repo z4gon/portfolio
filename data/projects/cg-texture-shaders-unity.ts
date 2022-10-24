@@ -6,7 +6,7 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'cg-texture-shaders-unity',
     date: '2022-10',
-    imagesNames: ['3.gif', '2.gif', '1d.gif', '1b.gif'],
+    videosNames: ['3.mp4', '2.mp4', '1d.mp4', '1b.mp4'],
     youtubeVideoIds: ['G0M9q3efZ1M'],
     title: 'Cg Texture Shaders',
     subtitle: 'Written in Cg with ShaderLab, for the Built-in RP in Unity',
