@@ -19,7 +19,7 @@ const data: ProjectData = generateProjectData({
         '1.mp4',
         '10.mp4',
     ],
-    imagesNames: ['11.png'],
+    imagesNames: ['11.jpg'],
     youtubeVideoIds: ['QF2svyMgkRQ'],
     title: 'Standard Surface Shaders',
     subtitle: 'Written in the Cg programming language for Unity Built-In RP',

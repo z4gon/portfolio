@@ -21,7 +21,7 @@ const data: ProjectData = generateProjectData({
         '2.mp4',
         '1.mp4',
     ],
-    imagesNames: ['14.png', '15.png'],
+    imagesNames: ['14.jpg', '15.jpg'],
     youtubeVideoIds: ['5UPacp2vzOk'],
     title: 'Mario Kart Item Box VFX',
     subtitle:
