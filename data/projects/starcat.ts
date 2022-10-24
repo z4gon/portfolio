@@ -6,14 +6,14 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'starcat',
     date: '2022-7',
-    thumbnailImageName: 'thumbnail.gif',
+    videosNames: ['1.mp4'],
     imagesNames: [
         'screen-1.jpg',
-        'screen-2.png',
-        'screen-3.png',
-        'screen-4.png',
-        'screen-5.png',
-        'screen-6.png',
+        'screen-2.jpg',
+        'screen-3.jpg',
+        'screen-4.jpg',
+        'screen-5.jpg',
+        'screen-6.jpg',
     ],
     youtubeVideoIds: ['3EQ1cwSD_BY'],
     title: 'The Star Cat',
@@ -53,8 +53,8 @@ const data: ProjectData = generateProjectData({
     isPrivateRepo: true,
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '-10px -70px',
+        backgroundSize: '90%',
+        backgroundPosition: '10px -90px',
         gradientColor: 'rgb(125, 0, 0)',
     },
 })

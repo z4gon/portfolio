@@ -6,17 +6,16 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'fire-vfx-unity',
     date: '2022-9',
-    thumbnailImageName: 'thumbnail.gif',
-    imagesNames: [
-        'thumbnail.gif',
-        'sparks.gif',
-        'lighting.gif',
-        'color.gif',
-        'with-normals.gif',
-        'flipbook-animation.gif',
-        'size-over-life-wind-and-drag-forces.gif',
-        'face-camera.gif',
-        'spawn-randomness.gif',
+    videosNames: [
+        'thumbnail.mp4',
+        'sparks.mp4',
+        'lighting.mp4',
+        'color.mp4',
+        'with-normals.mp4',
+        'flipbook-animation.mp4',
+        'size-over-life-wind-and-drag-forces.mp4',
+        'face-camera.mp4',
+        'spawn-randomness.mp4',
     ],
     youtubeVideoIds: ['mn22mVaAxvg'],
     title: 'Fire VFX',
@@ -33,8 +32,8 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.VFXGraph, Tag.HDRP, Tag.VFX, Tag.Unity],
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '100%',
-        backgroundPosition: '-10px -40px',
+        backgroundSize: '90%',
+        backgroundPosition: '10px -40px',
         gradientColor: 'rgb(102, 0, 119)',
     },
 })

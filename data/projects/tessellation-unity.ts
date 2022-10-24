@@ -6,8 +6,7 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'tessellation-unity',
     date: '2022-10',
-    thumbnailImageName: 'thumbnail.gif',
-    primaryImageName: 'thumbnail.gif',
+    primaryVideoName: '1.mp4',
     title: 'Tessellation',
     subtitle:
         'Tessellation in Unity, both with Cg for Surface Shaders and HDRP with Compute Shader',
@@ -19,8 +18,8 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.BuiltInRP, Tag.HDRP, Tag.Tessellation],
     technology: Technology.UnityEngine,
     cardConfig: {
-        backgroundSize: '140%',
-        backgroundPosition: '5px 0px',
+        backgroundSize: '100%',
+        backgroundPosition: '20px 10px',
         gradientColor: 'rgb(84, 119, 155)',
     },
 })
