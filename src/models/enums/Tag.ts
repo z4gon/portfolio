@@ -1,5 +1,6 @@
 /* eslint-disable unused-imports/no-unused-vars */
 export enum Tag {
+    ComputeShader = 'Compute Shader',
     Cg = 'Cg',
     HLSL = 'HLSL',
     Unity = 'Unity',
