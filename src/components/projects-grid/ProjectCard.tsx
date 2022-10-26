@@ -11,35 +11,33 @@ const ProjectCard: React.FC<ProjectDataMinimal> = ({
     technology = null,
 }) => {
     return (
-        <Link href={`/project/${id}`}>
-            <a className={styles.link}>
-                <article className={styles.card}>
-                    <div className={styles.thumbnailContainer}>
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className={styles.thumbnail}
-                        >
-                            <source src={thumbnailUrl} type="video/mp4" />
-                        </video>
-                    </div>
+        <Link href={`/project/${id}`} className={styles.link}>
+            <article className={styles.card}>
+                <div className={styles.thumbnailContainer}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={styles.thumbnail}
+                    >
+                        <source src={thumbnailUrl} type="video/mp4" />
+                    </video>
+                </div>
 
-                    <div className={styles.information}>
-                        <h2 className={styles.title}>{title}</h2>
-                        <TagsList dark tags={tags.slice(0, 3)} />
-                        {technology && (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                                className={styles.technology}
-                                src={`/images/${technology}.png`}
-                                alt={technology}
-                            />
-                        )}
-                    </div>
-                </article>
-            </a>
+                <div className={styles.information}>
+                    <h2 className={styles.title}>{title}</h2>
+                    <TagsList dark tags={tags.slice(0, 3)} />
+                    {technology && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                            className={styles.technology}
+                            src={`/images/${technology}.png`}
+                            alt={technology}
+                        />
+                    )}
+                </div>
+            </article>
         </Link>
     )
 }

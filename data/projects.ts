@@ -1,5 +1,6 @@
 import { ProjectData } from '../src/models/ProjectData'
 
+import bubblesComputeShaderUnity from './projects/bubbles-compute-shader-unity'
 import cgBallOfLavaShaderUnity from './projects/cg-ball-of-lava-shader-unity'
 import cgClippingShader from './projects/cg-clipping-shader'
 import cgPerlinNoiseShaderUnity from './projects/cg-perlin-noise-shader-unity'
@@ -28,6 +29,7 @@ const pinned: ProjectData[] = [
 ]
 const publishedGames: ProjectData[] = [starcat]
 const other: ProjectData[] = [
+    bubblesComputeShaderUnity,
     cgSurfaceShadersUnity,
     cgPerlinNoiseShaderUnity,
     cgTextureShadersUnity,
