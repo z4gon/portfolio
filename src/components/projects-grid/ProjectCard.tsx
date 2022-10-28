@@ -13,6 +13,15 @@ const ProjectCard: React.FC<ProjectDataMinimal> = ({
     return (
         <Link href={`/project/${id}`} className={styles.link}>
             <article className={styles.card}>
+                {technology && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                        className={styles.technology}
+                        src={`/images/${technology}.png`}
+                        alt={technology}
+                    />
+                )}
+
                 <div className={styles.thumbnailContainer}>
                     <video
                         autoPlay
@@ -28,14 +37,6 @@ const ProjectCard: React.FC<ProjectDataMinimal> = ({
                 <div className={styles.information}>
                     <h2 className={styles.title}>{title}</h2>
                     <TagsList dark tags={tags.slice(0, 3)} />
-                    {technology && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                            className={styles.technology}
-                            src={`/images/${technology}.png`}
-                            alt={technology}
-                        />
-                    )}
                 </div>
             </article>
         </Link>
