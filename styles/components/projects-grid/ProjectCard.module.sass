@@ -4,6 +4,7 @@
 
     .card
         height: 15em
+        position: relative
 
         cursor: pointer
         overflow: hidden
@@ -23,6 +24,14 @@
         &:hover
             border: solid 2px var(--card-border-highlight)
 
+        .technology
+            position: absolute
+            top: 5px
+            right: 5px
+            height: 40px
+            width: 40px
+            z-index: 1
+
         .thumbnailContainer
             height: 8em
             flex-basis: 70%
@@ -32,23 +41,22 @@
             video
                 width: 100%
 
+                filter: contrast(120%)
+                background: black
+
         .information
-            flex-basis: 40%
+            flex-basis: 30%
             padding: 10px
-            position: relative
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
 
             .title
-                font-size: 1.2em
+                font-size: 1em
                 line-height: 1.1em
                 margin-bottom: 10px
 
             .subtitle
                 line-height: 1.1em
                 font-weight: 400
-
-            .technology
-                position: absolute
-                bottom: 5px
-                right: 5px
-                height: 40px
-                widht: 40px
