@@ -10,6 +10,7 @@ import cgSurfaceShadersUnity from './projects/cg-surface-shaders-unity'
 import cgTextureShadersUnity from './projects/cg-texture-shaders-unity'
 import cgTransparencyShadersUnity from './projects/cg-transparency-shaders-unity'
 import fireVfxUnity from './projects/fire-vfx-unity'
+import grassComputeShaderUnity from './projects/grass-compute-shader-unity'
 import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
@@ -22,7 +23,7 @@ const pinned: ProjectData[] = [
     marioKartItemBoxVfx,
     cgBallOfLavaShaderUnity,
     cgClippingShader,
-    cgTransparencyShadersUnity,
+    grassComputeShaderUnity,
     groundSlashVfxUnity,
     iceAttackVfxUnity,
     fireVfxUnity,
@@ -30,9 +31,10 @@ const pinned: ProjectData[] = [
 ]
 const publishedGames: ProjectData[] = [starcat]
 const other: ProjectData[] = [
-    bubblesComputeShaderUnity,
+    cgTransparencyShadersUnity,
     meshDeformationComputeShaderUnity,
     cgSurfaceShadersUnity,
+    bubblesComputeShaderUnity,
     cgPerlinNoiseShaderUnity,
     cgTextureShadersUnity,
     cgShapingShadersUnity,
