@@ -10,12 +10,6 @@ export default function Document() {
                     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap"
                     rel="stylesheet"
                 />
-
-                <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.min.css"
-                />
             </Head>
             <body>
                 <Main />
