@@ -2,6 +2,9 @@ import Slider, { Settings as SliderSettings } from 'react-slick'
 import styles from '../../../styles/components/multimedia-slider/MultimediaSlider.module.sass'
 import GoFullScreenButton from './GoFullScreenButton'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 interface MultimediaSliderProps {
     imagesUrls: string[]
     videosUrls: string[]
@@ -58,6 +61,7 @@ const MultimediaSlider: React.FC<MultimediaSliderProps> = ({
                     <source src={url} type="video/mp4" />
                 </video>
             ))}
+
             {imagesUrls.map((url, idx) => (
                 <div key={url}>
                     <div

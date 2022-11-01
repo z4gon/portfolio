@@ -1,50 +1,50 @@
 .slick-slide
     & > div
         @media screen and ( min-width: 700px)
-            border: solid 10px var(--bg)
+            border: solid 10px var(--bg) !important
 
 
 
 .slick-arrow
-    height: 40px
-    width: 40px
+    height: 40px !important
+    width: 40px !important
 
     &::before
-        border-radius: 10px
+        border-radius: 10px !important
         background: black
         content: '→'
         position: absolute
         left: 0
         top: 0
 
-        font-size: 32px
-        padding: 5px 5px 3px
+        font-size: 32px !important
+        padding: 5px 5px 3px !important
 
     &.slick-next
-        right: 20px
+        right: 20px !important
 
     &.slick-prev
-        left: 20px
+        left: 20px !important
 
         &::before
             content: '←'
 
-    z-index: 1
+    z-index: 1 !important
 
 .slick-dots
-    margin-top: 10px
-    bottom: -35px
+    margin-top: 10px !important
+    bottom: -35px !important
 
     @media screen and ( max-width: 600px)
-        bottom: -75px
+        bottom: -75px !important
 
     li
         button
             &::before
-                font-size: 18px
-                color: var(--slider-dot)
+                font-size: 18px !important
+                color: var(--slider-dot) !important
 
     li.slick-active
         button
             &::before
-                color: var(--slider-dot)
+                color: var(--slider-dot) !important

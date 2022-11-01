@@ -14,15 +14,15 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         return null
     }
 
+    const { title, description = [], subtitle, metaImageUrl } = project
+
     return (
         <WithFullScreenCarousel>
             <Page>
                 <Metatags
-                    title={`${project.title} | Project`}
-                    description={
-                        project.description.join('') || project.subtitle
-                    }
-                    imageUrl={project.metaImageUrl}
+                    title={`${title} | Project`}
+                    description={description.join('') || subtitle}
+                    imageUrl={metaImageUrl}
                 />
                 <ProjectDetails {...project} />
             </Page>
