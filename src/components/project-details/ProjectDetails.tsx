@@ -7,6 +7,7 @@ import GitHubIcon from '../icons/GitHubIcon'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
+import YouTubeEmbed from './YouTubeEmbed'
 
 interface SectionProps extends PropsWithChildren {
     title?: string
@@ -166,12 +167,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <Section mobileFullWidth>
                         {youtubeVideoIds.map((videoId) => (
                             <div key={videoId} className={styles.youtubeVideos}>
-                                <iframe
-                                    src={`https://www.youtube.com/embed/${videoId}`}
-                                    title={title}
-                                    frameBorder="0"
-                                    allowFullScreen
-                                ></iframe>
+                                <YouTubeEmbed videoId={videoId} title={title} />
                             </div>
                         ))}
                     </Section>
