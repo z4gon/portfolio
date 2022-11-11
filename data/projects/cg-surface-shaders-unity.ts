@@ -1,3 +1,4 @@
+import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
 import { ProjectData } from '../../src/models/ProjectData'
@@ -46,6 +47,7 @@ const data: ProjectData = generateProjectData({
         Tag.Lighting,
     ],
     technology: Technology.UnityEngine,
+    category: Category.Shaders,
 })
 
 export default data

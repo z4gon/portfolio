@@ -1,3 +1,4 @@
+import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
 import { ProjectData } from '../../src/models/ProjectData'
@@ -52,6 +53,7 @@ const data: ProjectData = generateProjectData({
         'https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat',
     isPrivateRepo: true,
     technology: Technology.UnityEngine,
+    category: Category.PublishedGames,
 })
 
 export default data
