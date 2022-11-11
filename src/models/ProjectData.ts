@@ -1,3 +1,4 @@
+import { Category } from './enums/Category'
 import { Tag } from './enums/Tag'
 import { Technology } from './enums/Technology'
 import { LinkData } from './LinkData'
@@ -8,6 +9,7 @@ export interface ProjectDataMinimal {
     thumbnailUrl: string
     tags: Tag[]
     technology?: Technology
+    category: Category
 }
 
 export interface ProjectData extends ProjectDataMinimal {

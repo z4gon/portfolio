@@ -1,3 +1,4 @@
+import { Category } from '../src/models/enums/Category'
 import { Tag } from '../src/models/enums/Tag'
 import { Technology } from '../src/models/enums/Technology'
 import { LinkData } from '../src/models/LinkData'
@@ -23,6 +24,7 @@ interface GenerateProjectDataArgs {
     googlePlayStoreUrl?: string
     isPrivateRepo?: boolean
     technology?: Technology
+    category: Category
 }
 
 const generateProjectData = ({
@@ -45,6 +47,7 @@ const generateProjectData = ({
     googlePlayStoreUrl = null,
     isPrivateRepo = false,
     technology = null,
+    category,
 }: GenerateProjectDataArgs): ProjectData => {
     const thumbnailVideoUrl = `/videos/thumbnails/${id}.mp4`
     const metaImageUrl = `/images/thumbnails/${id}.gif`
@@ -78,6 +81,7 @@ const generateProjectData = ({
         appleAppStoreUrl,
         googlePlayStoreUrl,
         technology,
+        category,
     }
 
     return data

@@ -3,18 +3,36 @@ import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
+import { Category } from '../src/models/enums/Category'
 import { ProjectDataMinimal } from '../src/models/ProjectData'
 
 interface HomeProps {
     projects: ProjectDataMinimal[]
 }
 
+const PAGE_SIZE = 4
+
 export default function Home({ projects }: HomeProps) {
+    const categories = [
+        Category.VisualEffects,
+        Category.Shaders,
+        Category.ComputeShaders,
+        Category._3DModelingAnimation,
+        Category.PublishedGames,
+    ]
+
     return (
         <Page>
             <Metatags />
             <Spacer amount="3.5em" />
-            <ProjectsGrid projects={projects} />
+            {categories.map((category) => (
+                <ProjectsGrid
+                    key={category}
+                    title={category.toString()}
+                    projects={projects.filter((x) => x.category === category)}
+                    pageSize={PAGE_SIZE}
+                />
+            ))}
             <Spacer amount="3.5em" />
         </Page>
     )
@@ -34,6 +52,7 @@ export async function getStaticProps() {
                 thumbnailUrl: x.thumbnailUrl,
                 tags: x.tags,
                 technology: x.technology,
+                category: x.category,
             })),
         },
     }
