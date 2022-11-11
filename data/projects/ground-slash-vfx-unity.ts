@@ -26,7 +26,7 @@ const data: ProjectData = generateProjectData({
     title: 'Ground Slash VFX',
     subtitle: 'With VFX Graph in Unity for URP',
     implementationDetails: [
-        'Modelling of the 3D Meshes for the Slash and the Debris.',
+        'Modeling of the 3D Meshes for the Slash and the Debris.',
         'UV Mapping for the gradient texture of the Slash mesh.',
         'Utilize VFX Graph',
         'Spawning particles over distance, so the VFX leaves a trail of debris.',

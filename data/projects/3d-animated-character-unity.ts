@@ -28,10 +28,10 @@ const data: ProjectData = generateProjectData({
     ],
     youtubeVideoIds: ['Salca9mhmU8'],
     title: '3D Animated Character',
-    subtitle: 'Modelled and Animated in Blender, implemented in Unity',
+    subtitle: 'Modeled and Animated in Blender, implemented in Unity',
     implementationDetails: [
-        'Designing the concept in Affinity Photo, to use as reference when modelling.',
-        '3D Modelling the character in Blender.',
+        'Designing the concept in Affinity Photo, to use as reference when modeling.',
+        '3D Modeling the character in Blender.',
         'Creating a high poly version and a low poly version of the model.',
         'Ensuring the low poly version is optimized and works well when rigged and animated.',
         'UV Mapping the low poly version.',
@@ -49,7 +49,7 @@ const data: ProjectData = generateProjectData({
         'Extending the Animator Controller to add the new states for the fight animations.',
         'Adding camera shake to the Cinemachine Camera.',
     ],
-    tags: [Tag.Blender, Tag._3DModelling, Tag.Animation, Tag.Unity],
+    tags: [Tag.Blender, Tag._3DModeling, Tag.Animation, Tag.Unity],
     technology: Technology.UnityEngine,
 })
 
