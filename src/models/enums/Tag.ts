@@ -20,4 +20,7 @@ export enum Tag {
     URP = 'URP',
     HDRP = 'HDRP',
     Tessellation = 'Tessellation',
+    _3DModelling = '3D Modelling',
+    Animation = 'Animation',
+    Blender = 'Blender',
 }
