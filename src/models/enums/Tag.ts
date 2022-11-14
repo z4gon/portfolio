@@ -23,4 +23,5 @@ export enum Tag {
     _3DModeling = '3D Modeling',
     Animation = 'Animation',
     Blender = 'Blender',
+    UI = 'UI',
 }
