@@ -13,7 +13,7 @@ const data: ProjectData = generateProjectData({
         '11.jpg',
         '10.jpg',
         '4.jpg',
-        '7jpg',
+        '7.jpg',
         '6.jpg',
         '5.jpg',
         '3.jpg',
