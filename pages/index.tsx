@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { filter } from 'lodash'
 import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
@@ -15,6 +17,8 @@ interface HomeProps {
 const PAGE_SIZE = 4
 
 export default function Home({ projects }: HomeProps) {
+    const [filteredProjects, setFilteredProjects] = useState(projects)
+
     const categories = [
         Category.VisualEffects,
         Category.Shaders,
@@ -23,23 +27,34 @@ export default function Home({ projects }: HomeProps) {
         Category.PublishedGames,
     ]
 
+    const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>
+        setFilteredProjects(filterResults)
+
     return (
         <Page>
             <Metatags />
             <Container>
                 <Spacer amount="3.5em" />
-                <ProjectFilters />
+                <ProjectFilters
+                    allProjects={projects}
+                    onFiltersChanged={onFiltersChanged}
+                />
                 <Spacer amount="1em" />
-                {categories.map((category) => (
-                    <ProjectsGrid
-                        key={category}
-                        title={category.toString()}
-                        projects={projects.filter(
-                            (x) => x.category === category
-                        )}
-                        pageSize={PAGE_SIZE}
-                    />
-                ))}
+                {categories.map((category) => {
+                    const categoryProjects = filter(
+                        filteredProjects,
+                        (x) => x.category === category
+                    )
+
+                    return (
+                        <ProjectsGrid
+                            key={category}
+                            title={category.toString()}
+                            projects={categoryProjects}
+                            pageSize={PAGE_SIZE}
+                        />
+                    )
+                })}
                 <Spacer amount="3.5em" />
             </Container>
         </Page>
