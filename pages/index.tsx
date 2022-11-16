@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { filter } from 'lodash'
 import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
@@ -26,15 +27,22 @@ export default function Home({ projects }: HomeProps) {
         Category.PublishedGames,
     ]
 
+    const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>
+        setFilteredProjects(filterResults)
+
     return (
         <Page>
             <Metatags />
             <Container>
                 <Spacer amount="3.5em" />
-                <ProjectFilters />
+                <ProjectFilters
+                    allProjects={projects}
+                    onFiltersChanged={onFiltersChanged}
+                />
                 <Spacer amount="1em" />
                 {categories.map((category) => {
-                    const filteredProjects = projects.filter(
+                    const categoryProjects = filter(
+                        filteredProjects,
                         (x) => x.category === category
                     )
 
@@ -42,7 +50,7 @@ export default function Home({ projects }: HomeProps) {
                         <ProjectsGrid
                             key={category}
                             title={category.toString()}
-                            projects={filteredProjects}
+                            projects={categoryProjects}
                             pageSize={PAGE_SIZE}
                         />
                     )

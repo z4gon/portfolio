@@ -1,3 +1,4 @@
+import { includes } from 'lodash'
 import projects from '../../data/projects'
 import Metatags from '../../src/components/Metatags'
 import WithFullScreenCarousel from '../../src/components/multimedia-slider/WithFullScreenCarousel'
@@ -37,7 +38,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 export async function getStaticProps(context) {
     const urlId = context.params.id
     const project = projects.find(
-        ({ id, aliases = [] }) => urlId === id || aliases.includes(urlId)
+        ({ id, aliases = [] }) => urlId === id || includes(aliases, urlId)
     )
 
     // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
