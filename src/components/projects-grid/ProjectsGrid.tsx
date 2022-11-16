@@ -29,11 +29,20 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
         setPage((currentPage) => currentPage + 1)
     }
 
+    if (projects.length == 0) {
+        return null
+    }
+
     const projectsToList = projects.slice(0, (page + 1) * pageSize)
 
     return (
         <main className={styles.container}>
-            {title && <h2 className={styles.title}>{title}</h2>}
+            {title && (
+                <div className={styles.titleWrapper}>
+                    <h2 className={styles.title}>{title}</h2>
+                    <span>{`(${projects.length})`}</span>
+                </div>
+            )}
             <div className={styles.grid}>
                 {projectsToList.map((project) => (
                     <ProjectCard key={project.id} {...project} />

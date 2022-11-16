@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Page from '../src/components/page/Page'
@@ -13,6 +14,8 @@ interface HomeProps {
 const PAGE_SIZE = 4
 
 export default function Home({ projects }: HomeProps) {
+    const [filteredProjects, setFilteredProjects] = useState(projects)
+
     const categories = [
         Category.VisualEffects,
         Category.Shaders,
@@ -25,14 +28,20 @@ export default function Home({ projects }: HomeProps) {
         <Page>
             <Metatags />
             <Spacer amount="3.5em" />
-            {categories.map((category) => (
-                <ProjectsGrid
-                    key={category}
-                    title={category.toString()}
-                    projects={projects.filter((x) => x.category === category)}
-                    pageSize={PAGE_SIZE}
-                />
-            ))}
+            {categories.map((category) => {
+                const filteredProjects = projects.filter(
+                    (x) => x.category === category
+                )
+
+                return (
+                    <ProjectsGrid
+                        key={category}
+                        title={category.toString()}
+                        projects={filteredProjects}
+                        pageSize={PAGE_SIZE}
+                    />
+                )
+            })}
             <Spacer amount="3.5em" />
         </Page>
     )
