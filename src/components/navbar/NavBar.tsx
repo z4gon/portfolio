@@ -20,12 +20,12 @@ const NavBar: React.FC<{}> = () => {
     return (
         <nav className={styles.navbar}>
             <ul className={styles.links}>
-                <li className={styles.icon}>
+                <li>
                     <Link href="/" className={styles.titleLink}>
                         <h1 className={styles.title}>Gonzalo Cumini</h1>
                     </Link>
                 </li>
-                <li className={styles.icon}>
+                <li className={styles.secondaryLink}>
                     <Link href="/">
                         <h1>Projects</h1>
                     </Link>

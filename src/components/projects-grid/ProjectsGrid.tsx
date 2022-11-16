@@ -32,7 +32,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
     const projectsToList = projects.slice(0, (page + 1) * pageSize)
 
     return (
-        <main className={styles.container}>
+        <div className={styles.gridWrapper}>
             {title && <h2 className={styles.title}>{title}</h2>}
             <div className={styles.grid}>
                 {projectsToList.map((project) => (
@@ -44,7 +44,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
                     <Button onClick={() => loadNextPage()}>Show More</Button>
                 </div>
             )}
-        </main>
+        </div>
     )
 }
 
