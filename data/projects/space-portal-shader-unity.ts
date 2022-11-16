@@ -24,8 +24,10 @@ const data: ProjectData = generateProjectData({
     subtitle:
         'Written in HLSL using Stencil Buffer, in the Built-in RP for Unity',
     implementationDetails: [
-        'Modeling the Meshes in Blender, and UV mapping.',
+        'Modeling the Meshes and UV Mapping in Blender.',
         'Creating the Textures in Affinity, for Masking and doing the Tunnel and Glow VFX.',
+        'Using ZWrite Off to make the shaders not write to the Depth Buffer.',
+        'Using the Blend command from Shader Lab to implement traditional transparency and additive transparency.',
         'Portal entrance implemented by writing a custom value to the Stencil Buffer to use as a Mask.',
         'Masking the Tunnel, Hemisphere and Particles using the Stencil Test, checking if the Stencil Buffer has the required value written on.',
         'Tunnel implemented animating the texture across the UV.y coordinates using _Time.',
