@@ -5,6 +5,7 @@ import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
+import Container from '../page/Container'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
 import YouTubeEmbed from './YouTubeEmbed'
@@ -52,128 +53,120 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     technology = null,
 }) => {
     return (
-        <div className={styles.detailsView}>
-            <main className={styles.container}>
-                <MultimediaSlider
-                    imagesUrls={imagesUrls}
-                    videosUrls={videosUrls}
-                />
+        <Container className={styles.detailsView} wide={false}>
+            <MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
-                {primaryImageUrl && (
-                    <Section mobileFullWidth>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            className={styles.primaryImage}
-                            src={primaryImageUrl}
-                            alt="Preview"
-                        />
-                    </Section>
-                )}
+            {primaryImageUrl && (
+                <Section mobileFullWidth>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        className={styles.primaryImage}
+                        src={primaryImageUrl}
+                        alt="Preview"
+                    />
+                </Section>
+            )}
 
-                {primaryVideoUrl && (
-                    <Section mobileFullWidth>
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            controls
-                            className={styles.primaryVideo}
+            {primaryVideoUrl && (
+                <Section mobileFullWidth>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        controls
+                        className={styles.primaryVideo}
+                    >
+                        <source src={primaryVideoUrl} type="video/mp4" />
+                    </video>
+                </Section>
+            )}
+
+            <div className={styles.card}>
+                <Section className={styles.header}>
+                    <div className={styles.information}>
+                        <h2 className={styles.title}>
+                            {technology && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                    className={styles.technology}
+                                    src={`/images/${technology}.png`}
+                                    alt={technology}
+                                />
+                            )}
+                            {title}
+                            <TagRenderer secondary className={styles.date}>
+                                {date}
+                            </TagRenderer>
+                        </h2>
+                        <span className={styles.subtitle}>{subtitle}</span>
+                        <TagsList tags={tags} />
+                    </div>
+                    {gitHubUrl && (
+                        <ExternalLink
+                            href={gitHubUrl}
+                            className={styles.gitHubLink}
+                            Icon={GitHubIcon}
                         >
-                            <source src={primaryVideoUrl} type="video/mp4" />
-                        </video>
-                    </Section>
-                )}
-
-                <div className={styles.card}>
-                    <Section className={styles.header}>
-                        <div className={styles.information}>
-                            <h2 className={styles.title}>
-                                {technology && (
-                                    // eslint-disable-next-line @next/next/no-img-element
-                                    <img
-                                        className={styles.technology}
-                                        src={`/images/${technology}.png`}
-                                        alt={technology}
-                                    />
-                                )}
-                                {title}
-                                <TagRenderer secondary className={styles.date}>
-                                    {date}
-                                </TagRenderer>
-                            </h2>
-                            <span className={styles.subtitle}>{subtitle}</span>
-                            <TagsList tags={tags} />
-                        </div>
-                        {gitHubUrl && (
-                            <ExternalLink
-                                href={gitHubUrl}
-                                className={styles.gitHubLink}
-                                Icon={GitHubIcon}
-                            >
-                                View on GitHub
-                            </ExternalLink>
-                        )}
-                    </Section>
-
-                    {description.length > 0 && (
-                        <Section className={styles.descriptionItems}>
-                            {description.map((paragraph, index) => (
-                                <p
-                                    className={styles.descriptionItem}
-                                    key={index}
-                                >
-                                    {paragraph}
-                                </p>
-                            ))}
-                        </Section>
+                            View on GitHub
+                        </ExternalLink>
                     )}
+                </Section>
 
-                    {implementationDetails.length > 0 && (
-                        <Section title="Implementation">
-                            <ul className={styles.implementationDetails}>
-                                {implementationDetails.map((bullet, index) => (
-                                    <li className={styles.bullet} key={index}>
-                                        {bullet}
-                                    </li>
-                                ))}
-                            </ul>
-                        </Section>
-                    )}
-
-                    {links.length > 0 && (
-                        <Section title="Links" className={styles.externalLinks}>
-                            <div className={styles.externalLinks}>
-                                {links.map((link, index) => (
-                                    <ExternalLink key={index} href={link.href}>
-                                        {link.text}
-                                    </ExternalLink>
-                                ))}
-                            </div>
-                        </Section>
-                    )}
-
-                    {(appleAppStoreUrl || googlePlayStoreUrl) && (
-                        <Section title="Store Presence">
-                            <StoreLinks
-                                appleAppStoreUrl={appleAppStoreUrl}
-                                googlePlayStoreUrl={googlePlayStoreUrl}
-                            />
-                        </Section>
-                    )}
-                </div>
-
-                {youtubeVideoIds.length > 0 && (
-                    <Section mobileFullWidth>
-                        {youtubeVideoIds.map((videoId) => (
-                            <div key={videoId} className={styles.youtubeVideos}>
-                                <YouTubeEmbed videoId={videoId} title={title} />
-                            </div>
+                {description.length > 0 && (
+                    <Section className={styles.descriptionItems}>
+                        {description.map((paragraph, index) => (
+                            <p className={styles.descriptionItem} key={index}>
+                                {paragraph}
+                            </p>
                         ))}
                     </Section>
                 )}
-            </main>
-        </div>
+
+                {implementationDetails.length > 0 && (
+                    <Section title="Implementation">
+                        <ul className={styles.implementationDetails}>
+                            {implementationDetails.map((bullet, index) => (
+                                <li className={styles.bullet} key={index}>
+                                    {bullet}
+                                </li>
+                            ))}
+                        </ul>
+                    </Section>
+                )}
+
+                {links.length > 0 && (
+                    <Section title="Links" className={styles.externalLinks}>
+                        <div className={styles.externalLinks}>
+                            {links.map((link, index) => (
+                                <ExternalLink key={index} href={link.href}>
+                                    {link.text}
+                                </ExternalLink>
+                            ))}
+                        </div>
+                    </Section>
+                )}
+
+                {(appleAppStoreUrl || googlePlayStoreUrl) && (
+                    <Section title="Store Presence">
+                        <StoreLinks
+                            appleAppStoreUrl={appleAppStoreUrl}
+                            googlePlayStoreUrl={googlePlayStoreUrl}
+                        />
+                    </Section>
+                )}
+            </div>
+
+            {youtubeVideoIds.length > 0 && (
+                <Section mobileFullWidth>
+                    {youtubeVideoIds.map((videoId) => (
+                        <div key={videoId} className={styles.youtubeVideos}>
+                            <YouTubeEmbed videoId={videoId} title={title} />
+                        </div>
+                    ))}
+                </Section>
+            )}
+        </Container>
     )
 }
 
