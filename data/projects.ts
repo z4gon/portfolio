@@ -16,6 +16,7 @@ import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import meshDeformationComputeShaderUnity from './projects/mesh-deformation-compute-shader-unity'
+import spacePortalShaderUnity from './projects/space-portal-shader-unity'
 import starcat from './projects/starcat'
 import tessellationUnity from './projects/tessellation-unity'
 import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
@@ -23,8 +24,8 @@ import waterShaderUnity from './projects/water-shader-unity'
 
 const pinned: ProjectData[] = [
     marioKartItemBoxVfx,
-    cgBallOfLavaShaderUnity,
     grassComputeShaderUnity,
+    spacePortalShaderUnity,
     groundSlashVfxUnity,
     iceAttackVfxUnity,
     fireVfxUnity,
@@ -34,6 +35,7 @@ const pinned: ProjectData[] = [
 const publishedGames: ProjectData[] = [starcat]
 const other: ProjectData[] = [
     _3dAnimatedCharacterUnity,
+    cgBallOfLavaShaderUnity,
     cgClippingShader,
     cgTransparencyShadersUnity,
     meshDeformationComputeShaderUnity,
