@@ -26,11 +26,12 @@ const data: ProjectData = generateProjectData({
     implementationDetails: [
         'Modeling the Meshes in Blender, and UV mapping.',
         'Creating the Textures in Affinity, for Masking and doing the Tunnel and Glow VFX.',
-        'Mask shader using the Stencil Buffer.',
-        'Masking the Tunnel, Hemisphere and Particles using the Stencil Test.',
-        'Tunnel implemented animating across the UV.y coordinates.',
-        'Particle System with custom Shader using the Stencil Buffer.',
+        'Portal entrance implemented by writing a custom value to the Stencil Buffer to use as a Mask.',
+        'Masking the Tunnel, Hemisphere and Particles using the Stencil Test, checking if the Stencil Buffer has the required value written on.',
+        'Tunnel implemented animating the texture across the UV.y coordinates using _Time.',
+        'Particle System with custom Shader to also do the Stencil Test to Mask the particles inside the portal.',
         'Defining the Vertex Color property so Color Over Time works in the Particle System.',
+        'Parametrizing Color, Intensity and Velocity in all the parts of the VFX, for full customization.',
     ],
     tags: [
         Tag.HLSL,
