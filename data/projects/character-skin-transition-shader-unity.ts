@@ -29,7 +29,7 @@ const data: ProjectData = generateProjectData({
         'Using Shader Graph to setup a Lit Shader Graph, to benefit from the Lighting Model to use Metallic, Smoothness and Emission.',
         'Create a reusable Sub Graph in Shader Graph, to transition the Main Texture and the Emission Texture.',
         'Custom Function node using an HLSL function to transition between two textures, given a threshold position and width.',
-        'Use HDR to be able to define intesity for the threshold band.',
+        'Use HDR to be able to define intensity for the threshold band.',
         'Post Processing Bloom effect to pick up the threshold band and generate a Glow effect.',
         'Manual Fresnel effect in a custom Unlit Shader using Cg.',
         'Fresnel achieved by doing the dot multiplication between the World Normal of the Fragment and the View Dir in World Space.',
