@@ -1,5 +1,3 @@
-import { ProjectData } from '../src/models/ProjectData'
-
 import _3dAnimatedCharacterUnity from './projects/3d-animated-character-unity'
 import bubblesComputeShaderUnity from './projects/bubbles-compute-shader-unity'
 import cgBallOfLavaShaderUnity from './projects/cg-ball-of-lava-shader-unity'
@@ -10,6 +8,7 @@ import cgStencilBufferUnity from './projects/cg-stencil-buffer-unity'
 import cgSurfaceShadersUnity from './projects/cg-surface-shaders-unity'
 import cgTextureShadersUnity from './projects/cg-texture-shaders-unity'
 import cgTransparencyShadersUnity from './projects/cg-transparency-shaders-unity'
+import characterSkinTransitionShaderUnity from './projects/character-skin-transition-shader-unity'
 import fireVfxUnity from './projects/fire-vfx-unity'
 import grassComputeShaderUnity from './projects/grass-compute-shader-unity'
 import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
@@ -22,32 +21,41 @@ import tessellationUnity from './projects/tessellation-unity'
 import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
 import waterShaderUnity from './projects/water-shader-unity'
 
-const pinned: ProjectData[] = [
-    marioKartItemBoxVfx,
-    grassComputeShaderUnity,
-    spacePortalShaderUnity,
+const vfx = [
     groundSlashVfxUnity,
     iceAttackVfxUnity,
     fireVfxUnity,
     uiStarsFireworksVfxUnity,
-    waterShaderUnity,
 ]
-const publishedGames: ProjectData[] = [starcat]
-const other: ProjectData[] = [
-    _3dAnimatedCharacterUnity,
+const shaders = [
+    marioKartItemBoxVfx,
+    characterSkinTransitionShaderUnity,
+    waterShaderUnity,
+    spacePortalShaderUnity,
     cgBallOfLavaShaderUnity,
     cgClippingShader,
     cgTransparencyShadersUnity,
-    meshDeformationComputeShaderUnity,
     cgSurfaceShadersUnity,
-    bubblesComputeShaderUnity,
     cgPerlinNoiseShaderUnity,
     cgTextureShadersUnity,
     cgShapingShadersUnity,
     cgStencilBufferUnity,
     tessellationUnity,
 ]
+const computeShaders = [
+    grassComputeShaderUnity,
+    meshDeformationComputeShaderUnity,
+    bubblesComputeShaderUnity,
+]
+const modelingAndAnimation = [_3dAnimatedCharacterUnity]
+const publishedGames = [starcat]
 
-const projects = [...pinned, ...publishedGames, ...other]
+const projects = [
+    ...vfx,
+    ...shaders,
+    ...computeShaders,
+    ...modelingAndAnimation,
+    ...publishedGames,
+]
 
 export default projects
