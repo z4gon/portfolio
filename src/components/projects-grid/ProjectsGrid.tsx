@@ -11,6 +11,7 @@ interface ProjectsGridProps {
 }
 
 const PAGE_SIZE = 12
+const PAGE_JUMP = 4
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({
     title,
@@ -21,36 +22,41 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
 
     const hasNext = projects.length > (page + 1) * pageSize
 
-    const loadNextPage = () => {
+    const loadMore = () => {
         if (!hasNext) {
             return
         }
 
-        setPage((currentPage) => currentPage + 1)
+        setPage((currentPage) => currentPage + PAGE_JUMP)
     }
 
     if (projects.length == 0) {
         return null
     }
 
-    const projectsToList = projects.slice(0, (page + 1) * pageSize)
+    const thumbnailsShowing = projects.slice(0, (page + 1) * pageSize)
 
     return (
         <div className={styles.gridWrapper}>
             {title && (
                 <div className={styles.titleWrapper}>
                     <h2 className={styles.title}>{title}</h2>
-                    <span>{`(${projects.length})`}</span>
+                    <span className={styles.projectCount}>{`${
+                        projects.length
+                    } project${projects.length > 1 ? 's' : ''}`}</span>
                 </div>
             )}
+
             <div className={styles.grid}>
-                {projectsToList.map((project) => (
+                {thumbnailsShowing.map((project) => (
                     <ProjectCard key={project.id} {...project} />
                 ))}
             </div>
+
             {hasNext && (
                 <div className={styles.actions}>
-                    <Button onClick={() => loadNextPage()}>Show More</Button>
+                    <p>{`Showing ${thumbnailsShowing.length} of ${projects.length}`}</p>
+                    <Button onClick={() => loadMore()}>Show More</Button>
                 </div>
             )}
         </div>

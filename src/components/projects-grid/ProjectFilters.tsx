@@ -54,8 +54,8 @@ const ProjectFilters: React.FC<ProjectFiltersProps> = ({
             </div>
             <span className={styles.message}>
                 {searchInput
-                    ? `${filterResultsCount} projects matched search criteria`
-                    : `${filterResultsCount} available projects`}
+                    ? `${filterResultsCount} matching projects`
+                    : `${filterResultsCount} total projects`}
             </span>
         </div>
     )
