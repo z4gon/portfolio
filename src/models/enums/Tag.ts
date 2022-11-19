@@ -24,4 +24,5 @@ export enum Tag {
     Animation = 'Animation',
     Blender = 'Blender',
     UI = 'UI',
+    ParticleSystem = 'Particle System',
 }

@@ -35,7 +35,7 @@ const data: ProjectData = generateProjectData({
         'Color Over Time, Size Over Time, Force Over Time.',
         'Emission Shapes and Emission Bursts.',
     ],
-    tags: [Tag.VFX, Tag.UI, Tag.BuiltInRP],
+    tags: [Tag.VFX, Tag.UI, Tag.BuiltInRP, Tag.ParticleSystem],
     technology: Technology.UnityEngine,
     category: Category.VisualEffects,
 })

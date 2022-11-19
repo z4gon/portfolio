@@ -1,4 +1,5 @@
 import _3dAnimatedCharacterUnity from './projects/3d-animated-character-unity'
+import blackHoleVfxUnity from './projects/black-hole-vfx-unity'
 import bubblesComputeShaderUnity from './projects/bubbles-compute-shader-unity'
 import cgBallOfLavaShaderUnity from './projects/cg-ball-of-lava-shader-unity'
 import cgClippingShader from './projects/cg-clipping-shader'
@@ -22,10 +23,11 @@ import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
 import waterShaderUnity from './projects/water-shader-unity'
 
 const vfx = [
+    blackHoleVfxUnity,
     groundSlashVfxUnity,
     iceAttackVfxUnity,
-    fireVfxUnity,
     uiStarsFireworksVfxUnity,
+    fireVfxUnity,
 ]
 const shaders = [
     marioKartItemBoxVfx,
