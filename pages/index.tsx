@@ -14,7 +14,7 @@ interface HomeProps {
     projects: ProjectDataMinimal[]
 }
 
-const PAGE_SIZE = 4
+const PAGE_SIZE = 8
 
 export default function Home({ projects }: HomeProps) {
     const [filteredProjects, setFilteredProjects] = useState(projects)
