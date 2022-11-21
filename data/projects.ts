@@ -16,6 +16,7 @@ import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import meshDeformationComputeShaderUnity from './projects/mesh-deformation-compute-shader-unity'
+import sciFiShieldShaderUnity from './projects/sci-fi-shield-shader-unity'
 import spacePortalShaderUnity from './projects/space-portal-shader-unity'
 import starcat from './projects/starcat'
 import tessellationUnity from './projects/tessellation-unity'
@@ -30,6 +31,7 @@ const vfx = [
     fireVfxUnity,
 ]
 const shaders = [
+    sciFiShieldShaderUnity,
     marioKartItemBoxVfx,
     characterSkinTransitionShaderUnity,
     waterShaderUnity,

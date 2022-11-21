@@ -8,15 +8,17 @@ interface ProjectsGridProps {
     title?: string
     projects: ProjectDataMinimal[]
     pageSize?: number
+    pageJump?: number
 }
 
 const PAGE_SIZE = 12
-const PAGE_JUMP = 4
+const PAGE_JUMP = 2
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({
     title,
     projects,
     pageSize = PAGE_SIZE,
+    pageJump = PAGE_JUMP,
 }) => {
     const [page, setPage] = useState(0)
 
@@ -27,7 +29,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
             return
         }
 
-        setPage((currentPage) => currentPage + PAGE_JUMP)
+        setPage((currentPage) => currentPage + pageJump)
     }
 
     if (projects.length == 0) {
