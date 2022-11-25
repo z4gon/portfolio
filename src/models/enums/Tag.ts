@@ -28,5 +28,5 @@ export enum Tag {
     Material = 'Material',
     MaterialFunction = 'MaterialFunction',
     UnrealEngine = 'Unreal Engine',
-    Shader = 'Shader'
+    Shader = 'Shader',
 }

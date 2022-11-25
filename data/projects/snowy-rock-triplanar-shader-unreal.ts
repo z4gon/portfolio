@@ -38,7 +38,7 @@ const data: ProjectData = generateProjectData({
         'Implementing a basic material using Base Color, Roughness, Normal, Displacement and Ambient Occlusion.',
         'Triplanar Projection using two channels at a time from the current Vertex Normal.',
         'Blending Triplanar Projections by masking with the Absolute Magnitude of the corresponding Normal Coordinate.',
-        'Material Function to extract the Sub Graph for the Triplanar Projection, to resue in the rest of the textures of the Material.',
+        'Material Function to extract the Sub Graph for the Triplanar Projection, to reuse in the rest of the textures of the Material.',
         'Material Instances to have different instances of Rocks, using the same base Material.',
         'Subsurface Scattering Material for the Snow.',
         'Using the Make Material Attributes Node to output whole Material attributes from the Material Functions for Rock and Snow.',
