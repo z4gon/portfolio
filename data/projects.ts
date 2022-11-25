@@ -17,6 +17,7 @@ import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import meshDeformationComputeShaderUnity from './projects/mesh-deformation-compute-shader-unity'
 import sciFiShieldShaderUnity from './projects/sci-fi-shield-shader-unity'
+import snowyRockTriplanarShaderUnity from './projects/snowy-rock-triplanar-shader-unreal'
 import spacePortalShaderUnity from './projects/space-portal-shader-unity'
 import starcat from './projects/starcat'
 import tessellationUnity from './projects/tessellation-unity'
@@ -34,6 +35,7 @@ const shaders = [
     sciFiShieldShaderUnity,
     marioKartItemBoxVfx,
     characterSkinTransitionShaderUnity,
+    snowyRockTriplanarShaderUnity,
     waterShaderUnity,
     spacePortalShaderUnity,
     cgBallOfLavaShaderUnity,
