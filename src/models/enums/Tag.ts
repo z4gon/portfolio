@@ -25,4 +25,8 @@ export enum Tag {
     Blender = 'Blender',
     UI = 'UI',
     ParticleSystem = 'Particle System',
+    Material = 'Material',
+    MaterialFunction = 'MaterialFunction',
+    UnrealEngine = 'Unreal Engine',
+    Shader = 'Shader'
 }
