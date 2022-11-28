@@ -1,6 +1,5 @@
-import classNames from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
+import styles from '../../../styles/components/blog/CoverImage.module.sass'
 
 type Props = {
     title: string
@@ -9,19 +8,11 @@ type Props = {
 }
 
 const CoverImage = ({ title, src, slug }: Props) => {
-    const image = (
-        <Image
-            src={src}
-            alt={`Cover Image for ${title}`}
-            className={classNames('shadow-sm w-full', {
-                'hover:shadow-lg transition-shadow duration-200': slug,
-            })}
-            width={1300}
-            height={630}
-        />
-    )
+    // eslint-disable-next-line @next/next/no-img-element
+    const image = <img src={src} alt={`Cover Image for ${title}`} />
+
     return (
-        <div className="sm:mx-0">
+        <div className={styles.coverImage}>
             {slug ? (
                 <Link
                     as={`/blog/${slug}`}

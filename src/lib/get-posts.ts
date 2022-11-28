@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import Author from '../models/Author'
+import authors from '../../data/authors'
 import { BlogPost, BlogPostMinimal } from '../models/BlogPost'
 
 const postsDirectory = join(process.cwd(), 'data/blog-posts')
@@ -26,10 +26,12 @@ export const getPostBySlug = <T extends BlogPostMinimal | BlogPost>(
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
+    const author = authors[data.authorId]
+
     let blogPost = {
         slug: realSlug,
         date: data.date,
-        author: data.author as Author,
+        author: author,
         title: data.title,
         excerpt: data.excerpt,
         coverImageUrl: data.coverImageUrl,

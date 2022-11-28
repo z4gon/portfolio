@@ -1,3 +1,4 @@
+import styles from '../../../styles/components/blog/PostHeader.module.sass'
 import Author from '../../models/Author'
 import Avatar from './Avatar'
 import CoverImage from './CoverImage'
@@ -15,7 +16,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
     return (
         <>
             <PostTitle>{title}</PostTitle>
-            <div className="hidden md:block md:mb-12">
+            <div className={styles.authorAndDate}>
                 <Avatar name={author.name} pictureUrl={author.pictureUrl} />
                 <DateFormatter dateString={date} />
             </div>

@@ -15,7 +15,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
     return (
         <Page>
             <Metatags
-                title={post.title}
+                title={`${post.title} | Blog`}
                 description={post.excerpt}
                 imageUrl={post.coverImageUrl}
             />

@@ -3,9 +3,7 @@ title: 'Hello World 3'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImageUrl: '/images/blog/hello-world/1.jpg'
 date: '2020-03-16T05:35:07.322Z'
-author:
-    name: Gonzalo Cumini
-    pictureUrl: '/images/avatars/z4gon.jpg'
+authorId: 'z4gon'
 ---
 
 -   [Lorem Ipsum 1](#lorem-ipsum-1)
