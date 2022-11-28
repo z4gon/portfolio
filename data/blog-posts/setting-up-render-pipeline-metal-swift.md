@@ -7,52 +7,132 @@ date: '2022-11-28T00:00:00.000Z'
 authorId: 'z4gon'
 ---
 
+## Github Repo
+
+-   [Github Project](https://github.com/z4gon/swift-metal-game-engine)
+
+## References
+
+-   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+-   [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
+
 ## Table of Content
 
--   [Lorem Ipsum 1](#lorem-ipsum-1)
-    -   [Testing](#lorem-ipsum-2)
-        -   [Testing](#lorem-ipsum-3)
-        -   [Testing](#lorem-ipsum-3)
-    -   [Testing](#lorem-ipsum-3)
--   [Testing](#lorem-ipsum-4)
+-   [Creating the XCode project](#creating-the-xcode-project)
+-   [MTKView](#mtkview)
+-   [The Command Structure](#the-command-structure)
+-   [Basic Render Pipeline](#basic-render-pipeline)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## Creating the XCode project
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+## MTKView
 
-## Lorem Ipsum
+-   [MTK View](https://developer.apple.com/documentation/metalkit/mtkview)
+-   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
+    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
+    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
 
-### Lorem Ipsum
+## The Commmand Structure
 
-#### Lorem Ipsum 1
+-   [Metal Render Pipeline](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
-##### Lorem Ipsum
+    -   [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
 
-###### Lorem Ipsum
+-   [Setting up a Command Structure](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/setting_up_a_command_structure)
+    -   [MTL Command Buffer](https://developer.apple.com/documentation/metal/mtlcommandbuffer)
+    -   [MTL Command Encoder](https://developer.apple.com/documentation/metal/mtlcommandencoder)
+        -   [MTL Render Command Encoder](https://developer.apple.com/documentation/metal/mtlrendercommandencoder)
+-   [MTL Render Pass Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpassdescriptor)
+-   [MTL Render Pipeline State](https://developer.apple.com/documentation/metal/mtlrenderpipelinestate)
+    -   [MTL Render Pipeline Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpipelinedescriptor)
+        -   Color Attachments
+            -   Pixel Format
+        -   Vertex/Fragment Functions
+            -   [MTL Library](https://developer.apple.com/documentation/metal/mtllibrary)
+                -   [MTL Function Type](https://developer.apple.com/documentation/metal/mtlfunctiontype)
+                    -   Vertex/Fragment/Kernel
+                -   [MTL Function](https://developer.apple.com/documentation/metal/mtlfunction)
+                    -   **.metal** files
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+## Basic Render Pipeline
 
--   testing
-    -   testing
-        -   testing
-        -   testing
-            -   testing
-            -   testing
-        -   testing
-        -   testing
-    -   testing
-    -   testing
--   testing
+```swift
+import MetalKit
 
-1. hello
-1. hello
-    1. hello
-        1. hello
-        2. hello
-    2. hello
-    3. hello
-1. hello
-    1. hello
-1. hello
+class GameView: MTKView {
 
-![Picture](/images/blog/hello-world/1.jpg)
+    var commandQueue: MTLCommandQueue!
+    var renderPipelineState: MTLRenderPipelineState!
+
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+
+        // device is an abstract representation of the GPU
+        // allows to create Metal GPU objects and send them down to the GPU
+        self.device = MTLCreateSystemDefaultDevice()
+
+        // clearColor fills the screen each time the GPU clears the frame (60 times per second at 60 fps)
+        // rgba is 0-1
+        self.clearColor = MTLClearColor(red: 0.43, green: 0.73, blue: 0.35, alpha: 1.0)
+
+        // how pixels are stored
+        self.colorPixelFormat = MTLPixelFormat.bgra8Unorm
+
+        // create the command queue to handle commands for the GPU
+        self.commandQueue = device?.makeCommandQueue()
+
+        createRenderPipelineState()
+    }
+
+    func createRenderPipelineState(){
+
+        let library = device?.makeDefaultLibrary()
+
+        // at compile time it will pick the right vertex and shader functions by matching the names
+        let vertexFunction = library?.makeFunction(name: "basic_vertex_shader")
+        let fragmentFunction = library?.makeFunction(name: "basic_fragment_shader")
+
+        // create the descriptor for the render pipeline, make the pixel format match the device
+        let renderPipelineDescriptor = MTLRenderPipelineDescriptor()
+        renderPipelineDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormat.bgra8Unorm
+
+        // set the vertex and fragment functions
+        renderPipelineDescriptor.vertexFunction = vertexFunction
+        renderPipelineDescriptor.fragmentFunction = fragmentFunction
+
+        // create the render pipeline state using the render pipeline descriptor
+        do {
+            renderPipelineState = try device?.makeRenderPipelineState(descriptor: renderPipelineDescriptor)
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+
+    override func draw(_ dirtyRect: NSRect) {
+
+        // get references if available, else return
+        guard let drawable = self.currentDrawable, let renderPassDescriptor = self.currentRenderPassDescriptor else { return }
+
+        // cretae a command buffer
+        let commandBuffer = commandQueue.makeCommandBuffer()
+
+        // create the render command encoder
+        // pass the render pass descriptor, which includes pixel information and destination buffers
+        let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+
+        // set the render pipeline state to the render command encoder
+        renderCommandEncoder?.setRenderPipelineState(self.renderPipelineState)
+
+        // TODO: send info to render command encoder
+
+        // after passing all the data
+        renderCommandEncoder?.endEncoding()
+
+        // the command buffer will present the result of the rendering when it's done
+        commandBuffer?.present(drawable)
+
+        // execute the command buffer
+        commandBuffer?.commit()
+    }
+}
+```
