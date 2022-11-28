@@ -1,6 +1,6 @@
 ---
 title: 'Setting up a Render Pipeline with Metal and Swift'
-excerpt: 'Following the amazing tutorial series by Rick Twohy and creating a basic xcode project using Swift and Storyboards for macos. Utilizing the Metal Kit library to access the Metal APIs to render graphics in 3D and initializing the basic components to setup the render pipeline to start outputing graphics to the screen.'
+excerpt: 'Following the amazing tutorial series by Rick Twohy, creating a basic macos app project in xcode using Swift and Storyboards. Utilizing the Metal Kit library to access the Metal APIs to render 3D graphics, initializing the basic components to setup the render pipeline and start outputing 3D graphics on the screen.'
 coverImageUrl: '/images/blog/setting-up-render-pipeline-metal-swift/cover.jpg'
 coverImageSourceUrl: 'https://unsplash.com/photos/ICTjWYzpoc0'
 date: '2022-11-28T00:00:00.000Z'

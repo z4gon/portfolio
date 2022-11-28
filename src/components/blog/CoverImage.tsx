@@ -6,9 +6,16 @@ type Props = {
     imageUrl: string
     imageSourceUrl: string
     slug?: string
+    showImageSourceLink?: boolean
 }
 
-const CoverImage = ({ title, imageUrl, imageSourceUrl, slug }: Props) => {
+const CoverImage = ({
+    title,
+    imageUrl,
+    imageSourceUrl,
+    slug,
+    showImageSourceLink = false,
+}: Props) => {
     // eslint-disable-next-line @next/next/no-img-element
     const image = <img src={imageUrl} alt={`Cover Image for ${title}`} />
 
@@ -26,9 +33,15 @@ const CoverImage = ({ title, imageUrl, imageSourceUrl, slug }: Props) => {
                 image
             )}
 
-            <a href={imageSourceUrl} target="_blank" rel="noopener noreferrer">
-                Image Source 🔗
-            </a>
+            {showImageSourceLink && (
+                <a
+                    href={imageSourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Image Source 🔗
+                </a>
+            )}
         </div>
     )
 }

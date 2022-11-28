@@ -31,6 +31,7 @@ const PostHeader = ({
                 title={title}
                 imageUrl={coverImageUrl}
                 imageSourceUrl={coverImageSourceUrl}
+                showImageSourceLink
             />
         </>
     )
