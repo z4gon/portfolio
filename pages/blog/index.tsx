@@ -1,5 +1,5 @@
-import HeroPost from '../../src/components/blog/HeroPost'
 import MoreStories from '../../src/components/blog/MoreStories'
+import PostPreview from '../../src/components/blog/PostPreview'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
@@ -24,7 +24,8 @@ export default function Blog({ allPosts }: BlogProps) {
             <Container>
                 <Spacer amount="3.5em" />
                 {heroPost && (
-                    <HeroPost
+                    <PostPreview
+                        isHero
                         title={heroPost.title}
                         coverImageUrl={heroPost.coverImageUrl}
                         date={heroPost.date}

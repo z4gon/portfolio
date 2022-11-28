@@ -1,10 +1,13 @@
+import classNames from 'classnames'
 import Link from 'next/link'
+import styles from '../../../styles/components/blog/PostPreview.module.sass'
 import Author from '../../models/Author'
 import Avatar from './Avatar'
 import CoverImage from './CoverImage'
 import DateFormatter from './DateFormatter'
 
 type Props = {
+    isHero?: boolean
     title: string
     coverImageUrl: string
     date: string
@@ -14,6 +17,7 @@ type Props = {
 }
 
 const PostPreview = ({
+    isHero = false,
     title,
     coverImageUrl,
     date,
@@ -22,25 +26,23 @@ const PostPreview = ({
     slug,
 }: Props) => {
     return (
-        <div>
-            <div className="mb-5">
-                <CoverImage slug={slug} title={title} src={coverImageUrl} />
-            </div>
-            <h3 className="text-3xl mb-3 leading-snug">
-                <Link
-                    as={`/blog/${slug}`}
-                    href="/blog/[slug]"
-                    className="hover:underline"
-                >
+        <section
+            className={classNames(styles.postPreview, {
+                [styles.hero]: isHero,
+            })}
+        >
+            <CoverImage title={title} src={coverImageUrl} slug={slug} />
+            <h3 className={styles.title}>
+                <Link as={`/blog/${slug}`} href="/blog/[slug]">
                     {title}
                 </Link>
             </h3>
-            <div className="text-lg mb-4">
+            <div className={styles.authorAndDate}>
+                <Avatar name={author.name} pictureUrl={author.pictureUrl} />
                 <DateFormatter dateString={date} />
             </div>
-            <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-            <Avatar name={author.name} pictureUrl={author.pictureUrl} />
-        </div>
+            <p className={styles.excerpt}>{excerpt}</p>
+        </section>
     )
 }
 
