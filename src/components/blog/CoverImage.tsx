@@ -5,18 +5,16 @@ import styles from '../../../styles/components/blog/CoverImage.module.sass'
 type Props = {
     title: string
     imageUrl: string
-    imageSourceUrl: string
+    imageSourceUrl?: string
     slug?: string
-    showImageSourceLink?: boolean
     className?: string
 }
 
 const CoverImage = ({
     title,
     imageUrl,
-    imageSourceUrl,
+    imageSourceUrl = null,
     slug,
-    showImageSourceLink = false,
     className,
 }: Props) => {
     // eslint-disable-next-line @next/next/no-img-element
@@ -36,7 +34,7 @@ const CoverImage = ({
                 image
             )}
 
-            {showImageSourceLink && (
+            {imageSourceUrl && (
                 <a
                     href={imageSourceUrl}
                     target="_blank"

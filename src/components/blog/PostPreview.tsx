@@ -10,7 +10,6 @@ type Props = {
     isHero?: boolean
     title: string
     coverImageUrl: string
-    coverImageSourceUrl: string
     date: string
     excerpt: string
     author: Author
@@ -21,7 +20,6 @@ const PostPreview = ({
     isHero = false,
     title,
     coverImageUrl,
-    coverImageSourceUrl,
     date,
     excerpt,
     author,
@@ -36,7 +34,6 @@ const PostPreview = ({
             <CoverImage
                 title={title}
                 imageUrl={coverImageUrl}
-                imageSourceUrl={coverImageSourceUrl}
                 slug={slug}
                 className={styles.picture}
             />

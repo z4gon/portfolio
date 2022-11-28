@@ -31,7 +31,6 @@ export default function Blog({ allPosts }: BlogProps) {
                         isHero
                         title={heroPost.title}
                         coverImageUrl={heroPost.coverImageUrl}
-                        coverImageSourceUrl={heroPost.coverImageSourceUrl}
                         date={heroPost.date}
                         author={heroPost.author}
                         slug={heroPost.slug}
