@@ -30,6 +30,11 @@ const NavBar: React.FC<{}> = () => {
                         <h1>Projects</h1>
                     </Link>
                 </li>
+                <li className={styles.secondaryLink}>
+                    <Link href="/blog">
+                        <h1>Blog</h1>
+                    </Link>
+                </li>
             </ul>
             <ul className={styles.icons}>
                 {icons.map((icon) => (
