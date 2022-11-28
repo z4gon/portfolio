@@ -35,6 +35,7 @@ export const getPostBySlug = <T extends BlogPostMinimal | BlogPost>(
         title: data.title,
         excerpt: data.excerpt,
         coverImageUrl: data.coverImageUrl,
+        coverImageSourceUrl: data.coverImageSourceUrl,
     }
 
     if (full) {

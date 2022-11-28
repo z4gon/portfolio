@@ -28,6 +28,7 @@ export default function Blog({ allPosts }: BlogProps) {
                         isHero
                         title={heroPost.title}
                         coverImageUrl={heroPost.coverImageUrl}
+                        coverImageSourceUrl={heroPost.coverImageSourceUrl}
                         date={heroPost.date}
                         author={heroPost.author}
                         slug={heroPost.slug}
@@ -35,7 +36,7 @@ export default function Blog({ allPosts }: BlogProps) {
                     />
                 )}
                 {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-                <Spacer amount="3.5em" />
+                <Spacer amount="6em" />
             </Container>
         </Page>
     )

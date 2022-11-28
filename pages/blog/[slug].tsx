@@ -12,6 +12,10 @@ interface BlogPostProps {
 }
 
 export default function BlogPostPage({ post }: BlogPostProps) {
+    if (!post) {
+        return null
+    }
+
     return (
         <Page>
             <Metatags
@@ -24,7 +28,8 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                 <article className="mb-32">
                     <PostHeader
                         title={post.title}
-                        coverImage={post.coverImageUrl}
+                        coverImageUrl={post.coverImageUrl}
+                        coverImageSourceUrl={post.coverImageSourceUrl}
                         date={post.date}
                         author={post.author}
                     />

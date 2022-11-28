@@ -3,13 +3,14 @@ import styles from '../../../styles/components/blog/CoverImage.module.sass'
 
 type Props = {
     title: string
-    src: string
+    imageUrl: string
+    imageSourceUrl: string
     slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, imageUrl, imageSourceUrl, slug }: Props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    const image = <img src={src} alt={`Cover Image for ${title}`} />
+    const image = <img src={imageUrl} alt={`Cover Image for ${title}`} />
 
     return (
         <div className={styles.coverImage}>
@@ -24,6 +25,10 @@ const CoverImage = ({ title, src, slug }: Props) => {
             ) : (
                 image
             )}
+
+            <a href={imageSourceUrl} target="_blank" rel="noopener noreferrer">
+                Image Source 🔗
+            </a>
         </div>
     )
 }

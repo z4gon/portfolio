@@ -7,12 +7,19 @@ import PostTitle from './PostTitle'
 
 type Props = {
     title: string
-    coverImage: string
+    coverImageUrl: string
+    coverImageSourceUrl: string
     date: string
     author: Author
 }
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const PostHeader = ({
+    title,
+    coverImageUrl,
+    coverImageSourceUrl,
+    date,
+    author,
+}: Props) => {
     return (
         <>
             <PostTitle>{title}</PostTitle>
@@ -20,7 +27,11 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
                 <Avatar name={author.name} pictureUrl={author.pictureUrl} />
                 <DateFormatter dateString={date} />
             </div>
-            <CoverImage title={title} src={coverImage} />
+            <CoverImage
+                title={title}
+                imageUrl={coverImageUrl}
+                imageSourceUrl={coverImageSourceUrl}
+            />
         </>
     )
 }

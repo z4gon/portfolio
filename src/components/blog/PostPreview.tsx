@@ -10,6 +10,7 @@ type Props = {
     isHero?: boolean
     title: string
     coverImageUrl: string
+    coverImageSourceUrl: string
     date: string
     excerpt: string
     author: Author
@@ -20,6 +21,7 @@ const PostPreview = ({
     isHero = false,
     title,
     coverImageUrl,
+    coverImageSourceUrl,
     date,
     excerpt,
     author,
@@ -31,7 +33,12 @@ const PostPreview = ({
                 [styles.hero]: isHero,
             })}
         >
-            <CoverImage title={title} src={coverImageUrl} slug={slug} />
+            <CoverImage
+                title={title}
+                imageUrl={coverImageUrl}
+                imageSourceUrl={coverImageSourceUrl}
+                slug={slug}
+            />
             <h3 className={styles.title}>
                 <Link as={`/blog/${slug}`} href="/blog/[slug]">
                     {title}
