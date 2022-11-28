@@ -4,6 +4,7 @@ import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
+import PageTitle from '../src/components/page/PageTitle'
 import ProjectFilters from '../src/components/projects-grid/ProjectFilters'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
@@ -34,7 +35,9 @@ export default function Home({ projects }: HomeProps) {
         <Page>
             <Metatags />
             <Container>
-                <Spacer amount="3.5em" />
+                <Spacer amount="2em" />
+                <PageTitle>Portfolio</PageTitle>
+                <Spacer amount="2em" />
                 <ProjectFilters
                     allProjects={projects}
                     onFiltersChanged={onFiltersChanged}

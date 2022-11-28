@@ -27,7 +27,12 @@ const NavBar: React.FC<{}> = () => {
                 </li>
                 <li className={styles.secondaryLink}>
                     <Link href="/">
-                        <h1>Projects</h1>
+                        <h1>Portfolio</h1>
+                    </Link>
+                </li>
+                <li className={styles.secondaryLink}>
+                    <Link href="/blog">
+                        <h1>Blog</h1>
                     </Link>
                 </li>
             </ul>

@@ -1,5 +1,6 @@
 import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
+import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
@@ -15,21 +16,23 @@ export default function NotFound({ projects }: NotFoundProps) {
     return (
         <Page>
             <Metatags />
-            <Spacer amount="8em" />
+            <Container>
+                <Spacer amount="8em" />
 
-            <h1 className={styles.title}>404</h1>
-            <h2 className={styles.subtitle}>Not Found</h2>
+                <h1 className={styles.title}>404</h1>
+                <h2 className={styles.subtitle}>Not Found</h2>
 
-            <p className={styles.description}>
-                The project doesn&apos;t exist 💀
-            </p>
-            <p className={styles.description}>
-                These other projects might interest you 🥳
-            </p>
+                <p className={styles.description}>
+                    The project doesn&apos;t exist 💀
+                </p>
+                <p className={styles.description}>
+                    These other projects might interest you 🥳
+                </p>
 
-            <Spacer amount="4em" />
-            <ProjectsGrid projects={projects} />
-            <Spacer amount="10em" />
+                <Spacer amount="4em" />
+                <ProjectsGrid projects={projects} />
+                <Spacer amount="10em" />
+            </Container>
         </Page>
     )
 }

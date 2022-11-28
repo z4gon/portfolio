@@ -1,0 +1,25 @@
+.moreStories
+    .title
+        display: block
+        text-align: center
+        font-size: 1.6em
+        margin: 2em 0 2em
+
+    .grid
+        width: 100%
+
+        display: grid
+        grid-template-columns: 1fr
+
+        @media screen and (min-width: 701px)
+            grid-template-columns: 1fr 1fr
+
+        @media screen and (min-width: 1051px)
+            grid-template-columns: 1fr 1fr 1fr
+
+        @media screen and (min-width: 1401px)
+            grid-template-columns: 1fr 1fr 1fr 1fr
+
+        grid-auto-columns: 25rem
+
+        box-sizing: border-box
