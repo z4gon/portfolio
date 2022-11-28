@@ -21,18 +21,51 @@ authorId: 'z4gon'
 -   [Creating the XCode project](#creating-the-xcode-project)
 -   [MTKView](#mtkview)
 -   [The Command Structure](#the-command-structure)
+    -   [Resources](#resources)
 -   [Basic Render Pipeline](#basic-render-pipeline)
+    -   [Resources](#resources)
+    -   [Code](#code)
+        -   [Shaders](#shaders)
+        -   [Game View](#game-view)
+    -   [Result](#result)
 
 ## Creating the XCode project
+
+We just need to create a very basic **macOS** app using **Swift** and **Storyboards** for the UI.
+
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/1.jpg)
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/2.jpg)
 
 ## MTKView
 
 -   [MTK View](https://developer.apple.com/documentation/metalkit/mtkview)
--   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
-    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
-    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
+
+Create a new **Cocoa Class** file, extending from **MTKView**, which in turn extends **NSView**.
+
+This will be connected to your main **Storyboard** for the **Game View**, where we will output the rendering of the pipeline.
+
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/3.jpg)
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/4.jpg)
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/5.jpg)
 
 ## The Commmand Structure
+
+[Command Structure Images from Apple Docs](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/setting_up_a_command_structure)
+
+The **Metal** Graphics **API** uses a **Command Structure** to handle all the petitions from the **CPU** to render graphics in the **GPU**.
+
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/6.png)
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/9.jpg)
+
+[Render Pipeline Descriptor Image Source](https://lcellentani.github.io/post/metal_introduction/)
+
+The **Command Buffers** contain the instructions the the **CPU** needs to execute.
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/7.png)
+
+The **Command Queue** holds all the **Command Buffers** and ensures they execute timely and in order. It also handles executions and results coming to/from **Compute Shaders**.
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/8.png)
+
+### Resources
 
 -   [Metal Render Pipeline](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
@@ -55,6 +88,51 @@ authorId: 'z4gon'
                     -   **.metal** files
 
 ## Basic Render Pipeline
+
+1. The **Device** represents the **GPU** device in the machine.
+1. From the **Device**, we create the **Commmand Queue**.
+1. We create **Command Buffers** using the **Command Queue**.
+1. The **Render Command Encoder** is created out of the **Command Buffer** (There are many types of **Command Encoders**, **Render** is for Graphics Rendering, **Compute** would be for Computations, as in Compute Shaders)
+    1. We use the **Render Pass Descriptor** for this, which includes information about the output buffers to show the result of the rendering.
+1. At one point we will set the **Render Pipeline State** to the **Render Command Encoder**.
+1. To create the **Render Pipeline State**, we first need to create the **Render Pipeline Descriptor**.
+    1. For creating the **Render Pipeline Descriptor**, we need to create a **Library** first, which will let us create the **Functions** for **Vertex** and **Fragment** calculations.
+    2. Once we have the **Library** and the **Functions**, we can create the **Render Pipeline Descriptor**.
+    3. With the **Render Pipeline Descriptor**, we can tell the **Device** to create the **Render Pipeline State**.
+1. Now we can set the **Render Pipeline State** to the **Render Command Encoder**.
+1. And we can tell the **Command Buffer** to **endEncoding()**, **present()** to the **drawable**, and **commit()** to schedule its execution.
+
+### Resources
+
+-   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
+    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
+    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
+
+### Code
+
+#### Shaders
+
+For defining the **Shaders**, we need to create a **Metal** file.
+
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/10.jpg)
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/11.jpg)
+
+```c
+#include <metal_stdlib>
+using namespace metal;
+
+vertex float4 basic_vertex_shader(){
+    return float4(1);
+}
+
+fragment half4 basic_fragment_shader(){
+    return half4(1);
+}
+```
+
+#### Game View
+
+For now this will just clear the screen with a basic green color, every frame.
 
 ```swift
 import MetalKit
@@ -136,3 +214,7 @@ class GameView: MTKView {
     }
 }
 ```
+
+### Result
+
+![Picture](/images/blog/setting-up-render-pipeline-metal-swift/12.jpg)
