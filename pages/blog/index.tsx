@@ -3,6 +3,7 @@ import PostPreview from '../../src/components/blog/PostPreview'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
+import PageTitle from '../../src/components/page/PageTitle'
 import Spacer from '../../src/components/Spacer'
 import { getAllPosts } from '../../src/lib/get-posts'
 import { BlogPostMinimal } from '../../src/models/BlogPost'
@@ -22,7 +23,9 @@ export default function Blog({ allPosts }: BlogProps) {
                 description="Gonzalo Cumini | Blog"
             />
             <Container>
-                <Spacer amount="3.5em" />
+                <Spacer amount="2em" />
+                <PageTitle>Blog</PageTitle>
+                <Spacer amount="2em" />
                 {heroPost && (
                     <PostPreview
                         isHero

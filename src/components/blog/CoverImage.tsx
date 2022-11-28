@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import Link from 'next/link'
 import styles from '../../../styles/components/blog/CoverImage.module.sass'
 
@@ -7,6 +8,7 @@ type Props = {
     imageSourceUrl: string
     slug?: string
     showImageSourceLink?: boolean
+    className?: string
 }
 
 const CoverImage = ({
@@ -15,12 +17,13 @@ const CoverImage = ({
     imageSourceUrl,
     slug,
     showImageSourceLink = false,
+    className,
 }: Props) => {
     // eslint-disable-next-line @next/next/no-img-element
     const image = <img src={imageUrl} alt={`Cover Image for ${title}`} />
 
     return (
-        <div className={styles.coverImage}>
+        <div className={classNames(styles.coverImage, className)}>
             {slug ? (
                 <Link
                     as={`/blog/${slug}`}

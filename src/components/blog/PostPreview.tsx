@@ -38,17 +38,20 @@ const PostPreview = ({
                 imageUrl={coverImageUrl}
                 imageSourceUrl={coverImageSourceUrl}
                 slug={slug}
+                className={styles.picture}
             />
-            <h3 className={styles.title}>
-                <Link as={`/blog/${slug}`} href="/blog/[slug]">
-                    {title}
-                </Link>
-            </h3>
-            <div className={styles.authorAndDate}>
-                <Avatar name={author.name} pictureUrl={author.pictureUrl} />
-                <DateFormatter dateString={date} />
+            <div className={styles.info}>
+                <h3 className={styles.title}>
+                    <Link as={`/blog/${slug}`} href="/blog/[slug]">
+                        {title}
+                    </Link>
+                </h3>
+                <div className={styles.authorAndDate}>
+                    <Avatar name={author.name} pictureUrl={author.pictureUrl} />
+                    <DateFormatter dateString={date} />
+                </div>
+                <p className={styles.excerpt}>{excerpt}</p>
             </div>
-            <p className={styles.excerpt}>{excerpt}</p>
         </section>
     )
 }
