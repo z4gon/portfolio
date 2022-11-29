@@ -1,4 +1,4 @@
-import MoreStories from '../../src/components/blog/MoreStories'
+import MoreStories from '../../src/components/blog/MorePosts'
 import PostPreview from '../../src/components/blog/PostPreview'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'

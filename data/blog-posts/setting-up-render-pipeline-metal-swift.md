@@ -1,5 +1,5 @@
 ---
-title: 'Setting up a Render Pipeline with Metal and Swift'
+title: 'Render Pipeline with Metal and Swift: Part 1'
 excerpt: 'Following the amazing tutorial series by Rick Twohy, creating a basic macos app project in xcode using Swift and Storyboards. Utilizing the Metal Kit library to access the Metal APIs to render 3D graphics, initializing the basic components to setup the render pipeline and start outputing 3D graphics on the screen.'
 coverImageUrl: '/images/blog/setting-up-render-pipeline-metal-swift/cover.jpg'
 coverImageSourceUrl: 'https://unsplash.com/photos/ICTjWYzpoc0'
@@ -7,14 +7,16 @@ date: '2022-11-29T00:00:00.000Z'
 authorId: 'z4gon'
 ---
 
-## Github Repo
+## Source Code
 
--   [Github Project](https://github.com/z4gon/swift-metal-game-engine)
+[See Project in GitHub 👩‍💻](https://github.com/z4gon/metal-render-pipeline)
 
 ## References
 
 -   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
 -   [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
+
+---
 
 ## Table of Content
 
@@ -23,11 +25,12 @@ authorId: 'z4gon'
 -   [The Command Structure](#the-command-structure)
     -   [Resources](#resources)
 -   [Basic Render Pipeline](#basic-render-pipeline)
-    -   [Resources](#resources)
     -   [Code](#code)
         -   [Shaders](#shaders)
         -   [Game View](#game-view)
     -   [Result](#result)
+
+---
 
 ## Creating the XCode project
 
@@ -35,6 +38,8 @@ We just need to create a very basic **macOS** app using **Swift** and **Storyboa
 
 ![Picture](/images/blog/setting-up-render-pipeline-metal-swift/1.jpg)
 ![Picture](/images/blog/setting-up-render-pipeline-metal-swift/2.jpg)
+
+---
 
 ## MTKView
 
@@ -48,7 +53,9 @@ This will be connected to your main **Storyboard** for the **Game View**, where 
 ![Picture](/images/blog/setting-up-render-pipeline-metal-swift/4.jpg)
 ![Picture](/images/blog/setting-up-render-pipeline-metal-swift/5.jpg)
 
-## The Commmand Structure
+---
+
+## The Command Structure
 
 [Command Structure Images from Apple Docs](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/setting_up_a_command_structure)
 
@@ -77,6 +84,7 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
         -   [MTL Render Command Encoder](https://developer.apple.com/documentation/metal/mtlrendercommandencoder)
 -   [MTL Render Pass Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpassdescriptor)
 -   [MTL Render Pipeline State](https://developer.apple.com/documentation/metal/mtlrenderpipelinestate)
+
     -   [MTL Render Pipeline Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpipelinedescriptor)
         -   Color Attachments
             -   Pixel Format
@@ -86,6 +94,12 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
                     -   Vertex/Fragment/Kernel
                 -   [MTL Function](https://developer.apple.com/documentation/metal/mtlfunction)
                     -   **.metal** files
+
+-   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
+    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
+    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
+
+---
 
 ## Basic Render Pipeline
 
@@ -101,12 +115,6 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
     3. With the **Render Pipeline Descriptor**, we can tell the **Device** to create the **Render Pipeline State**.
 1. Now we can set the **Render Pipeline State** to the **Render Command Encoder**.
 1. And we can tell the **Command Buffer** to **endEncoding()**, **present()** to the **drawable**, and **commit()** to schedule its execution.
-
-### Resources
-
--   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
-    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
-    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
 
 ### Code
 

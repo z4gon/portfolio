@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/blog/MoreStories.module.sass'
+import styles from '../../../styles/components/blog/MorePosts.module.sass'
 import { BlogPostMinimal } from '../../models/BlogPost'
 import BlogPostPreview from './PostPreview'
 
@@ -6,10 +6,10 @@ type Props = {
     posts: BlogPostMinimal[]
 }
 
-const MoreStories = ({ posts }: Props) => {
+const MorePosts = ({ posts }: Props) => {
     return (
-        <section className={styles.moreStories}>
-            <h2 className={styles.title}>More Stories</h2>
+        <section className={styles.morePosts}>
+            <h2 className={styles.title}>More Posts</h2>
             <div className={styles.grid}>
                 {posts.map((post) => (
                     <BlogPostPreview
@@ -27,4 +27,4 @@ const MoreStories = ({ posts }: Props) => {
     )
 }
 
-export default MoreStories
+export default MorePosts

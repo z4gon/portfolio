@@ -21,7 +21,7 @@ const PostHeader = ({
     author,
 }: Props) => {
     return (
-        <>
+        <div className={styles.postHeader}>
             <PostTitle>{title}</PostTitle>
             <div className={styles.authorAndDate}>
                 <Avatar name={author.name} pictureUrl={author.pictureUrl} />
@@ -33,7 +33,7 @@ const PostHeader = ({
                 imageSourceUrl={coverImageSourceUrl}
                 className={styles.picture}
             />
-        </>
+        </div>
     )
 }
 
