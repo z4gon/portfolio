@@ -5,7 +5,6 @@ import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
-import Container from '../page/Container'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
 import YouTubeEmbed from './YouTubeEmbed'
@@ -53,7 +52,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     technology = null,
 }) => {
     return (
-        <Container className={styles.detailsView} wide={false}>
+        <div className={styles.detailsView}>
             <MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
             {primaryImageUrl && (
@@ -166,7 +165,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     ))}
                 </Section>
             )}
-        </Container>
+        </div>
     )
 }
 

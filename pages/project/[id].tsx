@@ -2,6 +2,7 @@ import { includes } from 'lodash'
 import projects from '../../data/projects'
 import Metatags from '../../src/components/Metatags'
 import WithFullScreenCarousel from '../../src/components/multimedia-slider/WithFullScreenCarousel'
+import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
 import ProjectDetails from '../../src/components/project-details/ProjectDetails'
 import { ProjectData } from '../../src/models/ProjectData'
@@ -25,7 +26,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                     description={description.join('') || subtitle}
                     imageUrl={metaImageUrl}
                 />
-                <ProjectDetails {...project} />
+                <Container wide={false}>
+                    <ProjectDetails {...project} />
+                </Container>
             </Page>
         </WithFullScreenCarousel>
     )

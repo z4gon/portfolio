@@ -28,10 +28,22 @@
         color: var(--font-color)
 
     .authorAndDate
-        display: flex
-        align-items: center
+        flex-direction: column
+        align-items: flex-start
         margin: 1em 0 2em
+
+        time
+            margin: 1em 0 0 0
 
         @media screen and (max-width: 600px)
             flex-direction: column
             align-items: flex-start
+
+    &.hero
+        .authorAndDate
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            time
+                margin: 0 0 0 1em

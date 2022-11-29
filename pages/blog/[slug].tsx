@@ -23,7 +23,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                 description={post.excerpt}
                 imageUrl={post.coverImageUrl}
             />
-            <Container>
+            <Container wide={false}>
                 <Spacer amount="3.5em" />
                 <article className="mb-32">
                     <PostHeader
