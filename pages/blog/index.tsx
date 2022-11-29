@@ -7,6 +7,7 @@ import PageTitle from '../../src/components/page/PageTitle'
 import Spacer from '../../src/components/Spacer'
 import { getAllPosts } from '../../src/lib/get-posts'
 import { BlogPostMinimal } from '../../src/models/BlogPost'
+import styles from '../../styles/pages/Blog.module.sass'
 
 interface BlogProps {
     allPosts: BlogPostMinimal[]
@@ -17,7 +18,7 @@ export default function Blog({ allPosts }: BlogProps) {
     const morePosts = allPosts.slice(1)
 
     return (
-        <Page>
+        <Page className={styles.blog}>
             <Metatags
                 title="Gonzalo Cumini | Blog"
                 description="Gonzalo Cumini | Blog"

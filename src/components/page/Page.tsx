@@ -1,19 +1,22 @@
 import { PropsWithChildren } from 'react'
+import classNames from 'classnames'
 import styles from '../../../styles/components/page/Page.module.sass'
 import NavBar from '../navbar/NavBar'
 import Footer from './Footer'
 import GoogleAnalytics from './GoogleAnalytics'
 
 interface PageProps {
-    title?: string
+    className?: string
 }
 
-const Page: React.FC<PropsWithChildren<PageProps>> = ({ title, children }) => {
+const Page: React.FC<PropsWithChildren<PageProps>> = ({
+    className,
+    children,
+}) => {
     return (
-        <div className={styles.page}>
+        <div className={classNames(styles.page, className)}>
             <GoogleAnalytics />
             <NavBar />
-            {title && <h1>{title}</h1>}
             {children}
             <Footer />
         </div>

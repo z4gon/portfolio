@@ -6,6 +6,7 @@ import Page from '../../src/components/page/Page'
 import Spacer from '../../src/components/Spacer'
 import { getPostBySlug, getPostSlugs } from '../../src/lib/get-posts'
 import { BlogPost } from '../../src/models/BlogPost'
+import styles from '../../styles/pages/Blog.module.sass'
 
 interface BlogPostProps {
     post: BlogPost
@@ -17,7 +18,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
     }
 
     return (
-        <Page>
+        <Page className={styles.blog}>
             <Metatags
                 title={post.title}
                 description={post.excerpt}

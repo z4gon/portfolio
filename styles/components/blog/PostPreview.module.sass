@@ -12,17 +12,18 @@
         margin-bottom: 0.4em
         line-height: 1.1em
 
-    &.hero
-        display: flex
-        .title
-            font-size: 2.2em
+    @media screen and (min-width: 701px)
+        &.hero
+            display: flex
+            .title
+                font-size: 2.2em
 
-        .info
-            flex-basis: 50%
-            padding: 0 20px
+            .info
+                flex-basis: 50%
+                padding: 0 20px
 
-        .picture
-            flex-basis: 50%
+            .picture
+                flex-basis: 50%
 
     a
         color: var(--font-color)
@@ -39,11 +40,12 @@
             flex-direction: column
             align-items: flex-start
 
-    &.hero
-        .authorAndDate
-            display: flex
-            flex-direction: row
-            align-items: center
+    @media screen and (min-width: 701px)
+        &.hero
+            .authorAndDate
+                display: flex
+                flex-direction: row
+                align-items: center
 
-            time
-                margin: 0 0 0 1em
+                time
+                    margin: 0 0 0 1em
