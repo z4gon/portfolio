@@ -16,7 +16,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         return null
     }
 
-    const { title, description = [], subtitle, metaImageUrl } = project
+    const { id, title, description = [], subtitle, metaImageUrl } = project
 
     return (
         <WithFullScreenCarousel>
@@ -25,6 +25,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                     title={`${title} | Project`}
                     description={description.join('') || subtitle}
                     imageUrl={metaImageUrl}
+                    pathUrl={`/project/${id}`}
                 />
                 <Container wide={false}>
                     <ProjectDetails {...project} />

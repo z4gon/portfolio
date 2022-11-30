@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 interface Props {
     title?: string
-    url?: string
+    pathUrl?: string
     imageUrl?: string
     faviconUrl?: string
     description?: string
@@ -13,12 +13,13 @@ export default function Metatags(props: Props) {
 
     const {
         title = 'Gonzalo Cumini | Portfolio',
-        url = urlBase,
+        pathUrl,
         imageUrl = '/thumbnail.gif',
         faviconUrl = '/favicon.ico',
         description = 'Gonzalo Cumini | Portfolio',
     } = props
 
+    const url = `${urlBase}${pathUrl}`
     const imageUrlFull = `${urlBase}${imageUrl}`
     const faviconUrlFull = `${urlBase}${faviconUrl}`
 
@@ -44,6 +45,9 @@ export default function Metatags(props: Props) {
             <meta property="twitter:image" content={imageUrlFull} />
 
             <link rel="icon" href={faviconUrlFull} />
+
+            {/* https://nextjs.org/learn/seo/crawling-and-indexing/canonical */}
+            <link rel="canonical" href={url} key="canonical" />
         </Head>
     )
 }

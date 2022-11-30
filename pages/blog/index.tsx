@@ -22,6 +22,7 @@ export default function Blog({ allPosts }: BlogProps) {
             <Metatags
                 title="Gonzalo Cumini | Blog"
                 description="Gonzalo Cumini | Blog"
+                pathUrl="/blog"
             />
             <Container>
                 <Spacer amount="2em" />
