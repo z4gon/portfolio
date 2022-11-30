@@ -1,7 +1,7 @@
 ---
-title: 'Render Pipeline with Metal and Swift: Part 1'
+title: 'Metal Render Pipeline Part 1: Setting up the Project'
 excerpt: 'Following the amazing tutorial series by Rick Twohy, creating a basic macos app project in xcode using Swift and Storyboards. Utilizing the Metal Kit library to access the Metal APIs to render 3D graphics, initializing the basic components to setup the render pipeline and start outputing 3D graphics on the screen.'
-coverImageUrl: '/images/blog/setting-up-render-pipeline-metal-swift/cover.jpg'
+coverImageUrl: '/images/blog/metal-render-pipeline-part-1-setting-up-the-project/cover.jpg'
 coverImageSourceUrl: 'https://unsplash.com/photos/ICTjWYzpoc0'
 date: '2022-11-29T00:00:00.000Z'
 authorId: 'z4gon'
@@ -36,8 +36,8 @@ authorId: 'z4gon'
 
 We just need to create a very basic **macOS** app using **Swift** and **Storyboards** for the UI.
 
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/1.jpg)
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/2.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/1.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/2.jpg)
 
 ---
 
@@ -49,9 +49,9 @@ Create a new **Cocoa Class** file, extending from **MTKView**, which in turn ext
 
 This will be connected to your main **Storyboard** for the **Game View**, where we will output the rendering of the pipeline.
 
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/3.jpg)
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/4.jpg)
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/5.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/3.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/4.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/5.jpg)
 
 ---
 
@@ -61,16 +61,16 @@ This will be connected to your main **Storyboard** for the **Game View**, where 
 
 The **Metal** Graphics **API** uses a **Command Structure** to handle all the petitions from the **CPU** to render graphics in the **GPU**.
 
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/6.png)
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/9.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/6.png)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/9.jpg)
 
 [Render Pipeline Descriptor Image Source](https://lcellentani.github.io/post/metal_introduction/)
 
 The **Command Buffers** contain the instructions the the **CPU** needs to execute.
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/7.png)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/7.png)
 
 The **Command Queue** holds all the **Command Buffers** and ensures they execute timely and in order. It also handles executions and results coming to/from **Compute Shaders**.
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/8.png)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/8.png)
 
 ### Resources
 
@@ -122,8 +122,8 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
 
 For defining the **Shaders**, we need to create a **Metal** file.
 
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/10.jpg)
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/11.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/10.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/11.jpg)
 
 ```c
 #include <metal_stdlib>
@@ -225,4 +225,4 @@ class GameView: MTKView {
 
 ### Result
 
-![Picture](/images/blog/setting-up-render-pipeline-metal-swift/12.jpg)
+![Picture](/images/blog/metal-render-pipeline-part-1-setting-up-the-project/12.jpg)
