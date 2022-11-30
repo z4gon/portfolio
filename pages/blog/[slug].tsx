@@ -17,24 +17,36 @@ export default function BlogPostPage({ post }: BlogPostProps) {
         return null
     }
 
+    const {
+        slug,
+        title,
+        excerpt,
+        date,
+        author,
+        coverImageUrl,
+        coverImageSourceUrl,
+        contentMarkdown,
+    } = post
+
     return (
         <Page className={styles.blog}>
             <Metatags
-                title={post.title}
-                description={post.excerpt}
-                imageUrl={post.coverImageUrl}
+                title={title}
+                description={excerpt}
+                imageUrl={coverImageUrl}
+                pathUrl={`/blog/${slug}`}
             />
             <Container wide={false}>
                 <Spacer amount="3.5em" />
                 <article className="mb-32">
                     <PostHeader
-                        title={post.title}
-                        coverImageUrl={post.coverImageUrl}
-                        coverImageSourceUrl={post.coverImageSourceUrl}
-                        date={post.date}
-                        author={post.author}
+                        title={title}
+                        coverImageUrl={coverImageUrl}
+                        coverImageSourceUrl={coverImageSourceUrl}
+                        date={date}
+                        author={author}
                     />
-                    <PostBody contentMarkdown={post.contentMarkdown} />
+                    <PostBody contentMarkdown={contentMarkdown} />
                 </article>
                 <Spacer amount="3.5em" />
             </Container>
