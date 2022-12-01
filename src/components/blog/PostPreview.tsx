@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styles from '../../../styles/components/blog/PostPreview.module.sass'
 import Author from '../../models/Author'
 import Avatar from './Avatar'
-import CoverImage from './CoverImage'
 import DateFormatter from './DateFormatter'
 
 type Props = {
@@ -31,12 +30,20 @@ const PostPreview = ({
                 [styles.hero]: isHero,
             })}
         >
-            <CoverImage
-                title={title}
-                imageUrl={coverImageUrl}
-                slug={slug}
-                className={styles.picture}
-            />
+            <div className={styles.picture}>
+                <Link
+                    as={`/blog/${slug}`}
+                    href="/blog/[slug]"
+                    aria-label={title}
+                >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        className={styles.image}
+                        src={coverImageUrl}
+                        alt={`Cover Image for ${title}`}
+                    />
+                </Link>
+            </div>
             <div className={styles.info}>
                 <h3 className={styles.title}>
                     <Link as={`/blog/${slug}`} href="/blog/[slug]">
