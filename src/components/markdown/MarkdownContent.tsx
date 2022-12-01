@@ -2,15 +2,11 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import styles from '../../../styles/components/blog/PostBody.module.sass'
-
-type Props = {
-    contentMarkdown: string
-}
+import styles from '../../../styles/components/markdown/MarkdownContent.module.sass'
 
 // https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight
 const CodeSnippetRenderer = ({
-    node,
+    node: _node,
     inline,
     className,
     children,
@@ -51,9 +47,13 @@ const HeadingRenderer = (props) => {
     return React.createElement('h' + props.level, { id: slug }, props.children)
 }
 
-const PostBody = ({ contentMarkdown }: Props) => {
+type Props = {
+    markdownString: string
+}
+
+const MarkdownContent = ({ markdownString }: Props) => {
     return (
-        <div className={styles.postBody}>
+        <div className={styles.markdownContent}>
             <ReactMarkdown
                 components={{
                     code: CodeSnippetRenderer,
@@ -65,10 +65,10 @@ const PostBody = ({ contentMarkdown }: Props) => {
                     h6: HeadingRenderer,
                 }}
             >
-                {contentMarkdown}
+                {markdownString}
             </ReactMarkdown>
         </div>
     )
 }
 
-export default PostBody
+export default MarkdownContent

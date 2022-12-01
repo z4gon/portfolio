@@ -1,5 +1,5 @@
-import PostBody from '../../src/components/blog/PostBody'
 import PostHeader from '../../src/components/blog/PostHeader'
+import MarkdownContent from '../../src/components/markdown/MarkdownContent'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
@@ -46,7 +46,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
                         date={date}
                         author={author}
                     />
-                    <PostBody contentMarkdown={contentMarkdown} />
+                    <MarkdownContent markdownString={contentMarkdown} />
                 </article>
                 <Spacer amount="3.5em" />
             </Container>

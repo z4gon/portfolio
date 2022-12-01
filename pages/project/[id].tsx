@@ -5,6 +5,7 @@ import WithFullScreenCarousel from '../../src/components/multimedia-slider/WithF
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
 import ProjectDetails from '../../src/components/project-details/ProjectDetails'
+import Spacer from '../../src/components/Spacer'
 import { ProjectData } from '../../src/models/ProjectData'
 
 interface ProjectPageProps {
@@ -28,6 +29,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                     pathUrl={`/project/${id}`}
                 />
                 <Container wide={false}>
+                    <Spacer amount="3.5em" />
                     <ProjectDetails {...project} />
                 </Container>
             </Page>
