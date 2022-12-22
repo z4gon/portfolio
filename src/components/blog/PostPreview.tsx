@@ -30,17 +30,17 @@ const PostPreview = ({
                 [styles.hero]: isHero,
             })}
         >
-            <div className={styles.picture}>
+            <div className={styles.imageWrapper}>
                 <Link
                     as={`/blog/${slug}`}
                     href="/blog/[slug]"
                     aria-label={title}
                 >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <div
                         className={styles.image}
-                        src={coverImageUrl}
-                        alt={`Cover Image for ${title}`}
+                        style={{
+                            backgroundImage: `url(${coverImageUrl})`,
+                        }}
                     />
                 </Link>
             </div>
