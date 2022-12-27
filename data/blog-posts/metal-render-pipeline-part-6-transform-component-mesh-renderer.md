@@ -13,15 +13,15 @@ authorId: 'z4gon'
 
 ## References
 
-- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+-   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
 
 ---
 
 ## Table of Content
 
-- [Transform](#transform)
-- [Component](#component)
-- [MeshRenderer](#meshrenderer)
+-   [Transform](#transform)
+-   [Component](#component)
+-   [MeshRenderer](#meshrenderer)
 
 ---
 
@@ -40,26 +40,26 @@ Then it will check if **itself** implements the **Renderable** or **Updatable** 
 ```swift
 class Transform {
     public var children: [Transform]! = []
-    
+
     public func addChildren(transform: Transform){
         children.append(transform)
     }
-    
+
     public func update(deltaTime: Float){
         for child in children {
             child.update(deltaTime: deltaTime)
         }
-        
+
         if let updatableSelf = self as? Updatable {
             updatableSelf.doUpdate(deltaTime: deltaTime)
         }
     }
-    
+
     public func render(renderCommandEncoder: MTLRenderCommandEncoder){
         for child in children {
             child.render(renderCommandEncoder: renderCommandEncoder)
         }
-        
+
         if let renderableSelf = self as? Renderable {
             renderableSelf.doRender(renderCommandEncoder: renderCommandEncoder)
         }
@@ -77,9 +77,9 @@ On **doRender()** and **doUpdate()**, the **GameObject** will iterate its compon
 
 ```swift
 class GameObject : Transform {
-    
+
     public var components: [Component]! = []
-    
+
     public func addComponent(component: Component){
         components.append(component)
     }
@@ -118,12 +118,12 @@ It will have a reference to a **Mesh** class.
 class MeshRenderer : Component, Renderable {
     private var _vertexBuffer: MTLBuffer!
     private var _mesh: Mesh!
-    
+
     init(mesh: Mesh) {
         _mesh = mesh
         _vertexBuffer = Engine.device.makeBuffer(bytes: _mesh.vertices, length: Vertex.stride * _mesh.vertices.count, options: [])
     }
-    
+
     func doRender(renderCommandEncoder: MTLRenderCommandEncoder) {
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateCache.getPipelineState(.Basic))
         renderCommandEncoder.setVertexBuffer(_vertexBuffer, offset: 0, index: 0)
@@ -137,11 +137,11 @@ The **Mesh** class will have the **array of vertices** that will later be used b
 ```swift
 class Mesh {
     public var vertices: [Vertex]!
-    
+
     init(){
         createVertices()
     }
-    
+
     func createVertices() {}
 }
 
