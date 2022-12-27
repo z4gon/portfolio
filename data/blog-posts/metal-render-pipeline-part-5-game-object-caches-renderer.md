@@ -19,7 +19,7 @@ authorId: 'z4gon'
 
 ## Table of Content
 
--   [Object Caches](#objects-caches)
+-   [Objects Caches](#objects-caches)
 -   [Game Object](#game-object)
 -   [Renderer](#renderer)
 -   [Game View](#game-view)
