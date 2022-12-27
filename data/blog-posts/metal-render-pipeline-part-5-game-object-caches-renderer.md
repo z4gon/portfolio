@@ -1,7 +1,7 @@
 ---
-title: 'Metal Render Pipeline Part 5: Game Object, Libraries and Renderer'
+title: 'Metal Render Pipeline Part 5: Game Object, Objects Caches and Renderer'
 excerpt: 'Organizing the code in sub classes to build the foundations of what is to come for this basic game engine. Delegating the rendering to an MTKViewDelegate, and also drawing the primitives in the dedicated Game Object class.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-5-game-object-libraries-renderer/cover.jpg'
+coverImageUrl: '/images/blog/metal-render-pipeline-part-5-game-object-caches-renderer/cover.jpg'
 coverImageSourceUrl: 'https://unsplash.com/photos/CxE1H2_9B9s'
 date: '2022-12-21T00:00:00.000Z'
 authorId: 'z4gon'
@@ -19,14 +19,14 @@ authorId: 'z4gon'
 
 ## Table of Content
 
--   [Libraries](#libraries)
+-   [Objects Caches](#objects-caches)
 -   [Game Object](#game-object)
 -   [Renderer](#renderer)
 -   [Game View](#game-view)
 
 ---
 
-## Libraries
+## Objects Caches
 
 We will extract the code that initializes the **MTLLibrary**, **MTLRenderPipelineState**, **MTLRenderPipelineDescriptor** and **MTLVertexDescriptor** into separate classes.
 
@@ -39,20 +39,20 @@ enum ElementType{
     case Basic
 }
 
-class ElementsLibrary<T> {
+class ElementsCache<T> {
 
-    private static var elements: [ElementType: T] = [:]
+    private static var _elements: [ElementType: T] = [:]
 
     public static func Initialize(){
         createElements()
     }
 
     public static func createElements(){
-        elements.updateValue(BasicElement(), forKey: .Basic)
+        _elements.updateValue(BasicElement(), forKey: .Basic)
     }
 
     public static func GetElement(_ elementType: ElementType)->T{
-        return elements[elementType]!
+        return _elements[elementType]!
     }
 
 }
@@ -75,10 +75,10 @@ class Engine {
         // create the command queue to handle commands for the GPU
         self.CommandQueue = device.makeCommandQueue()
 
-        ShaderLibrary.Initialize()
-        VertexDescriptorLibrary.Initialize()
-        RenderPipelineDescriptorLibrary.Initialize()
-        RenderPipelineStateLibrary.Initialize()
+        ShaderCache.Initialize()
+        VertexDescriptorCache.Initialize()
+        RenderPipelineDescriptorCache.Initialize()
+        RenderPipelineStateCache.Initialize()
     }
 }
 ```
