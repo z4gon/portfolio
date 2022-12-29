@@ -1,5 +1,4 @@
-import PostHeader from '../../src/components/blog/PostHeader'
-import MarkdownContent from '../../src/components/markdown/MarkdownContent'
+import Post from '../../src/components/blog/Post'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
@@ -17,16 +16,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
         return null
     }
 
-    const {
-        slug,
-        title,
-        excerpt,
-        date,
-        author,
-        coverImageUrl,
-        coverImageSourceUrl,
-        contentMarkdown,
-    } = post
+    const { slug, title, excerpt, coverImageUrl } = post
 
     return (
         <Page className={styles.blog}>
@@ -38,16 +28,7 @@ export default function BlogPostPage({ post }: BlogPostProps) {
             />
             <Container wide={false}>
                 <Spacer amount="3.5em" />
-                <article className="mb-32">
-                    <PostHeader
-                        title={title}
-                        coverImageUrl={coverImageUrl}
-                        coverImageSourceUrl={coverImageSourceUrl}
-                        date={date}
-                        author={author}
-                    />
-                    <MarkdownContent markdownString={contentMarkdown} />
-                </article>
+                <Post post={post} />
                 <Spacer amount="3.5em" />
             </Container>
         </Page>
