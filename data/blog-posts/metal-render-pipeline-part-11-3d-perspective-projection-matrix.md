@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 11: Perspective Projection Matrix'
+title: 'Metal Render Pipeline Part 11: 3D Perspective Projection Matrix'
 excerpt: 'Implementing a Camera Component to calculate a view matrix. Updating the view matrix and passing it down to the GPU. Using the view matrix during the vertex shader function to transform the vertex coordinates to view space.'
 coverImageUrl: '/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/cover.jpg'
 coverImageSourceUrl: ''
@@ -31,9 +31,9 @@ authorId: 'z4gon'
     -   [Matrix](#matrix)
 -   [Cube Mesh](#cube-mesh)
 -   [Depth Stencil](#depth-stencil)
-    -   [Depth Stencil Descriptor](#depth-stencil-descriptor)
-    -   [Depth Stencil State](#depth-stencil-state)
-    -   [Depth Stencil Pixel Format](#depth-stencil-pixel-format)
+    -   [Descriptor](#descriptor)
+    -   [State](#state)
+    -   [Pixel Format](#pixel-format)
 -   [Mesh Renderer](#mesh-renderer)
 -   [Camera](#camera)
 -   [Scene](#scene)
@@ -153,11 +153,11 @@ class CubeMesh : Mesh{
 
 ## Depth Stencil
 
-### Depth Stencil Descriptor
+### Descriptor
 
 To let the **GPU** know what vertices are **farther away** from the **camera**, and then be able to clip them using the **Depth Test**, we need to setup the **Depth Stencil Descriptor**.
 
-### Depth Stencil State
+### State
 
 We will use the descriptor to create the **Depth Stencil State**, and pass it on to the **Render Command Encoder**.
 
@@ -177,7 +177,7 @@ public struct LessDepthStencilState: DepthStencilState {
 }
 ```
 
-### Depth Stencil Pixel Format
+### Pixel Format
 
 The **Render Pipeline Descriptor** and the **MTKView** will both need to set the **Depth Stencil Pixel Format** as well, just like they set the **Color Pixel Format**.
 
