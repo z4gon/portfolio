@@ -1,6 +1,6 @@
 ---
 title: 'Metal Render Pipeline Part 12: Nested Model Matrices'
-excerpt: 'Setting up the the 3D perspective projection matrix to transform view space coordinates in homogeneous clip space coordinates. Later on the GPU takes in these and calculates the Normalized Device Coordinates, to finally calculate the actual Screen Space coordinates. Configuring the Depth Stencil in Metal, to perform Depth Testing and clipping based on depth, using the Depth Texture. Multiplying the projection matrix by the view space coordinates vector during the Vertex Shader Function stage.'
+excerpt: 'Using the parent transform to calculate the child model matrix, taking into account the transformation applied to the parent.'
 coverImageUrl: '/images/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg'
 coverImageSourceUrl: ''
 coverVideoUrl: '/videos/blog/metal-render-pipeline-part-12-nested-model-matrices/1.mp4'
