@@ -1,6 +1,6 @@
 ---
 title: 'Metal Render Pipeline Part 14: UVs, Loading and Sampling Textures'
-excerpt: 'Defining materials with different vertex, fragment functions and attributes. Maintaining multiple render pipeline descriptors and states to match the different materials being used. Passing values to the GPU from the materials. Setting the corresponding render pipeline state to the render command encoder, based on the current material attached to the mesh renderer.'
+excerpt: 'Defining the UV coordinates in the vertices of the mesh, and also in the GPU structs used in the Vertex and Fragment functions. Initializing MTLTextures and MTLSamplerStates to handle texture sampling. Passing textures and samplers to the GPU from the material. Accessing the texture and sampler in the corresponding memory blocks in the GPU and sampling the texels using the UV coordinates in the fragment shader function.'
 coverImageUrl: '/images/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/cover.jpg'
 coverImageSourceUrl: ''
 coverVideoUrl: '/videos/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/1.mp4'
