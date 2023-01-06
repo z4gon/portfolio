@@ -26,6 +26,7 @@ export default function Home({ projects }: HomeProps) {
         Category.ComputeShaders,
         Category._3DModelingAnimation,
         Category.PublishedGames,
+        Category.GameDev,
     ]
 
     const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>

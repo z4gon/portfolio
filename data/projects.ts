@@ -16,6 +16,7 @@ import groundSlashVfxUnity from './projects/ground-slash-vfx-unity'
 import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import meshDeformationComputeShaderUnity from './projects/mesh-deformation-compute-shader-unity'
+import metalRenderPipeline from './projects/metal-render-pipeline'
 import sciFiShieldShaderUnity from './projects/sci-fi-shield-shader-unity'
 import snowyRockTriplanarShaderUnity from './projects/snowy-rock-triplanar-shader-unreal'
 import spacePortalShaderUnity from './projects/space-portal-shader-unity'
@@ -55,6 +56,7 @@ const computeShaders = [
 ]
 const modelingAndAnimation = [_3dAnimatedCharacterUnity]
 const publishedGames = [starcat]
+const gameDev = [metalRenderPipeline]
 
 const projects = [
     ...vfx,
@@ -62,6 +64,7 @@ const projects = [
     ...computeShaders,
     ...modelingAndAnimation,
     ...publishedGames,
+    ...gameDev,
 ]
 
 export default projects

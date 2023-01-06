@@ -29,4 +29,8 @@ export enum Tag {
     MaterialFunction = 'MaterialFunction',
     UnrealEngine = 'Unreal Engine',
     Shader = 'Shader',
+    GameEngine = 'Game Engine',
+    RenderPipeline = 'Render Pipeline',
+    GraphicsApi = 'Graphics API',
+    Rendering = 'Rendering',
 }
