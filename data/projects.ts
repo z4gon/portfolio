@@ -23,6 +23,7 @@ import spacePortalShaderUnity from './projects/space-portal-shader-unity'
 import starcat from './projects/starcat'
 import tessellationUnity from './projects/tessellation-unity'
 import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
+import waterCausticsShaderUnity from './projects/water-caustics-shader-unity'
 import waterShaderUnity from './projects/water-shader-unity'
 
 const vfx = [
@@ -36,6 +37,7 @@ const shaders = [
     sciFiShieldShaderUnity,
     marioKartItemBoxVfx,
     characterSkinTransitionShaderUnity,
+    waterCausticsShaderUnity,
     snowyRockTriplanarShaderUnity,
     waterShaderUnity,
     spacePortalShaderUnity,
