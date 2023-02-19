@@ -12,5 +12,5 @@ export interface BlogPostMinimal {
 }
 
 export interface BlogPost extends BlogPostMinimal {
-    contentMarkdown: string
+    markdownContent: string
 }

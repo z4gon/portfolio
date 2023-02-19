@@ -3,9 +3,8 @@ import authors from '../../data/authors'
 import { BlogPost, BlogPostMinimal } from '../models/BlogPost'
 import FilesParser, { ParserFunction } from './FilesParser'
 
-const postsDirectory = join(process.cwd(), 'data/blog-posts')
-
-const filesParser = new FilesParser<BlogPostMinimal | BlogPost>(postsDirectory)
+const directory = join(process.cwd(), 'data/blog-posts')
+const filesParser = new FilesParser<BlogPostMinimal | BlogPost>(directory)
 
 export const getPostSlugs = (): string[] => filesParser.getFileNames()
 
@@ -15,24 +14,34 @@ const blogPostParser: ParserFunction<BlogPostMinimal | BlogPost> = (
     markdownContent,
     full: boolean = false
 ) => {
-    const author = authors[frontMatterData.authorId]
+    const {
+        authorId,
+        date,
+        title,
+        excerpt,
+        coverImageUrl,
+        coverImageSourceUrl,
+        coverVideoUrl,
+    } = frontMatterData
+
+    const author = authors[authorId]
 
     let blogPost = {
         slug: fileNameNoExt,
-        date: frontMatterData.date,
-        author: author,
-        title: frontMatterData.title,
-        excerpt: frontMatterData.excerpt,
-        coverImageUrl: frontMatterData.coverImageUrl,
-        coverImageSourceUrl: frontMatterData.coverImageSourceUrl,
-        coverVideoUrl: frontMatterData.coverVideoUrl || '',
+        date,
+        author,
+        title,
+        excerpt,
+        coverImageUrl,
+        coverImageSourceUrl,
+        coverVideoUrl: coverVideoUrl || '',
     }
 
     if (full) {
         blogPost = {
             ...blogPost,
             // @ts-ignore
-            contentMarkdown: markdownContent,
+            markdownContent,
         }
     }
 
