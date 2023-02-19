@@ -44,6 +44,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 
     let project = {
         id,
+        date,
         aliases: aliases || [],
         title,
         thumbnailUrl: thumbnailVideoUrl,
@@ -56,7 +57,6 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
         project = {
             ...project,
             // @ts-ignore
-            date,
             metaImageUrl: metaImageUrl,
             imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
             videosUrls: videosNames.map((name) => `${videosFolder}/${name}`),

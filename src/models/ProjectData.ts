@@ -5,6 +5,7 @@ import { LinkData } from './LinkData'
 
 export interface ProjectDataMinimal {
     id: string
+    date: string
     aliases?: string[]
     title: string
     thumbnailUrl: string
@@ -14,7 +15,6 @@ export interface ProjectDataMinimal {
 }
 
 export interface ProjectData extends ProjectDataMinimal {
-    date: string
     metaImageUrl: string
     imagesUrls?: string[]
     videosUrls?: string[]

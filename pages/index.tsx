@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { filter } from 'lodash'
+import { filter, orderBy } from 'lodash'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
@@ -45,10 +45,13 @@ export default function Home({ projects }: HomeProps) {
                 />
                 <Spacer amount="1em" />
                 {categories.map((category) => {
-                    const categoryProjects = filter(
+                    let categoryProjects = filter(
                         filteredProjects,
                         (x) => x.category === category
                     )
+
+                    categoryProjects = orderBy(categoryProjects, ['date'], ['desc'])
+                    console.log(categoryProjects)
 
                     return (
                         <ProjectsGrid

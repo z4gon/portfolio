@@ -32,12 +32,12 @@ export interface ProjectDefinition {
 // the weird new lines are intentional
 const getProjectFrontMatter = (projectDefinition: ProjectDefinition) => {
     const { id, ...rest } = projectDefinition
-    return `
----
+    return `---
 ${yaml.stringify(rest)}---`
 }
 
-const generateAllFrontMatterMdFiles = (
+// generateAllFrontMatterMdFiles(projects, 'data/projects/')
+export const generateAllFrontMatterMdFiles = (
     projects: ProjectDefinition[],
     targetDirectory: string
 ) => {

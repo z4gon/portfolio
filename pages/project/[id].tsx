@@ -1,12 +1,11 @@
 import { includes } from 'lodash'
-import getProjectFrontMatter from '../../data/getProjectFrontMatter'
-import projects from '../../data/projects'
 import Metatags from '../../src/components/Metatags'
 import WithFullScreenCarousel from '../../src/components/multimedia-slider/WithFullScreenCarousel'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
 import ProjectDetails from '../../src/components/project-details/ProjectDetails'
 import Spacer from '../../src/components/Spacer'
+import { getAllProjects, getProjectById } from '../../src/lib/get-projects'
 import { ProjectData } from '../../src/models/ProjectData'
 
 interface ProjectPageProps {
@@ -44,20 +43,18 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps(context) {
     const urlId = context.params.id
-    const project = projects.find(
+    const projectMinimal = getAllProjects().find(
         ({ id, aliases = [] }) => urlId === id || includes(aliases, urlId)
     )
 
     // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
-    if (!project) {
+    if (!projectMinimal) {
         return {
             notFound: true,
         }
     }
 
-    // const project = getProjectById(projectMinimal.id, true)
-
-    console.log(getProjectFrontMatter(project))
+    const project = getProjectById(projectMinimal.id, true)
 
     return {
         props: {
@@ -70,7 +67,7 @@ export async function getStaticProps(context) {
 // For example, suppose that you have a page that uses Dynamic Routes named pages/posts/[id].js.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
-    const idsAndAliases = projects
+    const idsAndAliases = getAllProjects()
         .map(({ id, aliases = [] }) => [id, ...aliases])
         .reduce((subArray, finalArray) => finalArray.concat(subArray), [])
 
