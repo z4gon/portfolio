@@ -17,6 +17,7 @@ import iceAttackVfxUnity from './projects/ice-attack-vfx-unity'
 import marioKartItemBoxVfx from './projects/mario-kart-item-box-vfx'
 import meshDeformationComputeShaderUnity from './projects/mesh-deformation-compute-shader-unity'
 import metalRenderPipeline from './projects/metal-render-pipeline'
+import metroidvaniaGodotGame from './projects/metroidvania-godot-game'
 import sciFiShieldShaderUnity from './projects/sci-fi-shield-shader-unity'
 import snowyRockTriplanarShaderUnity from './projects/snowy-rock-triplanar-shader-unreal'
 import spacePortalShaderUnity from './projects/space-portal-shader-unity'
@@ -25,7 +26,6 @@ import tessellationUnity from './projects/tessellation-unity'
 import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
 import waterCausticsShaderUnity from './projects/water-caustics-shader-unity'
 import waterShaderUnity from './projects/water-shader-unity'
-import metroidvaniaGodotGame from './projects/metroidvania-godot-game'
 
 const vfx = [
     blackHoleVfxUnity,

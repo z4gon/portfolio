@@ -7,18 +7,8 @@ import generateProjectData from '../generateProjectData'
 const data: ProjectData = generateProjectData({
     id: 'metroidvania-godot-game',
     date: '2023-2',
-    imagesNames: [
-        '0.jpg',
-        '5.jpg',
-        '4.jpg',
-        '3.jpg',
-        '2.jpg',
-        '1.jpg',
-    ],
-    videosNames: [
-        '1.mp4',
-        '2.mp4',
-    ],
+    imagesNames: ['0.jpg', '5.jpg', '4.jpg', '3.jpg', '2.jpg', '1.jpg'],
+    videosNames: ['1.mp4', '2.mp4'],
     youtubeVideoIds: ['P3s1gVc3-zM'],
     title: 'Metroidvania Godot Game',
     subtitle: 'Made with Godot Engine 3.5.1',
