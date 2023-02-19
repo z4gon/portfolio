@@ -33,4 +33,7 @@ export enum Tag {
     RenderPipeline = 'Render Pipeline',
     GraphicsApi = 'Graphics API',
     Rendering = 'Rendering',
+    Godot = 'Godot',
+    GDScript = 'GDScript',
+    Prototype = 'Prototype',
 }

@@ -89,7 +89,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
                                     className={styles.technology}
-                                    src={`/images/${technology}.png`}
+                                    src={`/images/technologies/${technology}.png`}
                                     alt={technology}
                                 />
                             )}
