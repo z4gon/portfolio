@@ -53,6 +53,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     primaryVideoUrl = null,
     technology = null,
 }) => {
+    var dateObj = new Date(date)
     return (
         <div className={styles.detailsView}>
             <MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
@@ -97,7 +98,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             )}
                             {title}
                             <TagRenderer secondary className={styles.date}>
-                                {date}
+                                {`${dateObj.getFullYear()}-${dateObj.getMonth()}`}
                             </TagRenderer>
                         </h2>
                         <span className={styles.subtitle}>{subtitle}</span>
