@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { filter } from 'lodash'
-import projects from '../data/projects'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
@@ -8,6 +7,7 @@ import PageTitle from '../src/components/page/PageTitle'
 import ProjectFilters from '../src/components/projects-grid/ProjectFilters'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
+import { getAllProjects } from '../src/lib/get-projects'
 import { Category } from '../src/models/enums/Category'
 import { ProjectDataMinimal } from '../src/models/ProjectData'
 
@@ -73,14 +73,7 @@ export async function getStaticProps() {
     return {
         props: {
             // only serialize the needed properties
-            projects: projects.map((x) => ({
-                id: x.id,
-                title: x.title,
-                thumbnailUrl: x.thumbnailUrl,
-                tags: x.tags,
-                technology: x.technology,
-                category: x.category,
-            })),
+            projects: getAllProjects(),
         },
     }
 }
