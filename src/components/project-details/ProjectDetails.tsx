@@ -137,7 +137,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </Section>
                 )}
 
-                {markdownContent && <MarkdownContent markdownString={markdownContent} />}
+                {markdownContent && (
+                    <MarkdownContent markdownString={markdownContent} />
+                )}
 
                 {links.length > 0 && (
                     <Section title="Links" className={styles.externalLinks}>
