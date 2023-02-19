@@ -13,17 +13,17 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Metal Shading Language Specification](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Metal Shading Language Specification](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf)
 
 ---
 
 ## Table of Content
 
--   [Vertex Buffer](#vertex-buffer)
--   [Vertex Shader](#vertex-shader)
--   [Draw Primitives](#draw-primitives)
--   [Result](#result)
+- [Vertex Buffer](#vertex-buffer)
+- [Vertex Shader](#vertex-shader)
+- [Draw Primitives](#draw-primitives)
+- [Result](#result)
 
 ---
 

@@ -13,17 +13,17 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Using a Render Pipeline to Render Primitives](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Using a Render Pipeline to Render Primitives](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
 ---
 
 ## Table of Content
 
--   [Vertex Struct in CPU](#vertex-struct)
--   [Vertex Shader](#vertex-shader)
--   [Fragment Shader](#fragment-shader)
--   [Result](#result)
+- [Vertex Struct in CPU](#vertex-struct)
+- [Vertex Shader](#vertex-shader)
+- [Fragment Shader](#fragment-shader)
+- [Result](#result)
 
 ---
 

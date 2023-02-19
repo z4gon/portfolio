@@ -12,63 +12,59 @@ import { Category } from '../src/models/enums/Category'
 import { ProjectDataMinimal } from '../src/models/ProjectData'
 
 interface HomeProps {
-    projects: ProjectDataMinimal[]
+  projects: ProjectDataMinimal[]
 }
 
 const PAGE_SIZE = 8
 
 export default function Home({ projects }: HomeProps) {
-    const [filteredProjects, setFilteredProjects] = useState(projects)
+  const [filteredProjects, setFilteredProjects] = useState(projects)
 
-    const categories = [
-        Category.VisualEffects,
-        Category.Shaders,
-        Category.ComputeShaders,
-        Category._3DModelingAnimation,
-        Category.PublishedGames,
-        Category.GameDev,
-    ]
+  const categories = [
+    Category.VisualEffects,
+    Category.Shaders,
+    Category.ComputeShaders,
+    Category._3DModelingAnimation,
+    Category.PublishedGames,
+    Category.GameDev,
+  ]
 
-    const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>
-        setFilteredProjects(filterResults)
+  const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>
+    setFilteredProjects(filterResults)
 
-    return (
-        <Page>
-            <Metatags />
-            <Container>
-                <Spacer amount="2em" />
-                <PageTitle>Portfolio</PageTitle>
-                <Spacer amount="2em" />
-                <ProjectFilters
-                    allProjects={projects}
-                    onFiltersChanged={onFiltersChanged}
-                />
-                <Spacer amount="1em" />
-                {categories.map((category) => {
-                    let categoryProjects = filter(
-                        filteredProjects,
-                        (x) => x.category === category
-                    )
+  return (
+    <Page>
+      <Metatags />
+      <Container>
+        <Spacer amount="2em" />
+        <PageTitle>Portfolio</PageTitle>
+        <Spacer amount="2em" />
+        <ProjectFilters
+          allProjects={projects}
+          onFiltersChanged={onFiltersChanged}
+        />
+        <Spacer amount="1em" />
+        {categories.map((category) => {
+          let categoryProjects = filter(
+            filteredProjects,
+            (x) => x.category === category
+          )
 
-                    categoryProjects = orderBy(
-                        categoryProjects,
-                        ['priority'],
-                        ['asc']
-                    )
+          categoryProjects = orderBy(categoryProjects, ['priority'], ['asc'])
 
-                    return (
-                        <ProjectsGrid
-                            key={category}
-                            title={category.toString()}
-                            projects={categoryProjects}
-                            pageSize={PAGE_SIZE}
-                        />
-                    )
-                })}
-                <Spacer amount="3.5em" />
-            </Container>
-        </Page>
-    )
+          return (
+            <ProjectsGrid
+              key={category}
+              title={category.toString()}
+              projects={categoryProjects}
+              pageSize={PAGE_SIZE}
+            />
+          )
+        })}
+        <Spacer amount="3.5em" />
+      </Container>
+    </Page>
+  )
 }
 
 // This function gets called at build time on server-side.
@@ -76,10 +72,10 @@ export default function Home({ projects }: HomeProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
-    return {
-        props: {
-            // only serialize the needed properties
-            projects: getAllProjects(),
-        },
-    }
+  return {
+    props: {
+      // only serialize the needed properties
+      projects: getAllProjects(),
+    },
+  }
 }

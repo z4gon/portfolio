@@ -4,7 +4,7 @@
 
 ## Steps to add a new project entry
 
--   Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+- Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
 1. Create a new config file under `/data/projects/the-project-id.md`.
 1. Create an optimized `.gif` to use as metadata image in `/public/images/thumbnails/the-project-id.gif`.
@@ -14,7 +14,7 @@
 
 ## Steps for adding a new blog post
 
--   Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+- Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
 1. Create a new blog post entry file under `/data/blog-posts/the-blog-post-slug-id.md`.
 2. Create an optimized `.jpg` to use as cover image in `/public/images/blog/the-blog-post-slug-id/cover.jpg`.

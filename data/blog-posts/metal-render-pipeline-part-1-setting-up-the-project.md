@@ -13,22 +13,22 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
 
 ---
 
 ## Table of Content
 
--   [Creating the XCode project](#creating-the-xcode-project)
--   [MTKView](#mtkview)
--   [The Command Structure](#the-command-structure)
-    -   [Resources](#resources)
--   [Basic Render Pipeline](#basic-render-pipeline)
-    -   [Code](#code)
-        -   [Shaders](#shaders)
-        -   [Game View](#game-view)
-    -   [Result](#result)
+- [Creating the XCode project](#creating-the-xcode-project)
+- [MTKView](#mtkview)
+- [The Command Structure](#the-command-structure)
+  - [Resources](#resources)
+- [Basic Render Pipeline](#basic-render-pipeline)
+  - [Code](#code)
+    - [Shaders](#shaders)
+    - [Game View](#game-view)
+  - [Result](#result)
 
 ---
 
@@ -43,7 +43,7 @@ We just need to create a very basic **macOS** app using **Swift** and **Storyboa
 
 ## MTKView
 
--   [MTK View](https://developer.apple.com/documentation/metalkit/mtkview)
+- [MTK View](https://developer.apple.com/documentation/metalkit/mtkview)
 
 Create a new **Cocoa Class** file, extending from **MTKView**, which in turn extends **NSView**.
 
@@ -74,30 +74,30 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
 
 ### Resources
 
--   [Metal Render Pipeline](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
+- [Metal Render Pipeline](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
-    -   [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
+  - [Introduction to Metal by Ludovico Cellentani](https://lcellentani.github.io/post/metal_introduction/)
 
--   [Setting up a Command Structure](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/setting_up_a_command_structure)
-    -   [MTL Command Buffer](https://developer.apple.com/documentation/metal/mtlcommandbuffer)
-    -   [MTL Command Encoder](https://developer.apple.com/documentation/metal/mtlcommandencoder)
-        -   [MTL Render Command Encoder](https://developer.apple.com/documentation/metal/mtlrendercommandencoder)
--   [MTL Render Pass Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpassdescriptor)
--   [MTL Render Pipeline State](https://developer.apple.com/documentation/metal/mtlrenderpipelinestate)
+- [Setting up a Command Structure](https://developer.apple.com/documentation/metal/gpu_devices_and_work_submission/setting_up_a_command_structure)
+  - [MTL Command Buffer](https://developer.apple.com/documentation/metal/mtlcommandbuffer)
+  - [MTL Command Encoder](https://developer.apple.com/documentation/metal/mtlcommandencoder)
+    - [MTL Render Command Encoder](https://developer.apple.com/documentation/metal/mtlrendercommandencoder)
+- [MTL Render Pass Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpassdescriptor)
+- [MTL Render Pipeline State](https://developer.apple.com/documentation/metal/mtlrenderpipelinestate)
 
-    -   [MTL Render Pipeline Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpipelinedescriptor)
-        -   Color Attachments
-            -   Pixel Format
-        -   Vertex/Fragment Functions
-            -   [MTL Library](https://developer.apple.com/documentation/metal/mtllibrary)
-                -   [MTL Function Type](https://developer.apple.com/documentation/metal/mtlfunctiontype)
-                    -   Vertex/Fragment/Kernel
-                -   [MTL Function](https://developer.apple.com/documentation/metal/mtlfunction)
-                    -   **.metal** files
+  - [MTL Render Pipeline Descriptor](https://developer.apple.com/documentation/metal/mtlrenderpipelinedescriptor)
+    - Color Attachments
+      - Pixel Format
+    - Vertex/Fragment Functions
+      - [MTL Library](https://developer.apple.com/documentation/metal/mtllibrary)
+        - [MTL Function Type](https://developer.apple.com/documentation/metal/mtlfunctiontype)
+          - Vertex/Fragment/Kernel
+        - [MTL Function](https://developer.apple.com/documentation/metal/mtlfunction)
+          - **.metal** files
 
--   [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
-    -   [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
-    -   [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
+- [MTL Device](https://developer.apple.com/documentation/metal/mtldevice)
+  - [MTL Pixel Format](https://developer.apple.com/documentation/metal/mtlpixelformat)
+  - [MTL Command Queue](https://developer.apple.com/documentation/metal/mtlcommandqueue)
 
 ---
 
@@ -107,12 +107,12 @@ The **Command Queue** holds all the **Command Buffers** and ensures they execute
 1. From the **Device**, we create the **Commmand Queue**.
 1. We create **Command Buffers** using the **Command Queue**.
 1. The **Render Command Encoder** is created out of the **Command Buffer** (There are many types of **Command Encoders**, **Render** is for Graphics Rendering, **Compute** would be for Computations, as in Compute Shaders)
-    1. We use the **Render Pass Descriptor** for this, which includes information about the output buffers to show the result of the rendering.
+   1. We use the **Render Pass Descriptor** for this, which includes information about the output buffers to show the result of the rendering.
 1. At one point we will set the **Render Pipeline State** to the **Render Command Encoder**.
 1. To create the **Render Pipeline State**, we first need to create the **Render Pipeline Descriptor**.
-    1. For creating the **Render Pipeline Descriptor**, we need to create a **Library** first, which will let us create the **Functions** for **Vertex** and **Fragment** calculations.
-    2. Once we have the **Library** and the **Functions**, we can create the **Render Pipeline Descriptor**.
-    3. With the **Render Pipeline Descriptor**, we can tell the **Device** to create the **Render Pipeline State**.
+   1. For creating the **Render Pipeline Descriptor**, we need to create a **Library** first, which will let us create the **Functions** for **Vertex** and **Fragment** calculations.
+   2. Once we have the **Library** and the **Functions**, we can create the **Render Pipeline Descriptor**.
+   3. With the **Render Pipeline Descriptor**, we can tell the **Device** to create the **Render Pipeline State**.
 1. Now we can set the **Render Pipeline State** to the **Render Command Encoder**.
 1. And we can tell the **Command Buffer** to **endEncoding()**, **present()** to the **drawable**, and **commit()** to schedule its execution.
 

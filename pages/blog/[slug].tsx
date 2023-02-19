@@ -8,31 +8,31 @@ import { BlogPost } from '../../src/models/BlogPost'
 import styles from '../../styles/pages/Blog.module.sass'
 
 interface BlogPostProps {
-    post: BlogPost
+  post: BlogPost
 }
 
 export default function BlogPostPage({ post }: BlogPostProps) {
-    if (!post) {
-        return null
-    }
+  if (!post) {
+    return null
+  }
 
-    const { slug, title, excerpt, coverImageUrl } = post
+  const { slug, title, excerpt, coverImageUrl } = post
 
-    return (
-        <Page className={styles.blog}>
-            <Metatags
-                title={title}
-                description={excerpt}
-                imageUrl={coverImageUrl}
-                pathUrl={`/blog/${slug}`}
-            />
-            <Container wide={false}>
-                <Spacer amount="3.5em" />
-                <Post post={post} />
-                <Spacer amount="3.5em" />
-            </Container>
-        </Page>
-    )
+  return (
+    <Page className={styles.blog}>
+      <Metatags
+        title={title}
+        description={excerpt}
+        imageUrl={coverImageUrl}
+        pathUrl={`/blog/${slug}`}
+      />
+      <Container wide={false}>
+        <Spacer amount="3.5em" />
+        <Post post={post} />
+        <Spacer amount="3.5em" />
+      </Container>
+    </Page>
+  )
 }
 
 // This function gets called at build time on server-side.
@@ -40,35 +40,35 @@ export default function BlogPostPage({ post }: BlogPostProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps(context) {
-    const slug = context.params.slug
-    const post = getPostBySlug(slug, true)
+  const slug = context.params.slug
+  const post = getPostBySlug(slug, true)
 
-    // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
-    if (!post) {
-        return {
-            notFound: true,
-        }
-    }
-
+  // https://nextjs.org/docs/api-reference/data-fetching/get-static-props#notfound
+  if (!post) {
     return {
-        props: {
-            post,
-        },
+      notFound: true,
     }
+  }
+
+  return {
+    props: {
+      post,
+    },
+  }
 }
 
 // The paths key determines which paths will be pre-rendered.
 // For example, suppose that you have a page that uses Dynamic Routes named pages/posts/[id].js.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
-    const slugs = getPostSlugs()
+  const slugs = getPostSlugs()
 
-    const paths = slugs.map((slug) => ({
-        params: { slug: slug.replace(/\.md$/, '') },
-    }))
+  const paths = slugs.map((slug) => ({
+    params: { slug: slug.replace(/\.md$/, '') },
+  }))
 
-    return {
-        paths,
-        fallback: true, // false or 'blocking'
-    }
+  return {
+    paths,
+    fallback: true, // false or 'blocking'
+  }
 }
