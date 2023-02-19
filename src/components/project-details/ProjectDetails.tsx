@@ -4,6 +4,7 @@ import styles from '../../../styles/components/project-details/ProjectDetails.mo
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
+import MarkdownContent from '../markdown/MarkdownContent'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
@@ -41,6 +42,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     subtitle,
     description = [],
     implementationDetails = [],
+    markdownContent = null,
     tags = [],
     links = [],
     gitHubUrl = '',
@@ -122,7 +124,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </Section>
                 )}
 
-                {implementationDetails.length > 0 && (
+                {implementationDetails.length > 0 && !markdownContent && (
                     <Section title="Implementation">
                         <ul className={styles.implementationDetails}>
                             {implementationDetails.map((bullet, index) => (
@@ -133,6 +135,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         </ul>
                     </Section>
                 )}
+
+                {markdownContent && <MarkdownContent markdownString={markdownContent} />}
 
                 {links.length > 0 && (
                     <Section title="Links" className={styles.externalLinks}>

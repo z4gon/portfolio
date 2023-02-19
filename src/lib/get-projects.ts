@@ -30,7 +30,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
         youtubeVideoIds = [],
         primaryImageName,
         primaryVideoName,
-        isPrivateRepo = true,
+        isPrivateRepo = false,
         gitHubUrl = null,
         links = [],
         appleAppStoreUrl = null,
