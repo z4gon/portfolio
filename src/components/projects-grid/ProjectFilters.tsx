@@ -6,6 +6,7 @@ import SearchIcon from '../icons/SearchIcon'
 
 interface ProjectFiltersProps {
     allProjects: ProjectDataMinimal[]
+    // eslint-disable-next-line unused-imports/no-unused-vars
     onFiltersChanged: (filterResults: ProjectDataMinimal[]) => void
 }
 

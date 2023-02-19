@@ -1,9 +1,10 @@
-import projects from '../data/projects'
+import { orderBy } from 'lodash'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
+import { getAllProjects } from '../src/lib/get-projects'
 import { ProjectData } from '../src/models/ProjectData'
 
 import styles from '../styles/pages/404.module.sass'
@@ -42,8 +43,17 @@ export default function NotFound({ projects }: NotFoundProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
+
+    let projects = getAllProjects()
+    projects = orderBy(
+        projects,
+        ['priority'],
+        ['asc']
+    )
+
     return {
         props: {
+            // only serialize the needed properties
             projects: projects.slice(0, 4),
         },
     }

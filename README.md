@@ -4,7 +4,9 @@
 
 ## Steps to add a new project entry
 
-1. Create a new config file under `/data/projects/the-project-id.ts`.
+-   Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
+
+1. Create a new config file under `/data/projects/the-project-id.md`.
 1. Create an optimized `.gif` to use as metadata image in `/public/images/thumbnails/the-project-id.gif`.
 1. Create an optimized `.mp4` to use as the grid thumbnail in `/public/videos/thumbnails/the-project-id.mp4`.
 1. Put optimized `.jpg` images in `/public/images/project/the-project-id/`.
