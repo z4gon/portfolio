@@ -14,7 +14,7 @@ const Post = ({ post }: PostProps) => {
         coverImageUrl,
         coverVideoUrl = '',
         coverImageSourceUrl,
-        contentMarkdown,
+        markdownContent,
     } = post
 
     return (
@@ -27,7 +27,7 @@ const Post = ({ post }: PostProps) => {
                 date={date}
                 author={author}
             />
-            <MarkdownContent markdownString={contentMarkdown} />
+            <MarkdownContent markdownString={markdownContent} />
         </article>
     )
 }

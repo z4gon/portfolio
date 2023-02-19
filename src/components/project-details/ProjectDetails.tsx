@@ -4,6 +4,7 @@ import styles from '../../../styles/components/project-details/ProjectDetails.mo
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
 import GitHubIcon from '../icons/GitHubIcon'
+import MarkdownContent from '../markdown/MarkdownContent'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import StoreLinks from './StoreLinks'
@@ -41,6 +42,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     subtitle,
     description = [],
     implementationDetails = [],
+    markdownContent = null,
     tags = [],
     links = [],
     gitHubUrl = '',
@@ -51,6 +53,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     primaryVideoUrl = null,
     technology = null,
 }) => {
+    var dateObj = new Date(date)
     return (
         <div className={styles.detailsView}>
             <MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
@@ -95,7 +98,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             )}
                             {title}
                             <TagRenderer secondary className={styles.date}>
-                                {date}
+                                {`${dateObj.getFullYear()}-${dateObj.getMonth()}`}
                             </TagRenderer>
                         </h2>
                         <span className={styles.subtitle}>{subtitle}</span>
@@ -122,7 +125,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </Section>
                 )}
 
-                {implementationDetails.length > 0 && (
+                {implementationDetails.length > 0 && !markdownContent && (
                     <Section title="Implementation">
                         <ul className={styles.implementationDetails}>
                             {implementationDetails.map((bullet, index) => (
@@ -132,6 +135,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             ))}
                         </ul>
                     </Section>
+                )}
+
+                {markdownContent && (
+                    <MarkdownContent markdownString={markdownContent} />
                 )}
 
                 {links.length > 0 && (
