@@ -13,16 +13,16 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Index Buffer](https://vulkan-tutorial.com/Vertex_buffers/Index_buffer)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Index Buffer](https://vulkan-tutorial.com/Vertex_buffers/Index_buffer)
 
 ---
 
 ## Table of Content
 
--   [Mesh Indices](#mesh-indices)
--   [Index Buffer](#index-buffer)
--   [Draw Indexed Primitive](#draw-indexed-primitive)
+- [Mesh Indices](#mesh-indices)
+- [Index Buffer](#index-buffer)
+- [Draw Indexed Primitive](#draw-indexed-primitive)
 
 ---
 
