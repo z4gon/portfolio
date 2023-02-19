@@ -25,6 +25,7 @@ import tessellationUnity from './projects/tessellation-unity'
 import uiStarsFireworksVfxUnity from './projects/ui-stars-fireworks-vfx-unity'
 import waterCausticsShaderUnity from './projects/water-caustics-shader-unity'
 import waterShaderUnity from './projects/water-shader-unity'
+import metroidvaniaGodotGame from './projects/metroidvania-godot-game'
 
 const vfx = [
     blackHoleVfxUnity,
@@ -58,7 +59,7 @@ const computeShaders = [
 ]
 const modelingAndAnimation = [_3dAnimatedCharacterUnity]
 const publishedGames = [starcat]
-const gameDev = [metalRenderPipeline]
+const gameDev = [metalRenderPipeline, metroidvaniaGodotGame]
 
 const projects = [
     ...vfx,
