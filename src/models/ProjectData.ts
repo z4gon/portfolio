@@ -5,6 +5,7 @@ import { LinkData } from './LinkData'
 
 export interface ProjectDataMinimal {
     id: string
+    priority: number
     date: string
     aliases?: string[]
     title: string

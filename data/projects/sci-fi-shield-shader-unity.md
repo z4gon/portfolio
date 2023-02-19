@@ -1,5 +1,6 @@
 ---
 date: '2022-11-01T00:00:00.0000'
+priority: -3
 videosNames:
   - 1.mp4
   - 2.mp4

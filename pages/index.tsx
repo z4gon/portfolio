@@ -50,8 +50,7 @@ export default function Home({ projects }: HomeProps) {
                         (x) => x.category === category
                     )
 
-                    categoryProjects = orderBy(categoryProjects, ['date'], ['desc'])
-                    console.log(categoryProjects)
+                    categoryProjects = orderBy(categoryProjects, ['priority'], ['asc'])
 
                     return (
                         <ProjectsGrid

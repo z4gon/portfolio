@@ -1,5 +1,6 @@
 ---
 date: '2022-09-01T00:00:00.0000'
+priority: -5
 videosNames:
   - 9.mp4
   - 8-waves.mp4

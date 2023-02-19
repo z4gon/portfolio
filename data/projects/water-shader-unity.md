@@ -1,5 +1,6 @@
 ---
 date: '2022-07-01T00:00:00.0000'
+priority: -2
 videosNames:
   - cliff.mp4
   - lake.mp4

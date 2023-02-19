@@ -17,6 +17,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 
     const {
         aliases,
+        priority = 0,
         title,
         subtitle,
         description = [],
@@ -44,6 +45,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 
     let project = {
         id,
+        priority,
         date,
         aliases: aliases || [],
         title,

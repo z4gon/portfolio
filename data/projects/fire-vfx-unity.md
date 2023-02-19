@@ -1,5 +1,6 @@
 ---
 date: '2022-09-01T00:00:00.0000'
+priority: -2
 videosNames:
   - thumbnail.mp4
   - sparks.mp4
