@@ -43,13 +43,8 @@ export default function NotFound({ projects }: NotFoundProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
-
     let projects = getAllProjects()
-    projects = orderBy(
-        projects,
-        ['priority'],
-        ['asc']
-    )
+    projects = orderBy(projects, ['priority'], ['asc'])
 
     return {
         props: {
