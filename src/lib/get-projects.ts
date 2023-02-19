@@ -82,8 +82,6 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
         }
     }
 
-    console.log(project)
-
     return project
 }
 

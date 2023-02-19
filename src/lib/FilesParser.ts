@@ -2,6 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
+/* eslint-disable unused-imports/no-unused-vars */
 export type ParserFunction<ParsedType> = (
     fileNameNoExt: string,
     frontMatterData: {
@@ -10,7 +11,7 @@ export type ParserFunction<ParsedType> = (
     markdownContent: string,
     full: boolean
 ) => ParsedType
-
+/* eslint-enable unused-imports/no-unused-vars */
 export default class FilesParser<ParsedType> {
     private directory: string
 
