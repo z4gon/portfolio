@@ -2,7 +2,7 @@ import { join } from 'path'
 import { ProjectData, ProjectDataMinimal } from '../models/ProjectData'
 import FilesParser, { ParserFunction } from './FilesParser'
 
-const directory = join(process.cwd(), 'data/projects-md')
+const directory = join(process.cwd(), 'data/projects')
 const filesParser = new FilesParser<ProjectDataMinimal | ProjectData>(directory)
 
 export const getProjectIds = (): string[] => filesParser.getFileNames()

@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'mario-kart-item-box-vfx',
     date: '2022-10',
     videosNames: [
@@ -51,6 +49,6 @@ const data: ProjectData = generateProjectData({
     ],
     technology: Technology.UnityEngine,
     category: Category.Shaders,
-})
+}
 
 export default data

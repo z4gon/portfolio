@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'character-skin-transition-shader-unity',
     date: '2022-11',
     videosNames: ['12.mp4'],
@@ -44,6 +42,6 @@ const data: ProjectData = generateProjectData({
     ],
     technology: Technology.UnityEngine,
     category: Category.Shaders,
-})
+}
 
 export default data

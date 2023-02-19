@@ -1,3 +1,6 @@
+import fs from 'fs'
+import { join } from 'path'
+import yaml from 'yaml'
 import { Category } from '../src/models/enums/Category'
 import { Tag } from '../src/models/enums/Tag'
 import { Technology } from '../src/models/enums/Technology'
@@ -26,10 +29,33 @@ export interface ProjectDefinition {
     category: Category
 }
 
-const getProjectFrontMatter = (projectDefinition: ProjectDefinition) => `
+// the weird new lines are intentional
+const getProjectFrontMatter = (projectDefinition: ProjectDefinition) => {
+    const { id, ...rest } = projectDefinition
+    return `
 ---
+${yaml.stringify(rest)}---`
+}
 
----
-`
+const generateAllFrontMatterMdFiles = (
+    projects: ProjectDefinition[],
+    targetDirectory: string
+) => {
+    const __dirname = join(process.cwd(), targetDirectory)
+    projects.forEach((project) => {
+        const { id, ...rest } = project
+        fs.appendFile(
+            __dirname + `${id}.md`,
+            getProjectFrontMatter(project),
+            function (err) {
+                if (err) {
+                    // append failed
+                } else {
+                    // done
+                }
+            }
+        )
+    })
+}
 
 export default getProjectFrontMatter

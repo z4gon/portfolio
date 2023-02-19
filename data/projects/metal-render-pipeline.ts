@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'metal-render-pipeline',
     date: '2022-12',
     videosNames: [
@@ -58,6 +56,6 @@ const data: ProjectData = generateProjectData({
     ],
     technology: Technology.Metal,
     category: Category.GameDev,
-})
+}
 
 export default data

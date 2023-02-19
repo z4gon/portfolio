@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'cg-texture-shaders-unity',
     date: '2022-10',
     videosNames: ['3.mp4', '2.mp4', '1d.mp4', '1b.mp4'],
@@ -22,6 +20,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.Cg, Tag.BuiltInRP, Tag.ShaderLab, Tag.Unity, Tag.FragmentShader],
     technology: Technology.UnityEngine,
     category: Category.Shaders,
-})
+}
 
 export default data

@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'ground-slash-vfx-unity',
     date: '2022-9',
     videosNames: [
@@ -39,6 +37,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.VFXGraph, Tag.URP, Tag.VFX, Tag.Unity],
     technology: Technology.UnityEngine,
     category: Category.VisualEffects,
-})
+}
 
 export default data

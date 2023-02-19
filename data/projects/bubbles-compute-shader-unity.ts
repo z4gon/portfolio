@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'bubbles-compute-shader-unity',
     date: '2022-10',
     videosNames: ['9.mp4', '3.mp4', '2.mp4', '1.mp4'],
@@ -26,6 +24,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.ComputeShader, Tag.HLSL, Tag.BuiltInRP, Tag.Unity],
     technology: Technology.UnityEngine,
     category: Category.ComputeShaders,
-})
+}
 
 export default data

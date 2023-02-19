@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'sci-fi-shield-shader-unity',
     date: '2022-11',
     videosNames: ['1.mp4', '2.mp4'],
@@ -49,6 +47,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.HLSL, Tag.ShaderGraph, Tag.URP, Tag.VFX, Tag.VFXGraph],
     technology: Technology.UnityEngine,
     category: Category.Shaders,
-})
+}
 
 export default data

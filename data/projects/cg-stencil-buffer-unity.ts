@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'cg-stencil-buffer-unity',
     date: '2022-10',
     primaryVideoName: '1.mp4',
@@ -20,6 +18,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.Cg, Tag.BuiltInRP, Tag.Unity],
     technology: Technology.UnityEngine,
     category: Category.Shaders,
-})
+}
 
 export default data

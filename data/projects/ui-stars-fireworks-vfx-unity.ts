@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'ui-stars-fireworks-vfx-unity',
     date: '2022-11',
     videosNames: ['8.mp4'],
@@ -38,6 +36,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.VFX, Tag.UI, Tag.BuiltInRP, Tag.ParticleSystem],
     technology: Technology.UnityEngine,
     category: Category.VisualEffects,
-})
+}
 
 export default data

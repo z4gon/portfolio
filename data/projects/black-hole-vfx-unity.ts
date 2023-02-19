@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'black-hole-vfx-unity',
     date: '2022-11',
     videosNames: ['1.mp4', '2.mp4'],
@@ -44,6 +42,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.ShaderGraph, Tag.VFXGraph, Tag.URP, Tag.VFX, Tag.ParticleSystem],
     technology: Technology.UnityEngine,
     category: Category.VisualEffects,
-})
+}
 
 export default data

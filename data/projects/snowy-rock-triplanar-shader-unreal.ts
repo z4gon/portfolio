@@ -1,10 +1,8 @@
 import { Category } from '../../src/models/enums/Category'
 import { Tag } from '../../src/models/enums/Tag'
 import { Technology } from '../../src/models/enums/Technology'
-import { ProjectData } from '../../src/models/ProjectData'
-import generateProjectData from '../generateProjectData'
 
-const data: ProjectData = generateProjectData({
+const data = {
     id: 'snowy-rock-triplanar-shader-unreal',
     date: '2022-11',
     videosNames: ['1.mp4'],
@@ -49,6 +47,6 @@ const data: ProjectData = generateProjectData({
     tags: [Tag.Shader, Tag.Material, Tag.UnrealEngine],
     technology: Technology.UnrealEngine,
     category: Category.Shaders,
-})
+}
 
 export default data
