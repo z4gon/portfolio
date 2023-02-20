@@ -10,32 +10,30 @@ import { ProjectData } from '../src/models/ProjectData'
 import styles from '../styles/pages/404.module.sass'
 
 interface NotFoundProps {
-    projects: ProjectData[]
+	projects: ProjectData[]
 }
 
 export default function NotFound({ projects }: NotFoundProps) {
-    return (
-        <Page>
-            <Metatags />
-            <Container>
-                <Spacer amount="8em" />
+	return (
+		<Page>
+			<Metatags />
+			<Container>
+				<Spacer amount="8em" />
 
-                <h1 className={styles.title}>404</h1>
-                <h2 className={styles.subtitle}>Not Found</h2>
+				<h1 className={styles.title}>404</h1>
+				<h2 className={styles.subtitle}>Not Found</h2>
 
-                <p className={styles.description}>
-                    The project doesn&apos;t exist 💀
-                </p>
-                <p className={styles.description}>
-                    These other projects might interest you 🥳
-                </p>
+				<p className={styles.description}>The project doesn&apos;t exist 💀</p>
+				<p className={styles.description}>
+					These other projects might interest you 🥳
+				</p>
 
-                <Spacer amount="4em" />
-                <ProjectsGrid projects={projects} />
-                <Spacer amount="10em" />
-            </Container>
-        </Page>
-    )
+				<Spacer amount="4em" />
+				<ProjectsGrid projects={projects} />
+				<Spacer amount="10em" />
+			</Container>
+		</Page>
+	)
 }
 
 // This function gets called at build time on server-side.
@@ -43,13 +41,13 @@ export default function NotFound({ projects }: NotFoundProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
-    let projects = getAllProjects()
-    projects = orderBy(projects, ['priority'], ['asc'])
+	let projects = getAllProjects()
+	projects = orderBy(projects, ['priority'], ['asc'])
 
-    return {
-        props: {
-            // only serialize the needed properties
-            projects: projects.slice(0, 4),
-        },
-    }
+	return {
+		props: {
+			// only serialize the needed properties
+			projects: projects.slice(0, 4),
+		},
+	}
 }

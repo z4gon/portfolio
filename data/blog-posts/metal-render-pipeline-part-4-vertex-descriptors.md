@@ -13,23 +13,23 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Size vs Stride in Swift](https://swiftunboxed.com/internals/size-stride-alignment/)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Size vs Stride in Swift](https://swiftunboxed.com/internals/size-stride-alignment/)
 
 ---
 
 ## Table of Content
 
--   [Vertex Descriptor](#vertex-descriptor)
--   [Vertex Shader](#vertex-shader)
--   [Result](#result)
+- [Vertex Descriptor](#vertex-descriptor)
+- [Vertex Shader](#vertex-shader)
+- [Result](#result)
 
 ---
 
 ## Vertex Descriptor
 
--   [MTLVertexDescriptor](https://developer.apple.com/documentation/metal/mtlvertexdescriptor)
--   [MTLVertexAttributeDescriptor](https://developer.apple.com/documentation/metal/mtlvertexattributedescriptor)
+- [MTLVertexDescriptor](https://developer.apple.com/documentation/metal/mtlvertexdescriptor)
+- [MTLVertexAttributeDescriptor](https://developer.apple.com/documentation/metal/mtlvertexattributedescriptor)
 
 Create a **MTL Vertex Descriptor** and start defining the **attributes**.
 

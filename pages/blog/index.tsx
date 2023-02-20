@@ -10,40 +10,40 @@ import { BlogPostMinimal } from '../../src/models/BlogPost'
 import styles from '../../styles/pages/Blog.module.sass'
 
 interface BlogProps {
-    allPosts: BlogPostMinimal[]
+	allPosts: BlogPostMinimal[]
 }
 
 export default function Blog({ allPosts }: BlogProps) {
-    const heroPost = allPosts[0]
-    const morePosts = allPosts.slice(1)
+	const heroPost = allPosts[0]
+	const morePosts = allPosts.slice(1)
 
-    return (
-        <Page className={styles.blog}>
-            <Metatags
-                title="Gonzalo Cumini | Blog"
-                description="Gonzalo Cumini | Blog"
-                pathUrl="/blog"
-            />
-            <Container>
-                <Spacer amount="2em" />
-                <PageTitle>Blog</PageTitle>
-                <Spacer amount="2em" />
-                {heroPost && (
-                    <PostPreview
-                        isHero
-                        title={heroPost.title}
-                        coverImageUrl={heroPost.coverImageUrl}
-                        date={heroPost.date}
-                        author={heroPost.author}
-                        slug={heroPost.slug}
-                        excerpt={heroPost.excerpt}
-                    />
-                )}
-                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-                <Spacer amount="6em" />
-            </Container>
-        </Page>
-    )
+	return (
+		<Page className={styles.blog}>
+			<Metatags
+				title="Gonzalo Cumini | Blog"
+				description="Gonzalo Cumini | Blog"
+				pathUrl="/blog"
+			/>
+			<Container>
+				<Spacer amount="2em" />
+				<PageTitle>Blog</PageTitle>
+				<Spacer amount="2em" />
+				{heroPost && (
+					<PostPreview
+						isHero
+						title={heroPost.title}
+						coverImageUrl={heroPost.coverImageUrl}
+						date={heroPost.date}
+						author={heroPost.author}
+						slug={heroPost.slug}
+						excerpt={heroPost.excerpt}
+					/>
+				)}
+				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				<Spacer amount="6em" />
+			</Container>
+		</Page>
+	)
 }
 
 // This function gets called at build time on server-side.
@@ -51,9 +51,9 @@ export default function Blog({ allPosts }: BlogProps) {
 // direct database queries.
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
-    return {
-        props: {
-            allPosts: getAllPosts(),
-        },
-    }
+	return {
+		props: {
+			allPosts: getAllPosts(),
+		},
+	}
 }

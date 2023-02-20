@@ -3,25 +3,25 @@ import styles from '../../../styles/components/multimedia-slider/GoFullScreenBut
 import { FullScreenCarouselContext } from '../../contexts/fullScreenCarousel'
 
 interface fullScreenCarouselButtonProps {
-    allImagesUrls: string[]
-    imageIdx: number
+	allImagesUrls: string[]
+	imageIdx: number
 }
 
 const GoFullScreenButton: React.FC<fullScreenCarouselButtonProps> = ({
-    allImagesUrls,
-    imageIdx,
+	allImagesUrls,
+	imageIdx,
 }) => {
-    const { initialize } = useContext(FullScreenCarouselContext)
+	const { initialize } = useContext(FullScreenCarouselContext)
 
-    return (
-        <button
-            className={styles.openButton}
-            onClick={() => initialize(allImagesUrls, imageIdx)}
-        >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/ui/full-screen-icon.png" alt="Open" />
-        </button>
-    )
+	return (
+		<button
+			className={styles.openButton}
+			onClick={() => initialize(allImagesUrls, imageIdx)}
+		>
+			{/* eslint-disable-next-line @next/next/no-img-element */}
+			<img src="/images/ui/full-screen-icon.png" alt="Open" />
+		</button>
+	)
 }
 
 export default GoFullScreenButton

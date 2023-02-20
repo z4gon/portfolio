@@ -13,18 +13,18 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [Spatial Transformation Matrices](https://www.brainvoyager.com/bv/doc/UsersGuide/CoordsAndTransforms/SpatialTransformationMatrices.html)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Spatial Transformation Matrices](https://www.brainvoyager.com/bv/doc/UsersGuide/CoordsAndTransforms/SpatialTransformationMatrices.html)
 
 ---
 
 ## Table of Content
 
--   [Translation](#translation)
--   [Scaling](#scaling)
--   [Rotation](#rotation)
--   [Shader](#shader)
--   [Result](#result)
+- [Translation](#translation)
+- [Scaling](#scaling)
+- [Rotation](#rotation)
+- [Shader](#shader)
+- [Result](#result)
 
 ---
 

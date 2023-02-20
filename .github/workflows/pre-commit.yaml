@@ -1,27 +1,27 @@
 name: pre-commit
 concurrency:
-    group: pre-commit-${{ github.ref }}
-    cancel-in-progress: true
+  group: pre-commit-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
-    pull_request:
-        types:
-            - opened
-            - reopened
-            - synchronize
-            - ready_for_review
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
 
 env:
-    PYTHON_VERSION: 3.9.10
+  PYTHON_VERSION: 3.9.10
 jobs:
-    pre-commit:
-        runs-on: ubuntu-latest
-        timeout-minutes: 10
-        steps:
-            - uses: actions/cache@v2
-              with:
-                  path: ~/.cache/pre-commit
-                  key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
-            - uses: actions/checkout@v2
-            - uses: actions/setup-python@v2
-            - uses: pre-commit/action@v2.0.3
+  pre-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: pre-commit/action@v2.0.3

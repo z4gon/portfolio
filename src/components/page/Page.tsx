@@ -6,21 +6,21 @@ import Footer from './Footer'
 import GoogleAnalytics from './GoogleAnalytics'
 
 interface PageProps {
-    className?: string
+	className?: string
 }
 
 const Page: React.FC<PropsWithChildren<PageProps>> = ({
-    className,
-    children,
+	className,
+	children,
 }) => {
-    return (
-        <div className={classNames(styles.page, className)}>
-            <GoogleAnalytics />
-            <NavBar />
-            {children}
-            <Footer />
-        </div>
-    )
+	return (
+		<div className={classNames(styles.page, className)}>
+			<GoogleAnalytics />
+			<NavBar />
+			{children}
+			<Footer />
+		</div>
+	)
 }
 
 export default Page

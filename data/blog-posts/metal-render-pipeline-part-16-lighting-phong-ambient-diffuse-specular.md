@@ -14,25 +14,25 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [MSL: const, constant and device](https://stackoverflow.com/questions/59010429/what-the-purpose-of-declaring-a-variable-with-const-constant)
--   [C arrays behave as pointers](https://stackoverflow.com/questions/2094666/pointers-in-c-when-to-use-the-ampersand-and-the-asterisk)
--   [C Pointers](https://www.programiz.com/c-programming/c-pointers)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [MSL: const, constant and device](https://stackoverflow.com/questions/59010429/what-the-purpose-of-declaring-a-variable-with-const-constant)
+- [C arrays behave as pointers](https://stackoverflow.com/questions/2094666/pointers-in-c-when-to-use-the-ampersand-and-the-asterisk)
+- [C Pointers](https://www.programiz.com/c-programming/c-pointers)
 
 ## Table of Content
 
--   [Light Component](#light-component)
--   [Light Data](#light-data)
--   [Light Manager](#light-manager)
--   [Scene](#scene)
--   [Material](#material)
--   [Material Data](#material-data)
--   [Lit Shader](#lit-shader)
-    -   [Attenuation](#attenuation)
-    -   [Ambient](#ambient)
-    -   [Diffuse](#diffuse)
-    -   [Specular](#specular)
--   [Result](#result)
+- [Light Component](#light-component)
+- [Light Data](#light-data)
+- [Light Manager](#light-manager)
+- [Scene](#scene)
+- [Material](#material)
+- [Material Data](#material-data)
+- [Lit Shader](#lit-shader)
+  - [Attenuation](#attenuation)
+  - [Ambient](#ambient)
+  - [Diffuse](#diffuse)
+  - [Specular](#specular)
+- [Result](#result)
 
 ---
 

@@ -13,16 +13,16 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
 
 ---
 
 ## Table of Content
 
--   [Objects Caches](#objects-caches)
--   [Game Object](#game-object)
--   [Renderer](#renderer)
--   [Game View](#game-view)
+- [Objects Caches](#objects-caches)
+- [Game Object](#game-object)
+- [Renderer](#renderer)
+- [Game View](#game-view)
 
 ---
 

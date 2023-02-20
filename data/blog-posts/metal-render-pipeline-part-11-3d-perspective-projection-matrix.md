@@ -14,30 +14,30 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
--   [3D Perspective Projection Matrix](https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl)
--   [3D Perspective Projection Matrix in Action](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)
--   [Projecting a Cube](https://glumpy.readthedocs.io/en/latest/tutorial/cube-ugly.html)
--   [Calculating Primitive Visibility Using Depth Testing](https://developer.apple.com/documentation/metal/render_passes/calculating_primitive_visibility_using_depth_testing)
--   [OpenGL - clip space, NDC, and screen space](https://www.youtube.com/watch?v=pThw0S8MR7w)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [3D Perspective Projection Matrix](https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl)
+- [3D Perspective Projection Matrix in Action](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)
+- [Projecting a Cube](https://glumpy.readthedocs.io/en/latest/tutorial/cube-ugly.html)
+- [Calculating Primitive Visibility Using Depth Testing](https://developer.apple.com/documentation/metal/render_passes/calculating_primitive_visibility_using_depth_testing)
+- [OpenGL - clip space, NDC, and screen space](https://www.youtube.com/watch?v=pThw0S8MR7w)
 
 ---
 
 ## Table of Content
 
--   [3D Perspective Projection Matrix](#3d-perspective-projection-matrix)
-    -   [View Frustrum](#view-frustrum)
-    -   [Clipping](#clipping)
-    -   [Matrix](#matrix)
--   [Cube Mesh](#cube-mesh)
--   [Depth Stencil](#depth-stencil)
-    -   [Descriptor](#descriptor)
-    -   [State](#state)
-    -   [Pixel Format](#pixel-format)
--   [Mesh Renderer](#mesh-renderer)
--   [Camera](#camera)
--   [Scene](#scene)
--   [Shader](#shader)
+- [3D Perspective Projection Matrix](#3d-perspective-projection-matrix)
+  - [View Frustrum](#view-frustrum)
+  - [Clipping](#clipping)
+  - [Matrix](#matrix)
+- [Cube Mesh](#cube-mesh)
+- [Depth Stencil](#depth-stencil)
+  - [Descriptor](#descriptor)
+  - [State](#state)
+  - [Pixel Format](#pixel-format)
+- [Mesh Renderer](#mesh-renderer)
+- [Camera](#camera)
+- [Scene](#scene)
+- [Shader](#shader)
 
 ---
 

@@ -1,4 +1,4 @@
 export interface LinkData {
-    href: string
-    text: string
+	href: string
+	text: string
 }

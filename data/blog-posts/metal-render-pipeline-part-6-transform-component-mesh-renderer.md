@@ -13,15 +13,15 @@ authorId: 'z4gon'
 
 ## References
 
--   [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
+- [Metal Render Pipeline tutorial series by Rick Twohy](https://www.youtube.com/playlist?list=PLEXt1-oJUa4BVgjZt9tK2MhV_DW7PVDsg)
 
 ---
 
 ## Table of Content
 
--   [Transform](#transform)
--   [Component](#component)
--   [MeshRenderer](#meshrenderer)
+- [Transform](#transform)
+- [Component](#component)
+- [MeshRenderer](#meshrenderer)
 
 ---
 

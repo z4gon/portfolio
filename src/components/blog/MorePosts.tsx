@@ -5,54 +5,54 @@ import Button from '../Button'
 import BlogPostPreview from './PostPreview'
 
 type Props = {
-    posts: BlogPostMinimal[]
+	posts: BlogPostMinimal[]
 }
 
 const PAGE_SIZE = 8
 
 const MorePosts = ({ posts }: Props) => {
-    const [page, setPage] = useState(0)
+	const [page, setPage] = useState(0)
 
-    const hasNext = posts.length > (page + 1) * PAGE_SIZE
+	const hasNext = posts.length > (page + 1) * PAGE_SIZE
 
-    const loadMore = () => {
-        if (!hasNext) {
-            return
-        }
+	const loadMore = () => {
+		if (!hasNext) {
+			return
+		}
 
-        setPage((currentPage) => currentPage + 1)
-    }
+		setPage((currentPage) => currentPage + 1)
+	}
 
-    if (posts.length == 0) {
-        return null
-    }
+	if (posts.length == 0) {
+		return null
+	}
 
-    const thumbnailsShowing = posts.slice(0, (page + 1) * PAGE_SIZE)
+	const thumbnailsShowing = posts.slice(0, (page + 1) * PAGE_SIZE)
 
-    return (
-        <section className={styles.morePosts}>
-            <h2 className={styles.title}>More Posts</h2>
-            <div className={styles.grid}>
-                {thumbnailsShowing.map((post) => (
-                    <BlogPostPreview
-                        key={post.slug}
-                        title={post.title}
-                        coverImageUrl={post.coverImageUrl}
-                        date={post.date}
-                        author={post.author}
-                        slug={post.slug}
-                        excerpt={post.excerpt}
-                    />
-                ))}
-            </div>
-            {hasNext && (
-                <div className={styles.actions}>
-                    <p>{`Showing ${thumbnailsShowing.length} of ${posts.length}`}</p>
-                    <Button onClick={() => loadMore()}>Show More</Button>
-                </div>
-            )}
-        </section>
-    )
+	return (
+		<section className={styles.morePosts}>
+			<h2 className={styles.title}>More Posts</h2>
+			<div className={styles.grid}>
+				{thumbnailsShowing.map((post) => (
+					<BlogPostPreview
+						key={post.slug}
+						title={post.title}
+						coverImageUrl={post.coverImageUrl}
+						date={post.date}
+						author={post.author}
+						slug={post.slug}
+						excerpt={post.excerpt}
+					/>
+				))}
+			</div>
+			{hasNext && (
+				<div className={styles.actions}>
+					<p>{`Showing ${thumbnailsShowing.length} of ${posts.length}`}</p>
+					<Button onClick={() => loadMore()}>Show More</Button>
+				</div>
+			)}
+		</section>
+	)
 }
 
 export default MorePosts
