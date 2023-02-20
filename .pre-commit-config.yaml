@@ -19,6 +19,6 @@ repos:
         entry: bash -c "npm run lint -- --fix"
         additional_dependencies:
           - next@13.0.0
-          - eslint@8.19.0
+          - eslint@8.34.0
           - eslint-config-next@13.0.0
           - eslint-plugin-unused-imports@2.0.0
