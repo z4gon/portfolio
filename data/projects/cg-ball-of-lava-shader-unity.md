@@ -2,7 +2,7 @@
 aliases:
   - ball-of-lava-shader-unity
 priority: -1
-date: '2022-10-01T00:00:00.0000'
+date: '2022-10-01T00:00:00.000Z'
 videosNames:
   - 7.mp4
   - 6.mp4

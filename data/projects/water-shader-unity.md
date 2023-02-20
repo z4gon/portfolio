@@ -1,5 +1,5 @@
 ---
-date: '2022-07-01T00:00:00.0000'
+date: '2022-07-01T00:00:00.000Z'
 priority: -2
 videosNames:
   - cliff.mp4
