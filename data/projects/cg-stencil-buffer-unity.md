@@ -1,5 +1,5 @@
 ---
-date: '2022-10-01T00:00:00.0000'
+date: '2022-10-01T00:00:00.000Z'
 primaryVideoName: 1.mp4
 title: X-Ray Stencil Buffer
 subtitle: X-Ray shader using the stencil buffer in Unity 2021.3.10f1 Built-in RP

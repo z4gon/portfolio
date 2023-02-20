@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
+import { parseISO, format } from 'date-fns'
 import styles from '../../../styles/components/project-details/ProjectDetails.module.sass'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
@@ -35,7 +36,7 @@ const Section: React.FC<SectionProps> = ({
 interface ProjectDetailsProps extends ProjectData {}
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
-	date,
+	date: dateString,
 	imagesUrls = [],
 	videosUrls = [],
 	title,
@@ -53,7 +54,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	primaryVideoUrl = null,
 	technology = null,
 }) => {
-	var dateObj = new Date(date)
+	const date = parseISO(dateString)
 	return (
 		<div className={styles.detailsView}>
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
@@ -98,7 +99,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 							)}
 							{title}
 							<TagRenderer secondary className={styles.date}>
-								{`${dateObj.getFullYear()}-${dateObj.getMonth()}`}
+								{format(date, 'yyyy-MM')}
 							</TagRenderer>
 						</h2>
 						<span className={styles.subtitle}>{subtitle}</span>
