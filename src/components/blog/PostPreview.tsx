@@ -20,7 +20,7 @@ const PostPreview = ({
 	title,
 	coverImageUrl,
 	date,
-	excerpt,
+	// excerpt,
 	author,
 	slug,
 }: Props) => {
@@ -47,10 +47,10 @@ const PostPreview = ({
 					</Link>
 				</h3>
 				<div className={styles.authorAndDate}>
-					<Avatar name={author.name} pictureUrl={author.pictureUrl} />
-					<DateFormatter dateString={date} />
+					<Avatar name={author.name} pictureUrl={author.pictureUrl} small />
+					<DateFormatter dateString={date} dateFormat="MMM yyyy" />
 				</div>
-				<p className={styles.excerpt}>{excerpt}</p>
+				{/* <p className={styles.excerpt}>{excerpt}</p> */}
 			</div>
 		</section>
 	)

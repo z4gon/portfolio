@@ -23,9 +23,9 @@ export default function NotFound({ projects }: NotFoundProps) {
 				<h1 className={styles.title}>404</h1>
 				<h2 className={styles.subtitle}>Not Found</h2>
 
-				<p className={styles.description}>The project doesn&apos;t exist 💀</p>
+				<p className={styles.description}>The url doesn&apos;t exist 💀</p>
 				<p className={styles.description}>
-					These other projects might interest you 🥳
+					These projects might interest you 🥳
 				</p>
 
 				<Spacer amount="4em" />

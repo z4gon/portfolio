@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '../../../styles/components/blog/MorePosts.module.sass'
+import styles from '../../../styles/components/blog/PostsGrid.module.sass'
 import { BlogPostMinimal } from '../../models/BlogPost'
 import Button from '../Button'
 import BlogPostPreview from './PostPreview'
@@ -8,9 +8,9 @@ type Props = {
 	posts: BlogPostMinimal[]
 }
 
-const PAGE_SIZE = 8
+const PAGE_SIZE = 20
 
-const MorePosts = ({ posts }: Props) => {
+const PostsGrid = ({ posts }: Props) => {
 	const [page, setPage] = useState(0)
 
 	const hasNext = posts.length > (page + 1) * PAGE_SIZE
@@ -30,8 +30,7 @@ const MorePosts = ({ posts }: Props) => {
 	const thumbnailsShowing = posts.slice(0, (page + 1) * PAGE_SIZE)
 
 	return (
-		<section className={styles.morePosts}>
-			<h2 className={styles.title}>More Posts</h2>
+		<section className={styles.postsGrid}>
 			<div className={styles.grid}>
 				{thumbnailsShowing.map((post) => (
 					<BlogPostPreview
@@ -55,4 +54,4 @@ const MorePosts = ({ posts }: Props) => {
 	)
 }
 
-export default MorePosts
+export default PostsGrid

@@ -3,10 +3,10 @@
 
     display: inline-block
 
-    margin-bottom: 3em
+    margin-bottom: 1em
 
     .imageWrapper
-        height: 12em
+        height: 8em
 
         .image
             height: 100%
@@ -15,54 +15,29 @@
             background-position: center
 
     .title
-        font-size: 1.3em
+        font-size: 1.1em
         line-height: 1.2em
         margin-top: 1em
         margin-bottom: 0.4em
 
-    .excerpt
-        font-size: 1em
-        line-height: 1.4em
-        text-align: justify
-
-    @media screen and (min-width: 701px)
-        &.hero
-            display: flex
-            min-height: 30em
-
-            .title
-                font-size: 2.2em
-                margin-top: 0
-
-            .info
-                flex-basis: 50%
-                padding: 0 20px
-
-            .imageWrapper
-                flex-basis: 50%
-                height: auto
+    // .excerpt
+    //     font-size: 1em
+    //     line-height: 1.4em
+    //     text-align: justify
 
     a
+        text-decoration: none
         color: var(--font-color)
 
-    .authorAndDate
-        flex-direction: column
-        align-items: flex-start
-        margin: 1em 0 2em
+        &:hover
+            text-decoration: underline
 
-        time
-            margin: 1em 0 0 0
+    .authorAndDate
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin: 1em 0 2em
 
         @media screen and (max-width: 600px)
             flex-direction: column
             align-items: flex-start
-
-    @media screen and (min-width: 701px)
-        &.hero
-            .authorAndDate
-                display: flex
-                flex-direction: row
-                align-items: center
-
-                time
-                    margin: 0 0 0 1em

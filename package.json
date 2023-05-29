@@ -6,7 +6,6 @@
 		"dev": "next dev",
 		"build": "next build",
 		"export": "next export -o out",
-		"start:static": "http-server -c-1 ./out",
 		"start": "next start",
 		"lint": "next lint"
 	},
