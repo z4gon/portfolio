@@ -1,4 +1,4 @@
-name: build-and-deploy-gh-pages
+name: gh-pages
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
@@ -27,4 +27,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out # The folder the action should deploy.
-          branch: gh-pages # The branch to deploy to.
+          branch: gh-pages # The branch to push to.
