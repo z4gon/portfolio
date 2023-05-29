@@ -3,13 +3,14 @@ import styles from '../../../styles/components/blog/DateFormatter.module.sass'
 
 type Props = {
 	dateString: string
+	dateFormat?: string
 }
 
-const DateFormatter = ({ dateString }: Props) => {
+const DateFormatter = ({ dateString, dateFormat = 'LLLL	d, yyyy' }: Props) => {
 	const date = parseISO(dateString)
 	return (
 		<time className={styles.dateFormatter} dateTime={dateString}>
-			{format(date, 'LLLL	d, yyyy')}
+			{format(date, dateFormat)}
 		</time>
 	)
 }

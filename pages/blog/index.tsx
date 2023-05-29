@@ -1,5 +1,4 @@
-import MoreStories from '../../src/components/blog/MorePosts'
-import PostPreview from '../../src/components/blog/PostPreview'
+import PostsGrid from '../../src/components/blog/PostsGrid'
 import Metatags from '../../src/components/Metatags'
 import Container from '../../src/components/page/Container'
 import Page from '../../src/components/page/Page'
@@ -14,9 +13,6 @@ interface BlogProps {
 }
 
 export default function Blog({ allPosts }: BlogProps) {
-	const heroPost = allPosts[0]
-	const morePosts = allPosts.slice(1)
-
 	return (
 		<Page className={styles.blog}>
 			<Metatags
@@ -28,18 +24,7 @@ export default function Blog({ allPosts }: BlogProps) {
 				<Spacer amount="2em" />
 				<PageTitle>Blog</PageTitle>
 				<Spacer amount="2em" />
-				{heroPost && (
-					<PostPreview
-						isHero
-						title={heroPost.title}
-						coverImageUrl={heroPost.coverImageUrl}
-						date={heroPost.date}
-						author={heroPost.author}
-						slug={heroPost.slug}
-						excerpt={heroPost.excerpt}
-					/>
-				)}
-				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				{allPosts.length > 0 && <PostsGrid posts={allPosts} />}
 				<Spacer amount="6em" />
 			</Container>
 		</Page>
