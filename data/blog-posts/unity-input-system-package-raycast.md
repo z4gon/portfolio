@@ -50,14 +50,7 @@ private bool isMoving = false;
 
 public void OnMoveAction(InputAction.CallbackContext context)
 {
-    if (context.performed)
-    {
-        isMoving = true;
-    }
-    else if (context.canceled)
-    {
-        isMoving = false;
-    }
+    isMoving = context.performed;
 }
 
 public void OnPointerPosition(InputAction.CallbackContext context)

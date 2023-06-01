@@ -38,31 +38,27 @@ private LayerMask raycastLayerMask;
 private float raycastMaxDistance = 40;
 private Transform[] corners;
 
-private void PositionCorners()
+void Awake()
 {
-    var points = new Vector2[]
-    {
-        new Vector2(0.0f, 0.0f), // bot left
-        new Vector2(1.0f, 1.0f) // top right
-    };
-    RaycastHit hit;
-    Ray ray;
+    PositionCorner(new Vector2(0.0f, 0.0f), corners[0]);
+    PositionCorner(new Vector2(1.0f, 1.0f), corners[1]);
+}
 
-    for (var i = 0; i < points.Length; i++)
-    {
-        ray = mainCamera.ViewportPointToRay(points[i]);
-        if (
-            Physics.Raycast(
-                ray,
-                out hit,
-                raycastMaxDistance,
-                raycastLayerMask,
-                QueryTriggerInteraction.Collide
-            )
+private void PositionCorner(Vector2 viewportPoint, Transform corner)
+{
+    RaycastHit hit;
+    var ray = mainCamera.ViewportPointToRay(points[i]);
+    if (
+        Physics.Raycast(
+            ray,
+            out hit,
+            raycastMaxDistance,
+            raycastLayerMask,
+            QueryTriggerInteraction.Collide
         )
-        {
-            corners[i].transform.position = hit.point;
-        }
+    )
+    {
+        corner.transform.position = hit.point;
     }
 }
 ```
