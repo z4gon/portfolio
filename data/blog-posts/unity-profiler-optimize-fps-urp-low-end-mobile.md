@@ -1,9 +1,9 @@
 ---
 title: 'Unity: Profile and optimize FPS for the URP in low end devices.'
 excerpt: 'Disable post processing, SSAO and enable target frame rate to optimize FPS count in the Universal Rende Pipeline, for low end moible devices.'
-coverImageUrl: '/images/blog/unity-profiler-optimize-fps-urp-low-end-mobile/1.jpg'
+coverImageUrl: '/images/blog/unity-profiler-optimize-fps-urp-low-end-mobile/2.jpg'
 coverImageSourceUrl: ''
-date: '2023-06-1T00:00:00.000Z'
+date: '2023-06-01T00:00:00.000Z'
 authorId: 'z4gon'
 ---
 
@@ -43,10 +43,12 @@ authorId: 'z4gon'
 
 ## Target Frame Rate
 
-- These is a part of the frame that is still taking long, but it doesn't seem to be anything causing it.
-- We can try setting the target frame rate to test if the engine can actually achieve the desired fps.
+- A portion of the frame is still taking long, but there doesn't seem to be anything in particular causing it.
+- Profiling the GPU is not available for this device, so that is not of much help.
 
 ![Picture](/images/blog/unity-profiler-optimize-fps-urp-low-end-mobile/6.jpg)
+
+- We can try setting the target frame rate to test if the engine can actually achieve the desired fps.
 
 ```cs
 private const int TARGET_FRAME_RATE = 60;
