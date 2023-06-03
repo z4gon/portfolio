@@ -1,7 +1,7 @@
 ---
 title: 'Unity: Physics Projectiles, Coroutines and Object Pooling'
 excerpt: 'Using Corotuines and Object Pools to instantiate projectiles, and Ribidbodies for simple physics.'
-coverImageUrl: '/images/blog/unity-projectiles-object-pooling/2.jpg'
+coverImageUrl: '/images/blog/unity-projectiles-object-pooling/1.jpg'
 coverImageSourceUrl: ''
 date: '2023-06-03T00:00:00.000Z'
 authorId: 'z4gon'
@@ -19,7 +19,12 @@ authorId: 'z4gon'
 - [Table of Content](#table-of-content)
 - [Projectile: Bullet](#projectile-bullet)
 - [ObjectPool: Gun](#objectpool-gun)
+  - [Properties](#properties)
+  - [Initialize Object Pool](#initialize-object-pool)
+  - [Object Pool Event Handlers](#object-pool-event-handlers)
+  - [Shoot Projectiles](#shoot-projectiles)
 - [Player](#player)
+- [All the Pieces Together](#all-the-pieces-together)
 
 ---
 
@@ -42,8 +47,6 @@ private void Awake()
 }
 ```
 
-![Picture](/images/blog/unity-projectiles-object-pooling/1.jpg)
-
 ---
 
 ## ObjectPool: Gun
@@ -51,6 +54,7 @@ private void Awake()
 - This component will use the `ObjectPool` to store the `Bullet` game objects.
 - It will also define a `Coroutine` to periodically fire the gun, and shoot projectiles.
 
+### Properties
 ```cs
 public Bullet bulletPrefab;
 public float bulletsPerSecond;
@@ -59,7 +63,11 @@ public int defaultBulletsPoolCapacity = 10;
 public int maxBulletsPoolSize = 20;
 private ObjectPool<Bullet> bulletsPool;
 private Coroutine shootCoroutine;
+```
 
+### Initialize Object Pool
+
+```cs
 void Awake()
 {
     bulletsPool = new ObjectPool<Bullet>(
@@ -72,7 +80,18 @@ void Awake()
         maxSize: maxBulletsPoolSize
     );
 }
+```
 
+### Object Pool Event Handlers
+```cs
+private Bullet CreatePooledBullet() => Object.Instantiate(bulletPrefab, transform.position, transform.rotation);
+private void OnGetBulletFromPool(Bullet bullet) => bullet.gameObject.SetActive(true);
+private void OnReleaseBulletToPool(Bullet bullet) => bullet.gameObject.SetActive(false);
+void OnDestroyBulletFromPool(Bullet bullet) => Destroy(bullet.gameObject);
+```
+
+### Shoot Projectiles
+```cs
 public void StartShooting()
 {
     shootCoroutine = StartCoroutine(Shoot());
@@ -96,14 +115,7 @@ private IEnumerator Shoot()
         yield return new WaitForSeconds(1.0f / bulletsPerSecond);
     }
 }
-
-private Bullet CreatePooledBullet() => Object.Instantiate(bulletPrefab, transform.position, transform.rotation);
-private void OnGetBulletFromPool(Bullet bullet) => bullet.gameObject.SetActive(true);
-private void OnReleaseBulletToPool(Bullet bullet) => bullet.gameObject.SetActive(false);
-void OnDestroyBulletFromPool(Bullet bullet) => Destroy(bullet.gameObject);
 ```
-
-![Picture](/images/blog/unity-projectiles-object-pooling/2.jpg)
 
 ---
 
@@ -117,30 +129,25 @@ public List<Gun> guns = new List<Gun>();
 public void OnShootAction(InputAction.CallbackContext context)
 {
     if (context.performed)
-    {
         StartShooting();
-    }
     else if (context.canceled)
-    {
         StopShooting();
-    }
 }
 
 private void StartShooting()
 {
     foreach (var gun in guns)
-    {
         gun.StartShooting();
-    }
 }
 
 private void StopShooting()
 {
     foreach (var gun in guns)
-    {
         gun.StopShooting();
-    }
 }
 ```
+---
 
-![Picture](/images/blog/unity-projectiles-object-pooling/3.jpg)
+## All the Pieces Together
+
+![Picture](/images/blog/unity-projectiles-object-pooling/1.jpg)
