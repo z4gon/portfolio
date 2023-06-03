@@ -25,6 +25,7 @@ authorId: 'z4gon'
   - [Shoot Projectiles](#shoot-projectiles)
 - [Player](#player)
 - [All the Pieces Together](#all-the-pieces-together)
+- [Correcting Projectile Trajectory](#correcting-projectile-trajectory)
 
 ---
 
@@ -151,3 +152,12 @@ private void StopShooting()
 ## All the Pieces Together
 
 ![Picture](/images/blog/unity-projectiles-object-pooling/1.jpg)
+
+---
+
+## Correcting Projectile Trajectory
+
+- Given the perspective of the camera, projectiles that are aligned to the direction of the player do not follow a straight line in the viewport.
+- This is a problem since the player won't be able to aim for enemies in the top left and right corners.
+
+![Picture](/images/blog/unity-projectiles-object-pooling/2.jpg)
