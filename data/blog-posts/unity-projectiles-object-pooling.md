@@ -1,8 +1,9 @@
 ---
 title: 'Unity: Physics Projectiles, Coroutines and Object Pooling'
 excerpt: 'Using Corotuines and Object Pools to instantiate projectiles, and Ribidbodies for simple physics.'
-coverImageUrl: '/images/blog/unity-projectiles-object-pooling/1.jpg'
+coverImageUrl: '/images/blog/unity-projectiles-object-pooling/3.jpg'
 coverImageSourceUrl: ''
+coverVideoUrl: '/videos/blog/unity-projectiles-object-pooling/1.mp4'
 date: '2023-06-03T00:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -161,3 +162,23 @@ private void StopShooting()
 - This is a problem since the player won't be able to aim for enemies in the top left and right corners.
 
 ![Picture](/images/blog/unity-projectiles-object-pooling/2.jpg)
+
+- Using a `Raycast` again, to get the corresponding point at the top edge, we can make the `Player` to `LookAt` it.
+- This effectively makes the aiming dynamic, and keeps a straight like of projectiles in the viewport.
+
+```cs
+public void OnPointerPosition(InputAction.CallbackContext context)
+{
+    ...
+
+    // look at
+    point = new Vector2(point.x, Screen.height);
+    ray = mainCamera.ScreenPointToRay(point);
+    if (boundaries.plane.Raycast(ray, out distance))
+    {
+        transform.LookAt(ray.GetPoint(distance), Vector3.up);
+    }
+}
+```
+
+![Picture](/images/blog/unity-projectiles-object-pooling/3.jpg)
