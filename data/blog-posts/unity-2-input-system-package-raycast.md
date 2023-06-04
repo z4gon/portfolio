@@ -1,9 +1,9 @@
 ---
 title: 'Unity: Input System Package + Raycasting'
 excerpt: 'Using Input Action events to Raycast points from Screen Space onto a Plane.'
-coverImageUrl: '/images/blog/unity-input-system-package-raycast/4.jpg'
+coverImageUrl: '/images/blog/unity-2-input-system-package-raycast/4.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/unity-input-system-package-raycast/1.mp4'
+coverVideoUrl: '/videos/blog/unity-2-input-system-package-raycast/1.mp4'
 date: '2023-05-29T01:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -30,9 +30,9 @@ authorId: 'z4gon'
 - Add a `Player Input` component to the Game Object, and set its behavior to `Invoke Unity Events`.
 - Bind the events to `OnMoveAction` and `OnPointerPosition`
 
-![Picture](/images/blog/unity-input-system-package-raycast/1.jpg)
-![Picture](/images/blog/unity-input-system-package-raycast/2.jpg)
-![Picture](/images/blog/unity-input-system-package-raycast/3.jpg)
+![Picture](/images/blog/unity-2-input-system-package-raycast/1.jpg)
+![Picture](/images/blog/unity-2-input-system-package-raycast/2.jpg)
+![Picture](/images/blog/unity-2-input-system-package-raycast/3.jpg)
 
 ---
 
@@ -79,4 +79,4 @@ public void OnPointerPosition(InputAction.CallbackContext context)
 }
 ```
 
-![Picture](/images/blog/unity-input-system-package-raycast/4.jpg)
+![Picture](/images/blog/unity-2-input-system-package-raycast/4.jpg)
