@@ -57,6 +57,7 @@ private void Awake()
 - It will also define a `Coroutine` to periodically fire the gun, and shoot projectiles.
 
 ### Properties
+
 ```cs
 public Bullet bulletPrefab;
 public float bulletsPerSecond;
@@ -85,6 +86,7 @@ void Awake()
 ```
 
 ### Object Pool Event Handlers
+
 ```cs
 private Bullet CreatePooledBullet() => Object.Instantiate(bulletPrefab, transform.position, transform.rotation);
 private void OnGetBulletFromPool(Bullet bullet) => bullet.gameObject.SetActive(true);
@@ -93,6 +95,7 @@ void OnDestroyBulletFromPool(Bullet bullet) => Destroy(bullet.gameObject);
 ```
 
 ### Shoot Projectiles
+
 ```cs
 public void StartShooting()
 {
@@ -148,6 +151,7 @@ private void StopShooting()
         gun.StopShooting();
 }
 ```
+
 ---
 
 ## All the Pieces Together
