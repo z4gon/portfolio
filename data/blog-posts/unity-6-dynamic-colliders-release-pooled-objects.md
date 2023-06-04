@@ -82,7 +82,7 @@ public void Initialize(Boundaries boundaries)
 ```cs
 public class Bullet : MonoBehaviour
 {
-    public Gun gun; // this is set by the gun, when shooting 
+    public Gun gun; // this is set by the gun, when shooting
 
     private void OnTriggerEnter(Collider other)
     {
