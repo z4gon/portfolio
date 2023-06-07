@@ -50,13 +50,12 @@ authorId: 'z4gon'
 
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/6.jpg)
 
-
 ---
 
 ## Tests Files
 
 - Create test files using the template or write your own from scratch.
-  
+
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/4.jpg)
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/5.jpg)
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/7.jpg)
@@ -79,7 +78,7 @@ authorId: 'z4gon'
 
 - Copy over the `.dll` corresponding to the `Api Compatibility Level` set in the `Player Settings` of your project. (Most likely `.NET Standard 2.1`)
 - Repeat the process for any dependency of the library.
-  
+
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/16.jpg)
 ![Picture](/images/blog/unity-7-unit-tests-nunit-nsubstitute/14.jpg)
 
