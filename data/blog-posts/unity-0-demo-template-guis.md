@@ -1,12 +1,15 @@
 ---
-title: 'Unity: Demo Project Template with GUIs for View Navigation'
+title: 'Unity: Pan, Zoom and Orbit for your Demo Projects'
 excerpt: 'UI elements to Orbit, Zoom, Pan and Reset View. GUIs to tweak values for demo purposes.'
-coverImageUrl: '/images/blog/unity-0-demo-template-guis/15.jpg'
+coverImageUrl: '/images/blog/unity-0-demo-template-guis/12.jpg'
 coverImageSourceUrl: ''
 coverVideoUrl: '/videos/blog/unity-0-demo-template-guis/1.mp4'
 date: '2023-07-08T00:00:00.000Z'
 authorId: 'z4gon'
 ---
+## Source Code
+
+[See Project in GitHub 👩‍💻](https://github.com/z4gon/unity-project-template-urp)
 
 ## References
 
@@ -15,8 +18,10 @@ authorId: 'z4gon'
 
 ## Table of Content
 
+- [Source Code](#source-code)
 - [References](#references)
 - [Table of Content](#table-of-content)
+- [Final Result](#final-result)
 - [Input Actions](#input-actions)
 - [On Screen Controls](#on-screen-controls)
   - [Connecting to the Camera Navigation](#connecting-to-the-camera-navigation)
@@ -25,9 +30,13 @@ authorId: 'z4gon'
   - [Zoom View](#zoom-view)
   - [Orbit View](#orbit-view)
 - [GUIs for Playground](#guis-for-playground)
-- [Final Result](#final-result)
 
----
+
+## Final Result
+
+A demo scene with view control to navigate the scene, and a playground to tweak values in the demo.
+
+![Picture](/images/blog/unity-0-demo-template-guis/12.jpg)
 
 ## Input Actions
 
@@ -40,7 +49,7 @@ Using the `Input System Package` from Unity, create an `Input Actions` asset and
 ![Picture](/images/blog/unity-0-demo-template-guis/1.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/2.jpg)
 
----
+
 
 ## On Screen Controls
 
@@ -50,8 +59,8 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 - We need to set the `Control Path` of the on screen stick to `Left Stick [Gamepad]` and `Right Stick [Gamepad]` correspondingly.
 
 ![Picture](/images/blog/unity-0-demo-template-guis/3.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/10.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/11.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/4.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/5.jpg)
 
 ### Connecting to the Camera Navigation
 
@@ -60,17 +69,17 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 - This makes this really easy to setup, just assign the `CameraNavigation` object to the `HUD` and you are done.
 - In turn, the `CameraNavigation` will search for the active `Camera` automatically.
 
-![Picture](/images/blog/unity-0-demo-template-guis/5.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/6.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/7.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/8.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/9.jpg)
 
----
+
 
 ## Camera Navigation
 
 This is just a class that will move the main `Camera` around, reacting to our input.
 
-![Picture](/images/blog/unity-0-demo-template-guis/4.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/9.jpg)
 
 ### Pan View
 
@@ -144,20 +153,12 @@ private void HandleOrbit()
 }
 ```
 
----
+
 
 ## GUIs for Playground
 
 - A set of `GUI` inputs to let you tweak values for the demo.
 - These can be hooked up via events to your objects and shaders, to showcase behavior.
 
-![Picture](/images/blog/unity-0-demo-template-guis/13.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/14.jpg)
-
----
-
-## Final Result
-
-A demo scene with view control to navigate the scene, and a playground to tweak values in the demo.
-
-![Picture](/images/blog/unity-0-demo-template-guis/15.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/10.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/11.jpg)
