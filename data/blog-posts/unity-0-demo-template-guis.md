@@ -7,6 +7,7 @@ coverVideoUrl: '/videos/blog/unity-0-demo-template-guis/1.mp4'
 date: '2023-07-08T00:00:00.000Z'
 authorId: 'z4gon'
 ---
+
 ## Source Code
 
 [See Project in GitHub 👩‍💻](https://github.com/z4gon/unity-project-template-urp)
@@ -31,7 +32,6 @@ authorId: 'z4gon'
   - [Orbit View](#orbit-view)
 - [GUIs for Playground](#guis-for-playground)
 
-
 ## Final Result
 
 A demo scene with view control to navigate the scene, and a playground to tweak values in the demo.
@@ -48,8 +48,6 @@ Using the `Input System Package` from Unity, create an `Input Actions` asset and
 
 ![Picture](/images/blog/unity-0-demo-template-guis/1.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/2.jpg)
-
-
 
 ## On Screen Controls
 
@@ -72,8 +70,6 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 ![Picture](/images/blog/unity-0-demo-template-guis/6.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/7.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/8.jpg)
-
-
 
 ## Camera Navigation
 
@@ -100,7 +96,7 @@ private void HandlePan()
 ```
 
 - The Pivot point is calculated by raycasting the `Camera` forward direction into a `Plane` defined parallel to the ground, at the `Zero` position.
-  
+
 ```cs
 private void PositionPivot()
 {
@@ -152,8 +148,6 @@ private void HandleOrbit()
     cameraTransform.RotateAround(transform.position, cameraTransform.right, orbitAmount.y * orbitSpeed * Time.deltaTime);
 }
 ```
-
-
 
 ## GUIs for Playground
 
