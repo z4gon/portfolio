@@ -1,7 +1,7 @@
 ---
 title: 'Unity: Pan, Zoom and Orbit for your Demo Projects'
 excerpt: 'UI elements to Orbit, Zoom, Pan and Reset View. GUIs to tweak values for demo purposes.'
-coverImageUrl: '/images/blog/unity-0-demo-template-guis/12.jpg'
+coverImageUrl: '/images/blog/unity-0-demo-template-guis/11.jpg'
 coverImageSourceUrl: ''
 coverVideoUrl: '/videos/blog/unity-0-demo-template-guis/1.mp4'
 date: '2023-07-08T00:00:00.000Z'
@@ -25,8 +25,8 @@ authorId: 'z4gon'
 - [Final Result](#final-result)
 - [Input Actions](#input-actions)
 - [On Screen Controls](#on-screen-controls)
-  - [Connecting to the Camera Navigation](#connecting-to-the-camera-navigation)
-- [Camera Navigation](#camera-navigation)
+- [Connecting to the CameraMovement](#connecting-to-the-cameramovement)
+  - [Input Signals](#input-signals)
   - [Pan View](#pan-view)
   - [Zoom View](#zoom-view)
   - [Orbit View](#orbit-view)
@@ -36,7 +36,8 @@ authorId: 'z4gon'
 
 A demo scene with view control to navigate the scene, and a playground to tweak values in the demo.
 
-![Picture](/images/blog/unity-0-demo-template-guis/12.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/10.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/11.jpg)
 
 ## Input Actions
 
@@ -60,22 +61,44 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 ![Picture](/images/blog/unity-0-demo-template-guis/4.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/5.jpg)
 
-### Connecting to the Camera Navigation
+## Connecting to the CameraMovement
 
-- The GUI elements will just invoke methods on the main `HUD` class.
-- In turn, the `HUD` will invoke the methods in the `CameraNavigation` object, to actually move the `Camera` around.
-- This makes this really easy to setup, just assign the `CameraNavigation` object to the `HUD` and you are done.
-- In turn, the `CameraNavigation` will search for the active `Camera` automatically.
+- The `CameraMovement` classes will listen to events such as `OnLeftStick` or `OnMouseDelta`.
+- And internally will use these inputs to move the camera accordingly.
 
 ![Picture](/images/blog/unity-0-demo-template-guis/6.jpg)
 ![Picture](/images/blog/unity-0-demo-template-guis/7.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/8.jpg)
 
-## Camera Navigation
+### Input Signals
 
-This is just a class that will move the main `Camera` around, reacting to our input.
+```cs
+private void OnLeftStick(InputValue value) => panAmount = value.Get<Vector2>();
+private void OnRightStick(InputValue value) => orbitAmount = value.Get<Vector2>();
+```
 
-![Picture](/images/blog/unity-0-demo-template-guis/9.jpg)
+```cs
+private void OnMouseDelta(InputValue value)
+{
+    orbitAmount = isOrbiting ? value.Get<Vector2>() : Vector2.zero;
+    panAmount = isPanning ? value.Get<Vector2>() * -1.0f : Vector2.zero;
+}
+
+private void OnMouseRightClick(InputValue value)
+{
+    isOrbiting = value.isPressed;
+}
+
+private void OnMouseMiddleClick(InputValue value)
+{
+    isPanning = value.isPressed;
+}
+
+private void OnMouseScroll(InputValue value)
+{
+    zoomAmount = value.Get<float>();
+}
+}
+```
 
 ### Pan View
 
@@ -87,10 +110,9 @@ private void HandlePan()
 {
     if (panAmount == Vector2.zero) { return; }
 
-    var direction = cameraTransform.right * panAmount.x + cameraTransform.up * panAmount.y;
+    var direction = camera.transform.right * panAmount.x + camera.transform.up * panAmount.y;
 
-    cameraTransform.position += direction * (panSpeed * Time.deltaTime);
-
+    camera.transform.position += (direction * panSpeed * Time.deltaTime);
     PositionPivot();
 }
 ```
@@ -118,19 +140,10 @@ private void PositionPivot()
 ```cs
 private void HandleZoom()
 {
-    if (zoomState == ZoomState.None) { return; }
+    if (zoomAmount == 0.0f) { return; }
 
-    var direction = transform.position - cameraTransform.position;
-    var distance = direction.magnitude;
-
-    if (zoomState == ZoomState.ZoomingIn && distance < cameraMinDistanceToPivot)
-    {
-        return;
-    }
-
-    direction = direction.normalized * (int)zoomState; // invert if zooming out
-
-    cameraTransform.position += direction * (zoomSpeed * Time.deltaTime);
+    var direction = camera.transform.forward;
+    camera.transform.position += (direction * zoomAmount * Time.deltaTime);
 }
 ```
 
@@ -154,5 +167,5 @@ private void HandleOrbit()
 - A set of `GUI` inputs to let you tweak values for the demo.
 - These can be hooked up via events to your objects and shaders, to showcase behavior.
 
-![Picture](/images/blog/unity-0-demo-template-guis/10.jpg)
-![Picture](/images/blog/unity-0-demo-template-guis/11.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/8.jpg)
+![Picture](/images/blog/unity-0-demo-template-guis/9.jpg)
