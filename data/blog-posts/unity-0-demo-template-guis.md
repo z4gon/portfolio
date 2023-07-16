@@ -63,7 +63,7 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 
 ## Connecting to the CameraMovement
 
-- The `CameraMovement` classes will listen to events such as `OnLeftStick` or `OnMouseDelta`.
+- The `CameraMovement` classes will listen to events such as `OnPan` or `OnPointerDelta`.
 - And internally will use these inputs to move the camera accordingly.
 
 ![Picture](/images/blog/unity-0-demo-template-guis/6.jpg)
@@ -72,31 +72,30 @@ We will need to add `Unity UI` Game Objects to represent the analog sticks on th
 ### Input Signals
 
 ```cs
-private void OnLeftStick(InputValue value) => panAmount = value.Get<Vector2>();
-private void OnRightStick(InputValue value) => orbitAmount = value.Get<Vector2>();
+private void OnPan(InputValue value) => panAmount = value.Get<Vector2>();
+private void OnOrbit(InputValue value) => orbitAmount = value.Get<Vector2>();
 ```
 
 ```cs
-private void OnMouseDelta(InputValue value)
+private void OnPointerDelta(InputValue value)
 {
     orbitAmount = isOrbiting ? value.Get<Vector2>() : Vector2.zero;
     panAmount = isPanning ? value.Get<Vector2>() * -1.0f : Vector2.zero;
 }
 
-private void OnMouseRightClick(InputValue value)
+private void OnOrbitStart(InputValue value)
 {
     isOrbiting = value.isPressed;
 }
 
-private void OnMouseMiddleClick(InputValue value)
+private void OnPanStart(InputValue value)
 {
     isPanning = value.isPressed;
 }
 
-private void OnMouseScroll(InputValue value)
+private void OnZoom(InputValue value)
 {
     zoomAmount = value.Get<float>();
-}
 }
 ```
 
