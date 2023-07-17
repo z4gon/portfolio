@@ -30,7 +30,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 		videosNames = [],
 		youtubeVideoIds = [],
 		heroImageName,
-		primaryVideoName,
+		heroVideoName,
 		isPrivateRepo = false,
 		gitHubUrl = null,
 		links = [],
@@ -65,8 +65,8 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 			heroImageUrl: heroImageName
 				? `${resourcesFolder}/${heroImageName}`
 				: null,
-			primaryVideoUrl: primaryVideoName
-				? `${resourcesFolder}/${primaryVideoName}`
+			heroVideoUrl: heroVideoName
+				? `${resourcesFolder}/${heroVideoName}`
 				: null,
 			subtitle,
 			description,

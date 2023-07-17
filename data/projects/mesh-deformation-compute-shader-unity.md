@@ -1,6 +1,6 @@
 ---
 date: '2022-10-01T00:00:00.000Z'
-primaryVideoName: 1.mp4
+heroVideoName: 1.mp4
 title: Mesh deformation Compute Shader
 subtitle: Written in HLSL, for the Built-in RP in Unity
 implementationDetails:

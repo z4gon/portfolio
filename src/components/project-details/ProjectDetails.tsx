@@ -51,7 +51,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	googlePlayStoreUrl = '',
 	youtubeVideoIds = [],
 	heroImageUrl = null,
-	primaryVideoUrl = null,
+	heroVideoUrl = null,
 	technology = null,
 }) => {
 	const date = parseISO(dateString)
@@ -66,7 +66,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 				</Section>
 			)}
 
-			{primaryVideoUrl && (
+			{heroVideoUrl && (
 				<Section mobileFullWidth>
 					<video
 						autoPlay
@@ -74,9 +74,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 						muted
 						playsInline
 						controls
-						className={styles.primaryVideo}
+						className={styles.heroVideo}
 					>
-						<source src={primaryVideoUrl} type="video/mp4" />
+						<source src={heroVideoUrl} type="video/mp4" />
 					</video>
 				</Section>
 			)}

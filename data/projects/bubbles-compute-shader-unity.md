@@ -11,7 +11,7 @@ imagesNames:
   - 6.jpg
   - 5.jpg
   - 4.jpg
-primaryVideoName: 10.mp4
+heroVideoName: 10.mp4
 title: Bubbles Compute Shader
 subtitle: Written in HLSL, for the Built-in RP in Unity
 implementationDetails:
