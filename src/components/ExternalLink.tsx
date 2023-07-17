@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import styles from '../../styles/components/ExternalLink.module.sass'
+import styles from './ExternalLink.module.sass'
 
 interface ExternalLinkProps {
 	href: string

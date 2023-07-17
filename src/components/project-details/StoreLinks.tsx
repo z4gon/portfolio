@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/project-details/StoreLinks.module.sass'
+import styles from './StoreLinks.module.sass'
 
 interface StoreLinksProps {
 	appleAppStoreUrl: string
