@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import styles from '../../../styles/components/blog/PostsGrid.module.sass'
 import { BlogPostMinimal } from '../../models/BlogPost'
 import Button from '../Button'
 import BlogPostPreview from './PostPreview'
+import styles from './PostsGrid.module.sass'
 
 type Props = {
 	posts: BlogPostMinimal[]

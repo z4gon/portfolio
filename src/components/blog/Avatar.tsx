@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import styles from '../../../styles/components/blog/Avatar.module.sass'
+import styles from './Avatar.module.sass'
 
 type Props = {
 	name: string

@@ -1,5 +1,5 @@
 import { parseISO, format } from 'date-fns'
-import styles from '../../../styles/components/blog/DateFormatter.module.sass'
+import styles from './DateFormatter.module.sass'
 
 type Props = {
 	dateString: string

@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import styles from '../../../styles/components/blog/CoverImage.module.sass'
+import styles from './CoverImage.module.sass'
 
 type Props = {
 	title: string
