@@ -12,7 +12,7 @@ const Post = ({ post }: PostProps) => {
 		date,
 		author,
 		heroImageUrl,
-		coverVideoUrl = '',
+		heroVideoUrl = '',
 		heroImageSourceUrl,
 		markdownContent,
 	} = post
@@ -23,7 +23,7 @@ const Post = ({ post }: PostProps) => {
 				title={title}
 				heroImageUrl={heroImageUrl}
 				heroImageSourceUrl={heroImageSourceUrl}
-				coverVideoUrl={coverVideoUrl}
+				heroVideoUrl={heroVideoUrl}
 				date={date}
 				author={author}
 			/>

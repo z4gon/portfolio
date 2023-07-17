@@ -9,7 +9,7 @@ type Props = {
 	title: string
 	heroImageUrl: string
 	heroImageSourceUrl: string
-	coverVideoUrl?: string
+	heroVideoUrl?: string
 	date: string
 	author: Author
 }
@@ -18,7 +18,7 @@ const PostHeader = ({
 	title,
 	heroImageUrl,
 	heroImageSourceUrl,
-	coverVideoUrl = '',
+	heroVideoUrl = '',
 	date,
 	author,
 }: Props) => {
@@ -29,12 +29,12 @@ const PostHeader = ({
 				<Avatar name={author.name} pictureUrl={author.pictureUrl} />
 				<DateFormatter dateString={date} />
 			</div>
-			{coverVideoUrl && (
-				<video muted playsInline controls className={styles.coverVideo}>
-					<source src={coverVideoUrl} type="video/mp4" />
+			{heroVideoUrl && (
+				<video muted playsInline controls className={styles.heroVideo}>
+					<source src={heroVideoUrl} type="video/mp4" />
 				</video>
 			)}
-			{!coverVideoUrl && (
+			{!heroVideoUrl && (
 				<CoverImage
 					title={title}
 					imageUrl={heroImageUrl}

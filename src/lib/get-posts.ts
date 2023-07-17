@@ -21,7 +21,7 @@ const blogPostParser: ParserFunction<BlogPostMinimal | BlogPost> = (
 		excerpt,
 		heroImageUrl,
 		heroImageSourceUrl,
-		coverVideoUrl,
+		heroVideoUrl,
 	} = frontMatterData
 
 	const author = authors[authorId]
@@ -34,7 +34,7 @@ const blogPostParser: ParserFunction<BlogPostMinimal | BlogPost> = (
 		excerpt,
 		heroImageUrl,
 		heroImageSourceUrl,
-		coverVideoUrl: coverVideoUrl || '',
+		heroVideoUrl: heroVideoUrl || '',
 	}
 
 	if (full) {

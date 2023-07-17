@@ -7,7 +7,7 @@ export interface BlogPostMinimal {
 	title: string
 	excerpt: string
 	heroImageUrl: string
-	coverVideoUrl?: string
+	heroVideoUrl?: string
 	heroImageSourceUrl: string
 }
 
