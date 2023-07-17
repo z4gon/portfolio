@@ -2,24 +2,15 @@
 
 [Live Portfolio](https://z4gon.github.io)
 
-## Steps to add a new project entry
+## Steps to add a new project/blog entry
 
 - Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
-1. Create a new config file under `/data/projects/the-project-id.md`.
-1. Create an optimized `.gif` to use as metadata image in `/public/images/thumbnails/the-project-id.gif`.
-1. Create an optimized `.mp4` to use as the grid thumbnail in `/public/videos/thumbnails/the-project-id.mp4`.
-1. Put optimized `.jpg` images in `/public/images/project/the-project-id/`.
-1. Put optimized `.mp4` videos in `/public/videos/project/the-project-id/`.
-
-## Steps for adding a new blog post
-
-- Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
-
-1. Create a new blog post entry file under `/data/blog-posts/the-blog-post-slug-id.md`.
-2. Create an optimized `.jpg` to use as cover image in `/public/resources/blog/the-blog-post-slug-id/cover.jpg`.
-3. Put optimized `.jpg` and `.png` images in `/public/resources/blog/the-blog-post-slug-id/`.
-4. Put optimized `.mp4` videos in `/public/resources/blog/the-blog-post-slug-id/`.
+1. Create a new markdown file under `/data/(projects|blog)/the-project-id.md`
+2. For projects:
+   1. The metadata image will be `/public/resources/projects/the-project-id/thumbnail.gif`
+   1. The grid thumbnail video will be `/public/resources/projects/the-project-id/thumbnail.mp4`
+3. Put optimized `(.mp4|.jpg)` files in `/resources/(projects|blog)/the-project-id/`
 
 ## Development
 
