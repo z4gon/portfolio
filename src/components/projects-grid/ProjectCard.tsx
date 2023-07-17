@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import styles from '../../../styles/components/projects-grid/ProjectCard.module.sass'
 import { ProjectDataMinimal } from '../../models/ProjectData'
 import TagsList from '../TagsList'
+import styles from './ProjectCard.module.sass'
 
 const ProjectCard: React.FC<ProjectDataMinimal> = ({
 	id,
