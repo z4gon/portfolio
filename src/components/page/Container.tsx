@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import styles from '../../../styles/components/page/Container.module.sass'
+import styles from './Container.module.sass'
 
 interface ContainerProps extends PropsWithChildren {
 	className?: string

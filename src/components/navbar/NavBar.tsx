@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-import styles from '../../../styles/components/navbar/NavBar.module.sass'
 import IconLink from '../IconLink'
 import GitHubIcon from '../icons/GitHubIcon'
 import LinkedInIcon from '../icons/LinkedInIcon'
+import styles from './NavBar.module.sass'
 
 const icons = [
 	{
