@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 12: Nested Model Matrices'
 excerpt: 'Using the parent transform to calculate the child model matrix, taking into account the transformation applied to the parent.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/metal-render-pipeline-part-12-nested-model-matrices/1.mp4'
+coverVideoUrl: '/resources/blog/metal-render-pipeline-part-12-nested-model-matrices/1.mp4'
 date: '2022-12-30T00:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -83,4 +83,4 @@ class Transform {
 
 Now the cube moves along the parent quad.
 
-![Picture](/images/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg)

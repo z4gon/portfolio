@@ -1,7 +1,7 @@
 ---
 title: 'Metal Render Pipeline Part 4: Vertex Descriptors'
 excerpt: 'Describing the memory layout for the vertices in the vertex buffer, so the vertex shader can pick them up individually.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-4-vertex-descriptors/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-4-vertex-descriptors/cover.jpg'
 coverImageSourceUrl: 'https://unsplash.com/photos/COFXWa6LJdw'
 date: '2022-12-20T00:00:00.000Z'
 authorId: 'z4gon'
@@ -68,7 +68,7 @@ The Stride will always be greater than or equal to the size.
 
 It can be greater sometimes to favor memory alignment.
 
-![Picture](/images/blog/metal-render-pipeline-part-4-vertex-descriptors/1.png)
+![Picture](/resources/blog/metal-render-pipeline-part-4-vertex-descriptors/1.png)
 
 [Image Source 🔗](https://swiftunboxed.com/internals/size-stride-alignment/)
 
@@ -108,4 +108,4 @@ vertex FragmentData basic_vertex_shader(
 
 The end result hasn't changed.
 
-![Picture](/images/blog/metal-render-pipeline-part-4-vertex-descriptors/2.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-4-vertex-descriptors/2.jpg)

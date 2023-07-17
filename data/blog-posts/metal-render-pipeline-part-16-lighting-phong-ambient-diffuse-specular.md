@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 16: Lighting, Ambient, Diffuse and Specular'
 excerpt: 'Defining light objects with properties like position, color, intensity, range. Collecting and passing down to the GPU all light information. Defining standard surface values in the material, like color and glossiness. Accessing the material and lights information from the corresponding buffers in the lit fragment shader. Defining the structure of the mathematical model of Phong shading. Calculating ambient illumination using the color, intensity and attenuation. Calculating the diffuse using the dot product between the normals and the light direction. Calculating the specular by refracting the light direction along the normals, and doing the dot product by the direction to the camera.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/cover.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/1.mp4'
+coverVideoUrl: '/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/1.mp4'
 date: '2023-01-05T00:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -303,7 +303,7 @@ The **ambient** is calculated using the **ambient intensity** of the **light**, 
 float4 ambient = light.color * light.ambient * attenuation;
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/1.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/1.jpg)
 
 ### Diffuse
 
@@ -316,7 +316,7 @@ float nDotL = max(dot(normalize(IN.worldNormal), normalize(lightDir)), 0.0);
 float4 diffuse =  light.color * nDotL * light.intensity * attenuation;
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/2.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/2.jpg)
 
 ### Specular
 
@@ -336,7 +336,7 @@ vDotL = pow(vDotL, materialData.glossiness);
 float4 specular =  light.color * vDotL * light.intensity * attenuation;
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/3.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/3.jpg)
 
 ---
 
@@ -344,5 +344,5 @@ float4 specular =  light.color * vDotL * light.intensity * attenuation;
 
 The **3D model of Samus** is now correclty illuminated with **ambient**, **diffuse** and **specular** components.
 
-![Picture](/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/cover.jpg)
-![Picture](/images/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/5.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/5.jpg)

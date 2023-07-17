@@ -2,7 +2,7 @@
 date: '2022-09-01T00:00:00.000Z'
 priority: -3
 videosNames:
-  - thumbnail.mp4
+  - final.mp4
   - 13-finished.mp4
   - 12-spawn-debris-gravity.mp4
   - 11-debris-cell-fracture.mp4

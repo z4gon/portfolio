@@ -2,7 +2,7 @@
 date: '2022-09-01T00:00:00.000Z'
 priority: -2
 videosNames:
-  - thumbnail.mp4
+  - final.mp4
   - sparks.mp4
   - lighting.mp4
   - color.mp4
