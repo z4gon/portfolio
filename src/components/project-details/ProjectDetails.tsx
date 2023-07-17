@@ -1,5 +1,3 @@
-import { PropsWithChildren } from 'react'
-import classNames from 'classnames'
 import { parseISO, format } from 'date-fns'
 import { ProjectData } from '../../models/ProjectData'
 import ExternalLink from '../ExternalLink'
@@ -8,30 +6,9 @@ import MarkdownContent from '../markdown/MarkdownContent'
 import MultimediaSlider from '../multimedia-slider/MultimediaSlider'
 import TagsList, { TagRenderer } from '../TagsList'
 import styles from './ProjectDetails.module.sass'
+import ProjectDetailsSection from './ProjectDetailsSection'
 import StoreLinks from './StoreLinks'
 import YouTubeEmbed from './YouTubeEmbed'
-
-interface SectionProps extends PropsWithChildren {
-	title?: string
-	className?: string
-	mobileFullWidth?: boolean
-}
-
-const Section: React.FC<SectionProps> = ({
-	title,
-	children,
-	className,
-	mobileFullWidth,
-}) => (
-	<div
-		className={classNames(styles.sectionBody, className, {
-			[styles.mobileFullWidth]: mobileFullWidth,
-		})}
-	>
-		{title && <h2 className={styles.sectionTitle}>{title}</h2>}
-		{children}
-	</div>
-)
 
 interface ProjectDetailsProps extends ProjectData {}
 
@@ -60,14 +37,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
 			{heroImageUrl && (
-				<Section mobileFullWidth>
+				<ProjectDetailsSection mobileFullWidth>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img className={styles.heroImage} src={heroImageUrl} alt="Preview" />
-				</Section>
+				</ProjectDetailsSection>
 			)}
 
 			{heroVideoUrl && (
-				<Section mobileFullWidth>
+				<ProjectDetailsSection mobileFullWidth>
 					<video
 						autoPlay
 						loop
@@ -78,11 +55,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					>
 						<source src={heroVideoUrl} type="video/mp4" />
 					</video>
-				</Section>
+				</ProjectDetailsSection>
 			)}
 
 			<div className={styles.card}>
-				<Section className={styles.header}>
+				<ProjectDetailsSection className={styles.header}>
 					<div className={styles.information}>
 						<h2 className={styles.title}>
 							{technology && (
@@ -110,20 +87,20 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 							View on GitHub
 						</ExternalLink>
 					)}
-				</Section>
+				</ProjectDetailsSection>
 
 				{description.length > 0 && (
-					<Section className={styles.descriptionItems}>
+					<ProjectDetailsSection className={styles.descriptionItems}>
 						{description.map((paragraph, index) => (
 							<p className={styles.descriptionItem} key={index}>
 								{paragraph}
 							</p>
 						))}
-					</Section>
+					</ProjectDetailsSection>
 				)}
 
 				{implementationDetails.length > 0 && !markdownContent && (
-					<Section title="Implementation">
+					<ProjectDetailsSection title="Implementation">
 						<ul className={styles.implementationDetails}>
 							{implementationDetails.map((bullet, index) => (
 								<li className={styles.bullet} key={index}>
@@ -131,15 +108,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 								</li>
 							))}
 						</ul>
-					</Section>
-				)}
-
-				{markdownContent && (
-					<MarkdownContent markdownString={markdownContent} />
+					</ProjectDetailsSection>
 				)}
 
 				{links.length > 0 && (
-					<Section title="Links" className={styles.externalLinks}>
+					<ProjectDetailsSection title="Links" className={styles.externalLinks}>
 						<div className={styles.externalLinks}>
 							{links.map((link, index) => (
 								<ExternalLink key={index} href={link.href}>
@@ -147,27 +120,31 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 								</ExternalLink>
 							))}
 						</div>
-					</Section>
+					</ProjectDetailsSection>
 				)}
 
 				{(appleAppStoreUrl || googlePlayStoreUrl) && (
-					<Section title="Store Presence">
+					<ProjectDetailsSection title="Store Presence">
 						<StoreLinks
 							appleAppStoreUrl={appleAppStoreUrl}
 							googlePlayStoreUrl={googlePlayStoreUrl}
 						/>
-					</Section>
+					</ProjectDetailsSection>
+				)}
+
+				{markdownContent && (
+					<MarkdownContent markdownString={markdownContent} />
 				)}
 			</div>
 
 			{youtubeVideoIds.length > 0 && (
-				<Section mobileFullWidth>
+				<ProjectDetailsSection mobileFullWidth>
 					{youtubeVideoIds.map((videoId) => (
 						<div key={videoId} className={styles.youtubeVideos}>
 							<YouTubeEmbed videoId={videoId} title={title} />
 						</div>
 					))}
-				</Section>
+				</ProjectDetailsSection>
 			)}
 		</div>
 	)
