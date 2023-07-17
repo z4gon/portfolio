@@ -1,6 +1,6 @@
 import React, { HTMLProps, PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import styles from '../../styles/components/Button.module.sass'
+import styles from './Button.module.sass'
 
 interface ButtonProps extends HTMLProps<HTMLButtonElement> {
 	className?: string

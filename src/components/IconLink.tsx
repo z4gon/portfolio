@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/components/IconLink.module.sass'
+import styles from './IconLink.module.sass'
 
 interface IconLinkProps {
 	Icon: React.FC<{ className?: string }>
