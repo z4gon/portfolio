@@ -31,6 +31,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 				<Container wide={false}>
 					<Spacer amount="3.5em" />
 					<ProjectDetails {...project} />
+					<Spacer amount="3.5em" />
 				</Container>
 			</Page>
 		</WithFullScreenCarousel>
