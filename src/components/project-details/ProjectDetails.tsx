@@ -50,7 +50,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	appleAppStoreUrl = '',
 	googlePlayStoreUrl = '',
 	youtubeVideoIds = [],
-	primaryImageUrl = null,
+	heroImageUrl = null,
 	primaryVideoUrl = null,
 	technology = null,
 }) => {
@@ -59,14 +59,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 		<div className={styles.detailsView}>
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
-			{primaryImageUrl && (
+			{heroImageUrl && (
 				<Section mobileFullWidth>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
-					<img
-						className={styles.primaryImage}
-						src={primaryImageUrl}
-						alt="Preview"
-					/>
+					<img className={styles.heroImage} src={heroImageUrl} alt="Preview" />
 				</Section>
 			)}
 
