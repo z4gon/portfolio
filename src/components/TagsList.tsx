@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import styles from '../../styles/components/Tags.module.sass'
 import { Tag } from '../models/enums/Tag'
+import styles from './Tags.module.sass'
 
 interface TagsListProps {
 	tags: Tag[]

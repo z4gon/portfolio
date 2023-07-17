@@ -1,7 +1,7 @@
-import styles from '../../../styles/components/page/Footer.module.sass'
 import IconLink from '../IconLink'
 import GitHubIcon from '../icons/GitHubIcon'
 import LinkedInIcon from '../icons/LinkedInIcon'
+import styles from './Footer.module.sass'
 
 const icons = [
 	{

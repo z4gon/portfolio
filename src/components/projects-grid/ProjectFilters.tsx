@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { includes, filter } from 'lodash'
-import styles from '../../../styles/components/projects-grid/ProjectFilters.module.sass'
 import { ProjectDataMinimal } from '../../models/ProjectData'
 import SearchIcon from '../icons/SearchIcon'
+import styles from './ProjectFilters.module.sass'
 
 interface ProjectFiltersProps {
 	allProjects: ProjectDataMinimal[]

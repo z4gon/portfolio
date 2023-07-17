@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import styles from '../../../styles/components/multimedia-slider/GoFullScreenButton.module.sass'
 import { FullScreenCarouselContext } from '../../contexts/fullScreenCarousel'
+import styles from './GoFullScreenButton.module.sass'
 
 interface fullScreenCarouselButtonProps {
 	allImagesUrls: string[]

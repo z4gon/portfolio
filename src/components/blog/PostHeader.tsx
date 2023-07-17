@@ -1,8 +1,8 @@
-import styles from '../../../styles/components/blog/PostHeader.module.sass'
 import Author from '../../models/Author'
 import Avatar from './Avatar'
 import CoverImage from './CoverImage'
 import DateFormatter from './DateFormatter'
+import styles from './PostHeader.module.sass'
 import PostTitle from './PostTitle'
 
 type Props = {

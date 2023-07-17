@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import Link from 'next/link'
-import styles from '../../../styles/components/blog/PostPreview.module.sass'
 import Author from '../../models/Author'
 import Avatar from './Avatar'
 import DateFormatter from './DateFormatter'
+import styles from './PostPreview.module.sass'
 
 type Props = {
 	isHero?: boolean

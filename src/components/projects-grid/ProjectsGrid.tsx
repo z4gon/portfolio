@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import styles from '../../../styles/components/projects-grid/ProjectsGrid.module.sass'
 import { ProjectDataMinimal } from '../../models/ProjectData'
 import Button from '../Button'
 import ProjectCard from './ProjectCard'
+import styles from './ProjectsGrid.module.sass'
 
 interface ProjectsGridProps {
 	title?: string

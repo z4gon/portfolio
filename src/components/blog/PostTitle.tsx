@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import styles from '../../../styles/components/blog/PostTitle.module.sass'
+import styles from './PostTitle.module.sass'
 
 type Props = {
 	children?: ReactNode

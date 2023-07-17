@@ -7,7 +7,7 @@ import Spacer from '../src/components/Spacer'
 import { getAllProjects } from '../src/lib/get-projects'
 import { ProjectData } from '../src/models/ProjectData'
 
-import styles from '../styles/pages/404.module.sass'
+import styles from './404.module.sass'
 
 interface NotFoundProps {
 	projects: ProjectData[]

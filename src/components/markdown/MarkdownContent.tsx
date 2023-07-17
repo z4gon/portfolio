@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nightOwl as codeSnippetStyle } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
-import styles from '../../../styles/components/markdown/MarkdownContent.module.sass'
+import styles from './MarkdownContent.module.sass'
 
 // https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight
 const CodeSnippetRenderer = ({
