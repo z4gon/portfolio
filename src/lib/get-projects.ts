@@ -38,10 +38,9 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 		googlePlayStoreUrl = null,
 	} = frontMatterData
 
-	const thumbnailVideoUrl = `/videos/thumbnails/${id}.mp4`
-	const metaImageUrl = `/images/thumbnails/${id}.gif`
-	const imagesFolder = `/images/projects/${id}`
-	const videosFolder = `/videos/projects/${id}`
+	const resourcesFolder = `/resources/projects/${id}`
+	const thumbnailVideoUrl = `${resourcesFolder}/thumbnail.mp4`
+	const metaImageUrl = `${resourcesFolder}/thumbnail.gif`
 
 	let project = {
 		id,
@@ -60,14 +59,14 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 			...project,
 			// @ts-ignore
 			metaImageUrl: metaImageUrl,
-			imagesUrls: imagesNames.map((name) => `${imagesFolder}/${name}`),
-			videosUrls: videosNames.map((name) => `${videosFolder}/${name}`),
+			imagesUrls: imagesNames.map((name) => `${resourcesFolder}/${name}`),
+			videosUrls: videosNames.map((name) => `${resourcesFolder}/${name}`),
 			youtubeVideoIds,
 			primaryImageUrl: primaryImageName
-				? `${imagesFolder}/${primaryImageName}`
+				? `${resourcesFolder}/${primaryImageName}`
 				: null,
 			primaryVideoUrl: primaryVideoName
-				? `${videosFolder}/${primaryVideoName}`
+				? `${resourcesFolder}/${primaryVideoName}`
 				: null,
 			subtitle,
 			description,
