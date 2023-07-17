@@ -1,7 +1,7 @@
 import Author from '../../models/Author'
 import Avatar from './Avatar'
-import CoverImage from './CoverImage'
 import DateFormatter from './DateFormatter'
+import HeroImage from './HeroImage'
 import styles from './PostHeader.module.sass'
 import PostTitle from './PostTitle'
 
@@ -35,7 +35,7 @@ const PostHeader = ({
 				</video>
 			)}
 			{!heroVideoUrl && (
-				<CoverImage
+				<HeroImage
 					title={title}
 					imageUrl={heroImageUrl}
 					imageSourceUrl={heroImageSourceUrl}

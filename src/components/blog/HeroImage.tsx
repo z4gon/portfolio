@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import styles from './CoverImage.module.sass'
+import styles from './HeroImage.module.sass'
 
 type Props = {
 	title: string
@@ -8,7 +8,7 @@ type Props = {
 	className?: string
 }
 
-const CoverImage = ({
+const HeroImage = ({
 	title,
 	imageUrl,
 	imageSourceUrl = null,
@@ -28,4 +28,4 @@ const CoverImage = ({
 	)
 }
 
-export default CoverImage
+export default HeroImage
