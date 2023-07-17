@@ -1,24 +1,24 @@
 import Author from '../../models/Author'
 import Avatar from './Avatar'
-import CoverImage from './CoverImage'
 import DateFormatter from './DateFormatter'
+import HeroImage from './HeroImage'
 import styles from './PostHeader.module.sass'
 import PostTitle from './PostTitle'
 
 type Props = {
 	title: string
-	coverImageUrl: string
-	coverImageSourceUrl: string
-	coverVideoUrl?: string
+	heroImageUrl: string
+	heroImageSourceUrl: string
+	heroVideoUrl?: string
 	date: string
 	author: Author
 }
 
 const PostHeader = ({
 	title,
-	coverImageUrl,
-	coverImageSourceUrl,
-	coverVideoUrl = '',
+	heroImageUrl,
+	heroImageSourceUrl,
+	heroVideoUrl = '',
 	date,
 	author,
 }: Props) => {
@@ -29,16 +29,16 @@ const PostHeader = ({
 				<Avatar name={author.name} pictureUrl={author.pictureUrl} />
 				<DateFormatter dateString={date} />
 			</div>
-			{coverVideoUrl && (
-				<video muted playsInline controls className={styles.coverVideo}>
-					<source src={coverVideoUrl} type="video/mp4" />
+			{heroVideoUrl && (
+				<video muted playsInline controls className={styles.heroVideo}>
+					<source src={heroVideoUrl} type="video/mp4" />
 				</video>
 			)}
-			{!coverVideoUrl && (
-				<CoverImage
+			{!heroVideoUrl && (
+				<HeroImage
 					title={title}
-					imageUrl={coverImageUrl}
-					imageSourceUrl={coverImageSourceUrl}
+					imageUrl={heroImageUrl}
+					imageSourceUrl={heroImageSourceUrl}
 					className={styles.picture}
 				/>
 			)}

@@ -50,8 +50,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	appleAppStoreUrl = '',
 	googlePlayStoreUrl = '',
 	youtubeVideoIds = [],
-	primaryImageUrl = null,
-	primaryVideoUrl = null,
+	heroImageUrl = null,
+	heroVideoUrl = null,
 	technology = null,
 }) => {
 	const date = parseISO(dateString)
@@ -59,18 +59,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 		<div className={styles.detailsView}>
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
-			{primaryImageUrl && (
+			{heroImageUrl && (
 				<Section mobileFullWidth>
 					{/* eslint-disable-next-line @next/next/no-img-element */}
-					<img
-						className={styles.primaryImage}
-						src={primaryImageUrl}
-						alt="Preview"
-					/>
+					<img className={styles.heroImage} src={heroImageUrl} alt="Preview" />
 				</Section>
 			)}
 
-			{primaryVideoUrl && (
+			{heroVideoUrl && (
 				<Section mobileFullWidth>
 					<video
 						autoPlay
@@ -78,9 +74,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 						muted
 						playsInline
 						controls
-						className={styles.primaryVideo}
+						className={styles.heroVideo}
 					>
-						<source src={primaryVideoUrl} type="video/mp4" />
+						<source src={heroVideoUrl} type="video/mp4" />
 					</video>
 				</Section>
 			)}

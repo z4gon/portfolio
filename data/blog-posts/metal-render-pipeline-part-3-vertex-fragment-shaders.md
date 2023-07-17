@@ -1,8 +1,8 @@
 ---
 title: 'Metal Render Pipeline Part 3: Vertex and Fragment Shaders'
 excerpt: 'Modeling the vertices data as structs in the CPU side, then passing this data through a buffer to the GPU. Modeling the data structures for vertex and fragment functions in the GPU side. Accessing the interpolated values after rasterization to render corresponding colors for pixels on screen.'
-coverImageUrl: '/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg'
-coverImageSourceUrl: ''
+heroImageUrl: '/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg'
+heroImageSourceUrl: ''
 date: '2022-12-01T00:00:00.000Z'
 authorId: 'z4gon'
 ---

@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 13: Materials, Multiple Render Pipeline Descriptors and States'
 excerpt: 'Defining materials with different vertex, fragment functions and attributes. Maintaining multiple render pipeline descriptors and states to match the different materials being used. Passing values to the GPU from the materials. Setting the corresponding render pipeline state to the render command encoder, based on the current material attached to the mesh renderer.'
-coverImageUrl: '/resources/blog/metal-render-pipeline-part-13-materials-multiple-render-pipeline-descriptors-states/cover.jpg'
-coverImageSourceUrl: ''
-coverVideoUrl: ''
+heroImageUrl: '/resources/blog/metal-render-pipeline-part-13-materials-multiple-render-pipeline-descriptors-states/cover.jpg'
+heroImageSourceUrl: ''
+heroVideoUrl: ''
 date: '2023-01-01T00:00:00.000Z'
 authorId: 'z4gon'
 ---

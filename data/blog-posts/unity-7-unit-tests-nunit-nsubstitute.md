@@ -1,9 +1,9 @@
 ---
 title: 'Unity: Writing Unit Tests with NSubstitute'
 excerpt: 'Use the Unity Test Framework, NUnit and NSubstitute to test your game.'
-coverImageUrl: '/resources/blog/unity-7-unit-tests-nunit-nsubstitute/0.jpg'
-coverImageSourceUrl: ''
-# coverVideoUrl: '/resources/blog/unity-7-unit-tests-nunit-nsubstitute/1.mp4'
+heroImageUrl: '/resources/blog/unity-7-unit-tests-nunit-nsubstitute/0.jpg'
+heroImageSourceUrl: ''
+# heroVideoUrl: '/resources/blog/unity-7-unit-tests-nunit-nsubstitute/1.mp4'
 date: '2023-06-06T00:00:00.000Z'
 authorId: 'z4gon'
 ---

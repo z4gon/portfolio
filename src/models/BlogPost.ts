@@ -6,9 +6,9 @@ export interface BlogPostMinimal {
 	author: Author
 	title: string
 	excerpt: string
-	coverImageUrl: string
-	coverVideoUrl?: string
-	coverImageSourceUrl: string
+	heroImageUrl: string
+	heroVideoUrl?: string
+	heroImageSourceUrl: string
 }
 
 export interface BlogPost extends BlogPostMinimal {

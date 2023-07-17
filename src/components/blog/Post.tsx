@@ -11,9 +11,9 @@ const Post = ({ post }: PostProps) => {
 		title,
 		date,
 		author,
-		coverImageUrl,
-		coverVideoUrl = '',
-		coverImageSourceUrl,
+		heroImageUrl,
+		heroVideoUrl = '',
+		heroImageSourceUrl,
 		markdownContent,
 	} = post
 
@@ -21,9 +21,9 @@ const Post = ({ post }: PostProps) => {
 		<article>
 			<PostHeader
 				title={title}
-				coverImageUrl={coverImageUrl}
-				coverImageSourceUrl={coverImageSourceUrl}
-				coverVideoUrl={coverVideoUrl}
+				heroImageUrl={heroImageUrl}
+				heroImageSourceUrl={heroImageSourceUrl}
+				heroVideoUrl={heroVideoUrl}
 				date={date}
 				author={author}
 			/>

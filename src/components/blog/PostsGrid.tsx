@@ -36,7 +36,7 @@ const PostsGrid = ({ posts }: Props) => {
 					<BlogPostPreview
 						key={post.slug}
 						title={post.title}
-						coverImageUrl={post.coverImageUrl}
+						heroImageUrl={post.heroImageUrl}
 						date={post.date}
 						author={post.author}
 						slug={post.slug}

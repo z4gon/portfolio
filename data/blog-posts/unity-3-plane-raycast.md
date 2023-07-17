@@ -1,8 +1,8 @@
 ---
 title: 'Unity: Using Plane.Raycast'
 excerpt: 'Optimizing the Raycast to use pure geometry instead of doing Physics Queries to check collisions with colliders.'
-coverImageUrl: '/resources/blog/unity-3-plane-raycast/1.jpg'
-coverImageSourceUrl: ''
+heroImageUrl: '/resources/blog/unity-3-plane-raycast/1.jpg'
+heroImageSourceUrl: ''
 date: '2023-05-31T01:00:00.000Z'
 authorId: 'z4gon'
 ---

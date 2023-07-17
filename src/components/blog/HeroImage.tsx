@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import styles from './CoverImage.module.sass'
+import styles from './HeroImage.module.sass'
 
 type Props = {
 	title: string
@@ -8,14 +8,14 @@ type Props = {
 	className?: string
 }
 
-const CoverImage = ({
+const HeroImage = ({
 	title,
 	imageUrl,
 	imageSourceUrl = null,
 	className,
 }: Props) => {
 	return (
-		<div className={classNames(styles.coverImage, className)}>
+		<div className={classNames(styles.heroImage, className)}>
 			{/* eslint-disable-next-line @next/next/no-img-element */}
 			<img src={imageUrl} alt={`Cover Image for ${title}`} />
 
@@ -28,4 +28,4 @@ const CoverImage = ({
 	)
 }
 
-export default CoverImage
+export default HeroImage

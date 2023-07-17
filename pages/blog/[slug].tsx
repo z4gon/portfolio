@@ -15,14 +15,14 @@ export default function BlogPostPage({ post }: BlogPostProps) {
 		return null
 	}
 
-	const { slug, title, excerpt, coverImageUrl } = post
+	const { slug, title, excerpt, heroImageUrl } = post
 
 	return (
 		<Page>
 			<Metatags
 				title={title}
 				description={excerpt}
-				imageUrl={coverImageUrl}
+				imageUrl={heroImageUrl}
 				pathUrl={`/blog/${slug}`}
 			/>
 			<Container wide={false}>
