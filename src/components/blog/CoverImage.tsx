@@ -15,7 +15,7 @@ const CoverImage = ({
 	className,
 }: Props) => {
 	return (
-		<div className={classNames(styles.coverImage, className)}>
+		<div className={classNames(styles.heroImage, className)}>
 			{/* eslint-disable-next-line @next/next/no-img-element */}
 			<img src={imageUrl} alt={`Cover Image for ${title}`} />
 

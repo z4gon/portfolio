@@ -8,7 +8,7 @@ import styles from './PostPreview.module.sass'
 type Props = {
 	isHero?: boolean
 	title: string
-	coverImageUrl: string
+	heroImageUrl: string
 	date: string
 	excerpt: string
 	author: Author
@@ -18,7 +18,7 @@ type Props = {
 const PostPreview = ({
 	isHero = false,
 	title,
-	coverImageUrl,
+	heroImageUrl,
 	date,
 	// excerpt,
 	author,
@@ -35,7 +35,7 @@ const PostPreview = ({
 					<div
 						className={styles.image}
 						style={{
-							backgroundImage: `url(${coverImageUrl})`,
+							backgroundImage: `url(${heroImageUrl})`,
 						}}
 					/>
 				</Link>

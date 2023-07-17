@@ -7,8 +7,8 @@ import PostTitle from './PostTitle'
 
 type Props = {
 	title: string
-	coverImageUrl: string
-	coverImageSourceUrl: string
+	heroImageUrl: string
+	heroImageSourceUrl: string
 	coverVideoUrl?: string
 	date: string
 	author: Author
@@ -16,8 +16,8 @@ type Props = {
 
 const PostHeader = ({
 	title,
-	coverImageUrl,
-	coverImageSourceUrl,
+	heroImageUrl,
+	heroImageSourceUrl,
 	coverVideoUrl = '',
 	date,
 	author,
@@ -37,8 +37,8 @@ const PostHeader = ({
 			{!coverVideoUrl && (
 				<CoverImage
 					title={title}
-					imageUrl={coverImageUrl}
-					imageSourceUrl={coverImageSourceUrl}
+					imageUrl={heroImageUrl}
+					imageSourceUrl={heroImageSourceUrl}
 					className={styles.picture}
 				/>
 			)}

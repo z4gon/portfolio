@@ -19,8 +19,8 @@ const blogPostParser: ParserFunction<BlogPostMinimal | BlogPost> = (
 		date,
 		title,
 		excerpt,
-		coverImageUrl,
-		coverImageSourceUrl,
+		heroImageUrl,
+		heroImageSourceUrl,
 		coverVideoUrl,
 	} = frontMatterData
 
@@ -32,8 +32,8 @@ const blogPostParser: ParserFunction<BlogPostMinimal | BlogPost> = (
 		author,
 		title,
 		excerpt,
-		coverImageUrl,
-		coverImageSourceUrl,
+		heroImageUrl,
+		heroImageSourceUrl,
 		coverVideoUrl: coverVideoUrl || '',
 	}
 

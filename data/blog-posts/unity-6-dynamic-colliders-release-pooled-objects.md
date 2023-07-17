@@ -1,8 +1,8 @@
 ---
 title: 'Unity: Dynamic Colliders, Releasing Pooled Objects'
 excerpt: 'Dynamically resizing box collliders to enclose the scene, so when pooled objects reach the limits can be released.'
-coverImageUrl: '/resources/blog/unity-6-dynamic-colliders-release-pooled-objects/2.jpg'
-coverImageSourceUrl: ''
+heroImageUrl: '/resources/blog/unity-6-dynamic-colliders-release-pooled-objects/2.jpg'
+heroImageSourceUrl: ''
 coverVideoUrl: '/resources/blog/unity-6-dynamic-colliders-release-pooled-objects/1.mp4'
 date: '2023-06-03T01:00:00.000Z'
 authorId: 'z4gon'

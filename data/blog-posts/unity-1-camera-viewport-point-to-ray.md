@@ -1,8 +1,8 @@
 ---
 title: 'Unity: Using Camera ViewportPointToRay'
 excerpt: 'Raycasting from the Camera and finding the hit point in a plane, to determine a surface area corresponding to the proyected view from the Camera on the Plane.'
-coverImageUrl: '/resources/blog/unity-1-camera-viewport-point-to-ray/1.jpg'
-coverImageSourceUrl: ''
+heroImageUrl: '/resources/blog/unity-1-camera-viewport-point-to-ray/1.jpg'
+heroImageSourceUrl: ''
 coverVideoUrl: '/resources/blog/unity-1-camera-viewport-point-to-ray/1.mp4'
 date: '2023-05-29T00:00:00.000Z'
 authorId: 'z4gon'
