@@ -6,7 +6,6 @@ import PageTitle from '../../src/components/page/PageTitle'
 import Spacer from '../../src/components/Spacer'
 import { getAllPosts } from '../../src/lib/get-posts'
 import { BlogPostMinimal } from '../../src/models/BlogPost'
-import styles from '../../styles/pages/Blog.module.sass'
 
 interface BlogProps {
 	allPosts: BlogPostMinimal[]
@@ -14,7 +13,7 @@ interface BlogProps {
 
 export default function Blog({ allPosts }: BlogProps) {
 	return (
-		<Page className={styles.blog}>
+		<Page>
 			<Metatags
 				title="Gonzalo Cumini | Blog"
 				description="Gonzalo Cumini | Blog"
