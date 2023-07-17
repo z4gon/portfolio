@@ -1,7 +1,7 @@
 ---
 title: 'Metal Render Pipeline Part 8: Scene Graph'
 excerpt: 'Implementing a Scene Object and a Scene Manager, to be able to render many objects and decouple the state out of the Game View Renderer.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-8-scene-graph/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-8-scene-graph/cover.jpg'
 coverImageSourceUrl: ''
 date: '2022-12-28T00:00:00.000Z'
 authorId: 'z4gon'
@@ -170,4 +170,4 @@ class Engine {
 
 Now the scene contains lots of game objects and all **update** and **render** accordingly.
 
-![Picture](/images/blog/metal-render-pipeline-part-8-scene-graph/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-8-scene-graph/cover.jpg)

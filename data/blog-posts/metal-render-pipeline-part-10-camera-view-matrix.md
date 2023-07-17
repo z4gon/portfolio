@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 10: Camera and View Matrix'
 excerpt: 'Implementing a Camera Component to calculate a view matrix. Updating the view matrix and passing it down to the GPU. Using the view matrix during the vertex shader function to transform the vertex coordinates to view space.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-10-camera-view-matrix/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-10-camera-view-matrix/cover.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/metal-render-pipeline-part-10-camera-view-matrix/1.mp4'
+coverVideoUrl: '/resources/blog/metal-render-pipeline-part-10-camera-view-matrix/1.mp4'
 date: '2022-12-28T02:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -167,4 +167,4 @@ vertex FragmentData basic_vertex_shader(
 
 Pressing the keyboard arrows now moves the camera along the x and y coordinates.
 
-![Picture](/images/blog/metal-render-pipeline-part-10-camera-view-matrix/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-10-camera-view-matrix/cover.jpg)

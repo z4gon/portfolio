@@ -1,7 +1,7 @@
 ---
 title: 'Metal Render Pipeline Part 7: 3D Affine Transformation Matrices'
 excerpt: 'Implementing transformation matrices to convert vertex positions from object space to world space, using the model matrix for transformations. Passing the matrix to the CPU using a buffer, and then doing the matrix multiplication for each vertex in the vertex shader function'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-7-3d-affine-transformation-matrices/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-7-3d-affine-transformation-matrices/cover.jpg'
 coverImageSourceUrl: ''
 date: '2022-12-27T00:00:00.000Z'
 authorId: 'z4gon'
@@ -213,4 +213,4 @@ vertex FragmentData basic_vertex_shader(
 
 Now the mesh translates, scales and rotates.
 
-![Picture](/images/blog/metal-render-pipeline-part-7-3d-affine-transformation-matrices/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-7-3d-affine-transformation-matrices/cover.jpg)

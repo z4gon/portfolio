@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 11: 3D Perspective Projection Matrix'
 excerpt: 'Setting up the the 3D perspective projection matrix to transform view space coordinates in homogeneous clip space coordinates. Later on the GPU takes in these and calculates the Normalized Device Coordinates, to finally calculate the actual Screen Space coordinates. Configuring the Depth Stencil in Metal, to perform Depth Testing and clipping based on depth, using the Depth Texture. Multiplying the projection matrix by the view space coordinates vector during the Vertex Shader Function stage.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/cover.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/1.mp4'
+coverVideoUrl: '/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/1.mp4'
 date: '2022-12-29T00:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -47,7 +47,7 @@ authorId: 'z4gon'
 
 Projecting 3D objects onto a flat surface means connecting each vertex to the position of the camera, and pin pointing where that line crosses the near clip plane.
 
-![Picture](/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/1.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/1.jpg)
 
 [Image Source 🔗](https://glumpy.readthedocs.io/en/latest/tutorial/cube-ugly.html)
 
@@ -57,7 +57,7 @@ The near and far clip planes determine what gets rendered in terms of depth.
 
 The field of view means how much stuff gets into the projection in terms of bounds vertically and horizontally.
 
-![Picture](/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/2.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/2.jpg)
 
 [Image Source 🔗](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)
 
@@ -69,7 +69,7 @@ Metal will then translate these to Normalized Device Coordinates ranging from (-
 
 Finally this will be translated to screen space as x, y coordinates in pixels.
 
-![Picture](/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/3.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/3.jpg)
 
 [Image Source 🔗](https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl)
 
@@ -349,4 +349,4 @@ vertex FragmentData basic_vertex_shader(
 
 Now the cube appears projected correctly in the screen space plane.
 
-![Picture](/images/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-11-3d-perspective-projection-matrix/cover.jpg)

@@ -17,9 +17,9 @@
 - Reference [statically generated blog by Next.js](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
 1. Create a new blog post entry file under `/data/blog-posts/the-blog-post-slug-id.md`.
-2. Create an optimized `.jpg` to use as cover image in `/public/images/blog/the-blog-post-slug-id/cover.jpg`.
-3. Put optimized `.jpg` and `.png` images in `/public/images/blog/the-blog-post-slug-id/`.
-4. Put optimized `.mp4` videos in `/public/videos/blog/the-blog-post-slug-id/`.
+2. Create an optimized `.jpg` to use as cover image in `/public/resources/blog/the-blog-post-slug-id/cover.jpg`.
+3. Put optimized `.jpg` and `.png` images in `/public/resources/blog/the-blog-post-slug-id/`.
+4. Put optimized `.mp4` videos in `/public/resources/blog/the-blog-post-slug-id/`.
 
 ## Development
 

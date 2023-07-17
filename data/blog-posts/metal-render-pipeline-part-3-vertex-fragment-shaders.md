@@ -1,7 +1,7 @@
 ---
 title: 'Metal Render Pipeline Part 3: Vertex and Fragment Shaders'
 excerpt: 'Modeling the vertices data as structs in the CPU side, then passing this data through a buffer to the GPU. Modeling the data structures for vertex and fragment functions in the GPU side. Accessing the interpolated values after rasterization to render corresponding colors for pixels on screen.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg'
 coverImageSourceUrl: ''
 date: '2022-12-01T00:00:00.000Z'
 authorId: 'z4gon'
@@ -38,7 +38,7 @@ struct Vertex {
 }
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/2.png)
+![Picture](/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/2.png)
 
 [Image Source 🔗](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
@@ -74,7 +74,7 @@ The attribute `[[ position ]]` prevents the values interpolation from happening 
 
 The interpolation happens at the **Rasterizer** stage.
 
-![Picture](/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/3.png)
+![Picture](/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/3.png)
 
 [Image Source 🔗](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
@@ -110,7 +110,7 @@ vertex FragmentData basic_vertex_shader(
 }
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/4.png)
+![Picture](/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/4.png)
 
 [Image Source 🔗](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
@@ -129,7 +129,7 @@ fragment half4 basic_fragment_shader(FragmentData IN [[ stage_in ]]){
 }
 ```
 
-![Picture](/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/5.png)
+![Picture](/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/5.png)
 
 [Image Source 🔗](https://developer.apple.com/documentation/metal/using_a_render_pipeline_to_render_primitives)
 
@@ -137,4 +137,4 @@ fragment half4 basic_fragment_shader(FragmentData IN [[ stage_in ]]){
 
 ## Result
 
-![Picture](/images/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-3-vertex-fragment-shaders/cover.jpg)

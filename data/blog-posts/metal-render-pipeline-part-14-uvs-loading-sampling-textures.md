@@ -1,9 +1,9 @@
 ---
 title: 'Metal Render Pipeline Part 14: UVs, Loading and Sampling Textures'
 excerpt: 'Defining the UV coordinates in the vertices of the mesh, and also in the GPU structs used in the Vertex and Fragment functions. Initializing MTLTextures and MTLSamplerStates to handle texture sampling. Passing textures and samplers to the GPU from the material. Accessing the texture and sampler in the corresponding memory blocks in the GPU and sampling the texels using the UV coordinates in the fragment shader function.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/cover.jpg'
 coverImageSourceUrl: ''
-coverVideoUrl: '/videos/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/1.mp4'
+coverVideoUrl: '/resources/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/1.mp4'
 date: '2023-01-01T01:00:00.000Z'
 authorId: 'z4gon'
 ---
@@ -157,7 +157,7 @@ fragment half4 uvs_fragment_shader(
 
 ### UVs Gradient
 
-![Picture](/images/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/1.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/1.jpg)
 
 ---
 
@@ -279,4 +279,4 @@ fragment half4 texture_sample_fragment_shader(
 
 The Quad now renders the texture using the UV texture coordinates.
 
-![Picture](/images/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-14-uvs-loading-sampling-textures/cover.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 'Metal Render Pipeline Part 2: Rendering a primitive Triangle'
 excerpt: 'Rendering a primitive triangle using the GPU, a vertices array, and a memory buffer. Writing a vertex function to access the individual vertices and passing them down to the fragment stage shader.'
-coverImageUrl: '/images/blog/metal-render-pipeline-part-2-rendering-primitive-triangle/cover.jpg'
+coverImageUrl: '/resources/blog/metal-render-pipeline-part-2-rendering-primitive-triangle/cover.jpg'
 coverImageSourceUrl: ''
 date: '2022-11-30T00:00:00.000Z'
 authorId: 'z4gon'
@@ -102,4 +102,4 @@ renderCommandEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStar
 
 ## Result
 
-![Picture](/images/blog/metal-render-pipeline-part-2-rendering-primitive-triangle/cover.jpg)
+![Picture](/resources/blog/metal-render-pipeline-part-2-rendering-primitive-triangle/cover.jpg)
