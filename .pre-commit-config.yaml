@@ -14,8 +14,6 @@ repos:
         language: node
         files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
         types: [file]
-        args:
-          - --fix
         entry: bash -c "npm run lint -- --fix"
         additional_dependencies:
           - next@14.0.1
