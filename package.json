@@ -5,8 +5,6 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"export": "next export -o out",
-		"start": "next start",
 		"lint": "next lint"
 	},
 	"dependencies": {
@@ -14,7 +12,7 @@
 		"date-fns": "2.29.3",
 		"gray-matter": "4.0.3",
 		"lodash": "4.17.21",
-		"next": "13.1.6",
+		"next": "14.0.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-lite-youtube-embed": "2.3.52",
@@ -25,13 +23,13 @@
 		"slick-carousel": "1.8.1"
 	},
 	"devDependencies": {
-		"@types/node": "18.14.0",
-		"@types/react": "18.0.28",
+		"@types/node": "20.8.10",
+		"@types/react": "18.2.34",
+		"@types/react-dom": "18.2.14",
 		"@types/react-slick": "0.23.10",
-		"eslint": "8.34.0",
-		"eslint-config-next": "13.1.6",
-		"eslint-plugin-unused-imports": "2.0.0",
-		"typescript": "4.9.5",
-		"yaml": "2.2.1"
+		"eslint": "8.52.0",
+		"eslint-config-next": "14.0.1",
+		"eslint-plugin-unused-imports": "3.0.0",
+		"typescript": "4.9.5"
 	}
 }

@@ -1,5 +1,5 @@
 default_language_version:
-  node: 16.0.0
+  node: 20.9.0
 repos:
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: 'v2.7.1' # Use the sha or tag you want to point at
@@ -14,11 +14,12 @@ repos:
         language: node
         files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
         types: [file]
-        args:
-          - --fix
         entry: bash -c "npm run lint -- --fix"
         additional_dependencies:
-          - next@13.1.6
-          - eslint@8.34.0
-          - eslint-config-next@13.1.6
-          - eslint-plugin-unused-imports@2.0.0
+          - next@14.0.1
+          - eslint@8.52.0
+          - eslint-config-next@14.0.1
+          - eslint-plugin-unused-imports@3.0.0
+          - typescript@4.9.5
+          - '@types/node@20.8.10'
+          - '@types/react@18.2.34'
