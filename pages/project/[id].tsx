@@ -29,7 +29,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 					pathUrl={`/project/${id}`}
 				/>
 				<Container wide={false}>
-					<Spacer amount="3.5em" />
 					<ProjectDetails {...project} />
 					<Spacer amount="3.5em" />
 				</Container>

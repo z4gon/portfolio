@@ -46,6 +46,7 @@ tags:
 links:
   - href: https://nochegames.com
     text: Noche Games Website
+itchioUrl: https://nochegames.itch.io/star-cat
 appleAppStoreUrl: https://apps.apple.com/us/app/the-star-cat/id1544668944
 googlePlayStoreUrl: https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat
 isPrivateRepo: true

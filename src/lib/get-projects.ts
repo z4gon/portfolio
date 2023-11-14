@@ -36,6 +36,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 		links = [],
 		appleAppStoreUrl = null,
 		googlePlayStoreUrl = null,
+		itchioUrl = null,
 	} = frontMatterData
 
 	const resourcesFolder = `/resources/projects/${id}`
@@ -77,6 +78,7 @@ const projectParser: ParserFunction<ProjectDataMinimal | ProjectData> = (
 			links,
 			appleAppStoreUrl,
 			googlePlayStoreUrl,
+			itchioUrl,
 			markdownContent,
 		}
 	}

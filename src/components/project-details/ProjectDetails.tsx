@@ -26,6 +26,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	gitHubUrl = '',
 	appleAppStoreUrl = '',
 	googlePlayStoreUrl = '',
+	itchioUrl = '',
 	youtubeVideoIds = [],
 	heroImageUrl = null,
 	heroVideoUrl = null,
@@ -34,6 +35,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	const date = parseISO(dateString)
 	return (
 		<div className={styles.detailsView}>
+			{youtubeVideoIds.length > 0 && (
+				<ProjectDetailsSection mobileFullWidth>
+					{youtubeVideoIds.map((videoId) => (
+						<div key={videoId} className={styles.youtubeVideos}>
+							<YouTubeEmbed videoId={videoId} title={title} />
+						</div>
+					))}
+				</ProjectDetailsSection>
+			)}
+
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
 			{heroImageUrl && (
@@ -89,6 +100,28 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					)}
 				</ProjectDetailsSection>
 
+				{(appleAppStoreUrl || googlePlayStoreUrl || itchioUrl) && (
+					<ProjectDetailsSection>
+						<StoreLinks
+							appleAppStoreUrl={appleAppStoreUrl}
+							googlePlayStoreUrl={googlePlayStoreUrl}
+							itchioUrl={itchioUrl}
+						/>
+					</ProjectDetailsSection>
+				)}
+
+				{links.length > 0 && (
+					<ProjectDetailsSection className={styles.externalLinks}>
+						<div className={styles.externalLinks}>
+							{links.map((link, index) => (
+								<ExternalLink key={index} href={link.href}>
+									{link.text}
+								</ExternalLink>
+							))}
+						</div>
+					</ProjectDetailsSection>
+				)}
+
 				{description.length > 0 && (
 					<ProjectDetailsSection className={styles.descriptionItems}>
 						{description.map((paragraph, index) => (
@@ -111,41 +144,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					</ProjectDetailsSection>
 				)}
 
-				{links.length > 0 && (
-					<ProjectDetailsSection title="Links" className={styles.externalLinks}>
-						<div className={styles.externalLinks}>
-							{links.map((link, index) => (
-								<ExternalLink key={index} href={link.href}>
-									{link.text}
-								</ExternalLink>
-							))}
-						</div>
-					</ProjectDetailsSection>
-				)}
-
-				{(appleAppStoreUrl || googlePlayStoreUrl) && (
-					<ProjectDetailsSection title="Store Presence">
-						<StoreLinks
-							appleAppStoreUrl={appleAppStoreUrl}
-							googlePlayStoreUrl={googlePlayStoreUrl}
-						/>
-					</ProjectDetailsSection>
-				)}
-
 				{markdownContent && (
 					<MarkdownContent markdownString={markdownContent} />
 				)}
 			</div>
-
-			{youtubeVideoIds.length > 0 && (
-				<ProjectDetailsSection mobileFullWidth>
-					{youtubeVideoIds.map((videoId) => (
-						<div key={videoId} className={styles.youtubeVideos}>
-							<YouTubeEmbed videoId={videoId} title={title} />
-						</div>
-					))}
-				</ProjectDetailsSection>
-			)}
 		</div>
 	)
 }

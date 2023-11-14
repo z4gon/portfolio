@@ -11,12 +11,12 @@ const GoogleAnalytics: React.FC<{}> = () => {
 			/>
 			<Script id="google-analytics" strategy="afterInteractive">
 				{`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
 
-                        gtag('config', 'G-NPBT98N1FD');
-                    `}
+					gtag('config', 'G-NPBT98N1FD');
+				`}
 			</Script>
 		</>
 	)

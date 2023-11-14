@@ -4,12 +4,18 @@ import { Technology } from './enums/Technology'
 import { LinkData } from './LinkData'
 
 export interface ProjectDataMinimal {
+	// id
 	id: string
-	priority: number
-	date: string
 	aliases?: string[]
+
+	priority: number
+
 	title: string
+	date: string
+
 	thumbnailUrl: string
+
+	// metadata
 	tags: Tag[]
 	technology?: Technology
 	category: Category
@@ -17,17 +23,29 @@ export interface ProjectDataMinimal {
 
 export interface ProjectData extends ProjectDataMinimal {
 	metaImageUrl: string
-	imagesUrls?: string[]
-	videosUrls?: string[]
-	youtubeVideoIds?: string[]
+
+	// hero
 	heroImageUrl?: string
 	heroVideoUrl?: string
+
+	// carousel
+	imagesUrls?: string[]
+	videosUrls?: string[]
+
 	subtitle: string
 	description?: string[]
 	implementationDetails: string[]
+
 	links?: LinkData[]
 	gitHubUrl?: string
+
+	// store links
 	appleAppStoreUrl?: string
 	googlePlayStoreUrl?: string
+	itchioUrl?: string
+
 	markdownContent?: string
+
+	// yt
+	youtubeVideoIds?: string[]
 }
