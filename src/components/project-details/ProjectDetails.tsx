@@ -122,7 +122,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					</ProjectDetailsSection>
 				)}
 
-				{description.length > 0 && (
+				{description && description.length > 0 && (
 					<ProjectDetailsSection className={styles.descriptionItems}>
 						{description.map((paragraph, index) => (
 							<p className={styles.descriptionItem} key={index}>
@@ -132,17 +132,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					</ProjectDetailsSection>
 				)}
 
-				{implementationDetails.length > 0 && !markdownContent && (
-					<ProjectDetailsSection title="Implementation">
-						<ul className={styles.implementationDetails}>
-							{implementationDetails.map((bullet, index) => (
-								<li className={styles.bullet} key={index}>
-									{bullet}
-								</li>
-							))}
-						</ul>
-					</ProjectDetailsSection>
-				)}
+				{implementationDetails &&
+					implementationDetails.length > 0 &&
+					!markdownContent && (
+						<ProjectDetailsSection title="Implementation">
+							<ul className={styles.implementationDetails}>
+								{implementationDetails.map((bullet, index) => (
+									<li className={styles.bullet} key={index}>
+										{bullet}
+									</li>
+								))}
+							</ul>
+						</ProjectDetailsSection>
+					)}
 
 				{markdownContent && (
 					<MarkdownContent markdownString={markdownContent} />

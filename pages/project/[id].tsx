@@ -24,7 +24,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 			<Page>
 				<Metatags
 					title={`${title} | Project`}
-					description={description.join('') || subtitle}
+					description={(description && description.join('')) || subtitle}
 					imageUrl={metaImageUrl}
 					pathUrl={`/project/${id}`}
 				/>
