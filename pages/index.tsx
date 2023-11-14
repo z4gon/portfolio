@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import { filter, orderBy } from 'lodash'
 import Metatags from '../src/components/Metatags'
 import Container from '../src/components/page/Container'
 import Page from '../src/components/page/Page'
-import PageTitle from '../src/components/page/PageTitle'
-import ProjectFilters from '../src/components/projects-grid/ProjectFilters'
 import ProjectsGrid from '../src/components/projects-grid/ProjectsGrid'
 import Spacer from '../src/components/Spacer'
 import { getAllProjects } from '../src/lib/get-projects'
@@ -18,35 +15,21 @@ interface HomeProps {
 const PAGE_SIZE = 8
 
 export default function Home({ projects }: HomeProps) {
-	const [filteredProjects, setFilteredProjects] = useState(projects)
-
 	const categories = [
-		Category.VisualEffects,
-		Category.Shaders,
-		Category.ComputeShaders,
-		Category._3DModelingAnimation,
-		Category.PublishedGames,
 		Category.GameDev,
+		Category.Shaders,
+		Category.VisualEffects,
+		Category.ComputeShaders,
 	]
-
-	const onFiltersChanged = (filterResults: ProjectDataMinimal[]) =>
-		setFilteredProjects(filterResults)
 
 	return (
 		<Page>
 			<Metatags />
 			<Container>
 				<Spacer amount="2em" />
-				<PageTitle>Portfolio</PageTitle>
-				<Spacer amount="2em" />
-				<ProjectFilters
-					allProjects={projects}
-					onFiltersChanged={onFiltersChanged}
-				/>
-				<Spacer amount="1em" />
 				{categories.map((category) => {
 					let categoryProjects = filter(
-						filteredProjects,
+						projects,
 						(x) => x.category === category
 					)
 
@@ -55,7 +38,7 @@ export default function Home({ projects }: HomeProps) {
 					return (
 						<ProjectsGrid
 							key={category}
-							title={category.toString()}
+							// title={category.toString()}
 							projects={categoryProjects}
 							pageSize={PAGE_SIZE}
 						/>

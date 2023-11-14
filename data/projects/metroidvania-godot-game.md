@@ -12,7 +12,7 @@ videosNames:
   - 2.mp4
 youtubeVideoIds:
   - P3s1gVc3-zM
-title: Metroidvania Godot Game
+title: Metroidvania Game in Godot Engine
 subtitle: Made with Godot Engine 3.5.1
 description:
   - Prototype to learn the basics of the Godot Engine, Scene Graph, Resources,
