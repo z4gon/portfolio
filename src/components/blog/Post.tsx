@@ -15,12 +15,14 @@ const Post = ({ post }: PostProps) => {
 		heroVideoUrl = '',
 		heroImageSourceUrl,
 		markdownContent,
+		excerpt,
 	} = post
 
 	return (
 		<article>
 			<PostHeader
 				title={title}
+				excerpt={excerpt}
 				heroImageUrl={heroImageUrl}
 				heroImageSourceUrl={heroImageSourceUrl}
 				heroVideoUrl={heroVideoUrl}

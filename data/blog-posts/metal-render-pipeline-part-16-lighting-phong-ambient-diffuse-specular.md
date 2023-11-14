@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 16: Lighting, Ambient, Diffuse and Specular'
+title: 'Lighting, Ambient, Diffuse and Specular (Metal Part 16)'
 excerpt: 'Defining light objects with properties like position, color, intensity, range. Collecting and passing down to the GPU all light information. Defining standard surface values in the material, like color and glossiness. Accessing the material and lights information from the corresponding buffers in the lit fragment shader. Defining the structure of the mathematical model of Phong shading. Calculating ambient illumination using the color, intensity and attenuation. Calculating the diffuse using the dot product between the normals and the light direction. Calculating the specular by refracting the light direction along the normals, and doing the dot product by the direction to the camera.'
 heroImageUrl: '/resources/blog/metal-render-pipeline-part-16-lighting-phong-ambient-diffuse-specular/cover.jpg'
 heroImageSourceUrl: ''

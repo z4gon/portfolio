@@ -26,6 +26,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	gitHubUrl = '',
 	appleAppStoreUrl = '',
 	googlePlayStoreUrl = '',
+	itchioUrl = '',
 	youtubeVideoIds = [],
 	heroImageUrl = null,
 	heroVideoUrl = null,
@@ -34,6 +35,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 	const date = parseISO(dateString)
 	return (
 		<div className={styles.detailsView}>
+			{youtubeVideoIds.length > 0 && (
+				<ProjectDetailsSection mobileFullWidth>
+					{youtubeVideoIds.map((videoId) => (
+						<div key={videoId} className={styles.youtubeVideos}>
+							<YouTubeEmbed videoId={videoId} title={title} />
+						</div>
+					))}
+				</ProjectDetailsSection>
+			)}
+
 			<MultimediaSlider imagesUrls={imagesUrls} videosUrls={videosUrls} />
 
 			{heroImageUrl && (
@@ -89,30 +100,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					)}
 				</ProjectDetailsSection>
 
-				{description.length > 0 && (
-					<ProjectDetailsSection className={styles.descriptionItems}>
-						{description.map((paragraph, index) => (
-							<p className={styles.descriptionItem} key={index}>
-								{paragraph}
-							</p>
-						))}
-					</ProjectDetailsSection>
-				)}
-
-				{implementationDetails.length > 0 && !markdownContent && (
-					<ProjectDetailsSection title="Implementation">
-						<ul className={styles.implementationDetails}>
-							{implementationDetails.map((bullet, index) => (
-								<li className={styles.bullet} key={index}>
-									{bullet}
-								</li>
-							))}
-						</ul>
+				{(appleAppStoreUrl || googlePlayStoreUrl || itchioUrl) && (
+					<ProjectDetailsSection>
+						<StoreLinks
+							appleAppStoreUrl={appleAppStoreUrl}
+							googlePlayStoreUrl={googlePlayStoreUrl}
+							itchioUrl={itchioUrl}
+						/>
 					</ProjectDetailsSection>
 				)}
 
 				{links.length > 0 && (
-					<ProjectDetailsSection title="Links" className={styles.externalLinks}>
+					<ProjectDetailsSection className={styles.externalLinks}>
 						<div className={styles.externalLinks}>
 							{links.map((link, index) => (
 								<ExternalLink key={index} href={link.href}>
@@ -123,29 +122,34 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 					</ProjectDetailsSection>
 				)}
 
-				{(appleAppStoreUrl || googlePlayStoreUrl) && (
-					<ProjectDetailsSection title="Store Presence">
-						<StoreLinks
-							appleAppStoreUrl={appleAppStoreUrl}
-							googlePlayStoreUrl={googlePlayStoreUrl}
-						/>
+				{description && description.length > 0 && (
+					<ProjectDetailsSection className={styles.descriptionItems}>
+						{description.map((paragraph, index) => (
+							<p className={styles.descriptionItem} key={index}>
+								{paragraph}
+							</p>
+						))}
 					</ProjectDetailsSection>
 				)}
+
+				{implementationDetails &&
+					implementationDetails.length > 0 &&
+					!markdownContent && (
+						<ProjectDetailsSection title="Implementation">
+							<ul className={styles.implementationDetails}>
+								{implementationDetails.map((bullet, index) => (
+									<li className={styles.bullet} key={index}>
+										{bullet}
+									</li>
+								))}
+							</ul>
+						</ProjectDetailsSection>
+					)}
 
 				{markdownContent && (
 					<MarkdownContent markdownString={markdownContent} />
 				)}
 			</div>
-
-			{youtubeVideoIds.length > 0 && (
-				<ProjectDetailsSection mobileFullWidth>
-					{youtubeVideoIds.map((videoId) => (
-						<div key={videoId} className={styles.youtubeVideos}>
-							<YouTubeEmbed videoId={videoId} title={title} />
-						</div>
-					))}
-				</ProjectDetailsSection>
-			)}
 		</div>
 	)
 }

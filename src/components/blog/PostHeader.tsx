@@ -12,6 +12,7 @@ type Props = {
 	heroVideoUrl?: string
 	date: string
 	author: Author
+	excerpt: string
 }
 
 const PostHeader = ({
@@ -21,6 +22,7 @@ const PostHeader = ({
 	heroVideoUrl = '',
 	date,
 	author,
+	excerpt,
 }: Props) => {
 	return (
 		<div className={styles.postHeader}>
@@ -29,6 +31,7 @@ const PostHeader = ({
 				<Avatar name={author.name} pictureUrl={author.pictureUrl} />
 				<DateFormatter dateString={date} />
 			</div>
+			{excerpt && <p className={styles.excerpt}>{excerpt}</p>}
 			{heroVideoUrl && (
 				<video muted playsInline controls className={styles.heroVideo}>
 					<source src={heroVideoUrl} type="video/mp4" />

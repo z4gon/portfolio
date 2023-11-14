@@ -1,5 +1,6 @@
 ---
 date: '2022-11-01T00:00:00.000Z'
+priority: -4
 imagesNames:
   - 34.jpg
   - 33.jpg
@@ -21,7 +22,7 @@ imagesNames:
   - 1.jpg
 youtubeVideoIds:
   - Salca9mhmU8
-title: 3D Animated Character
+title: Modeling/Skinning a 3D Mesh
 subtitle: Modeled and Animated in Blender, implemented in Unity
 implementationDetails:
   - Designing the concept in Affinity Photo, to use as reference when modeling.
@@ -51,5 +52,5 @@ tags:
   - Animation
   - Unity
 technology: UnityEngine
-category: 3D Modeling and Animation
+category: Game Dev
 ---

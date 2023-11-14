@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 10: Camera and View Matrix'
+title: 'Camera and View Matrix (Metal Part 10)'
 excerpt: 'Implementing a Camera Component to calculate a view matrix. Updating the view matrix and passing it down to the GPU. Using the view matrix during the vertex shader function to transform the vertex coordinates to view space.'
 heroImageUrl: '/resources/blog/metal-render-pipeline-part-10-camera-view-matrix/cover.jpg'
 heroImageSourceUrl: ''

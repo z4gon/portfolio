@@ -1,5 +1,6 @@
 ---
 date: '2022-07-01T00:00:00.000Z'
+priority: -100
 videosNames:
   - 1.mp4
 imagesNames:
@@ -46,9 +47,10 @@ tags:
 links:
   - href: https://nochegames.com
     text: Noche Games Website
+itchioUrl: https://nochegames.itch.io/star-cat
 appleAppStoreUrl: https://apps.apple.com/us/app/the-star-cat/id1544668944
 googlePlayStoreUrl: https://play.google.com/store/apps/details?id=com.NightOwlGames.Starcat
 isPrivateRepo: true
 technology: UnityEngine
-category: Published Games
+category: Game Dev
 ---

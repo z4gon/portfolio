@@ -36,4 +36,6 @@ export enum Tag {
 	Godot = 'Godot',
 	GDScript = 'GDScript',
 	Prototype = 'Prototype',
+	JavaScript = 'JavaScript',
+	TypeScript = 'TypeScript',
 }

@@ -20,7 +20,7 @@ imagesNames:
   - 1.jpg
 youtubeVideoIds:
   - lGVy9tTWq2E
-title: Metal 3D Render Pipeline
+title: 'From Scratch: Metal Render Pipeline'
 subtitle: Basic Game Engine using the Metal Graphics API
 implementationDetails:
   - 'Part 1: Setting up the basic Render Pipeline'
