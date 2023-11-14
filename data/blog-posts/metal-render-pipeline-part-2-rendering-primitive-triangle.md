@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 2: Rendering a primitive Triangle'
+title: 'Rendering a Triangle (Metal Part 2)'
 excerpt: 'Rendering a primitive triangle using the GPU, a vertices array, and a memory buffer. Writing a vertex function to access the individual vertices and passing them down to the fragment stage shader.'
 heroImageUrl: '/resources/blog/metal-render-pipeline-part-2-rendering-primitive-triangle/cover.jpg'
 heroImageSourceUrl: ''

@@ -1,5 +1,5 @@
 ---
-title: 'Unity: Pan, Zoom and Orbit for your Demo Projects'
+title: 'Pan, Zoom and Orbit Behavior (Unity)'
 excerpt: 'UI elements to Orbit, Zoom, Pan and Reset View. GUIs to tweak values for demo purposes.'
 heroImageUrl: '/resources/blog/unity-0-demo-template-guis/11.jpg'
 heroImageSourceUrl: ''

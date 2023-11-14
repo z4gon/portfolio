@@ -1,5 +1,5 @@
 ---
-title: 'Unity: Input System Package + Raycasting'
+title: 'Input System Package + Raycasting (Unity)'
 excerpt: 'Using Input Action events to Raycast points from Screen Space onto a Plane.'
 heroImageUrl: '/resources/blog/unity-2-input-system-package-raycast/4.jpg'
 heroImageSourceUrl: ''

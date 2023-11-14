@@ -1,5 +1,5 @@
 ---
-title: 'Unity: Profile and Optimize FPS in low end devices with the Universal Render Pipeline'
+title: 'Profile and Optimize FPS in low-end devices with the URP (Unity)'
 excerpt: 'Disable post processing, SSAO and enable target frame rate to optimize FPS count in the Universal Rende Pipeline, for low end moible devices.'
 heroImageUrl: '/resources/blog/unity-4-profiler-optimize-fps-urp-low-end-mobile/2.jpg'
 heroImageSourceUrl: ''

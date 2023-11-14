@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 4: Vertex Descriptors'
+title: 'Vertex Descriptors (Metal Part 4)'
 excerpt: 'Describing the memory layout for the vertices in the vertex buffer, so the vertex shader can pick them up individually.'
 heroImageUrl: '/resources/blog/metal-render-pipeline-part-4-vertex-descriptors/cover.jpg'
 heroImageSourceUrl: 'https://unsplash.com/photos/COFXWa6LJdw'

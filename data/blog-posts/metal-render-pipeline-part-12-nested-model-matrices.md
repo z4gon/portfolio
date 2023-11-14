@@ -1,5 +1,5 @@
 ---
-title: 'Metal Render Pipeline Part 12: Nested Model Matrices'
+title: 'Nested Model Matrices (Metal Part 12)'
 excerpt: 'Using the parent transform to calculate the child model matrix, taking into account the transformation applied to the parent.'
 heroImageUrl: '/resources/blog/metal-render-pipeline-part-12-nested-model-matrices/cover.jpg'
 heroImageSourceUrl: ''

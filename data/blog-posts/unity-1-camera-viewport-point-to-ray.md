@@ -1,5 +1,5 @@
 ---
-title: 'Unity: Using Camera ViewportPointToRay'
+title: 'Using Camera ViewportPointToRay (Unity)'
 excerpt: 'Raycasting from the Camera and finding the hit point in a plane, to determine a surface area corresponding to the proyected view from the Camera on the Plane.'
 heroImageUrl: '/resources/blog/unity-1-camera-viewport-point-to-ray/1.jpg'
 heroImageSourceUrl: ''
