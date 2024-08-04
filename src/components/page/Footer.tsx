@@ -1,13 +1,8 @@
 import IconLink from '../IconLink'
 import GitHubIcon from '../icons/GitHubIcon'
-import LinkedInIcon from '../icons/LinkedInIcon'
 import styles from './Footer.module.sass'
 
 const icons = [
-	{
-		href: 'https://linkedin.com/in/gonzacn',
-		Icon: LinkedInIcon,
-	},
 	{
 		href: 'https://github.com/z4gon',
 		Icon: GitHubIcon,
@@ -17,7 +12,7 @@ const icons = [
 const Footer: React.FC<{}> = () => {
 	return (
 		<footer className={styles.footer}>
-			<p>&copy;{` ${new Date().getFullYear()}, Gonzalo Cumini`}</p>
+			<p>&copy;{` ${new Date().getFullYear()}, z4gon`}</p>
 			<ul className={styles.icons}>
 				{icons.map((icon) => (
 					<li className={styles.icon} key={icon.href}>

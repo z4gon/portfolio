@@ -2,14 +2,9 @@ import Link from 'next/link'
 
 import IconLink from '../IconLink'
 import GitHubIcon from '../icons/GitHubIcon'
-import LinkedInIcon from '../icons/LinkedInIcon'
 import styles from './NavBar.module.sass'
 
 const icons = [
-	{
-		href: 'https://linkedin.com/in/gonzacn',
-		Icon: LinkedInIcon,
-	},
 	{
 		href: 'https://github.com/z4gon',
 		Icon: GitHubIcon,
@@ -22,7 +17,7 @@ const NavBar: React.FC<{}> = () => {
 			<ul className={styles.links}>
 				<li>
 					<Link href="/" className={styles.titleLink}>
-						<h1 className={styles.title}>Gonzalo Cumini</h1>
+						<h1 className={styles.title}>z4gon</h1>
 					</Link>
 				</li>
 				<li className={styles.secondaryLink}>

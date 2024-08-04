@@ -15,8 +15,8 @@ export default function Blog({ allPosts }: BlogProps) {
 	return (
 		<Page>
 			<Metatags
-				title="Gonzalo Cumini | Blog"
-				description="Gonzalo Cumini | Blog"
+				title="z4gon | Blog"
+				description="z4gon | Blog"
 				pathUrl="/blog"
 			/>
 			<Container>

@@ -4,7 +4,7 @@ const authors: {
 	[id: string]: Author
 } = {
 	z4gon: {
-		name: 'Gonzalo Cumini',
+		name: 'z4gon',
 		pictureUrl: '/images/avatars/z4gon.jpg',
 	},
 }

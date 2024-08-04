@@ -12,11 +12,11 @@ export default function Metatags(props: Props) {
 	const urlBase = `https://z4gon.github.io`
 
 	const {
-		title = 'Gonzalo Cumini | Portfolio',
+		title = 'z4gon | Portfolio',
 		pathUrl,
 		imageUrl = '/thumbnail.gif',
 		faviconUrl = '/favicon.ico',
-		description = 'Gonzalo Cumini | Portfolio',
+		description = 'z4gon | Portfolio',
 	} = props
 
 	const url = `${urlBase}${pathUrl}`
